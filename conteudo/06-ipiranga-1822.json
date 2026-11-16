@@ -1,0 +1,73 @@
+{
+ "id": "06-ipiranga-1822",
+ "ordem": 6,
+ "formato": "voce-acorda",
+ "estilo": "sepia",
+ "titulo": "Você acorda em 1822 ao lado de Dom Pedro no Ipiranga",
+ "descricao": "Você acorda em 7 de setembro de 1822, ao lado de Dom Pedro às margens do Ipiranga. O que aconteceu de verdade?",
+ "tags": [
+  "independencia do brasil",
+  "dom pedro",
+  "1822",
+  "ipiranga",
+  "voce acorda",
+  "historia do brasil"
+ ],
+ "cenas": [
+  {
+   "fala": "Você acorda em sete de setembro de mil oitocentos e vinte e dois, ao lado de Dom Pedro, às margens do rio Ipiranga!",
+   "visuais": [
+    "first person view riding a horse beside prince dom pedro near a river in brazil, 1822, painting"
+   ],
+   "emocao": "surpreso",
+   "ano": "1822",
+   "destaques": [
+    "Dom Pedro"
+   ]
+  },
+  {
+   "fala": "Ele tem vinte e três anos e acabou de receber cartas de Portugal exigindo que ele volte para Lisboa.",
+   "visuais": [
+    "young prince reading letters on horseback, guards around him, painting"
+   ],
+   "emocao": "neutro",
+   "destaques": [
+    "cartas"
+   ]
+  },
+  {
+   "fala": "Dizem que ele estava com problemas de barriga naquele dia. A história nem sempre é heroica!",
+   "visuais": [
+    "prince on horseback looking uncomfortable holding his stomach, humorous illustration"
+   ],
+   "emocao": "feliz"
+  },
+  {
+   "fala": "Então ele lê as cartas, fica furioso e arranca o laço português do uniforme.",
+   "visuais": [
+    "close up of a hand tearing a ribbon from a military uniform, dramatic"
+   ],
+   "emocao": "surpreso",
+   "destaques": [
+    "laço"
+   ]
+  },
+  {
+   "fala": "Ele levanta a espada e grita: independência ou morte! A guarda de honra responde com vivas.",
+   "visuais": [
+    "dom pedro raising his sword with honor guard cavalry cheering, heroic painting"
+   ],
+   "emocao": "feliz",
+   "destaques": [
+    "independência"
+   ]
+  },
+  {
+   "fala": "Nascia ali o Império do Brasil. Se você estivesse lá, teria gritado junto? Comenta!",
+   "visuais": [
+    "brazilian imperial flag waving over green hills at sunset, painting"
+   ],
+   "emocao": "feliz"
+  }
+ ]
+}

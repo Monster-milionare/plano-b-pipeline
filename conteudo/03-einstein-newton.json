@@ -1,0 +1,79 @@
+{
+ "id": "03-einstein-newton",
+ "ordem": 3,
+ "formato": "e-se",
+ "estilo": "aquarela",
+ "titulo": "E se Einstein tivesse descoberto a gravidade e Newton a relatividade?",
+ "descricao": "E se Einstein e Newton tivessem trocado de descobertas? Uma pergunta que revela como a ciência funciona de verdade.",
+ "tags": [
+  "einstein",
+  "newton",
+  "fisica",
+  "relatividade",
+  "gravidade",
+  "ciencia",
+  "e se"
+ ],
+ "cenas": [
+  {
+   "fala": "E se Einstein tivesse descoberto a gravidade, e Newton a relatividade? A resposta é mais curiosa do que parece!",
+   "visuais": [
+    "cute cartoon scientists einstein and newton swapping notebooks, colorful classroom"
+   ],
+   "emocao": "surpreso",
+   "destaques": [
+    "Einstein",
+    "Newton"
+   ]
+  },
+  {
+   "fala": "Primeiro problema: Newton viveu no século dezessete. Einstein, mais de duzentos anos depois.",
+   "visuais": [
+    "split portrait style illustration of a 1600s english scholar and a 1900s physicist, timeline"
+   ],
+   "emocao": "neutro",
+   "ano": "1687",
+   "destaques": [
+    "duzentos"
+   ]
+  },
+  {
+   "fala": "A gravidade de Newton é a escada. Sem ela, ninguém teria chegado à relatividade de Einstein.",
+   "visuais": [
+    "a glowing staircase made of equations leading up to the stars, storybook illustration"
+   ],
+   "emocao": "feliz",
+   "destaques": [
+    "escada"
+   ]
+  },
+  {
+   "fala": "Então, na prática, a ordem não poderia mudar. A ciência se constrói degrau por degrau!",
+   "visuais": [
+    "apple falling from a tree and a light beam bending around a planet, illustration"
+   ],
+   "emocao": "feliz",
+   "destaques": [
+    "degrau"
+   ]
+  },
+  {
+   "fala": "E olha que isso afeta você hoje: o GPS do seu celular precisa corrigir o tempo usando a relatividade.",
+   "visuais": [
+    "smartphone showing a map with satellites orbiting earth, glowing lines"
+   ],
+   "emocao": "surpreso",
+   "destaques": [
+    "GPS",
+    "relatividade"
+   ]
+  },
+  {
+   "fala": "Sem essa correção, o GPS erraria vários quilômetros por dia. Qual desses dois gênios você acha mais incrível?",
+   "visuais": [
+    "earth from space with gps satellites and a clock, dramatic lighting"
+   ],
+   "emocao": "feliz"
+  }
+ ]
+}

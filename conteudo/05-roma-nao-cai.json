@@ -1,0 +1,73 @@
+{
+ "id": "05-roma-nao-cai",
+ "ordem": 5,
+ "formato": "e-se",
+ "estilo": "noir",
+ "titulo": "E se Roma nunca tivesse caído?",
+ "descricao": "E se o Império Romano nunca tivesse caído? Línguas, ciência e o mundo que conhecemos mudariam.",
+ "tags": [
+  "imperio romano",
+  "queda de roma",
+  "e se",
+  "historia alternativa",
+  "latim"
+ ],
+ "cenas": [
+  {
+   "fala": "E se Roma nunca tivesse caído? O mundo de hoje seria irreconhecível!",
+   "visuais": [
+    "roman forum and colosseum in a futuristic modern city at night, cinematic"
+   ],
+   "emocao": "surpreso",
+   "ano": "476",
+   "destaques": [
+    "Roma"
+   ]
+  },
+  {
+   "fala": "Em quatrocentos e setenta e seis, o último imperador do Ocidente foi deposto. Mas o lado oriental durou até mil quatrocentos e cinquenta e três.",
+   "visuais": [
+    "last roman emperor deposed in a throne room, dramatic painting"
+   ],
+   "emocao": "neutro",
+   "ano": "476",
+   "destaques": [
+    "476"
+   ]
+  },
+  {
+   "fala": "Imagine o Ocidente também continuando. O latim seria a língua comum, e talvez nem existissem português, espanhol ou italiano.",
+   "visuais": [
+    "roman scribe with latin inscriptions on a marble wall, torchlight"
+   ],
+   "emocao": "preocupado",
+   "destaques": [
+    "latim"
+   ]
+  },
+  {
+   "fala": "Estradas, aquedutos e leis romanas continuariam evoluindo sem parar.",
+   "visuais": [
+    "huge roman aqueduct with high speed trains passing on top, cinematic"
+   ],
+   "emocao": "feliz",
+   "destaques": [
+    "aquedutos"
+   ]
+  },
+  {
+   "fala": "Mas um império gigante também sofre: corrupção, guerras e impostos pesados. Talvez ele só mudasse de forma.",
+   "visuais": [
+    "tax collector and crowded roman market, ink drawing"
+   ],
+   "emocao": "preocupado"
+  },
+  {
+   "fala": "Você preferiria viver nesse mundo? Comenta aí, cidadão romano!",
+   "visuais": [
+    "roman citizen looking at a skyline with columns and skyscrapers, noir style"
+   ],
+   "emocao": "feliz"
+  }
+ ]
+}

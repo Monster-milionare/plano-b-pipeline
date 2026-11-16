@@ -1,0 +1,80 @@
+{
+ "id": "07-brasil-holandes",
+ "ordem": 7,
+ "formato": "e-se",
+ "estilo": "epico",
+ "titulo": "E se o Brasil tivesse sido colonizado pelos holandeses?",
+ "descricao": "Os holandeses chegaram a dominar parte do Brasil no século 17. E se tivessem ficado? A história de Nova Holanda.",
+ "tags": [
+  "holandeses no brasil",
+  "nova holanda",
+  "mauricio de nassau",
+  "recife",
+  "e se",
+  "historia"
+ ],
+ "cenas": [
+  {
+   "fala": "E se o Brasil tivesse sido colonizado pelos holandeses? Isso quase aconteceu de verdade!",
+   "visuais": [
+    "dutch ships arriving at the coast of recife brazil, 1630s painting, golden light"
+   ],
+   "emocao": "surpreso",
+   "ano": "1630",
+   "destaques": [
+    "holandeses"
+   ]
+  },
+  {
+   "fala": "De 1630 a 1654, os holandeses dominaram parte do Nordeste, numa região chamada Nova Holanda.",
+   "visuais": [
+    "map of new holland northeastern brazil dutch colony, old map illustration"
+   ],
+   "emocao": "neutro",
+   "ano": "1630",
+   "destaques": [
+    "Nova Holanda"
+   ]
+  },
+  {
+   "fala": "O governador Maurício de Nassau transformou o Recife numa cidade moderna, com pontes, canais e um observatório astronômico!",
+   "visuais": [
+    "mauritsstad recife dutch style city with bridges and canals, 17th century painting"
+   ],
+   "emocao": "feliz",
+   "ano": "1637",
+   "destaques": [
+    "Nassau",
+    "observatório"
+   ]
+  },
+  {
+   "fala": "E mais: foi no Recife que surgiu a primeira sinagoga das Américas.",
+   "visuais": [
+    "old synagogue interior with candles, 17th century, warm light"
+   ],
+   "emocao": "surpreso",
+   "destaques": [
+    "sinagoga"
+   ]
+  },
+  {
+   "fala": "Mas portugueses e pernambucanos resistiram. Depois das batalhas dos Guararapes, os holandeses foram expulsos em 1654.",
+   "visuais": [
+    "battle of guararapes soldiers fighting on a green hill, dramatic painting"
+   ],
+   "emocao": "preocupado",
+   "ano": "1654",
+   "destaques": [
+    "Guararapes"
+   ]
+  },
+  {
+   "fala": "Se eles tivessem ficado, talvez falássemos holandês e tivéssemos mais cidades planejadas. Você trocaria?",
+   "visuais": [
+    "modern recife skyline with dutch windmills and canals, whimsical illustration"
+   ],
+   "emocao": "feliz"
+  }
+ ]
+}

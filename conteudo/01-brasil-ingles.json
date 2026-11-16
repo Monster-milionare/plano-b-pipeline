@@ -1,0 +1,88 @@
+{
+ "id": "01-brasil-ingles",
+ "ordem": 1,
+ "formato": "e-se",
+ "estilo": "epico",
+ "titulo": "E se o Brasil tivesse sido colonizado pelos ingleses?",
+ "descricao": "E se o Brasil tivesse sido colonizado pelos ingleses em vez dos portugueses? Uma viagem pela história alternativa.",
+ "tags": [
+  "historia alternativa",
+  "e se",
+  "brasil",
+  "colonizacao",
+  "inglaterra",
+  "curiosidades historicas"
+ ],
+ "cenas": [
+  {
+   "fala": "E se o Brasil tivesse sido colonizado pelos ingleses? Fica até o final, porque o último ponto muda tudo!",
+   "visuais": [
+    "english sailing ships with british flags arriving at a tropical brazilian coast at sunrise, oil painting"
+   ],
+   "emocao": "surpreso",
+   "ano": "1500",
+   "destaques": [
+    "ingleses"
+   ]
+  },
+  {
+   "fala": "Em mil quatrocentos e noventa e quatro, Portugal e Espanha dividiram o mundo no Tratado de Tordesilhas. A Inglaterra ficou de fora.",
+   "visuais": [
+    "old parchment world map with a line dividing the atlantic ocean, explorers desk"
+   ],
+   "emocao": "neutro",
+   "ano": "1494",
+   "destaques": [
+    "Tordesilhas"
+   ]
+  },
+  {
+   "fala": "Agora imagine os ingleses chegando primeiro. Nós falaríamos inglês, e o samba talvez tivesse outro nome!",
+   "visuais": [
+    "brazilian carnival dancers waving british union jack flags, colorful"
+   ],
+   "emocao": "feliz",
+   "destaques": [
+    "inglês",
+    "samba"
+   ]
+  },
+  {
+   "fala": "Segundo ponto: a Inglaterra aboliu a escravidão em suas colônias em 1833. Aqui, a Lei Áurea só veio em 1888.",
+   "visuais": [
+    "british parliament in the 1830s, painting of lawmakers debating"
+   ],
+   "emocao": "preocupado",
+   "ano": "1833",
+   "destaques": [
+    "1833",
+    "1888"
+   ]
+  },
+  {
+   "fala": "Isso é só uma hipótese, mas talvez a abolição chegasse mais de cinquenta anos antes.",
+   "visuais": [
+    "calendar pages flying away in time, hourglass, dramatic light"
+   ],
+   "emocao": "neutro"
+  },
+  {
+   "fala": "Terceiro ponto: o Rio de Janeiro seria uma Londres tropical, com chá das cinco e ônibus vermelho na praia de Copacabana!",
+   "visuais": [
+    "red double decker bus on copacabana beach with sugarloaf mountain, whimsical illustration"
+   ],
+   "emocao": "feliz",
+   "destaques": [
+    "Londres",
+    "Copacabana"
+   ]
+  },
+  {
+   "fala": "E você, acha que seríamos mais ricos ou só falaríamos inglês pior? Comenta aqui embaixo!",
+   "visuais": [
+    "split image portuguese caravel versus english galleon on ocean, dramatic sky"
+   ],
+   "emocao": "feliz"
+  }
+ ]
+}

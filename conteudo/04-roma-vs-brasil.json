@@ -1,0 +1,79 @@
+{
+ "id": "04-roma-vs-brasil",
+ "ordem": 4,
+ "formato": "quem-venceria",
+ "estilo": "neon",
+ "titulo": "Quem venceria: Império Romano no auge vs Brasil de hoje",
+ "descricao": "Quem venceria numa guerra: o Império Romano no auge ou o Brasil de hoje? A comparação dos números.",
+ "tags": [
+  "quem venceria",
+  "imperio romano",
+  "brasil",
+  "exercito",
+  "historia",
+  "comparacao"
+ ],
+ "cenas": [
+  {
+   "fala": "Quem venceria: o Império Romano no auge ou o Brasil de hoje? Spoiler: não é tão simples!",
+   "visuais": [
+    "roman legion facing modern brazilian soldiers and tanks, epic cinematic clash, neon lights"
+   ],
+   "emocao": "surpreso",
+   "destaques": [
+    "Romano",
+    "Brasil"
+   ]
+  },
+  {
+   "fala": "Roma, por volta do ano cento e dezessete, tinha entre cinquenta e sessenta milhões de pessoas e as legiões mais temidas do mundo.",
+   "visuais": [
+    "roman legion in formation marching, shields, golden eagle standards, cinematic"
+   ],
+   "emocao": "neutro",
+   "ano": "117",
+   "destaques": [
+    "legiões"
+   ]
+  },
+  {
+   "fala": "O Brasil de hoje tem mais de duzentos milhões de habitantes e forças armadas com tecnologia moderna.",
+   "visuais": [
+    "modern brazilian armed forces, soldiers, jets and ships, cinematic"
+   ],
+   "emocao": "neutro",
+   "ano": "2026",
+   "destaques": [
+    "duzentos"
+   ]
+  },
+  {
+   "fala": "Em campo aberto, a legião era disciplinada. Mas contra aviões, blindados e radar, não há formação em tartaruga que resista!",
+   "visuais": [
+    "fighter jet flying over a roman army in testudo formation, dramatic sky"
+   ],
+   "emocao": "preocupado",
+   "destaques": [
+    "aviões",
+    "blindados"
+   ]
+  },
+  {
+   "fala": "Já em logística, Roma era brilhante: estradas, fortes e exércitos que viviam de suprimentos organizados.",
+   "visuais": [
+    "ancient roman road with legionaries and supply carts, painting"
+   ],
+   "emocao": "feliz",
+   "destaques": [
+    "estradas"
+   ]
+  },
+  {
+   "fala": "Veredito: o Brasil vence com folga, por tecnologia. Mas o improviso romano daria trabalho! Quem você escolhe?",
+   "visuais": [
+    "scoreboard style versus screen roman helmet versus modern soldier helmet, neon"
+   ],
+   "emocao": "feliz"
+  }
+ ]
+}

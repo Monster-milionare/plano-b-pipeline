@@ -1,0 +1,84 @@
+{
+ "id": "02-frota-cabral",
+ "ordem": 2,
+ "formato": "voce-acorda",
+ "estilo": "sepia",
+ "titulo": "Você acorda em 1500 como capitão da frota de Cabral",
+ "descricao": "Você acorda em 1500 no comando da frota que chegou ao Brasil. O que você faria? Viagem no tempo em primeira pessoa.",
+ "tags": [
+  "voce acorda",
+  "cabral",
+  "1500",
+  "descobrimento",
+  "historia do brasil",
+  "viagem no tempo"
+ ],
+ "cenas": [
+  {
+   "fala": "Você acorda em 1500, no meio do oceano Atlântico, como capitão de uma frota com treze navios!",
+   "visuais": [
+    "first person view from the deck of a portuguese caravel, thirteen ships on the open atlantic, sunrise, 1500"
+   ],
+   "emocao": "surpreso",
+   "ano": "1500",
+   "destaques": [
+    "treze"
+   ]
+  },
+  {
+   "fala": "Há mais de mil homens a bordo, e a ordem do rei é clara: chegar à Índia.",
+   "visuais": [
+    "crowded deck of a portuguese ship with sailors and soldiers, old painting"
+   ],
+   "emocao": "neutro",
+   "destaques": [
+    "Índia"
+   ]
+  },
+  {
+   "fala": "Mas o mar não perdoa. Os ventos empurram sua frota para o oeste, e depois de semanas só se vê água.",
+   "visuais": [
+    "stormy atlantic ocean with a small wooden fleet, dark clouds, dramatic painting"
+   ],
+   "emocao": "preocupado"
+  },
+  {
+   "fala": "Até que, em vinte e dois de abril, um marinheiro grita: terra à vista!",
+   "visuais": [
+    "a sailor pointing at a green hill on the horizon over the sea, golden light"
+   ],
+   "emocao": "surpreso",
+   "ano": "22 ABR",
+   "destaques": [
+    "terra"
+   ]
+  },
+  {
+   "fala": "É o Monte Pascoal, no atual sul da Bahia. Você ainda não sabe, mas acabou de mudar a história do Brasil.",
+   "visuais": [
+    "monte pascoal mountain in bahia seen from the sea, tropical coast, painting"
+   ],
+   "emocao": "feliz",
+   "destaques": [
+    "Pascoal"
+   ]
+  },
+  {
+   "fala": "Dias depois, o escrivão Pero Vaz de Caminha escreve ao rei a famosa carta contando tudo.",
+   "visuais": [
+    "a scribe writing a letter with a feather pen by candlelight on a ship, 1500"
+   ],
+   "emocao": "neutro",
+   "destaques": [
+    "carta"
+   ]
+  },
+  {
+   "fala": "E se você fosse o capitão, o que faria primeiro? Conta nos comentários!",
+   "visuais": [
+    "tropical brazilian beach with indigenous people and portuguese ships in the bay, painting"
+   ],
+   "emocao": "feliz"
+  }
+ ]
+}

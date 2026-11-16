@@ -1,0 +1,75 @@
+{
+ "id": "08-internet-1900",
+ "ordem": 8,
+ "formato": "e-se",
+ "estilo": "neon",
+ "titulo": "E se a internet tivesse sido inventada em 1900?",
+ "descricao": "E se a internet existisse em 1900? Guerras, impérios e o cotidiano de uma sociedade ligada em rede cem anos mais cedo.",
+ "tags": [
+  "internet",
+  "1900",
+  "historia alternativa",
+  "e se",
+  "tecnologia",
+  "primeira guerra"
+ ],
+ "cenas": [
+  {
+   "fala": "E se a internet tivesse sido inventada em 1900? O mundo seria bem diferente!",
+   "visuais": [
+    "victorian era people using glowing futuristic screens in 1900 paris street, steampunk neon"
+   ],
+   "emocao": "surpreso",
+   "ano": "1900",
+   "destaques": [
+    "internet"
+   ]
+  },
+  {
+   "fala": "Primeiro: só a elite usaria. Em 1900, a maioria das casas nem tinha energia elétrica.",
+   "visuais": [
+    "dark victorian street with gas lamps and one house glowing with a screen, cinematic"
+   ],
+   "emocao": "preocupado",
+   "destaques": [
+    "elite",
+    "energia"
+   ]
+  },
+  {
+   "fala": "Segundo: as notícias viajariam em minutos. Hoje parece normal, mas era uma revolução!",
+   "visuais": [
+    "telegraph wires turning into glowing data streams over a 1900s city"
+   ],
+   "emocao": "feliz",
+   "destaques": [
+    "notícias"
+   ]
+  },
+  {
+   "fala": "Terceiro: em 1914, a Primeira Guerra teria propaganda e boatos espalhados em tempo real.",
+   "visuais": [
+    "world war one soldiers in trenches with a glowing phone-like device, dramatic"
+   ],
+   "emocao": "preocupado",
+   "ano": "1914",
+   "destaques": [
+    "Guerra"
+   ]
+  },
+  {
+   "fala": "Imagine fake news com sotaque de 1900 e trajes de gala!",
+   "visuais": [
+    "victorian gentleman reading shocking news on a glowing tablet, comedic illustration"
+   ],
+   "emocao": "feliz"
+  },
+  {
+   "fala": "Você postaria selfie com chapéu de cartola? Comenta!",
+   "visuais": [
+    "selfie of a victorian man with a top hat in front of the eiffel tower, comedic"
+   ],
+   "emocao": "feliz"
+  }
+ ]
+}

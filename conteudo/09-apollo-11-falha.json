@@ -1,0 +1,78 @@
+{
+ "id": "09-apollo-11-falha",
+ "ordem": 9,
+ "formato": "voce-acorda",
+ "estilo": "noir",
+ "titulo": "Você é o piloto da Apollo 11 e o motor falha",
+ "descricao": "Você é o piloto do módulo lunar da Apollo 11 e o motor falha. O que aconteceu de verdade na descida e o que poderia ter dado errado.",
+ "tags": [
+  "apollo 11",
+  "lua",
+  "1969",
+  "nasa",
+  "voce acorda",
+  "historia"
+ ],
+ "cenas": [
+  {
+   "fala": "Você é o piloto do módulo lunar da Apollo 11, a poucos minutos de pousar na Lua!",
+   "visuais": [
+    "first person view inside a lunar module cockpit looking at the moon surface, 1969, dramatic"
+   ],
+   "emocao": "surpreso",
+   "ano": "1969",
+   "destaques": [
+    "Apollo"
+   ]
+  },
+  {
+   "fala": "De repente, o computador dispara alarmes. O combustível está acabando!",
+   "visuais": [
+    "red warning lights in a 1960s spacecraft cockpit, tense, cinematic"
+   ],
+   "emocao": "preocupado",
+   "destaques": [
+    "alarmes",
+    "combustível"
+   ]
+  },
+  {
+   "fala": "Isso aconteceu de verdade: no pouso, restava menos de um minuto de combustível.",
+   "visuais": [
+    "fuel gauge nearly empty in a vintage space cockpit, close up"
+   ],
+   "emocao": "preocupado",
+   "destaques": [
+    "minuto"
+   ]
+  },
+  {
+   "fala": "Neil Armstrong assumiu o controle manual para fugir de um campo de pedras e pousou com segurança.",
+   "visuais": [
+    "lunar module descending over a rocky crater field on the moon, cinematic"
+   ],
+   "emocao": "surpreso",
+   "ano": "20 JUL",
+   "destaques": [
+    "Armstrong"
+   ]
+  },
+  {
+   "fala": "Mas pense no pior: sem o motor de subida, não havia plano B para voltar!",
+   "visuais": [
+    "astronauts standing on the moon next to a lunar module, black sky, earth far away"
+   ],
+   "emocao": "preocupado",
+   "destaques": [
+    "motor"
+   ]
+  },
+  {
+   "fala": "Você teria coragem de descer lá? Comenta sim ou não!",
+   "visuais": [
+    "earthrise over the lunar horizon, astronaut silhouette, cinematic"
+   ],
+   "emocao": "feliz"
+  }
+ ]
+}

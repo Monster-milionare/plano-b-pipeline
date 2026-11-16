@@ -1,0 +1,79 @@
+{
+ "id": "10-napoleao-waterloo",
+ "ordem": 10,
+ "formato": "e-se",
+ "estilo": "epico",
+ "titulo": "E se Napoleão tivesse vencido em Waterloo?",
+ "descricao": "E se Napoleão tivesse vencido a Batalha de Waterloo em 1815? A resposta tem uma reviravolta.",
+ "tags": [
+  "napoleao",
+  "waterloo",
+  "1815",
+  "e se",
+  "historia alternativa",
+  "europa"
+ ],
+ "cenas": [
+  {
+   "fala": "E se Napoleão tivesse vencido em Waterloo? A resposta tem uma reviravolta que quase ninguém conta!",
+   "visuais": [
+    "napoleon on horseback on a battlefield at dawn, smoke and cannons, epic oil painting"
+   ],
+   "emocao": "surpreso",
+   "ano": "1815",
+   "destaques": [
+    "Napoleão"
+   ]
+  },
+  {
+   "fala": "Em dezoito de junho de 1815, Napoleão enfrentou Wellington e os prussianos na Bélgica.",
+   "visuais": [
+    "battle of waterloo british squares and french cavalry, dramatic painting"
+   ],
+   "emocao": "neutro",
+   "ano": "18 JUN",
+   "destaques": [
+    "Wellington"
+   ]
+  },
+  {
+   "fala": "Ele perdeu, foi exilado na ilha de Santa Helena e morreu lá, em 1821.",
+   "visuais": [
+    "napoleon alone on a rocky island coast looking at the sea, melancholic painting"
+   ],
+   "emocao": "preocupado",
+   "ano": "1821",
+   "destaques": [
+    "Santa Helena"
+   ]
+  },
+  {
+   "fala": "Agora, se ele tivesse vencido aquele dia, o golpe seria enorme para a coalizão inimiga.",
+   "visuais": [
+    "french soldiers celebrating victory with imperial eagles, painting"
+   ],
+   "emocao": "feliz",
+   "destaques": [
+    "vencido"
+   ]
+  },
+  {
+   "fala": "Mas aqui está a virada: exércitos austríacos e russos já se mobilizavam contra a França!",
+   "visuais": [
+    "huge russian and austrian armies marching across europe, dramatic landscape"
+   ],
+   "emocao": "surpreso",
+   "destaques": [
+    "austríacos",
+    "russos"
+   ]
+  },
+  {
+   "fala": "Ou seja, mesmo vitorioso, Napoleão talvez perdesse a guerra mais tarde. Você acha que ele escaparia? Comenta!",
+   "visuais": [
+    "napoleon looking at a map table with enemy armies surrounding france, candlelight"
+   ],
+   "emocao": "feliz"
+  }
+ ]
+}
