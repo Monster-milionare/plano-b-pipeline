@@ -1,0 +1,90 @@
+{
+ "id": "13-pov-dom-pedro",
+ "ordem": 13,
+ "estilo": "aquarela",
+ "titulo": "POV: você é Dom Pedro I no momento do grito do Ipiranga",
+ "descricao": "POV na visão de Dom Pedro I em 7 de setembro de 1822, às margens do Ipiranga. Você vê o grito de Independência pelos olhos dele!",
+ "tags": [
+  "pov",
+  "dom pedro",
+  "independencia",
+  "1822",
+  "ipiranga",
+  "historia do brasil"
+ ],
+ "cenas": [
+  {
+   "fala": "POV: eu sou Dom Pedro, tenho vinte e três anos e estou a cavalo.",
+   "visuais": [
+    "first person view of a rider on horseback on a dirt road through green hills in brazil, 1822, painting"
+   ],
+   "emocao": "neutro",
+   "ano": "1822",
+   "destaques": [
+    "Dom Pedro"
+   ]
+  },
+  {
+   "fala": "É sete de setembro, perto do riacho do Ipiranga, em São Paulo.",
+   "visuais": [
+    "first person view of a small stream and green hills near sao paulo, a group of horsemen ahead, soft morning light, painting"
+   ],
+   "emocao": "neutro",
+   "ano": "7 SET",
+   "destaques": [
+    "Ipiranga"
+   ]
+  },
+  {
+   "fala": "Um mensageiro vem a galope e me entrega cartas urgentes de Portugal.",
+   "visuais": [
+    "first person view of a courier on a sweating horse handing sealed letters, dust on the road, painting"
+   ],
+   "emocao": "surpreso",
+   "destaques": [
+    "cartas"
+   ]
+  },
+  {
+   "fala": "Eu leio, e meu sangue ferve. Portugal quer me mandar voltar e controlar o Brasil!",
+   "visuais": [
+    "first person view of hands holding an opened letter with a red wax seal, trembling, painting"
+   ],
+   "emocao": "preocupado",
+   "destaques": [
+    "controlar"
+   ]
+  },
+  {
+   "fala": "Então eu me viro para a minha guarda e levanto a espada!",
+   "visuais": [
+    "first person view of a hand raising a sword toward a group of soldiers on horseback, dramatic sky, painting"
+   ],
+   "emocao": "surpreso",
+   "destaques": [
+    "espada"
+   ]
+  },
+  {
+   "fala": "Independência ou morte! O grito ecoa pela colina, e um país nasce ali.",
+   "visuais": [
+    "first person view of cheering soldiers raising their hats and swords on a green hill, brazilian landscape, golden light, painting"
+   ],
+   "emocao": "feliz",
+   "destaques": [
+    "Independência ou morte"
+   ]
+  },
+  {
+   "fala": "Você teria coragem de fazer isso aos vinte e três anos? Comenta!",
+   "visuais": [
+    "first person view of a young prince looking at a green brazilian valley, hopeful, sunrise, painting"
+   ],
+   "emocao": "feliz",
+   "destaques": [
+    "Comenta"
+   ]
+  }
+ ],
+ "formato": "pov"
+}

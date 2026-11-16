@@ -1,0 +1,90 @@
+{
+ "id": "14-pov-santos-dumont",
+ "ordem": 14,
+ "estilo": "neon",
+ "titulo": "POV: você é Santos Dumont no primeiro voo do 14-bis",
+ "descricao": "POV na visão de Santos Dumont em 1906, em Paris, no voo do 14-bis. Você sente o voo pelos olhos do inventor brasileiro!",
+ "tags": [
+  "pov",
+  "santos dumont",
+  "14-bis",
+  "1906",
+  "aviao",
+  "visao do personagem"
+ ],
+ "cenas": [
+  {
+   "fala": "POV: eu sou Santos Dumont, e hoje vou tentar voar!",
+   "visuais": [
+    "first person view from inside a wooden early airplane cockpit, hands on the controls, green field ahead, paris 1906, painting"
+   ],
+   "emocao": "surpreso",
+   "ano": "1906",
+   "destaques": [
+    "Santos Dumont"
+   ]
+  },
+  {
+   "fala": "Estamos em Paris, no campo de Bagatelle, em outubro de mil novecentos e seis.",
+   "visuais": [
+    "first person view of a crowd waiting around a grass field in paris with a strange box-kite airplane, vintage painting"
+   ],
+   "emocao": "neutro",
+   "ano": "OUT 1906",
+   "destaques": [
+    "Bagatelle"
+   ]
+  },
+  {
+   "fala": "Meu avião se chama 14-bis. Parece uma pipa gigante, e todo mundo duvida dele.",
+   "visuais": [
+    "first person view looking at the 14-bis biplane with box-kite wings, curious crowd, vintage photograph style"
+   ],
+   "emocao": "preocupado",
+   "destaques": [
+    "14-bis"
+   ]
+  },
+  {
+   "fala": "O motor ruge, a hélice gira, e eu começo a correr pela grama.",
+   "visuais": [
+    "first person view of a spinning propeller and a grass field rushing past, motion blur, dramatic painting"
+   ],
+   "emocao": "surpreso",
+   "destaques": [
+    "correr"
+   ]
+  },
+  {
+   "fala": "De repente, o chão fica para trás. Eu estou voando!",
+   "visuais": [
+    "first person view lifting off the ground in an early airplane, the field and crowd shrinking below, golden light, painting"
+   ],
+   "emocao": "feliz",
+   "destaques": [
+    "voando"
+   ]
+  },
+  {
+   "fala": "São uns sessenta metros no ar, mas é o começo de uma nova era.",
+   "visuais": [
+    "first person view flying low over a paris field with cheering people waving hats below, joyful, painting"
+   ],
+   "emocao": "feliz",
+   "destaques": [
+    "sessenta metros"
+   ]
+  },
+  {
+   "fala": "Você teria coragem de subir nessa geringonça? Comenta!",
+   "visuais": [
+    "first person view of a nervous aviator looking at a wooden airplane at sunset, vintage painting"
+   ],
+   "emocao": "feliz",
+   "destaques": [
+    "Comenta"
+   ]
+  }
+ ],
+ "formato": "pov"
+}

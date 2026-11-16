@@ -1,0 +1,91 @@
+{
+ "id": "12-pov-napoleao",
+ "ordem": 12,
+ "estilo": "epico",
+ "titulo": "POV: você é Napoleão na manhã de Waterloo",
+ "descricao": "POV na visão de Napoleão Bonaparte em 18 de junho de 1815, a manhã da batalha de Waterloo. Você vê tudo pelos olhos do imperador!",
+ "tags": [
+  "pov",
+  "napoleao",
+  "waterloo",
+  "1815",
+  "historia",
+  "visao do personagem"
+ ],
+ "cenas": [
+  {
+   "fala": "POV: eu sou Napoleão Bonaparte, e hoje decido o destino da Europa!",
+   "visuais": [
+    "first person view of an emperor on horseback looking over a misty battlefield at dawn, soldiers in blue coats, epic painting"
+   ],
+   "emocao": "surpreso",
+   "ano": "1815",
+   "destaques": [
+    "Napoleão"
+   ]
+  },
+  {
+   "fala": "É dezoito de junho, na Bélgica. Choveu a noite inteira e o chão virou lama.",
+   "visuais": [
+    "first person view of a muddy field after heavy rain, cannons stuck in mud, grey sky, dramatic painting"
+   ],
+   "emocao": "preocupado",
+   "ano": "18 JUN",
+   "destaques": [
+    "lama"
+   ]
+  },
+  {
+   "fala": "Espero o terreno secar um pouco para posicionar os canhões. Isso atrasa o ataque.",
+   "visuais": [
+    "first person view of an officer's gloved hand holding a spyglass, army camp in morning mist, painting"
+   ],
+   "emocao": "neutro",
+   "destaques": [
+    "atrasa"
+   ]
+  },
+  {
+   "fala": "Do outro lado, Wellington me espera com seu exército britânico.",
+   "visuais": [
+    "first person view across a battlefield toward red-coated british infantry lines on a ridge, smoke, epic painting"
+   ],
+   "emocao": "preocupado",
+   "destaques": [
+    "Wellington"
+   ]
+  },
+  {
+   "fala": "A batalha começa. Canhões rugem, a cavalaria avança, o chão treme!",
+   "visuais": [
+    "first person view in the middle of a napoleonic cavalry charge, horses galloping, smoke and fire, dynamic painting"
+   ],
+   "emocao": "surpreso",
+   "destaques": [
+    "avança"
+   ]
+  },
+  {
+   "fala": "Mas à tarde chegam os prussianos, e meu plano começa a desmoronar.",
+   "visuais": [
+    "first person view of prussian soldiers marching out of a forest on the flank of a battlefield, dusk, painting"
+   ],
+   "emocao": "preocupado",
+   "destaques": [
+    "prussianos"
+   ]
+  },
+  {
+   "fala": "Esse foi meu último dia de glória. Depois, só o exílio. Se você fosse eu, teria ganhado? Comenta!",
+   "visuais": [
+    "first person view of an exiled emperor looking at the sea from a rocky island, lonely, sunset, painting"
+   ],
+   "emocao": "preocupado",
+   "ano": "1821",
+   "destaques": [
+    "Comenta"
+   ]
+  }
+ ],
+ "formato": "pov"
+}

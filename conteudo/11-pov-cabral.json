@@ -1,0 +1,88 @@
+{
+ "id": "11-pov-cabral",
+ "ordem": 11,
+ "estilo": "sepia",
+ "titulo": "POV: você é Pedro Álvares Cabral e avista o Brasil pela primeira vez",
+ "descricao": "POV na visão de Pedro Álvares Cabral em 1500: o dia em que a frota portuguesa avistou terra. Você vê tudo pelos olhos dele!",
+ "tags": [
+  "pov",
+  "cabral",
+  "1500",
+  "descobrimento",
+  "historia do brasil",
+  "visao do personagem"
+ ],
+ "cenas": [
+  {
+   "fala": "POV: eu sou Pedro Álvares Cabral, e o mar não acaba nunca!",
+   "visuais": [
+    "first person view from the deck of a portuguese caravel, hands on the wooden railing, endless atlantic ocean, thirteen ships ahead, golden sunrise, painting"
+   ],
+   "emocao": "surpreso",
+   "ano": "1500",
+   "destaques": [
+    "Cabral"
+   ]
+  },
+  {
+   "fala": "Saímos de Lisboa em março, com treze navios e mais de mil homens.",
+   "visuais": [
+    "first person view looking at a crowded fleet of caravels leaving the Tagus river in Lisbon, crowds on the docks, painting"
+   ],
+   "emocao": "neutro",
+   "ano": "MAR",
+   "destaques": [
+    "treze"
+   ]
+  },
+  {
+   "fala": "A ordem do rei é chegar à Índia, mas os ventos me empurram para o oeste.",
+   "visuais": [
+    "first person view of a captain holding an old map and compass on a ship deck, wind in the sails, dramatic sky, painting"
+   ],
+   "emocao": "preocupado",
+   "destaques": [
+    "oeste"
+   ]
+  },
+  {
+   "fala": "Semanas só vendo água. Os homens já cochicham de medo.",
+   "visuais": [
+    "first person view of nervous sailors whispering on a ship deck at dusk, storm clouds, dark painting"
+   ],
+   "emocao": "preocupado"
+  },
+  {
+   "fala": "De repente, um marujo grita lá de cima: terra à vista!",
+   "visuais": [
+    "first person view looking up at a sailor on the mast pointing ahead, seagulls, bright sky, painting"
+   ],
+   "emocao": "surpreso",
+   "ano": "22 ABR",
+   "destaques": [
+    "terra"
+   ]
+  },
+  {
+   "fala": "Lá longe, um monte verde sobe do mar. É o Monte Pascoal, no atual sul da Bahia.",
+   "visuais": [
+    "first person view over the ship bow of a green mountain rising from the sea on the horizon, tropical coast, golden light, painting"
+   ],
+   "emocao": "feliz",
+   "destaques": [
+    "Monte Pascoal"
+   ]
+  },
+  {
+   "fala": "Eu ainda não sei, mas acabei de mudar a história de um país inteiro. E você, o que faria no meu lugar? Comenta!",
+   "visuais": [
+    "first person view of a portuguese captain stepping onto a tropical beach with palm trees, cinematic golden hour painting"
+   ],
+   "emocao": "feliz",
+   "destaques": [
+    "Comenta"
+   ]
+  }
+ ],
+ "formato": "pov"
+}
