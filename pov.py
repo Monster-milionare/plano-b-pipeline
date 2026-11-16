@@ -12,7 +12,7 @@ from PIL import Image, ImageDraw
 W, H = 1080, 1920
 F_CAM = 1700.0           # distancia focal da camera virtual
 CARD_W, CARD_H = 940, 1180
-CARD_CY = int(H * 0.45)
+CARD_CY = int(H * 0.41)
 DUR_TRANS = 0.65
 
 MOV_3D = ["push", "dolly", "orbit_l", "orbit_r", "pull"]

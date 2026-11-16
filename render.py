@@ -414,14 +414,14 @@ def render_video(conteudo: dict, out_path: Path, estilo_nome: str | None = None,
             spr = _chunk_sprite(tuple(x[0] for x in bl), ativa, estilo.legenda_forte, estilo.legenda_alt, 104)
             pop = 1.0 + 0.12 * max(0.0, 1 - (t - bl[ativa][1]) / 0.12)
             im = spr if pop < 1.01 else spr.resize((int(spr.width * pop), int(spr.height * pop)), Image.BILINEAR)
-            _blit(frame, im, (W - im.width) // 2, int(H * (0.745 if (pov_ctx and pov_ctx.modos[ci] == 'slide') else 0.60)) - im.height // 2)
+            _blit(frame, im, (W - im.width) // 2, int(H * (0.77 if (pov_ctx and pov_ctx.modos[ci] == 'slide') else 0.60)) - im.height // 2)
 
         # mascote Tic
         fala_ci = ci
         lado_dir = (ci % 2 == 1)
         amp = float(env[min(fi, len(env) - 1)]) if fi < len(env) else 0.0
         em = cenas[fala_ci].get("emocao", "neutro")
-        spr = mascote.sprite(t + ci, amp ** 0.8, amp > 0.12, em, altura=(400 if (pov_ctx and pov_ctx.modos[ci] == 'slide') else 520))
+        spr = mascote.sprite(t + ci, amp ** 0.8, amp > 0.12, em, altura=(330 if (pov_ctx and pov_ctx.modos[ci] == 'slide') else 520))
         t_cena = t - tempos_cena[ci][0]
         entra = min(1.0, max(0.0, t_cena / 0.35))
         quica = 1 + 0.18 * math.sin(entra * math.pi) if entra < 1 else 1.0
