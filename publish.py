@@ -6,6 +6,7 @@ Uso:
   python publish.py --max 2         # ate 2
   python publish.py --id 03-einstein-newton
   python publish.py --dry-run       # renderiza e NAO envia (teste)
+  python publish.py --id 01-brasil-ingles --so-instagram   # re-renderiza e posta SO no Instagram (video ja no YouTube)
 O que ja foi publicado fica em state/publicados.json; o que foi medido em state/videos.json.
 """
 import argparse
@@ -76,11 +77,51 @@ def registrar(c: dict, video_id: str, estilo: str, agora_iso: str, ig_id=None):
     VIDEOS.write_text(json.dumps(vids, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
+def _legenda_ig(c: dict) -> str:
+    return (f"{c['titulo']}\n\nSegue @planobdahistoria pra mais histórias alternativas! Comenta qual quer ver.\n\n"
+            f"#historia #historiaalternativa #eseo #curiosidades #brasil")
+
+
+def _so_instagram(fila: list, a) -> int:
+    """Re-renderiza o video (o mesmo estilo do YouTube) e posta apenas no Instagram."""
+    import instagram
+    pubs = _ler(PUB, [])
+    vids = {d["item_id"]: d for d in _ler(VIDEOS, [])}
+    erros = 0
+    for c in fila[: a.max]:
+        ja = next((d for d in pubs if d["id"] == c["id"]), None)
+        if not ja:
+            print(f"[publish] {c['id']} ainda nao esta no YouTube - use o fluxo normal.")
+            erros += 1
+            continue
+        if ja.get("instagram"):
+            print(f"[publish] {c['id']} ja esta no Instagram ({ja['instagram']}) - nada a fazer.")
+            continue
+        estilo = c.get("estilo") or (vids.get(c["id"]) or {}).get("estilo") or estilos.sortear(c["id"], evitar=None)
+        saida = config.OUT_DIR / f"{c['id']}.mp4"
+        print(f"[publish] (so IG) {c['id']} | estilo={estilo}", flush=True)
+        try:
+            render.render_video(c, saida, estilo)
+        except Exception as exc:
+            print(f"[publish] render falhou: {exc!r}")
+            erros += 1
+            continue
+        ig = instagram.postar(saida, _legenda_ig(c))
+        if not ig:
+            erros += 1
+            continue
+        ja["instagram"] = ig
+        PUB.write_text(json.dumps(pubs, ensure_ascii=False, indent=1), encoding="utf-8")
+        print(f"[publish] Instagram OK: {ig}", flush=True)
+    return 1 if erros else 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--id")
     ap.add_argument("--max", type=int, default=1)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--so-instagram", action="store_true", help="posta so no Instagram um video ja publicado no YouTube")
     a = ap.parse_args()
 
     fila = pendentes()
@@ -91,6 +132,9 @@ def main() -> int:
     if not fila:
         print("[publish] nada pendente - gere mais roteiros (roteirista.py).")
         return 0
+
+    if a.so_instagram:
+        return _so_instagram(fila, a)
 
     vids = _ler(VIDEOS, [])
     ultimo_estilo = vids[-1]["estilo"] if vids else None
@@ -128,8 +172,7 @@ def main() -> int:
         except Exception as exc:
             print(f"[publish] thumbnail pulada: {str(exc)[:160]}", flush=True)
         import instagram
-        legenda = f"{c['titulo']}\n\nSegue @planobdahistoria pra mais histórias alternativas! Comenta qual quer ver.\n\n#historia #historiaalternativa #eseo #curiosidades #brasil"
-        ig = instagram.postar(saida, legenda)
+        ig = instagram.postar(saida, _legenda_ig(c))
         registrar(c, vid, estilo, datetime.now(timezone.utc).isoformat(timespec="seconds"), ig)
     return 1 if erros and not a.dry_run and erros == len(fila[: a.max]) else 0
 
