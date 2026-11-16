@@ -1,0 +1,7 @@
+[render] cena 0.0 imagem=pollinations
+[render] cena 1.0 imagem=pollinations
+[render] cena 2.0 imagem=pollinations
+[render] cena 3.0 imagem=pollinations
+[render] cena 4.0 imagem=pollinations-curto
+[render] cena 5.0 imagem=pollinations-curto
+[render] cena 6.0 imagem=pollinations
