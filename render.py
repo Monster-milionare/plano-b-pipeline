@@ -23,7 +23,9 @@ import estilos
 import imagens
 import mascote
 import musica
+import musica_real
 import parallax
+import pov
 import tts
 
 W, H, FPS = config.W, config.H, config.FPS
@@ -240,7 +242,7 @@ def _blocos_legenda(palavras):
     return blocos
 
 
-def _planejar_planos(cenas, tempos_cena, estilo, rng):
+def _planejar_planos(cenas, tempos_cena, estilo, rng, pov_ctx=None):
     """Cada cena -> planos (inicio, fim, indice_visual, movimento, forca)."""
     planos = []
     ultimo_mov = None
@@ -255,11 +257,12 @@ def _planejar_planos(cenas, tempos_cena, estilo, rng):
             n = max(1, round(span / estilo.corte))
             limites = [a + span * k / n for k in range(n + 1)]
             for k in range(n):
-                opcoes = [m for m in parallax.MOVIMENTOS if m != ultimo_mov]
+                base_mov = pov_ctx.movimentos(ci) if pov_ctx else parallax.MOVIMENTOS
+                opcoes = [m for m in base_mov if m != ultimo_mov] or list(base_mov)
                 mov = rng.choice(opcoes)
                 ultimo_mov = mov
                 planos.append({"ini": limites[k], "fim": limites[k + 1], "visual": (ci, vi),
-                               "mov": mov, "forca": rng.uniform(0.85, 1.25), "nova_cena": k == 0 and vi == 0})
+                               "mov": mov, "forca": (pov_ctx.forca(ci, rng.uniform(0.85, 1.25)) if pov_ctx else rng.uniform(0.85, 1.25)), "nova_cena": k == 0 and vi == 0})
     planos[-1]["fim"] = max(planos[-1]["fim"], tempos_cena[-1][1])
     return planos
 
@@ -297,7 +300,8 @@ def render_video(conteudo: dict, out_path: Path, estilo_nome: str | None = None,
     nframes = int(total * FPS)
 
     # 2) planos e imagens
-    planos = _planejar_planos(cenas, tempos_cena, estilo, rng)
+    pov_ctx = pov.Pov(cenas, estilo, _fonte) if conteudo.get("formato") == "pov" else None
+    planos = _planejar_planos(cenas, tempos_cena, estilo, rng, pov_ctx)
     fontes = {}
 
     def carregar(ci, vi):
@@ -315,7 +319,11 @@ def render_video(conteudo: dict, out_path: Path, estilo_nome: str | None = None,
 
     # 3) ffmpeg (pipe de quadros)
     music_wav = work / "musica.wav"
-    musica.gerar(total + 2, estilo.musica, str(music_wav), seed=hash_seed(conteudo["id"], 9, 9))
+    segmentos = musica_real.plano_por_cenas(cenas, tempos_cena, estilo.musica)
+    faixas = musica_real.gerar(total + 1, segmentos, str(music_wav), seed=hash_seed(conteudo["id"], 9, 9))
+    if faixas is None:
+        print("[render] trilha real indisponivel - usando a sintetizada", flush=True)
+        musica.gerar(total + 2, estilo.musica, str(music_wav), seed=hash_seed(conteudo["id"], 9, 9))
     video_tmp = work / "video.mp4"
     proc = subprocess.Popen(
         ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
@@ -327,7 +335,7 @@ def render_video(conteudo: dict, out_path: Path, estilo_nome: str | None = None,
     destaques = {re.sub(r"\W", "", d.lower()) for c in cenas for d in c.get("destaques", [])}
     bloco_idx, plano_idx, cena_atual = 0, 0, -1
     ano_ate, ano_txt = -1.0, ""
-    titulo_spr = _titulo_sprite(conteudo["titulo"])
+    titulo_spr = _titulo_sprite(conteudo.get("titulo_curto") or conteudo["titulo"])
     formato = {"e-se": "E SE...?", "voce-acorda": "VOCÊ ACORDA EM...", "quem-venceria": "QUEM VENCERIA?", "pov": "POV"}.get(
         conteudo.get("formato", "e-se"), "PLANO B")
     chip = _chip(formato, (255, 214, 10))
@@ -355,7 +363,7 @@ def render_video(conteudo: dict, out_path: Path, estilo_nome: str | None = None,
         frame = parallax.quadro(fonte, dep, pl["mov"], u, pl["forca"], punch)
         frame = _grade(frame, estilo.grade)
         # glitch RGB / flash no corte
-        if dt_corte < 0.15:
+        if dt_corte < 0.15 and not (pov_ctx and pov_ctx.modos[ci] == "slide"):
             if estilo.glitch:
                 d = int(14 * (1 - dt_corte / 0.15))
                 frame[:, :, 0] = np.roll(frame[:, :, 0], d, axis=1)
@@ -364,6 +372,8 @@ def render_video(conteudo: dict, out_path: Path, estilo_nome: str | None = None,
             if fl > 0:
                 frame = cv2.addWeighted(frame, 1 - fl * 0.5, np.full_like(frame, 255), fl * 0.5, 0)
         frame = cv2.multiply(frame, vig, scale=1 / 255.0)
+        if pov_ctx:
+            frame = pov_ctx.compor(frame, ci, t, tempos_cena[ci][0])
         if estilo.grao > 0.015:
             frame = _grao(frame, estilo.grao, fi)
 
@@ -404,14 +414,14 @@ def render_video(conteudo: dict, out_path: Path, estilo_nome: str | None = None,
             spr = _chunk_sprite(tuple(x[0] for x in bl), ativa, estilo.legenda_forte, estilo.legenda_alt, 104)
             pop = 1.0 + 0.12 * max(0.0, 1 - (t - bl[ativa][1]) / 0.12)
             im = spr if pop < 1.01 else spr.resize((int(spr.width * pop), int(spr.height * pop)), Image.BILINEAR)
-            _blit(frame, im, (W - im.width) // 2, int(H * 0.60) - im.height // 2)
+            _blit(frame, im, (W - im.width) // 2, int(H * (0.745 if (pov_ctx and pov_ctx.modos[ci] == 'slide') else 0.60)) - im.height // 2)
 
         # mascote Tic
         fala_ci = ci
         lado_dir = (ci % 2 == 1)
         amp = float(env[min(fi, len(env) - 1)]) if fi < len(env) else 0.0
         em = cenas[fala_ci].get("emocao", "neutro")
-        spr = mascote.sprite(t + ci, amp ** 0.8, amp > 0.12, em, altura=520)
+        spr = mascote.sprite(t + ci, amp ** 0.8, amp > 0.12, em, altura=(400 if (pov_ctx and pov_ctx.modos[ci] == 'slide') else 520))
         t_cena = t - tempos_cena[ci][0]
         entra = min(1.0, max(0.0, t_cena / 0.35))
         quica = 1 + 0.18 * math.sin(entra * math.pi) if entra < 1 else 1.0
@@ -431,11 +441,11 @@ def render_video(conteudo: dict, out_path: Path, estilo_nome: str | None = None,
     proc.wait()
 
     # 4) mistura de audio: voz + musica (ducking leve)
-    vol_m = {"epica": 0.20, "misteriosa": 0.22, "tensa": 0.18, "leve": 0.22}[estilo.musica]
+    vol_m = 1.0 if faixas else {"epica": 0.20, "misteriosa": 0.22, "tensa": 0.18, "leve": 0.22}[estilo.musica]
     subprocess.run(
         ["ffmpeg", "-y", "-loglevel", "error", "-i", str(video_tmp), "-i", str(work / "voz.wav"), "-i", str(music_wav),
          "-filter_complex",
-         f"[1:a]volume=1.35,apad,asplit=2[v1][v2];[2:a]volume={vol_m}[m];[m][v1]sidechaincompress=threshold=0.02:ratio=6:attack=20:release=300[md];"
+         f"[1:a]volume=1.35,aresample=44100,aformat=channel_layouts=stereo,apad,asplit=2[v1][v2];[2:a]aresample=44100,aformat=channel_layouts=stereo,volume={vol_m}[m];[m][v1]sidechaincompress=threshold=0.02:ratio=6:attack=20:release=300[md];"
          f"[v2][md]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.95[a]",
          "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "160k", "-t", f"{total:.2f}",
          str(out_path)], check=True)

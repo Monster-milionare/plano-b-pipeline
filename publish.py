@@ -119,6 +119,14 @@ def main() -> int:
             erros += 1
             continue
         print(f"[publish] YouTube OK: https://youtube.com/shorts/{vid}", flush=True)
+        try:
+            import thumb
+            import upload as _up
+            th = thumb.gerar(c, estilo, config.OUT_DIR / f"{c['id']}_thumb.jpg")
+            _up.set_thumbnail(vid, th)
+            print("[publish] thumbnail customizada enviada", flush=True)
+        except Exception as exc:
+            print(f"[publish] thumbnail pulada: {str(exc)[:160]}", flush=True)
         import instagram
         legenda = f"{c['titulo']}\n\nSegue @planobdahistoria pra mais histórias alternativas! Comenta qual quer ver.\n\n#historia #historiaalternativa #eseo #curiosidades #brasil"
         ig = instagram.postar(saida, legenda)

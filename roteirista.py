@@ -22,7 +22,9 @@ Regras OBRIGATORIAS:
 - Nada de tracos longos, emojis ou asteriscos.
 - 6 a 8 cenas. Cada cena: "fala" (1 a 2 frases), "visuais" (lista com 1 ou 2 descricoes em INGLES, concretas, de uma imagem vertical, sem texto escrito na imagem), "emocao" (neutro|feliz|surpreso|preocupado), opcional "ano" (curto, ex "1500", "22 ABR"), "destaques" (1 a 3 palavras da fala que merecem enfase).
 - Se o formato for "pov": narre em PRIMEIRA PESSOA, como se o espectador fosse o personagem do titulo ("Eu sou ...", "Eu sinto ..."). Cada descricao em "visuais" deve comecar com "first person view" (camera na visao do personagem, maos ou objetos do personagem em primeiro plano). Termine perguntando o que o espectador faria no lugar do personagem.
-Responda SOMENTE com JSON valido: {{"descricao": "...", "tags": ["..."], "cenas": [ ... ]}}"""
+- Inclua "thumb_texto" (gancho de 2 a 4 palavras em MAIUSCULAS para a thumbnail, que gere curiosidade, ex "BRASIL INGLES?!") e "titulo_curto" (ate 24 caracteres, MAIUSCULAS, para o cartao de abertura).
+- No formato "pov", cada cena pode ter "modo": "3d" (cena imersiva, camera dentro do personagem, para chegadas, perigos e viradas) ou "slide" (cena de explicacao); alterne os dois.
+Responda SOMENTE com JSON valido: {{"descricao": "...", "tags": ["..."], "thumb_texto": "...", "titulo_curto": "...", "cenas": [ ... ]}}"""
 
 
 def _slug(t: str) -> str:
@@ -98,7 +100,8 @@ def main() -> int:
         return 0
     ordem = 1 + max([json.loads(p.read_text(encoding="utf-8")).get("ordem", 0) for p in config.CONTEUDO_DIR.glob("*.json")] or [0])
     c = {"id": f"{ordem:02d}-{_slug(titulo)}", "ordem": ordem, "formato": fmt, "titulo": titulo,
-         "descricao": d.get("descricao", titulo), "tags": d.get("tags", []), "cenas": d["cenas"]}
+         "descricao": d.get("descricao", titulo), "tags": d.get("tags", []), "cenas": d["cenas"],
+         "thumb_texto": d.get("thumb_texto", ""), "titulo_curto": d.get("titulo_curto", "")}
     (config.CONTEUDO_DIR / f"{c['id']}.json").write_text(json.dumps(c, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"[roteirista] novo roteiro: {c['id']}")
     return 0
