@@ -1,0 +1,30 @@
+e-se|E se os dinossauros nunca tivessem sido extintos?
+e-se|E se Cleópatra tivesse vencido Roma?
+e-se|E se a Segunda Guerra nunca tivesse acontecido?
+e-se|E se o Brasil nunca tivesse tido a escravidão?
+e-se|E se Alexandre, o Grande, tivesse vivido mais 30 anos?
+e-se|E se o Titanic não tivesse afundado?
+e-se|E se os astecas tivessem vencido os espanhóis?
+e-se|E se a Biblioteca de Alexandria nunca tivesse queimado?
+e-se|E se Dom Pedro I tivesse ficado em Portugal?
+e-se|E se o homem nunca tivesse chegado à Lua?
+e-se|E se Gutenberg nunca tivesse inventado a imprensa?
+e-se|E se o Egito Antigo tivesse descoberto a eletricidade?
+e-se|E se a Peste Negra nunca tivesse existido?
+e-se|E se Santos Dumont tivesse patenteado o avião?
+e-se|E se os vikings tivessem colonizado a América?
+e-se|E se a Revolução Industrial tivesse começado no Brasil?
+voce-acorda|Você acorda em 1969 e assiste ao pouso na Lua ao vivo
+voce-acorda|Você acorda no Egito de Cleópatra
+voce-acorda|Você acorda em Tenochtitlan, a capital dos astecas
+voce-acorda|Você acorda no Rio de Janeiro de 1808, com a chegada da corte portuguesa
+voce-acorda|Você acorda na Roma de Júlio César no dia dos Idos de Março
+voce-acorda|Você acorda no Titanic uma hora antes do choque
+voce-acorda|Você acorda em Paris durante a Revolução Francesa
+voce-acorda|Você acorda em Canudos em 1897
+quem-venceria|Quem venceria: Vikings vs Samurais
+quem-venceria|Quem venceria: Exército de Alexandre vs Exército Romano
+quem-venceria|Quem venceria: um cavaleiro medieval vs um soldado moderno
+quem-venceria|Quem venceria: Cleópatra vs Napoleão numa corrida de estratégia
+quem-venceria|Quem venceria: Brasil de 1500 vs Portugal de 1500
+quem-venceria|Quem venceria: Mongóis de Gengis Khan vs Império Romano
