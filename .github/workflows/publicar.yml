@@ -37,6 +37,11 @@ jobs:
           python-version: "3.11"
           cache: pip
 
+      - name: Garantir ffmpeg (a imagem do runner pode nao trazer)
+        run: |
+          which ffmpeg >/dev/null 2>&1 || (sudo apt-get update -y -qq && sudo apt-get install -y -qq ffmpeg)
+          ffmpeg -version | head -1
+
       - run: pip install -r requirements.txt
 
       - name: Profundidade por IA (opcional; cai na heuristica se falhar)
