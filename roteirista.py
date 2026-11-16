@@ -21,6 +21,7 @@ Regras OBRIGATORIAS:
 - Escreva numeros por extenso quando forem falados (ex: "mil quatrocentos e noventa e quatro"), mas o campo "ano" pode ter digitos.
 - Nada de tracos longos, emojis ou asteriscos.
 - 6 a 8 cenas. Cada cena: "fala" (1 a 2 frases), "visuais" (lista com 1 ou 2 descricoes em INGLES, concretas, de uma imagem vertical, sem texto escrito na imagem), "emocao" (neutro|feliz|surpreso|preocupado), opcional "ano" (curto, ex "1500", "22 ABR"), "destaques" (1 a 3 palavras da fala que merecem enfase).
+- Se o formato for "pov": narre em PRIMEIRA PESSOA, como se o espectador fosse o personagem do titulo ("Eu sou ...", "Eu sinto ..."). Cada descricao em "visuais" deve comecar com "first person view" (camera na visao do personagem, maos ou objetos do personagem em primeiro plano). Termine perguntando o que o espectador faria no lugar do personagem.
 Responda SOMENTE com JSON valido: {{"descricao": "...", "tags": ["..."], "cenas": [ ... ]}}"""
 
 

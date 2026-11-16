@@ -328,7 +328,7 @@ def render_video(conteudo: dict, out_path: Path, estilo_nome: str | None = None,
     bloco_idx, plano_idx, cena_atual = 0, 0, -1
     ano_ate, ano_txt = -1.0, ""
     titulo_spr = _titulo_sprite(conteudo["titulo"])
-    formato = {"e-se": "E SE...?", "voce-acorda": "VOCÊ ACORDA EM...", "quem-venceria": "QUEM VENCERIA?"}.get(
+    formato = {"e-se": "E SE...?", "voce-acorda": "VOCÊ ACORDA EM...", "quem-venceria": "QUEM VENCERIA?", "pov": "POV"}.get(
         conteudo.get("formato", "e-se"), "PLANO B")
     chip = _chip(formato, (255, 214, 10))
 

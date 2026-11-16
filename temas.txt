@@ -28,3 +28,11 @@ quem-venceria|Quem venceria: um cavaleiro medieval vs um soldado moderno
 quem-venceria|Quem venceria: Cleópatra vs Napoleão numa corrida de estratégia
 quem-venceria|Quem venceria: Brasil de 1500 vs Portugal de 1500
 quem-venceria|Quem venceria: Mongóis de Gengis Khan vs Império Romano
+pov|POV: você é Cleópatra recebendo César no palácio de Alexandria
+pov|POV: você é Alexandre, o Grande, cruzando o rio na batalha de Gaugamela
+pov|POV: você é Tiradentes a caminho da forca em 1792
+pov|POV: você é a Princesa Isabel assinando a Lei Áurea
+pov|POV: você é Neil Armstrong descendo a escada da Apollo 11
+pov|POV: você é Cristóvão Colombo avistando terra em 1492
+pov|POV: você é Dom João VI chegando ao Rio de Janeiro em 1808
+pov|POV: você é um soldado romano na batalha de Cannae
