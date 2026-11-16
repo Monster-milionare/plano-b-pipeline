@@ -37,6 +37,7 @@ def _decodificar(conteudo: bytes):
 
 
 _FALHAS_SEGUIDAS = 0
+_ULTIMA = {}
 
 
 def _pollinations(prompt: str, seed: int):
@@ -209,8 +210,15 @@ def obter(visual: str, estilo, seed: int):
         prompt = f"{visual}, {estilo.estilo_img}, {BASE_PROMPT}"
         rgb = _pollinations(prompt, seed)
         origem = "pollinations"
+        if rgb is None:     # 2a chance: prompt curto e outra semente
+            curto = " ".join(visual.split()[:7])
+            rgb = _pollinations(f"{curto}, {estilo.estilo_img}, vertical", seed + 7919)
+            origem = "pollinations-curto"
     if rgb is not None:
+        _ULTIMA["rgb"] = rgb
         cv2.imwrite(str(arq), cv2.cvtColor(rgb, cv2.COLOR_RGB2BGR))
         return rgb, None, origem
+    if _ULTIMA.get("rgb") is not None:   # reaproveita a imagem anterior (camera diferente)
+        return _ULTIMA["rgb"], None, "reuso"
     rgb, dep = arte_procedural(visual, estilo.grade, seed)
     return rgb, dep, "procedural"
