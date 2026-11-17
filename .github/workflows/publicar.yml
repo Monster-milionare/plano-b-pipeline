@@ -4,6 +4,8 @@ on:
   schedule:
     - cron: "17 13 * * *"   # ~10h Brasilia
     - cron: "43 21 * * *"   # ~18h40 Brasilia
+    - cron: "47 14 * * *"   # reforco da manha (o GitHub as vezes pula execucoes agendadas)
+    - cron: "13 23 * * *"   # reforco da noite
   workflow_dispatch:
     inputs:
       id:
@@ -73,6 +75,7 @@ jobs:
         run: |
           printf '%s' "$YOUTUBE_TOKEN_JSON" > token.json
           ARGS=""
+          if [ "${{ github.event_name }}" = "schedule" ]; then ARGS="--se-nao-publicou-ha 3"; fi
           if [ -n "${{ github.event.inputs.id }}" ]; then ARGS="--id ${{ github.event.inputs.id }}"; fi
           if [ "${{ github.event.inputs.so_instagram }}" = "true" ]; then ARGS="$ARGS --so-instagram"; fi
           set +e
