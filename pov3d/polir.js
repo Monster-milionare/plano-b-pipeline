@@ -15,7 +15,7 @@ function passe(frag, uniforms) {
 }
 const _pBright = passe(`varying vec2 vUv; uniform sampler2D tex; uniform vec2 px;
   void main(){ vec3 c = texture2D(tex, vUv + px*vec2(-1.5,-1.5)).rgb + texture2D(tex, vUv + px*vec2(1.5,-1.5)).rgb + texture2D(tex, vUv + px*vec2(-1.5,1.5)).rgb + texture2D(tex, vUv + px*vec2(1.5,1.5)).rgb; c *= 0.25;
-    float l = max(c.r, max(c.g, c.b)); float k = smoothstep(0.5, 0.95, l); gl_FragColor = vec4(c * k, 1.0); }`, {tex: {value: null}, px: {value: new THREE.Vector2(1 / W, 1 / H)}});
+    float l = max(c.r, max(c.g, c.b)); float k = smoothstep(0.62, 1.0, l); gl_FragColor = vec4(c * k, 1.0); }`, {tex: {value: null}, px: {value: new THREE.Vector2(1 / W, 1 / H)}});
 const _blurFrag = `varying vec2 vUv; uniform sampler2D tex; uniform vec2 dir;
   void main(){ vec3 c = texture2D(tex, vUv).rgb * 0.227027; c += (texture2D(tex, vUv + dir*1.3846).rgb + texture2D(tex, vUv - dir*1.3846).rgb) * 0.316216; c += (texture2D(tex, vUv + dir*3.2308).rgb + texture2D(tex, vUv - dir*3.2308).rgb) * 0.070270; gl_FragColor = vec4(c, 1.0); }`;
 const _pBlur = passe(_blurFrag, {tex: {value: null}, dir: {value: new THREE.Vector2()}});
@@ -36,7 +36,7 @@ const _pFinal = passe(`varying vec2 vUv; uniform sampler2D tex; uniform sampler2
     cc = mix(cc, sm, aa);
     vec3 c = vec3(texture2D(tex, vUv + ca).r * 0.0 + cc.r, cc.g, cc.b);
     vec3 b = texture2D(bloom, vUv).rgb;
-    c += b * 0.42;
+    c += b * 0.30;
     c = mix(c, aces(c * 1.18), 0.35);
     float l = dot(c, vec3(0.299, 0.587, 0.114));
     c = mix(vec3(l), c, 1.04);                                  // saturacao

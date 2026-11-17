@@ -160,7 +160,14 @@ function stdCams(a, P, alvo, slots) {
 }
 window.camsDe = nome => Object.keys(amb[nome].cams);
 
+window.setQuadro = function (linhas) {
+  const cv = quadroTex.image, g = cv.getContext('2d'), w = cv.width, h = cv.height;
+  g.fillStyle = '#10202e'; g.fillRect(0, 0, w, h); g.strokeStyle = '#7fe0ff'; g.lineWidth = 3; g.strokeRect(8, 8, w - 16, h - 16);
+  g.fillStyle = '#9ff0ff'; g.font = 'bold 40px monospace'; linhas.slice(0, 5).forEach((t, i) => g.fillText(t, 26, 62 + i * 56));
+  quadroTex.needsUpdate = true;
+};
 window.setElenco = function (spec) {
+  if (spec.quadro) window.setQuadro(spec.quadro);
   for (const k in amb) {
     const a = amb[k]; if (!a.slots) continue;
     for (const c of a.chars) a.g.remove(c); a.chars.length = 0;

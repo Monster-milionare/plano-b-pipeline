@@ -308,7 +308,7 @@ const PROTO_ROT = (dx, dz) => Math.atan2(dx, dz);
 
 // ---- 3) CABINE do capitao (carta de Caminha) ----
 (function () {
-  const a = novoAmb('cabine', {hemiCeu: 0x7a5a3a, hemiChao: 0x20150c, hemiInt: 0.9, pontoCor: 0xffc060, pontoInt: 13, pontoDist: 12, pontoPos: [0, 2.8, -1.5],
+  const a = novoAmb('cabine', {hemiCeu: 0x7a5a3a, hemiChao: 0x20150c, hemiInt: 0.8, pontoCor: 0xffc060, pontoInt: 7, pontoDist: 12, pontoPos: [0, 2.8, -1.5],
     dirCor: 0xffd9a0, dirInt: 0.25, dirPos: [3, 6, 4], fundo: 0x120c08, nevoa: [0x120c08, 8, 26], ceu: [0x120c08, 0x120c08, 0x120c08], semEstrelas: true});
   a.g.position.x = 600;
   mesh(new THREE.BoxGeometry(9, 0.3, 9), M(0x6b4423), 0, -0.15, -2, a.g).receiveShadow = true;
