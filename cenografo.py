@@ -25,7 +25,7 @@ PERFIS = {
                      amb={"palacio": ["rei", "cidada", "cidadao"]}, ambientes=["campo", "cidade", "palacio"]),
     "ciencia": dict(kw=["einstein", "newton", "gravidade", "relatividade", "cientista", "fisica"], prot="einstein", f=["newton", "cientista", "cidadao2"],
                     ambientes=["laboratorio", "cidade", "campo"]),
-    "apollo": dict(kw=["apollo", "lua", "astronauta", "armstrong", "foguete", "1969", "nasa"], prot="astronauta", f=["astronauta", "cientista", "astronauta"],
+    "apollo": dict(quadro=["HOUSTON: APOLLO 11", "T-00:03:00", "ALARME 1202", "COMBUSTIVEL BAIXO"], kw=["apollo", "lua", "astronauta", "armstrong", "foguete", "1969", "nasa"], prot="astronauta", f=["astronauta", "cientista", "astronauta"],
                    amb={"laboratorio": ["cientista", "cientista", "cidadao2"], "cidade": ["cidadao", "cidada", "cidadao2"]}, ambientes=["lua", "laboratorio", "cidade"]),
     "dumont": dict(kw=["santos dumont", "14-bis", "aviao", "aviador", "voo"], prot="aviador", f=["cidadao", "cidada", "cidadao2"], ambientes=["aerodromo", "cidade", "campo"]),
     "holandes": dict(kw=["holand", "nassau", "mauricio de nassau"], prot="soldado-holandes", f=["marujo", "nativo", "soldado-holandes"],
@@ -122,6 +122,8 @@ def preparar(c: dict, semente: str | None = None) -> dict:
 
     if "elenco" not in c:
         c["elenco"] = {"prot": perfil["prot"], "f": perfil["f"], "amb": perfil.get("amb", {})}
+        if perfil.get("quadro"):
+            c["elenco"]["quadro"] = perfil["quadro"]
 
     n = len(c["cenas"])
     anterior, seguidos, ciclo = None, 0, 0

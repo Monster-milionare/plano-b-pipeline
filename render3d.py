@@ -139,7 +139,7 @@ def render_pov3d(conteudo: dict, out_path: Path, estilo_nome: str | None = None,
 
     vig = R._vinheta(0.55)
     palavra_inicios = np.array([p[1] for p in palavras])
-    ep = conteudo.get("episodio") or {"e-se": "E SE...?", "voce-acorda": "VOCÊ ACORDA EM...", "quem-venceria": "QUEM VENCERIA?",
+    ep = conteudo.get("episodio") or {"e-se": "E SE...?", "voce-acorda": "VOCÊ ACORDA EM...", "quem-venceria": "QUEM VENCERIA?", "debate": "QUEM TEM RAZÃO?",
                                        "pov": "POV"}.get(conteudo.get("formato", "e-se"), "PLANO B")
     barra = _barra_ep(ep, conteudo.get("titulo_curto") or conteudo["titulo"])
     uis = [(tempos_cena[i], c["ui"]) for i, c in enumerate(cenas) if c.get("ui")]

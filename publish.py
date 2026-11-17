@@ -57,7 +57,8 @@ def pendentes() -> list:
 
 
 def _descricao(c: dict) -> str:
-    return (f"{c['descricao']}\n\nSe inscreva no Plano B da História: toda semana, um \"e se...\" que muda o mundo.\n"
+    fixo = c.get("comentario_fixado")
+    return ((f"{fixo}\n\n" if fixo else "") + f"{c['descricao']}\n\nSe inscreva no Plano B da História: toda semana, um \"e se...\" que muda o mundo.\n"
             f"Comente qual história alternativa você quer ver no próximo vídeo!\n\n"
             f"Conteúdo especulativo e educativo: os fatos citados são históricos, as hipóteses são imaginação.\n\n{HASHTAGS}")
 
@@ -66,7 +67,8 @@ def _enviar_youtube(video: Path, c: dict) -> str:
     import upload
     from googleapiclient.errors import HttpError
     try:
-        return upload.upload_video(video, c["titulo"][:92] + " #shorts" if len(c["titulo"]) <= 92 else c["titulo"][:100],
+        tit = (c.get("titulo_youtube") or c["titulo"]).strip()
+        return upload.upload_video(video, tit[:92] + " #shorts" if len(tit) <= 92 else tit[:100],
                                    _descricao(c), c.get("tags", []) + ["shorts"], None, True)
     except HttpError as exc:
         if "quota" in str(exc).lower() or "uploadLimitExceeded" in str(exc):
