@@ -29,15 +29,19 @@ REGRAS DE VERDADE (nao negociaveis):
 - Numeros falados por extenso na fala; o campo "ano" pode ter digitos.
 - Sem tracos longos, emojis, asteriscos, hashtags.
 
-CENAS: 7 a 9 cenas. Cada cena: "fala" (1 a 2 frases), "emocao" (neutro|feliz|surpreso|preocupado|misterioso), opcional "ano", "destaques" (1 a 3 palavras da fala para enfatizar na legenda), "visuais" (lista com 1 descricao curta em INGLES). Opcional "cenario" com um destes: conves, terra, cabine, palacio, cidade, cidade-antiga, campo, laboratorio, lua, arena, deserto, aerodromo, selva (use quando o lugar for obvio).
+CENAS: 7 a 9 cenas. Cada cena: "fala" (1 a 2 frases, o texto completo da cena), "emocao" (neutro|feliz|surpreso|preocupado|misterioso), opcional "ano", "destaques" (1 a 3 palavras da fala para enfatizar na legenda), "visuais" (lista com 1 descricao curta em INGLES). Opcional "cenario" com um destes: conves, terra, cabine, palacio, cidade, cidade-antiga, campo, laboratorio, lua, arena, deserto, aerodromo, selva (use quando o lugar for obvio). Opcional "hora" (dia, manha, amanhecer, tarde, entardecer, noite, madrugada): o CEU do video segue isso, entao se a fala diz "na manha seguinte" ou "a noite", ponha a hora certa (se a fala ja cita a hora, o sistema deduz sozinho).
+- DIVISAO DE FALAS (obrigatorio): cada cena traz tambem "falas": lista de {{"quem": "narrador"|"prot"|"f0"|"f1"|"f2", "texto": "..."}}. O NARRADOR conta e contextualiza; os PERSONAGENS falam em primeira pessoa, com frases curtas de ate 10 palavras ("prot" = o protagonista, "f0/f1/f2" = os outros bonecos da cena). Pelo menos 3 cenas devem ter fala de personagem, alternando quem fala, como um mini dialogo. O campo "fala" tem que ser exatamente todos os "texto" juntos, em ordem. Cada voz e diferente, entao nao ponha duas falas seguidas do mesmo "quem" sem necessidade.
+- CONTINUIDADE (voce sera reprovado se errar): o lugar, a hora do dia, a epoca e quem esta na cena tem que bater com a fala. "Manha seguinte" nao pode ser de noite; ninguem usa objeto que ainda nao existia; quem morreu nao fala.
+- Se o formato for "escolha": o espectador decide o destino. A ultima cena apresenta DUAS opcoes concretas e opostas e pede o voto: "Comenta A para <opcao A> ou B para <opcao B>". O proximo episodio segue a opcao mais votada, entao diga isso ("a mais votada vira o proximo episodio"). Narre em primeira pessoa, com perigo ou decisao iminente.
+- Se o formato for "futuro": o espectador acorda no ano indicado (ex.: 2100) no meio da sociedade; mostre COMO e a vida (trabalho, comida, moradia, governo, tecnologia), com consequencias surpreendentes e coerentes com tendencias reais de hoje. Deixe claro que e uma projecao ("segundo projecoes", "imagine"), nunca afirme o futuro como fato. Termine com voto A ou B sobre o que fazer.
 - Se o formato for "pov" ou "pov3d": narre em PRIMEIRA PESSOA, como se o espectador fosse o personagem, sempre com perigo ou decisao iminente.
 - Inclua "thumb_texto" (gancho de 2 a 4 palavras em MAIUSCULAS que gere curiosidade), "titulo_curto" (ate 24 caracteres, MAIUSCULAS), "titulo_youtube" (ate 62 caracteres, com lacuna de curiosidade e um nome ou numero concreto, sem clickbait falso) e "comentario_fixado" (1 frase que pergunta a opiniao e repete a votacao).
 Responda SOMENTE com JSON valido: {{"descricao": "...", "tags": ["..."], "thumb_texto": "...", "titulo_curto": "...", "titulo_youtube": "...", "comentario_fixado": "...", "cenas": [ ... ]}}"""
 
 CRITICO = """Voce e um editor severo de Shorts virais. Avalie este roteiro (JSON) para o tema "{titulo}".
-De nota de 0 a 10 para: gancho (a primeira cena faria alguem parar de deslizar em 2 segundos?), tensao crescente, final em loop com voto, e risco factual (0 = nada inventado, 10 = muito inventado).
-Se QUALQUER nota de gancho/tensao/loop for menor que 8 ou risco factual maior que 2, REESCREVA o roteiro inteiro corrigindo os problemas, mantendo o formato JSON identico e os fatos reais.
-Responda SOMENTE com JSON: {{"notas": {{"gancho": n, "tensao": n, "loop": n, "risco_factual": n}}, "roteiro": <o roteiro, reescrito se preciso, no mesmo formato>}}
+De nota de 0 a 10 para: gancho (a primeira cena faria alguem parar de deslizar em 2 segundos?), tensao crescente, final em loop com voto, continuidade (hora do dia, lugar, epoca e personagens batem com as falas? dialogos naturais e bem divididos entre narrador e personagens?) e risco factual (0 = nada inventado, 10 = muito inventado).
+Se QUALQUER nota de gancho/tensao/loop/continuidade for menor que 8 ou risco factual maior que 2, REESCREVA o roteiro inteiro corrigindo os problemas, mantendo o formato JSON identico e os fatos reais.
+Responda SOMENTE com JSON: {{"notas": {{"gancho": n, "tensao": n, "loop": n, "continuidade": n, "risco_factual": n}}, "roteiro": <o roteiro, reescrito se preciso, no mesmo formato>}}
 ROTEIRO:
 {roteiro}"""
 
@@ -75,10 +79,22 @@ def _validar(d: dict):
             c["visuais"] = ["cinematic scene"]
         if any(x in c["fala"] for x in ("—", "–", "*", "#")):
             return "caractere proibido na fala"
+        if c.get("falas"):
+            ok = isinstance(c["falas"], list) and all(isinstance(x, dict) and isinstance(x.get("texto"), str) for x in c["falas"])
+            if not ok:
+                return "falas mal formadas"
+            for x in c["falas"]:
+                if x.get("quem") not in ("narrador", "prot", "f0", "f1", "f2"):
+                    x["quem"] = "narrador"
+            c["fala"] = " ".join(x["texto"].strip() for x in c["falas"])
+            if any(ch in c["fala"] for ch in ("—", "–", "*", "#")):
+                return "caractere proibido na fala"
         total += len(c["fala"].split())
         c.setdefault("emocao", "neutro")
         if c["emocao"] not in ("neutro", "feliz", "surpreso", "preocupado", "misterioso"):
             c["emocao"] = "neutro"
+    if sum(1 for c in cenas if any(x.get("quem") != "narrador" for x in c.get("falas", []))) < 2:
+        return "poucas falas de personagem (minimo 2 cenas com dialogo)"
     if not 95 <= total <= 160:
         return f"{total} palavras (precisa 95-160)"
     return None

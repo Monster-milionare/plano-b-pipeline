@@ -26,24 +26,41 @@ W, H, FPS = config.W, config.H, config.FPS
 MOTOR = config.BASE_DIR / "pov3d" / "engine.html"
 FLAGS = ["--use-gl=swiftshader", "--enable-webgl", "--ignore-gpu-blocklist", "--enable-unsafe-swiftshader"]
 CORTE_MIN = 1.6
+MUSICA_VOL = 0.30   # musica = 30% da voz (pedido do Andre)
 
 
-def _linha_do_tempo(cenas, tempos_cena):
-    """Cada cena vira N planos (um por camera listada), com duracao >= CORTE_MIN."""
+def _cams_do_falante(quem, cena_cams):
+    if quem in ("", "narrador", None):
+        return cena_cams
+    if quem == "prot":
+        return ["eu-frente", "eu-lado"]
+    if quem[1:].isdigit():
+        n = quem[1:]
+        return [f"f{n}c", f"f{n}"]
+    return cena_cams
+
+
+def _linha_do_tempo(cenas, tempos_cena, spans_por_cena=None):
+    """Cada cena vira N planos. Com dialogo, cada fala ganha camera no PERSONAGEM que fala (boca mexendo);
+    o narrador usa as cameras de cenario. Duracao minima de plano = CORTE_MIN."""
     shots = []
-    for c, (a, b) in zip(cenas, tempos_cena):
-        cams = c["cams"]
-        dur = b - a
-        n = max(1, min(len(cams), int(dur / CORTE_MIN)))
-        cams = cams[:n]
-        for i, cam in enumerate(cams):
+    for ci, (c, (a, b)) in enumerate(zip(cenas, tempos_cena)):
+        spans = (spans_por_cena or {}).get(ci) or [(a, b, "narrador")]
+        for si, (sa, sb, quem) in enumerate(spans):
+            if si == 0:
+                sa = a
+            if si == len(spans) - 1:
+                sb = b
+            cams = _cams_do_falante(quem, c["cams"])
+            dur = sb - sa
+            n = max(1, min(len(cams), int(dur / CORTE_MIN)))
+            cams = cams[:n]
             fal = c.get("falante", "")
-            if not fal:                       # quem aparece em quadro e quem "fala"
-                if cam in ("eu-frente", "eu-lado"):
-                    fal = "prot"
-                elif re.match(r"^f\d c?$".replace(" ", ""), cam):
-                    fal = cam.rstrip("c")
-            shots.append({"t0": a + dur * i / n, "t1": a + dur * (i + 1) / n, "amb": c["amb"], "cam": cam, "falante": fal})
+            if quem not in ("", "narrador", None):
+                fal = quem
+            for i, cam in enumerate(cams):
+                shots.append({"t0": sa + dur * i / n, "t1": sa + dur * (i + 1) / n, "amb": c["amb"], "cam": cam,
+                              "falante": fal, "hora": c.get("hora")})
     shots[0]["t0"] = 0.0
     shots[-1]["t1"] = tempos_cena[-1][1] + 2.0
     return shots
@@ -110,12 +127,32 @@ def render_pov3d(conteudo: dict, out_path: Path, estilo_nome: str | None = None,
     if fake_tts or os.environ.get("PLANOB_FAKE_TTS") == "1":
         import tts_fake
         sintetizar = tts_fake.synthesize_sentences
-    segs_por_cena = [sintetizar(c["fala"], work / f"voz{i:02d}") for i, c in enumerate(cenas)]
+    import vozes
+    elenco_vozes = vozes.Elenco(conteudo.get("elenco") or {})
+    segs_por_cena, quem_por_seg, spans_ref = [], [], []
+    for i, c in enumerate(cenas):
+        linhas = c.get("falas") or [{"quem": "narrador", "texto": c["fala"]}]
+        ss_cena, spans_ref_cena = [], []
+        for j, ln in enumerate(linhas):
+            quem = ln.get("quem") or "narrador"
+            voz, tom = elenco_vozes.voz(quem, c)
+            ss = sintetizar(ln["texto"], work / f"voz{i:02d}_{j}", voz=voz, tom=tom if quem != "narrador" else None)
+            ss_cena.extend(ss)
+            spans_ref_cena.append((len(ss_cena) - len(ss), len(ss_cena), quem))
+        segs_por_cena.append(ss_cena)
+        spans_ref.append(spans_ref_cena)
     todos = [s for ss in segs_por_cena for s in ss]
     inicios, env, dur_voz = R._montar_audio(todos, work / "voz.wav")
-    tempos_cena, k = [], 0
-    for ss in segs_por_cena:
+    tempos_cena, k, spans_por_cena = [], 0, {}
+    for ci, ss in enumerate(segs_por_cena):
         a = inicios[k]
+        base = k
+        spans = []
+        for (i0, i1, quem) in spans_ref[ci]:
+            sa = inicios[base + i0]
+            sb = inicios[base + i1] if base + i1 < len(inicios) else dur_voz
+            spans.append((sa, sb, quem))
+        spans_por_cena[ci] = spans
         k += len(ss)
         b = inicios[k] if k < len(inicios) else dur_voz
         tempos_cena.append((a, b))
@@ -123,7 +160,7 @@ def render_pov3d(conteudo: dict, out_path: Path, estilo_nome: str | None = None,
     blocos = R._blocos_legenda(palavras)
     total = dur_voz + 1.6
     nframes = int(total * FPS)
-    shots = _linha_do_tempo(cenas, tempos_cena)
+    shots = _linha_do_tempo(cenas, tempos_cena, spans_por_cena)
 
     segmentos = musica_real.plano_por_cenas(cenas, tempos_cena, estilo.musica)
     music_wav = work / "musica.wav"
@@ -140,7 +177,7 @@ def render_pov3d(conteudo: dict, out_path: Path, estilo_nome: str | None = None,
     vig = R._vinheta(0.55)
     palavra_inicios = np.array([p[1] for p in palavras])
     ep = conteudo.get("episodio") or {"e-se": "E SE...?", "voce-acorda": "VOCÊ ACORDA EM...", "quem-venceria": "QUEM VENCERIA?", "debate": "QUEM TEM RAZÃO?",
-                                       "pov": "POV"}.get(conteudo.get("formato", "e-se"), "PLANO B")
+                                       "pov": "POV", "escolha": "VOCÊ ESCOLHE", "futuro": "VOCÊ ACORDA NO FUTURO"}.get(conteudo.get("formato", "e-se"), "PLANO B")
     barra = _barra_ep(ep, conteudo.get("titulo_curto") or conteudo["titulo"])
     uis = [(tempos_cena[i], c["ui"]) for i, c in enumerate(cenas) if c.get("ui")]
     bloco_idx = 0
@@ -224,14 +261,13 @@ def render_pov3d(conteudo: dict, out_path: Path, estilo_nome: str | None = None,
     proc.stdin.close()
     proc.wait()
 
-    vol_m = 1.0 if faixas else 0.22
+    # voz a 100% e musica a 30%: as duas normalizadas para o mesmo volume percebido, musica a 0.30 (sem "pumping")
     subprocess.run(
         ["ffmpeg", "-y", "-loglevel", "error", "-i", str(video_tmp), "-i", str(work / "voz.wav"), "-i", str(music_wav),
          "-filter_complex",
-         f"[1:a]volume=1.35,aresample=44100,aformat=channel_layouts=stereo,apad,asplit=2[v1][v2];"
-         f"[2:a]aresample=44100,aformat=channel_layouts=stereo,volume={vol_m}[m];"
-         f"[m][v1]sidechaincompress=threshold=0.02:ratio=6:attack=20:release=300[md];"
-         f"[v2][md]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.95[a]",
+         "[1:a]aresample=44100,aformat=channel_layouts=stereo,loudnorm=I=-15:TP=-1.5:LRA=9,apad[v];"
+         f"[2:a]aresample=44100,aformat=channel_layouts=stereo,loudnorm=I=-15:TP=-1.5:LRA=9,volume={MUSICA_VOL}[m];"
+         "[v][m]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.95[a]",
          "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "160k", "-t", f"{total:.2f}", str(out_path)],
         check=True)
     return {"duracao": total, "estilo": estilo.nome}

@@ -36,3 +36,7 @@ pov|POV: você é Neil Armstrong descendo a escada da Apollo 11
 pov|POV: você é Cristóvão Colombo avistando terra em 1492
 pov|POV: você é Dom João VI chegando ao Rio de Janeiro em 1808
 pov|POV: você é um soldado romano na batalha de Cannae
+escolha|Você é um marinheiro de Cabral: A para descer na praia desconhecida ou B para ficar no navio até amanhecer
+escolha|Você é o piloto do 14-Bis: A para decolar agora ou B para esperar o vento mudar
+futuro|Você acorda em 2100 no meio da sociedade: como é viver, trabalhar e comer no Brasil
+futuro|Você acorda em 2100 e as máquinas fazem todo o trabalho: o que as pessoas fazem o dia todo

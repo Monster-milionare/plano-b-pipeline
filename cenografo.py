@@ -48,6 +48,8 @@ PERFIS = {
     "joao": dict(kw=["dom joao", "1808", "corte portuguesa", "joao vi"], prot="rei", f=["cidadao", "cidada", "marujo"], ambientes=["conves", "terra", "cidade", "palacio"]),
     "samurai": dict(kw=["samurai", "japao", "japones"], prot="samurai", f=["samurai", "cidadao", "cidada"], ambientes=["campo", "cidade", "palacio"]),
     "alexandre": dict(kw=["alexandre", "gaugamela", "macedonia", "persia"], prot="general-romano", f=["soldado-romano", "egipcio", "cidadao"], ambientes=["campo", "deserto", "palacio"]),
+    "futuro": dict(kw=["2100", "2050", "2200", "futuro", "robo", "robos", "inteligencia artificial", "marte", "ciborgue", "daqui a"], prot="cientista",
+                   f=["cidadao2", "cidada", "astronauta"], amb={"laboratorio": ["cientista", "cidada", "astronauta"]}, ambientes=["cidade", "laboratorio", "lua"]),
     "generico": dict(kw=[], prot="cidadao", f=["cidadao2", "cidada", "marujo"], ambientes=["cidade", "campo", "palacio"]),
 }
 
@@ -67,6 +69,29 @@ CHAVES_AMB = [
 
 PADROES_CAM_POV = [["pov", "f0", "eu-costas"], ["f1c", "pov-luneta", "eu-lado"], ["panoramica", "f0c", "alto"], ["eu-frente", "f2", "pov-lanterna"], ["ampla", "f1", "pov"]]
 PADROES_CAM_3P = [["ampla", "f0", "eu-costas"], ["f1c", "eu-lado", "panoramica"], ["alto", "f0c", "eu-frente"], ["eu-costas", "f2", "ampla"], ["panoramica", "f1", "eu-lado"]]
+
+
+# hora do dia pedida pela fala: o ceu tem que bater com o que o narrador diz ("na manha seguinte" = ceu de manha)
+HORAS_RX = [
+    ("amanhecer", r"\b(amanhec\w*|alvorada|nascer do sol|raiar do dia|primeiros raios)\b"),
+    ("madrugada", r"\b(madrugada|meia[- ]noite)\b"),
+    ("entardecer", r"\b(entardecer|por do sol|crepusculo|anoitecer|anoiteceu|fim do dia|fim de tarde)\b"),
+    ("noite", r"\b(noite|noturn\w*|escuridao|luar|lua cheia|a luz da lua)\b"),
+    ("manha", r"\b(manha|manhazinha|dia seguinte|proximo dia|na manha)\b"),
+    ("dia", r"\b(meio[- ]dia|ao meio dia|de dia|sol a pino|em pleno dia)\b"),
+    ("tarde", r"(?<!mais )\b(tarde|a tarde|de tarde)\b"),
+]
+
+
+def hora_do_texto(txt: str):
+    """Devolve a hora do dia mencionada primeiro no texto, ou None."""
+    txt = _norm(txt)
+    achados = []
+    for h, rx in HORAS_RX:
+        m = re.search(rx, txt)
+        if m:
+            achados.append((m.start(), h))
+    return min(achados)[1] if achados else None
 
 
 def _norm(t: str) -> str:
@@ -116,7 +141,7 @@ def preparar(c: dict, semente: str | None = None) -> dict:
     c["perfil"] = nome_perfil
     rng = random.Random(semente or c.get("id", "x"))
     formato = c.get("formato", "e-se")
-    pov = formato in ("pov", "pov3d", "voce-acorda")
+    pov = formato in ("pov", "pov3d", "voce-acorda", "escolha", "futuro")
     padroes = PADROES_CAM_POV if pov else PADROES_CAM_3P
     era_antiga = nome_perfil in ("roma", "egito", "alexandre", "asteca")
 
@@ -126,7 +151,7 @@ def preparar(c: dict, semente: str | None = None) -> dict:
             c["elenco"]["quadro"] = perfil["quadro"]
 
     n = len(c["cenas"])
-    anterior, seguidos, ciclo = None, 0, 0
+    anterior, seguidos, ciclo, hora_atual = None, 0, 0, None
     for i, cena in enumerate(c["cenas"]):
         if not cena.get("amb"):
             amb = _ambiente_da_cena(cena, perfil, era_antiga)
@@ -138,6 +163,14 @@ def preparar(c: dict, semente: str | None = None) -> dict:
             cena["amb"] = amb
         seguidos = seguidos + 1 if cena["amb"] == anterior else 1
         anterior = cena["amb"]
+        if not cena.get("hora"):
+            h = hora_do_texto(cena.get("fala", "") + " " + " ".join(l.get("texto", "") for l in cena.get("falas", [])))
+            if h:
+                hora_atual = h
+            if hora_atual:
+                cena["hora"] = hora_atual
+        else:
+            hora_atual = cena["hora"]
         if not cena.get("cams"):
             if i == 0:
                 cams = ["ampla", "eu-frente", "f0"] if not pov else ["pov", "ampla", "eu-frente"]

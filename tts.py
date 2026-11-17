@@ -54,12 +54,12 @@ VOICE = VOICE_PREFERENCIAS[0]
 
 # IMPORTANTE: edge-tts exige sinal explícito (+/-) mesmo pra zero - "0%"
 # sozinho derruba com ValueError (bug real que já quebrou a publicação).
-_RATE_VARIACAO = ("+4%", "+7%", "+2%", "+10%", "+5%", "+12%", "+8%")
+_RATE_VARIACAO = ("+18%", "+20%", "+17%", "+22%", "+19%", "+21%")
 _PITCH_VARIACAO = ("+0Hz", "+2Hz", "-2Hz", "+4Hz", "-3Hz", "+1Hz")
-_RATE_VARIACAO_ENERGICA = ("+12%", "+15%", "+18%", "+13%", "+16%")
+_RATE_VARIACAO_ENERGICA = ("+24%", "+26%", "+25%", "+27%")
 _PITCH_VARIACAO_ENERGICA = ("+4Hz", "+6Hz", "+8Hz", "+5Hz")
 
-PAUSA_ENTRE_FRASES_SEC = 0.22
+PAUSA_ENTRE_FRASES_SEC = 0.10
 
 
 @dataclass
@@ -178,13 +178,13 @@ def _synth_gtts(text: str, out_path: Path) -> list:
     return []
 
 
-def _synth_com_fallback(text: str, out_path: Path, rate: str, pitch: str) -> list:
+def _synth_com_fallback(text: str, out_path: Path, rate: str, pitch: str, voz: str | None = None) -> list:
     texto = _pronuncia(_limpar_para_voz(text) or text)
     ultimo_erro = None
     # 1) vozes do edge-tts, varias tentativas com espera crescente (soluco de
     #    rede/servico). Na ultima volta tenta sem rate/pitch customizados.
     for volta in range(3):
-        for voice in VOICE_PREFERENCIAS:
+        for voice in ([voz] if voz and volta < 2 else []) + VOICE_PREFERENCIAS:
             r, p = (rate, pitch) if volta < 2 else ("+0%", "+0Hz")
             try:
                 return _restaurar_palavras(asyncio.run(_synth_one(texto, out_path, voice, r, p)))
@@ -201,7 +201,7 @@ def _synth_com_fallback(text: str, out_path: Path, rate: str, pitch: str) -> lis
         ) from exc
 
 
-def synthesize_sentences(text: str, out_dir: Path, cta: bool = False) -> list:
+def synthesize_sentences(text: str, out_dir: Path, cta: bool = False, voz: str | None = None, tom: str | None = None) -> list:
     """Gera um mp3 por frase do roteiro e retorna cada um com sua duração
     e o tempo de cada palavra.
 
@@ -219,7 +219,10 @@ def synthesize_sentences(text: str, out_dir: Path, cta: bool = False) -> list:
         else:
             rate = random.choice(_RATE_VARIACAO)
             pitch = random.choice(_PITCH_VARIACAO)
-        words = _synth_com_fallback(sentence, audio_path, rate, pitch)
+        if tom:   # voz de personagem: tom fixo (com uma variacao minima) em vez de sortear
+            base = int(tom.replace("Hz", ""))
+            pitch = f"{base + (4 if energica else 0):+d}Hz"
+        words = _synth_com_fallback(sentence, audio_path, rate, pitch, voz)
         duration = _probe_duration(audio_path) + PAUSA_ENTRE_FRASES_SEC
         segments.append(Segment(text=sentence, audio_path=audio_path, duration_sec=duration,
                                 is_cta=cta, words=words, energica=energica))
