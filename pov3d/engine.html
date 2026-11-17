@@ -1,0 +1,232 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>html,body{margin:0;background:#000;overflow:hidden}canvas{display:block}</style>
+</head><body>
+<script src="node_modules/three/build/three.min.js"></script>
+<script>
+// Motor 3D low-poly "joguinho" para os POVs. Dirigido por dados: setShots([...]) e frame(t, amp).
+const W = window.__W || 1080, H = window.__H || 1920;
+const renderer = new THREE.WebGLRenderer({antialias: true, preserveDrawingBuffer: true});
+renderer.setSize(W, H); renderer.setPixelRatio(1);
+renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+document.body.appendChild(renderer.domElement);
+const scene = new THREE.Scene();
+const cam = new THREE.PerspectiveCamera(65, W / H, 0.05, 200);
+const M = (c, o) => new THREE.MeshLambertMaterial(Object.assign({color: c}, o || {}));
+const B = c => new THREE.MeshBasicMaterial({color: c});
+const rnd = (() => { let s = 12345; return () => (s = (s * 16807) % 2147483647) / 2147483647; })();
+const lerp = (a, b, u) => a + (b - a) * u;
+const ease = u => u * u * (3 - 2 * u);
+const V = (a, b, u) => a.map((x, i) => lerp(x, b[i], u));
+
+// ---------------------------------------------------------------- personagem redondinho
+const chars = {};
+function personagem(id, o) {
+  const g = new THREE.Group();
+  const corpo = new THREE.Mesh(new THREE.CylinderGeometry(0.42, 0.52, 1.15, 16), M(o.roupa)); corpo.position.y = 0.78; corpo.castShadow = true; g.add(corpo);
+  if (o.cinto) { const c = new THREE.Mesh(new THREE.CylinderGeometry(0.5, 0.5, 0.1, 16), M(o.cinto)); c.position.y = 0.7; g.add(c); }
+  const cab = new THREE.Group(); cab.position.y = 1.72; g.add(cab);
+  const crani = new THREE.Mesh(new THREE.SphereGeometry(0.54, 24, 18), M(o.pele)); crani.castShadow = true; cab.add(crani);
+  const olhos = [];
+  for (const s of [-1, 1]) {
+    const eg = new THREE.Group(); eg.position.set(0.2 * s, 0.08, 0.43);
+    eg.add(new THREE.Mesh(new THREE.SphereGeometry(0.16, 14, 12), M(0xffffff)));
+    const pu = new THREE.Mesh(new THREE.SphereGeometry(0.075, 10, 8), B(0x151515)); pu.position.set(0, 0, 0.13); eg.add(pu);
+    cab.add(eg); olhos.push(eg);
+    const br = new THREE.Mesh(new THREE.BoxGeometry(0.22, 0.05, 0.05), M(o.cabelo || 0x2a1a10));
+    br.position.set(0.2 * s, 0.3, 0.47); br.rotation.z = (o.brava ? 0.3 : -0.2) * s; cab.add(br);
+  }
+  const nariz = new THREE.Mesh(new THREE.SphereGeometry(0.075, 8, 8), M(o.pele)); nariz.position.set(0, -0.06, 0.55); cab.add(nariz);
+  const boca = new THREE.Mesh(new THREE.SphereGeometry(0.11, 12, 10), B(0x4a1810)); boca.position.set(0, -0.26, 0.5); boca.scale.set(1.2, 0.2, 0.5); cab.add(boca);
+  if (o.barba) { const b = new THREE.Mesh(new THREE.SphereGeometry(0.3, 12, 10), M(o.barba)); b.position.set(0, -0.3, 0.3); b.scale.set(1.2, 0.8, 0.8); cab.add(b); }
+  if (o.chapeu === 'bone') { const c = new THREE.Mesh(new THREE.CylinderGeometry(0.5, 0.56, 0.3, 14), M(o.corChapeu)); c.position.y = 0.42; cab.add(c);
+    const a = new THREE.Mesh(new THREE.BoxGeometry(0.75, 0.05, 0.5), M(o.corChapeu)); a.position.set(0, 0.33, 0.55); cab.add(a); }
+  if (o.chapeu === 'cartola') { const c = new THREE.Mesh(new THREE.CylinderGeometry(0.36, 0.38, 0.6, 14), M(o.corChapeu)); c.position.y = 0.72; cab.add(c);
+    const a = new THREE.Mesh(new THREE.CylinderGeometry(0.66, 0.66, 0.06, 18), M(o.corChapeu)); a.position.y = 0.42; cab.add(a); }
+  if (o.chapeu === 'bandana') { const c = new THREE.Mesh(new THREE.SphereGeometry(0.56, 18, 10, 0, Math.PI * 2, 0, Math.PI * 0.42), M(o.corChapeu)); c.position.y = 0.04; cab.add(c); }
+  if (o.chapeu === 'barrete') { const c = new THREE.Mesh(new THREE.CylinderGeometry(0.2, 0.52, 0.55, 14), M(o.corChapeu)); c.position.y = 0.52; c.rotation.z = 0.15; cab.add(c);
+    const pena = new THREE.Mesh(new THREE.BoxGeometry(0.05, 0.5, 0.05), M(0xffffff)); pena.position.set(0.3, 0.9, 0); pena.rotation.z = -0.5; cab.add(pena); }
+  if (o.chapeu === 'cocar') { const f = new THREE.Mesh(new THREE.CylinderGeometry(0.55, 0.55, 0.1, 16), M(0xb8321e)); f.position.y = 0.3; cab.add(f);
+    [-0.4, -0.2, 0, 0.2, 0.4].forEach((x, i) => { const pe = new THREE.Mesh(new THREE.BoxGeometry(0.1, 0.55 - Math.abs(x) * 0.5, 0.05), M([0xe8c230, 0xd9442f, 0x2f8a4a, 0xd9442f, 0xe8c230][i])); pe.position.set(x, 0.62 - Math.abs(x) * 0.3, 0); pe.rotation.z = -x * 0.9; cab.add(pe); }); }
+  if (o.vulto) { crani.material = M(0x0a0a0f); corpo.material = M(0x0a0a0f);
+    for (const e of olhos) e.children[0].material = B(0xfff3c0); }
+  const bracos = [];
+  for (const s of [-1, 1]) {
+    const ag = new THREE.Group(); ag.position.set(0.55 * s, 1.2, 0);
+    const b = new THREE.Mesh(new THREE.CylinderGeometry(0.11, 0.11, 0.8, 10), M(o.roupa)); b.position.y = -0.4; ag.add(b);
+    const m = new THREE.Mesh(new THREE.SphereGeometry(0.13, 10, 8), M(o.vulto ? 0x0a0a0f : o.pele)); m.position.y = -0.82; ag.add(m);
+    ag.rotation.z = 0.25 * s; g.add(ag); bracos.push(ag);
+  }
+  g.userData = {cab, boca, olhos, bracos, base: 0, fase: rnd() * 6, id};
+  g.scale.setScalar(o.escala || 1);
+  chars[id] = g; return g;
+}
+
+// ---------------------------------------------------------------- bracos em 1a pessoa
+function maosPOV(roupa, pele, sobre) {
+  const g = new THREE.Group();
+  for (const s of [-1, 1]) {
+    const a = new THREE.Group();
+    const b = new THREE.Mesh(new THREE.CylinderGeometry(0.1, 0.12, 0.9, 10), M(roupa)); b.rotation.x = Math.PI / 2; b.position.z = 0.45; a.add(b);
+    const m = new THREE.Mesh(new THREE.SphereGeometry(0.15, 12, 10), M(pele)); m.position.z = -0.02; a.add(m);
+    a.position.set(0.3 * s, -0.55, -1.0); a.rotation.y = -0.12 * s; a.scale.setScalar(0.75); g.add(a);
+  }
+  return g;
+}
+
+// ---------------------------------------------------------------- ambientes
+const amb = {};
+function novoAmb(nome, cfg) {
+  const g = new THREE.Group(); g.visible = false; scene.add(g);
+  const hemi = new THREE.HemisphereLight(cfg.hemiCeu, cfg.hemiChao, cfg.hemiInt); g.add(hemi);
+  const ponto = new THREE.PointLight(cfg.pontoCor, cfg.pontoInt, cfg.pontoDist, 1.3); ponto.position.set(...cfg.pontoPos); g.add(ponto);
+  const dir = new THREE.DirectionalLight(cfg.dirCor, cfg.dirInt); dir.position.set(...cfg.dirPos); dir.castShadow = true;
+  dir.shadow.mapSize.set(1024, 1024); const sc = dir.shadow.camera; sc.left = -14; sc.right = 14; sc.top = 14; sc.bottom = -14; sc.far = 60; g.add(dir);
+  amb[nome] = {g, cfg, ponto, anim: [], cams: {}, chars: [], tick: null};
+  return amb[nome];
+}
+function sky(a, n, y0, y1, r) { for (let i = 0; i < n; i++) { const e = new THREE.Mesh(new THREE.SphereGeometry(0.07, 4, 4), B(0xffffff));
+  const ang = rnd() * Math.PI * 2, rr = r * (0.7 + rnd() * 0.3); e.position.set(Math.cos(ang) * rr, y0 + rnd() * (y1 - y0), Math.sin(ang) * rr); a.g.add(e); } }
+function mar(a, cor, tam, y) {
+  const geo = new THREE.PlaneGeometry(tam, tam, 40, 40); geo.rotateX(-Math.PI / 2);
+  const m = new THREE.Mesh(geo, M(cor, {flatShading: true})); m.position.y = y; m.receiveShadow = true; a.g.add(m);
+  const base = Float32Array.from(geo.attributes.position.array);
+  a.anim.push(t => { const p = geo.attributes.position.array; for (let i = 0; i < p.length; i += 3) p[i + 1] = Math.sin(base[i] * 0.4 + t * 1.3) * 0.18 + Math.cos(base[i + 2] * 0.35 + t) * 0.15; geo.attributes.position.needsUpdate = true; geo.computeVertexNormals(); });
+}
+function navioDist(a, x, z, esc) {
+  const n = new THREE.Group();
+  const casco = new THREE.Mesh(new THREE.CylinderGeometry(1.6, 1, 1.2, 8, 1, false, 0, Math.PI * 2), M(0x4a2f1c)); casco.scale.set(1.6, 1, 0.6); n.add(casco);
+  const mastro = new THREE.Mesh(new THREE.CylinderGeometry(0.07, 0.09, 4.2, 6), M(0x2a1a10)); mastro.position.y = 2.6; n.add(mastro);
+  const vela = new THREE.Mesh(new THREE.BoxGeometry(2.4, 2.6, 0.06), M(0xf0e6d0)); vela.position.y = 3; n.add(vela);
+  const cruz = new THREE.Mesh(new THREE.BoxGeometry(0.5, 0.15, 0.07), M(0xb81e1e)); cruz.position.set(0, 3.4, 0.05); n.add(cruz);
+  const cruz2 = new THREE.Mesh(new THREE.BoxGeometry(0.15, 0.5, 0.07), M(0xb81e1e)); cruz2.position.set(0, 3.4, 0.05); n.add(cruz2);
+  n.position.set(x, 0.1, z); n.scale.setScalar(esc || 1); a.g.add(n); a.anim.push(t => { n.position.y = 0.1 + Math.sin(t * 0.9 + x) * 0.18; n.rotation.z = Math.sin(t * 0.8 + x) * 0.03; });
+}
+function colocar(a, id, o, pos, ry) { const c = personagem(id, o); c.position.set(...pos); c.rotation.y = ry || 0; a.g.add(c); a.chars.push(c); return c; }
+
+// ---- 1) CONVES do navio (noite) ----
+(function () {
+  const a = novoAmb('conves', {hemiCeu: 0x7f94e8, hemiChao: 0x3a2e24, hemiInt: 1.25, pontoCor: 0xffb454, pontoInt: 28, pontoDist: 16, pontoPos: [1.5, 3.2, -1.5],
+    dirCor: 0x9bb0ff, dirInt: 0.7, dirPos: [-6, 12, 8], fundo: 0x172044, nevoa: [0x172044, 10, 55]});
+  mar(a, 0x1e3a6b, 160, -0.8);
+  const piso = new THREE.Mesh(new THREE.BoxGeometry(7, 0.3, 26), M(0x8a5a33)); piso.position.set(0, -0.15, -4); piso.receiveShadow = true; a.g.add(piso);
+  for (let i = -3; i <= 3; i++) { const t = new THREE.Mesh(new THREE.BoxGeometry(0.04, 0.02, 26), M(0x4d2f18)); t.position.set(i * 0.95, 0.01, -4); a.g.add(t); }
+  for (const s of [-1, 1]) { const ba = new THREE.Mesh(new THREE.BoxGeometry(0.15, 0.12, 26), M(0x5b3a20)); ba.position.set(3.4 * s, 1, -4); ba.castShadow = true; a.g.add(ba);
+    for (let z = 6; z > -18; z -= 2.2) { const p = new THREE.Mesh(new THREE.CylinderGeometry(0.07, 0.07, 1.1, 6), M(0x5b3a20)); p.position.set(3.4 * s, 0.5, z); a.g.add(p); } }
+  const mastro = new THREE.Mesh(new THREE.CylinderGeometry(0.28, 0.34, 15, 10), M(0x3b2614)); mastro.position.set(0, 7, -5); mastro.castShadow = true; a.g.add(mastro);
+  const vela = new THREE.Mesh(new THREE.BoxGeometry(8, 6, 0.1), M(0xe9dcc0)); vela.position.set(0, 9.5, -5.4); a.g.add(vela);
+  const cruz = new THREE.Mesh(new THREE.BoxGeometry(1.6, 0.4, 0.12), M(0xb81e1e)); cruz.position.set(0, 10.4, -5.35); a.g.add(cruz);
+  const cruz2 = new THREE.Mesh(new THREE.BoxGeometry(0.4, 1.6, 0.12), M(0xb81e1e)); cruz2.position.set(0, 10.4, -5.35); a.g.add(cruz2);
+  const lamp = new THREE.Mesh(new THREE.SphereGeometry(0.2, 10, 8), B(0xffd27a)); lamp.position.set(1.5, 3.2, -1.5); a.g.add(lamp);
+  const haste = new THREE.Mesh(new THREE.CylinderGeometry(0.03, 0.03, 3, 6), M(0x222222)); haste.position.set(1.5, 1.7, -1.5); a.g.add(haste);
+  const lua = new THREE.Mesh(new THREE.SphereGeometry(3, 16, 12), B(0xfff6d6)); lua.position.set(-30, 28, -70); a.g.add(lua);
+  sky(a, 260, 6, 60, 90);
+  navioDist(a, -16, -26, 1.3); navioDist(a, 18, -40, 1.5); navioDist(a, -34, -52, 1.6); navioDist(a, 6, -70, 1.7);
+  colocar(a, 'marujo', {roupa: 0xe8e0c8, pele: 0xd9a77c, chapeu: 'bandana', corChapeu: 0xb81e1e, cinto: 0x5b3a20}, [-1.3, 0, -3.2], 0.5);
+  colocar(a, 'cabral', {roupa: 0x7a1f2e, pele: 0xf2c8a0, chapeu: 'barrete', corChapeu: 0x1c2a5c, barba: 0x4a2f1c, cinto: 0xd9b24a, brava: true}, [1.0, 0, -6.5], -0.3);
+  const mH = maosPOV(0xe8e0c8, 0xf2c8a0); a.g.add(mH); a.maos = mH;
+  a.cams = {
+    maos:    u => ({pos: [0.1, 1.62, 3.2 - u * 0.5], look: [0.2, 1.4, -3], fov: 64, maos: true}),
+    marujo:  u => ({pos: V([0.3, 1.9, 1.8], [-0.2, 1.8, 0.3], ease(u)), look: [-1.3, 1.75, -3.2], fov: 52}),
+    cabral:  u => ({pos: V([1.6, 1.9, -2.2], [1.2, 1.9, -3.5], ease(u)), look: [1.0, 1.8, -6.5], fov: 50}),
+    mar:     u => ({pos: [0, 2.4, 2 - u * 2], look: V([-10, 1.5, -40], [6, 1.5, -40], u), fov: 70}),
+    alto:    u => ({pos: V([2.5, 6.5, 4], [-2.5, 5, 3], ease(u)), look: [0, 0.5, -8], fov: 70}),
+    vela:    u => ({pos: [0.5, 1.5, -1.5], look: V([0, 6, -5.4], [0, 10, -5.4], u), fov: 75}),
+  };
+})();
+
+// ---- 2) TERRA misteriosa (praia + fogueiras + vultos) ----
+(function () {
+  const a = novoAmb('terra', {hemiCeu: 0x5b6fb0, hemiChao: 0x2a2a20, hemiInt: 1.2, pontoCor: 0xff8a2a, pontoInt: 22, pontoDist: 16, pontoPos: [3, 2.2, -14],
+    dirCor: 0x9bb0ff, dirInt: 0.6, dirPos: [-8, 14, 6], fundo: 0x1a1d3c, nevoa: [0x2a2f55, 20, 110]});
+  a.g.position.x = 300;
+  mar(a, 0x2a5a9a, 160, -0.6);
+  const areia = new THREE.Mesh(new THREE.PlaneGeometry(90, 40), M(0xc9a76a)); areia.rotation.x = -Math.PI / 2; areia.position.set(0, 0.02, -26); areia.receiveShadow = true; a.g.add(areia);
+  const morro = new THREE.Mesh(new THREE.ConeGeometry(18, 20, 7), M(0x2f8a4a, {flatShading: true})); morro.position.set(4, 10, -62); a.g.add(morro);
+  const morro2 = new THREE.Mesh(new THREE.ConeGeometry(14, 12, 7), M(0x1a4a2d, {flatShading: true})); morro2.position.set(-24, 6, -58); a.g.add(morro2);
+  for (let i = 0; i < 16; i++) { const x = -28 + i * 3.6 + rnd() * 2, z = -34 - rnd() * 10;
+    const tr = new THREE.Mesh(new THREE.CylinderGeometry(0.15, 0.22, 3.4, 6), M(0x4a3420)); tr.position.set(x, 1.7, z); tr.rotation.z = (rnd() - 0.5) * 0.3; a.g.add(tr);
+    const fo = new THREE.Mesh(new THREE.SphereGeometry(1.5, 8, 6), M(0x1f6a3a, {flatShading: true})); fo.position.set(x, 3.7, z); fo.scale.y = 0.55; a.g.add(fo); }
+  const fog = [];
+  for (const [x, z] of [[-5, -22], [3, -26], [9, -20]]) {
+    const f = new THREE.Mesh(new THREE.ConeGeometry(0.5, 1.2, 6), B(0xff9d2e)); f.position.set(x, 0.7, z); a.g.add(f); fog.push(f);
+    const l = new THREE.Mesh(new THREE.CylinderGeometry(0.7, 0.8, 0.2, 8), M(0x3a2a1a)); l.position.set(x, 0.1, z); a.g.add(l); }
+  a.anim.push(t => { fog.forEach((f, i) => { f.scale.set(1 + Math.sin(t * 9 + i) * 0.15, 1 + Math.sin(t * 13 + i * 2) * 0.25, 1); }); a.ponto.intensity = 22 + Math.sin(t * 11) * 4; });
+  sky(a, 260, 8, 60, 90);
+  colocar(a, 'nativo1', {roupa: 0x9a6038, pele: 0x9a6038, chapeu: 'cocar', cabelo: 0x111111, cinto: 0xb8321e}, [-1.5, 0, -19], 0.1);
+  colocar(a, 'nativo2', {roupa: 0x8d5733, pele: 0x8d5733, chapeu: 'cocar', cabelo: 0x111111, cinto: 0x2f8a4a, escala: 1.1}, [2.5, 0, -22], -0.2);
+  colocar(a, 'nativo3', {roupa: 0xa66b40, pele: 0xa66b40, cabelo: 0x111111, cinto: 0xe8c230, escala: 0.9}, [6, 0, -18], -0.3);
+  a.cams = {
+    praia:  u => ({pos: [0, 1.7, 2 - u * 3], look: [1, 1.4, -22], fov: 62}),
+    vultos: u => ({pos: V([0, 1.3, -6], [0.5, 1.5, -10], ease(u)), look: [1, 1.7, -20], fov: 46}),
+    fogo:   u => ({pos: [-1, 1.2, -13 - u * 2], look: V([-5, 1.2, -22], [3, 1.2, -26], u), fov: 55}),
+    morro:  u => ({pos: [0, 2, 3], look: V([-10, 6, -60], [4, 8, -62], u), fov: 66}),
+  };
+})();
+
+// ---- 3) CABINE do capitao (carta de Caminha) ----
+(function () {
+  const a = novoAmb('cabine', {hemiCeu: 0x7a5a3a, hemiChao: 0x20150c, hemiInt: 0.9, pontoCor: 0xffc060, pontoInt: 22, pontoDist: 12, pontoPos: [0, 2.8, -1.5],
+    dirCor: 0xffd9a0, dirInt: 0.25, dirPos: [3, 6, 4], fundo: 0x120c08, nevoa: [0x120c08, 6, 22]});
+  a.g.position.x = 600;
+  const piso = new THREE.Mesh(new THREE.BoxGeometry(9, 0.3, 9), M(0x6b4423)); piso.position.set(0, -0.15, -2); piso.receiveShadow = true; a.g.add(piso);
+  const fundo = new THREE.Mesh(new THREE.BoxGeometry(9, 4.2, 0.3), M(0x5a3a1e)); fundo.position.set(0, 2.1, -6.5); a.g.add(fundo);
+  for (const s of [-1, 1]) { const p = new THREE.Mesh(new THREE.BoxGeometry(0.3, 4.2, 9), M(0x4d2f18)); p.position.set(4.5 * s, 2.1, -2); a.g.add(p); }
+  const teto = new THREE.Mesh(new THREE.BoxGeometry(9, 0.3, 9), M(0x3d2512)); teto.position.set(0, 4.3, -2); a.g.add(teto);
+  const jan = new THREE.Mesh(new THREE.CylinderGeometry(0.9, 0.9, 0.12, 16), B(0x1b2c5a)); jan.rotation.x = Math.PI / 2; jan.position.set(-2, 2.6, -6.3); a.g.add(jan);
+  const mesa = new THREE.Mesh(new THREE.BoxGeometry(3.2, 0.2, 1.6), M(0x7a4d26)); mesa.position.set(0, 1.0, -3); mesa.castShadow = true; a.g.add(mesa);
+  for (const [x, z] of [[-1.4, -2.4], [1.4, -2.4], [-1.4, -3.6], [1.4, -3.6]]) { const pe = new THREE.Mesh(new THREE.BoxGeometry(0.15, 1, 0.15), M(0x5b3a20)); pe.position.set(x, 0.5, z); a.g.add(pe); }
+  const carta = new THREE.Mesh(new THREE.BoxGeometry(1.0, 0.02, 0.8), M(0xf1e2b8)); carta.position.set(0.2, 1.12, -2.9); a.g.add(carta);
+  const vela = new THREE.Mesh(new THREE.CylinderGeometry(0.08, 0.1, 0.5, 8), M(0xf5ecd2)); vela.position.set(-0.9, 1.35, -3.1); a.g.add(vela);
+  const chama = new THREE.Mesh(new THREE.ConeGeometry(0.09, 0.25, 6), B(0xffb02e)); chama.position.set(-0.9, 1.72, -3.1); a.g.add(chama);
+  a.anim.push(t => { chama.scale.y = 1 + Math.sin(t * 14) * 0.25; a.ponto.intensity = 22 + Math.sin(t * 12) * 3 + Math.sin(t * 5) * 2; });
+  colocar(a, 'caminha', {roupa: 0x2f4f3a, pele: 0xe3b48a, chapeu: 'barrete', corChapeu: 0x111111, cinto: 0xc9a14a, barba: 0x2a1a10}, [0.3, 0, -4.4], 0.1);
+  a.cams = {
+    mesa:   u => ({pos: V([0, 2.4, -0.2], [0.2, 2.0, -0.9], ease(u)), look: [0.2, 1.1, -3], fov: 50}),
+    rosto:  u => ({pos: V([0.3, 2.2, -2.2], [0.3, 2.1, -2.8], ease(u)), look: [0.3, 1.9, -4.4], fov: 44}),
+    sala:   u => ({pos: [3.5, 2.6, 2.2 - u * 0.8], look: [0, 1.4, -3.2], fov: 68}),
+  };
+})();
+
+// ---------------------------------------------------------------- loop de quadro
+let shots = [], ativo = null;
+window.setShots = s => { shots = s; };
+function entrar(nome) {
+  for (const k in amb) amb[k].g.visible = (k === nome);
+  const c = amb[nome].cfg; scene.background = new THREE.Color(c.fundo); scene.fog = new THREE.Fog(c.nevoa[0], c.nevoa[1], c.nevoa[2]); ativo = nome;
+}
+window.frame = function (t, amp, fmt) {
+  let s = shots[shots.length - 1];
+  for (const x of shots) if (t >= x.t0 && t < x.t1) { s = x; break; }
+  const a = amb[s.amb]; if (ativo !== s.amb) entrar(s.amb);
+  const u = Math.min(1, Math.max(0, (t - s.t0) / Math.max(0.05, s.t1 - s.t0)));
+  for (const f of a.anim) f(t);
+  const cs = a.cams[s.cam](u);
+  // tremor sutil de "mao" (handheld) + head bob quando POV
+  const sh = s.tremor === undefined ? 0.012 : s.tremor;
+  const px = cs.pos[0] + Math.sin(t * 2.1) * sh, py = cs.pos[1] + Math.sin(t * 3.3) * sh, pz = cs.pos[2];
+  cam.position.set(px + a.g.position.x, py, pz);
+  cam.fov = cs.fov || 60; cam.updateProjectionMatrix();
+  cam.lookAt(cs.look[0] + a.g.position.x, cs.look[1], cs.look[2]);
+  // maos POV so em planos "maos"
+  if (a.maos) { a.maos.visible = !!cs.maos; if (cs.maos) { a.maos.position.copy(cam.position); a.maos.quaternion.copy(cam.quaternion); a.maos.translateY(-0.02 + Math.sin(t * 3.3) * 0.01); } }
+  // personagens
+  for (const c of a.chars) {
+    const d = c.userData, fala = (s.falante === c.userData.id);
+    const bob = Math.sin(t * 2.2 + d.fase);
+    c.position.y = d.base + (fala ? Math.abs(Math.sin(t * 6 + d.fase)) * 0.03 : 0);
+    c.rotation.z = Math.sin(t * 1.7 + d.fase) * 0.025;
+    d.cab.rotation.x = fala ? -0.06 + Math.sin(t * 5) * 0.03 : 0.04 + bob * 0.02;
+    d.cab.rotation.y = fala ? Math.sin(t * 2.4 + d.fase) * 0.1 : Math.sin(t * 0.9 + d.fase) * 0.18;
+    const abre = fala ? Math.min(1, amp * 1.25) : 0.0;
+    d.boca.scale.set(1.2 - abre * 0.35, 0.2 + abre * 1.0, 0.5);
+    const piscar = (Math.sin(t * 1.3 + d.fase * 3) > 0.985) ? 0.1 : 1;
+    for (const e of d.olhos) e.scale.y = piscar;
+    d.bracos[0].rotation.z = 0.25 + (fala ? Math.sin(t * 4.5) * 0.35 + 0.2 : bob * 0.05);
+    d.bracos[1].rotation.z = -0.25 - (fala ? Math.sin(t * 4.0 + 1) * 0.3 + 0.2 : bob * 0.05);
+  }
+  renderer.render(scene, cam);
+  return fmt === 'png' ? renderer.domElement.toDataURL('image/png') : renderer.domElement.toDataURL('image/jpeg', 0.93);
+};
+window.ambientes = () => Object.fromEntries(Object.entries(amb).map(([k, v]) => [k, Object.keys(v.cams)]));
+</script></body></html>
