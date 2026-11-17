@@ -1,0 +1,32 @@
+{
+ "id": "20-epi01-mar-sem-fim",
+ "ordem": 1.5,
+ "formato": "pov3d",
+ "estilo": "sepia",
+ "episodio": "EPI. 01",
+ "titulo": "POV: você é Cabral e o mar não acaba — EPI. 01",
+ "titulo_curto": "O mar que não acaba",
+ "descricao": "EPI. 01 — Abril de 1500. Você é Pedro Álvares Cabral e as águas começam a mudar. Dramatização baseada na Carta de Pero Vaz de Caminha: o que você faria? Comenta vermelho ou azul: a opção mais votada vira o EPI. 02!",
+ "tags": ["pov", "cabral", "1500", "descobrimento do brasil", "historia do brasil", "suspense", "animacao", "serie"],
+ "cenas": [
+  {"fala": "POV: você é Pedro Álvares Cabral, e faz semanas que só existe mar.",
+   "amb": "conves", "cams": ["maos", "mar", "alto"], "emocao": "preocupado"},
+  {"fala": "Um marujo corre até você: Capitão! A água está cheia de algas!",
+   "amb": "conves", "cams": ["marujo", "maos"], "falante": "marujo", "emocao": "surpreso"},
+  {"fala": "Elas só aparecem perto de terra. Mas o mapa diz que aqui não tem nada.",
+   "amb": "conves", "cams": ["marujo", "cabral", "mar"], "falante": "marujo", "emocao": "preocupado"},
+  {"fala": "Na cabine, o escrivão Caminha escreve tudo numa carta ao rei.",
+   "amb": "cabine", "cams": ["sala", "mesa"], "emocao": "neutro",
+   "ui": {"titulo": "Carta ao Rei D. Manuel", "linhas": ["Senhor, hoje o mar mudou.", "Vimos ervas compridas", "flutuando nas águas...", "E aves que não conhecemos", "seguem os navios."]}},
+  {"fala": "Ele sussurra: Capitão... essas aves não vivem em alto-mar.",
+   "amb": "cabine", "cams": ["rosto", "mesa"], "falante": "caminha", "emocao": "preocupado"},
+  {"fala": "Na manhã seguinte, o grito vem lá do alto: terra à vista!",
+   "amb": "conves", "cams": ["vela", "marujo", "mar"], "falante": "marujo", "emocao": "surpreso"},
+  {"fala": "Um monte verde surge na névoa. E na praia, fogueiras acesas.",
+   "amb": "terra", "cams": ["morro", "praia", "fogo"], "emocao": "misterioso"},
+  {"fala": "Alguém já estava lá. Esperando você.",
+   "amb": "terra", "cams": ["vultos", "praia"], "emocao": "misterioso"},
+  {"fala": "O que você faria? Comenta vermelho pra descer agora, ou azul pra esperar o amanhecer. O mais votado vira o episódio dois!",
+   "amb": "conves", "cams": ["maos", "cabral", "mar"], "emocao": "neutro"}
+ ]
+}
