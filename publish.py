@@ -128,8 +128,17 @@ def main() -> int:
     ap.add_argument("--id")
     ap.add_argument("--max", type=int, default=1)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--se-nao-publicou-ha", type=float, default=0, help="pula se algo foi publicado nas ultimas N horas (reforco de agendamento)")
     ap.add_argument("--so-instagram", action="store_true", help="posta so no Instagram um video ja publicado no YouTube")
     a = ap.parse_args()
+    if a.se_nao_publicou_ha and not a.id:
+        try:
+            ult = max(datetime.fromisoformat(d["publicado_em"]) for d in _ler(PUB, []) if d.get("publicado_em"))
+            if (datetime.now(timezone.utc) - ult).total_seconds() < a.se_nao_publicou_ha * 3600:
+                print(f"[publish] ja publicou ha menos de {a.se_nao_publicou_ha}h ({ult.isoformat()}) - pulando este horario.")
+                return 0
+        except ValueError:
+            pass
 
     fila = pendentes()
     if a.id:
