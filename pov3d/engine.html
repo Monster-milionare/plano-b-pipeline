@@ -164,12 +164,15 @@ function novoAmb(nome, cfg) {
     vertexShader: 'varying vec3 vP; void main(){ vP = position; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }',
     fragmentShader: 'varying vec3 vP; uniform vec3 topo; uniform vec3 meio; uniform vec3 hor; void main(){ float h = normalize(vP).y; vec3 c = mix(hor, meio, smoothstep(-0.05, 0.25, h)); c = mix(c, topo, smoothstep(0.2, 0.8, h)); gl_FragColor = vec4(pow(c, vec3(1.45)), 1.0); }'}));
   g.add(dome);
-  if (!cfg.semEstrelas) {
+  let estrelas = null;
+  {
     const pts = []; for (let i = 0; i < 420; i++) { const an = rnd() * Math.PI * 2, e = 0.12 + rnd() * 1.3, r = 170; pts.push(Math.cos(an) * Math.cos(e) * r, Math.sin(e) * r, Math.sin(an) * Math.cos(e) * r); }
     const sg = new THREE.BufferGeometry(); sg.setAttribute('position', new THREE.Float32BufferAttribute(pts, 3));
-    g.add(new THREE.Points(sg, new THREE.PointsMaterial({color: 0xffffff, size: 3.2, sizeAttenuation: false, fog: false})));
+    estrelas = new THREE.Points(sg, new THREE.PointsMaterial({color: 0xffffff, size: 3.2, sizeAttenuation: false, fog: false}));
+    estrelas.visible = !cfg.semEstrelas; g.add(estrelas);
   }
-  amb[nome] = {g, cfg, ponto, anim: [], cams: {}, chars: []};
+  const hemi = g.children[0];
+  amb[nome] = {nome, g, cfg, ponto, hemi, dir, dome, estrelas, pontoBase: cfg.pontoInt, pontoMult: 1, hora: 'orig', anim: [], cams: {}, chars: []};
   return amb[nome];
 }
 function lua(a, x, y, z, cor, esc) { mesh(new THREE.SphereGeometry(esc, 20, 14), new THREE.MeshBasicMaterial({color: cor, fog: false}), x, y, z, a.g); brilho(cor, esc * 7, x, y, z, a.g); }
@@ -178,7 +181,7 @@ function nuvens(a, cor, n) { for (let i = 0; i < n; i++) { const g = new THREE.G
   const an = rnd() * Math.PI * 2; g.position.set(Math.cos(an) * 120, 22 + rnd() * 25, Math.sin(an) * 120); g.lookAt(0, g.position.y, 0); a.g.add(g); } }
 function mar(a, cor, tam, y) {
   const geo = new THREE.PlaneGeometry(tam, tam, 48, 48); geo.rotateX(-Math.PI / 2);
-  const m = mesh(geo, M(cor, {flatShading: true}), 0, y, 0, a.g); m.receiveShadow = true;
+  const m = mesh(geo, M(cor, {flatShading: true}), 0, y, 0, a.g); m.receiveShadow = true; a.mar = m; a.marCor = new THREE.Color(cor);
   const base = Float32Array.from(geo.attributes.position.array);
   a.anim.push(t => { const p = geo.attributes.position.array; for (let i = 0; i < p.length; i += 3) p[i + 1] = Math.sin(base[i] * 0.35 + t * 1.3) * 0.2 + Math.cos(base[i + 2] * 0.3 + t) * 0.17; geo.attributes.position.needsUpdate = true; geo.computeVertexNormals(); });
 }
@@ -350,19 +353,59 @@ const PROTO_ROT = (dx, dz) => Math.atan2(dx, dz);
 <script src="ambientes.js"></script>
 <script src="polir.js"></script>
 <script>
+
+// ---------------------------------------------------------------- hora do dia (ceu coerente com a fala)
+const INTERIORES = new Set(['cabine', 'laboratorio', 'palacio', 'lua']);
+const HORAS = {
+  dia:       {ceu: [0x2f6fd0, 0x78b4ee, 0xe4f2ff], fundo: 0x9fd0ff, nevoa: 0xcfe6ff, hemi: [0xbfd8ff, 0x7a6a50, 1.0], dir: [0xfff2d8, 1.15, [-8, 16, 10]], estrelas: false, ponto: 0.12},
+  manha:     {ceu: [0x4a8ad8, 0x9cc8f0, 0xfff0d0], fundo: 0xbcdcf6, nevoa: 0xeee8da, hemi: [0xd8e6ff, 0x8a7a60, 1.0], dir: [0xffe4b8, 1.1, [-15, 9, 10]], estrelas: false, ponto: 0.1},
+  amanhecer: {ceu: [0x3a5a9a, 0xe09a7a, 0xffd8a0], fundo: 0xe8a888, nevoa: 0xf0c0a0, hemi: [0xffd0b0, 0x5a4a40, 0.95], dir: [0xffb878, 1.0, [-17, 5, 10]], estrelas: false, ponto: 0.25},
+  tarde:     {ceu: [0x3a78c8, 0xf0b080, 0xffd890], fundo: 0xf0c890, nevoa: 0xf2d6a8, hemi: [0xffe0b0, 0x6a5a40, 1.0], dir: [0xffc080, 1.05, [-13, 8, 11]], estrelas: false, ponto: 0.15},
+  entardecer: {ceu: [0x1f2f7a, 0xd9764a, 0xffd28a], fundo: 0xd9764a, nevoa: 0xe8b080, hemi: [0xffd0a0, 0x4a4a40, 0.95], dir: [0xffa060, 1.0, [-16, 5, 12]], estrelas: false, ponto: 0.5},
+  noite:     {ceu: [0x070b24, 0x1a2a5a, 0x3a3a6a], fundo: 0x10163a, nevoa: 0x1a2250, hemi: [0x7f94e8, 0x3a2e24, 1.25], dir: [0x9bb0ff, 0.7, [-6, 12, 8]], estrelas: true, ponto: 1},
+  madrugada: {ceu: [0x03051a, 0x0e1840, 0x24285a], fundo: 0x0a1030, nevoa: 0x121a44, hemi: [0x6a7fd0, 0x2a2430, 1.1], dir: [0x8aa0f0, 0.55, [-6, 12, 8]], estrelas: true, ponto: 1},
+};
+function aplicarHora(a, hora) {
+  const h = hora || 'orig';
+  if (a.hora === h) return;
+  a.hora = h;
+  if (INTERIORES.has(a.nome)) return;
+  let P;
+  if (h === 'orig' || !HORAS[h]) {
+    const c = a.cfg;
+    P = {ceu: c.ceu, fundo: c.fundo, nevoa: c.nevoa[0], hemi: [c.hemiCeu, c.hemiChao, c.hemiInt], dir: [c.dirCor, c.dirInt, c.dirPos], estrelas: !c.semEstrelas, ponto: 1};
+  } else P = HORAS[h];
+  const U = a.dome.material.uniforms;
+  U.topo.value.set(P.ceu[0]); U.meio.value.set(P.ceu[1]); U.hor.value.set(P.ceu[2]);
+  a.fundoAtual = P.fundo; a.nevoaCor = P.nevoa;
+  a.hemi.color.set(P.hemi[0]); a.hemi.groundColor.set(P.hemi[1]); a.hemi.intensity = P.hemi[2];
+  a.dir.color.set(P.dir[0]); a.dir.intensity = P.dir[1]; a.dir.position.set(...P.dir[2]);
+  a.estrelas.visible = P.estrelas;
+  a.pontoMult = P.ponto;
+  const noite = (h === 'orig') || h === 'noite' || h === 'madrugada';
+  const fb = h === 'entardecer' ? 0.7 : h === 'amanhecer' ? 0.45 : 0.12;
+  a.g.traverse(o => { if (o.isSprite && o.material.blending === THREE.AdditiveBlending) { if (o.userData.op0 === undefined) o.userData.op0 = o.material.opacity; o.material.opacity = o.userData.op0 * (noite ? 1 : fb); } });
+  if (a.mar) { const c = a.marCor.clone(); if (h === 'orig' || h === 'noite' || h === 'madrugada') { if (h === 'madrugada') c.multiplyScalar(0.7); } else c.lerp(new THREE.Color(0x4a8ac8), 0.55).multiplyScalar(h === 'entardecer' ? 1.0 : 1.5); a.mar.material.color.copy(c); }
+  if (ativo === a.nome) { scene.background = new THREE.Color(P.fundo); scene.fog.color.set(P.nevoa); }
+}
+
 // ---------------------------------------------------------------- loop de quadro
 let shots = [], ativo = null;
 window.setShots = s => { shots = s; };
 function entrar(nome) {
   for (const k in amb) amb[k].g.visible = (k === nome);
-  const c = amb[nome].cfg; scene.background = new THREE.Color(c.fundo); scene.fog = new THREE.Fog(c.nevoa[0], c.nevoa[1], c.nevoa[2]); ativo = nome;
+  const A = amb[nome], c = A.cfg; ativo = nome;
+  scene.background = new THREE.Color(A.fundoAtual !== undefined ? A.fundoAtual : c.fundo);
+  scene.fog = new THREE.Fog(A.nevoaCor !== undefined ? A.nevoaCor : c.nevoa[0], c.nevoa[1], c.nevoa[2]);
 }
 window.frame = function (t, amp, fmt) {
   let s = shots[shots.length - 1];
   for (const x of shots) if (t >= x.t0 && t < x.t1) { s = x; break; }
-  const a = amb[s.amb]; if (ativo !== s.amb) entrar(s.amb);
+  const a = amb[s.amb]; aplicarHora(a, s.hora); if (ativo !== s.amb) entrar(s.amb);
   const u = Math.min(1, Math.max(0, (t - s.t0) / Math.max(0.05, s.t1 - s.t0)));
+  a.ponto.intensity = a.pontoBase;
   for (const f of a.anim) f(t);
+  a.ponto.intensity *= a.pontoMult;
   const cs = a.cams[s.cam](u);
   const ext = s.cam.startsWith('eu-') || s.cam.startsWith('nau');      // planos "de fora": mostra o protagonista
   const sh = s.tremor === undefined ? 0.012 : s.tremor;
