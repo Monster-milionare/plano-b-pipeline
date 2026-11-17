@@ -19,6 +19,13 @@ import config
 import estilos
 import render
 
+
+def _renderizar(c, saida, estilo):
+    if c.get("formato") == "pov3d":
+        import render3d
+        return render3d.render_pov3d(c, saida, estilo)
+    return render.render_video(c, saida, estilo)
+
 PUB = config.STATE_DIR / "publicados.json"
 VIDEOS = config.STATE_DIR / "videos.json"
 HASHTAGS = "#shorts #historia #historiaalternativa #eseo #curiosidades #brasil"
@@ -43,7 +50,7 @@ def pendentes() -> list:
             c = json.loads(arq.read_text(encoding="utf-8"))
         except Exception:
             continue
-        if c.get("id") and c["id"] not in feitos and not c["id"].startswith("00-"):
+        if c.get("id") and c["id"] not in feitos and not c["id"].startswith("00-") and not c.get("desativado"):
             itens.append(c)
     itens.sort(key=lambda c: (c.get("ordem", 999), c["id"]))
     return itens
@@ -101,7 +108,7 @@ def _so_instagram(fila: list, a) -> int:
         saida = config.OUT_DIR / f"{c['id']}.mp4"
         print(f"[publish] (so IG) {c['id']} | estilo={estilo}", flush=True)
         try:
-            render.render_video(c, saida, estilo)
+            _renderizar(c, saida, estilo)
         except Exception as exc:
             print(f"[publish] render falhou: {exc!r}")
             erros += 1
@@ -144,7 +151,7 @@ def main() -> int:
         saida = config.OUT_DIR / f"{c['id']}.mp4"
         print(f"[publish] {c['id']} | estilo={estilo}", flush=True)
         try:
-            render.render_video(c, saida, estilo)
+            _renderizar(c, saida, estilo)
         except Exception as exc:
             print(f"[publish] render falhou: {exc!r}")
             erros += 1
