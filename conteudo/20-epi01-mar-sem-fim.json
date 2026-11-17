@@ -27,7 +27,7 @@
     "eu-costas"
    ],
    "emocao": "preocupado",
-   "falante": "cabral"
+   "falante": "prot"
   },
   {
    "fala": "Um marujo corre até você: Capitão! A água está cheia de algas!",
@@ -36,7 +36,7 @@
     "marujo",
     "eu-costas"
    ],
-   "falante": "marujo",
+   "falante": "f0",
    "emocao": "surpreso"
   },
   {
@@ -47,7 +47,7 @@
     "eu-frente",
     "mar"
    ],
-   "falante": "cabral",
+   "falante": "prot",
    "emocao": "preocupado"
   },
   {
@@ -77,7 +77,7 @@
     "rosto",
     "eu-lado"
    ],
-   "falante": "caminha",
+   "falante": "f0",
    "emocao": "preocupado"
   },
   {
@@ -118,7 +118,7 @@
     "nau-alta"
    ],
    "emocao": "neutro",
-   "falante": "cabral"
+   "falante": "prot"
   }
  ]
 }
