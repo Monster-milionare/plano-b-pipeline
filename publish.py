@@ -21,7 +21,7 @@ import render
 
 
 def _renderizar(c, saida, estilo):
-    if c.get("formato") == "pov3d":
+    if c.get("motor") != "classico":
         import render3d
         return render3d.render_pov3d(c, saida, estilo)
     return render.render_video(c, saida, estilo)

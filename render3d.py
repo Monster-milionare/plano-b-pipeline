@@ -15,6 +15,7 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
 import config
+import cenografo
 import estilos
 import musica
 import musica_real
@@ -36,8 +37,13 @@ def _linha_do_tempo(cenas, tempos_cena):
         n = max(1, min(len(cams), int(dur / CORTE_MIN)))
         cams = cams[:n]
         for i, cam in enumerate(cams):
-            shots.append({"t0": a + dur * i / n, "t1": a + dur * (i + 1) / n, "amb": c["amb"], "cam": cam,
-                          "falante": c.get("falante", "")})
+            fal = c.get("falante", "")
+            if not fal:                       # quem aparece em quadro e quem "fala"
+                if cam in ("eu-frente", "eu-lado"):
+                    fal = "prot"
+                elif re.match(r"^f\d c?$".replace(" ", ""), cam):
+                    fal = cam.rstrip("c")
+            shots.append({"t0": a + dur * i / n, "t1": a + dur * (i + 1) / n, "amb": c["amb"], "cam": cam, "falante": fal})
     shots[0]["t0"] = 0.0
     shots[-1]["t1"] = tempos_cena[-1][1] + 2.0
     return shots
@@ -97,6 +103,7 @@ def render_pov3d(conteudo: dict, out_path: Path, estilo_nome: str | None = None,
     work = config.OUT_DIR / f"_work_{conteudo['id']}"
     work.mkdir(parents=True, exist_ok=True)
     estilo = estilos.ESTILOS[estilo_nome or conteudo.get("estilo") or "sepia"]
+    conteudo = cenografo.preparar(conteudo)
     cenas = conteudo["cenas"]
 
     sintetizar = tts.synthesize_sentences
@@ -132,7 +139,8 @@ def render_pov3d(conteudo: dict, out_path: Path, estilo_nome: str | None = None,
 
     vig = R._vinheta(0.55)
     palavra_inicios = np.array([p[1] for p in palavras])
-    ep = conteudo.get("episodio", "EPI. 01")
+    ep = conteudo.get("episodio") or {"e-se": "E SE...?", "voce-acorda": "VOCÊ ACORDA EM...", "quem-venceria": "QUEM VENCERIA?",
+                                       "pov": "POV"}.get(conteudo.get("formato", "e-se"), "PLANO B")
     barra = _barra_ep(ep, conteudo.get("titulo_curto") or conteudo["titulo"])
     uis = [(tempos_cena[i], c["ui"]) for i, c in enumerate(cenas) if c.get("ui")]
     bloco_idx = 0
@@ -142,6 +150,8 @@ def render_pov3d(conteudo: dict, out_path: Path, estilo_nome: str | None = None,
         pg = br.new_page(viewport={"width": W, "height": H})
         pg.goto(MOTOR.resolve().as_uri())
         pg.wait_for_timeout(600)
+        if conteudo.get("elenco"):
+            pg.evaluate("e => window.setElenco(e)", conteudo["elenco"])
         pg.evaluate("s => window.setShots(s)", shots)
         for fi in range(nframes):
             t = fi / FPS
@@ -170,6 +180,17 @@ def render_pov3d(conteudo: dict, out_path: Path, estilo_nome: str | None = None,
                     ent = min(1.0, (t - a + 0.1) / 0.25)
                     _off = int((1 - ent) * 140)
                     R._blit(frame, im, (W - im.width) // 2, int(H * 0.30) + _off, opac=min(1.0, ent))
+                    break
+
+            # carimbo de ano / data
+            for ci, (cena, (a0, b0)) in enumerate(zip(cenas, tempos_cena)):
+                if cena.get("ano") and a0 <= t < a0 + 2.4:
+                    spr = R._carimbo_ano(str(cena["ano"]))
+                    ent = min(1.0, (t - a0) / 0.25)
+                    k = 0.55 + 0.45 * (1 - (1 - ent) ** 3) if ent < 1 else 1.0
+                    im = spr.resize((int(spr.width * k), int(spr.height * k)), Image.BILINEAR)
+                    sai = min(1.0, (a0 + 2.4 - t) / 0.3)
+                    R._blit(frame, im, (W - im.width) // 2, int(H * 0.52), opac=min(ent, sai))
                     break
 
             # chip do episodio + titulo (primeiros 3 s)
