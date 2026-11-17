@@ -43,6 +43,11 @@ jobs:
           ffmpeg -version | head -1
 
       - run: pip install -r requirements.txt
+      - name: Motor 3D (Chromium headless + three.js)
+        run: |
+          python -m playwright install --with-deps chromium
+          (cd pov3d && npm install three@0.160.0 --no-audit --no-fund)
+
 
       - name: Profundidade por IA (opcional; cai na heuristica se falhar)
         run: |

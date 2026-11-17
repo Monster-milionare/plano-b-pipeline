@@ -26,6 +26,11 @@ jobs:
           ffmpeg -version | head -1
 
       - run: pip install -r requirements.txt
+      - name: Motor 3D (Chromium headless + three.js)
+        run: |
+          python -m playwright install --with-deps chromium
+          (cd pov3d && npm install three@0.160.0 --no-audit --no-fund)
+
       - name: Profundidade por IA (opcional)
         run: |
           pip install torch --index-url https://download.pytorch.org/whl/cpu || true
@@ -48,6 +53,7 @@ jobs:
           ffmpeg -y -loglevel error -i previas/f%d.png -filter_complex "[0:v][1:v][2:v][3:v][4:v][5:v]hstack=inputs=6" -frames:v 1 "previas/${{ github.event.inputs.id }}.jpg" 2>/dev/null || \
           ffmpeg -y -loglevel error -framerate 1 -i previas/f%d.png -vf "tile=6x1" -frames:v 1 "previas/${{ github.event.inputs.id }}.jpg"
           rm -f previas/f*.png
+          cp "$V" "previas/${{ github.event.inputs.id }}.mp4"
           grep -E "imagem=" previa.log > "previas/${{ github.event.inputs.id }}.txt" || true
           git config user.name "planob-bot"
           git config user.email "actions@users.noreply.github.com"
