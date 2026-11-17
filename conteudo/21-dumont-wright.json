@@ -1,0 +1,116 @@
+{
+ "id": "21-dumont-wright",
+ "ordem": 3,
+ "formato": "debate",
+ "estilo": "sepia",
+ "titulo": "Quem inventou o avião? Os EUA e o Brasil não concordam",
+ "titulo_youtube": "Quem inventou o avião? EUA e Brasil discordam",
+ "titulo_curto": "QUEM INVENTOU O AVIÃO?",
+ "thumb_texto": "O AVIÃO É DE QUEM?",
+ "descricao": "Santos Dumont ou irmãos Wright? Veja os fatos de cada lado e vote nos comentários: vermelho para Santos Dumont, azul para os irmãos Wright.",
+ "comentario_fixado": "Vermelho: Santos Dumont. Azul: irmãos Wright. Qual o seu voto?",
+ "tags": [
+  "santos dumont",
+  "irmaos wright",
+  "14-bis",
+  "historia do brasil",
+  "aviao",
+  "debate",
+  "curiosidades"
+ ],
+ "cenas": [
+  {
+   "fala": "Os Estados Unidos dizem que o avião é deles. O Brasil discorda.",
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "destaques": [
+    "deles",
+    "discorda"
+   ]
+  },
+  {
+   "fala": "Em dezessete de dezembro de mil novecentos e três, os irmãos Wright voaram doze segundos. Mas existe um detalhe.",
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "ano": "1903",
+   "destaques": [
+    "doze segundos"
+   ],
+   "amb": "campo"
+  },
+  {
+   "fala": "O avião deles decolava por um trilho, contra um vento forte.",
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "destaques": [
+    "trilho"
+   ],
+   "amb": "campo"
+  },
+  {
+   "fala": "Em vinte e três de outubro de mil novecentos e seis, em Paris, Santos Dumont decolou sozinho, só com rodas, diante de testemunhas.",
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "ano": "1906",
+   "destaques": [
+    "sozinho",
+    "rodas"
+   ],
+   "amb": "aerodromo"
+  },
+  {
+   "fala": "Foram sessenta metros. Vinte dias depois, ele voou duzentos e vinte metros, e a França inteira viu.",
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "ano": "1906",
+   "destaques": [
+    "duzentos e vinte metros"
+   ],
+   "amb": "aerodromo"
+  },
+  {
+   "fala": "Os Wright só voaram em público em mil novecentos e oito. Por anos, quase ninguém viu o avião deles no ar.",
+   "emocao": "misterioso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "ano": "1908",
+   "destaques": [
+    "em público"
+   ],
+   "amb": "campo"
+  },
+  {
+   "fala": "Então quem foi o primeiro? Depende do que você chama de avião.",
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "destaques": [
+    "avião"
+   ]
+  },
+  {
+   "fala": "Comenta VERMELHO se foi Santos Dumont, ou AZUL se foram os irmãos Wright. E lembra: os Estados Unidos dizem que o avião é deles. O Brasil discorda.",
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "destaques": [
+    "VERMELHO",
+    "AZUL"
+   ],
+   "amb": "aerodromo"
+  }
+ ]
+}

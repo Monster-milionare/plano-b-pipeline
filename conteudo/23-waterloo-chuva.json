@@ -1,0 +1,112 @@
+{
+ "id": "23-waterloo-chuva",
+ "ordem": 6,
+ "formato": "e-se",
+ "estilo": "epico",
+ "titulo": "E se Napoleão tivesse atacado Waterloo ao amanhecer?",
+ "titulo_youtube": "Napoleão perdeu a Europa por causa da chuva?",
+ "titulo_curto": "A CHUVA DE WATERLOO",
+ "thumb_texto": "UMA CHUVA MUDOU TUDO",
+ "descricao": "Waterloo, 1815. Uma noite de chuva e uma decisão de horário. E se Napoleão tivesse atacado antes? Vermelho: ele vencia. Azul: perdia do mesmo jeito.",
+ "comentario_fixado": "Vermelho: Napoleão vencia. Azul: perdia do mesmo jeito. Qual o seu voto?",
+ "tags": [
+  "napoleao",
+  "waterloo",
+  "1815",
+  "e se",
+  "historia alternativa",
+  "guerra"
+ ],
+ "cenas": [
+  {
+   "fala": "Napoleão perdeu a Europa por causa de uma chuva.",
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "destaques": [
+    "chuva"
+   ],
+   "amb": "campo"
+  },
+  {
+   "fala": "Dezoito de junho de mil oitocentos e quinze. Waterloo. E tudo começou na noite anterior.",
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "ano": "1815",
+   "destaques": [
+    "Waterloo"
+   ],
+   "amb": "campo"
+  },
+  {
+   "fala": "Choveu forte a noite inteira. O chão virou lama, e os canhões de Napoleão não conseguiam se mover direito.",
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "destaques": [
+    "lama"
+   ],
+   "amb": "campo"
+  },
+  {
+   "fala": "Então ele esperou o chão secar e só mandou atacar perto do meio-dia. Isso deu horas de ouro ao inimigo.",
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "destaques": [
+    "meio-dia"
+   ],
+   "amb": "palacio"
+  },
+  {
+   "fala": "Enquanto isso, o exército prussiano de Blücher marchava para ajudar os ingleses. E ele chegou à tarde.",
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "destaques": [
+    "Blücher"
+   ],
+   "amb": "campo"
+  },
+  {
+   "fala": "Para piorar, trinta e três mil homens de Napoleão, sob o general Grouchy, estavam longe dali e nunca apareceram.",
+   "emocao": "misterioso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "destaques": [
+    "trinta e três mil"
+   ],
+   "amb": "campo"
+  },
+  {
+   "fala": "Imagine que ele atacasse ao amanhecer. Talvez vencesse os ingleses antes da chegada dos prussianos. É só uma hipótese.",
+   "emocao": "misterioso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "destaques": [
+    "amanhecer"
+   ],
+   "amb": "palacio"
+  },
+  {
+   "fala": "Comenta VERMELHO se Napoleão vencia, ou AZUL se perdia do mesmo jeito. Só que, no fim, foi uma chuva que mudou a Europa.",
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "destaques": [
+    "VERMELHO",
+    "AZUL"
+   ],
+   "amb": "campo"
+  }
+ ]
+}

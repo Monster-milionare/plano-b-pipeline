@@ -1,10 +1,10 @@
 {
  "id": "09-apollo-11-falha",
- "ordem": 9,
+ "ordem": 4,
  "formato": "voce-acorda",
  "estilo": "noir",
  "titulo": "Você é o piloto da Apollo 11 e o motor falha",
- "descricao": "Você é o piloto do módulo lunar da Apollo 11 e o motor falha. O que aconteceu de verdade na descida e o que poderia ter dado errado.",
+ "descricao": "Apollo 11, julho de 1969. O alarme na descida, o campo de pedras e o combustível acabando. Vermelho para pousar, azul para abortar.",
  "tags": [
   "apollo 11",
   "lua",
@@ -15,65 +15,100 @@
  ],
  "cenas": [
   {
-   "fala": "Você é o piloto do módulo lunar da Apollo 11, a poucos minutos de pousar na Lua!",
-   "visuais": [
-    "first person view inside a lunar module cockpit looking at the moon surface, 1969, dramatic"
-   ],
+   "fala": "Em mil novecentos e sessenta e nove, um alarme quase cancelou a Lua.",
    "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
    "ano": "1969",
    "destaques": [
-    "Apollo"
-   ]
+    "alarme"
+   ],
+   "amb": "lua"
   },
   {
-   "fala": "De repente, o computador dispara alarmes. O combustível está acabando!",
-   "visuais": [
-    "red warning lights in a 1960s spacecraft cockpit, tense, cinematic"
-   ],
+   "fala": "Você é Neil Armstrong. A Terra ficou para trás, e o módulo lunar está a minutos de pousar.",
    "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "ano": "1969",
    "destaques": [
-    "alarmes",
-    "combustível"
-   ]
+    "Neil Armstrong"
+   ],
+   "amb": "lua"
   },
   {
-   "fala": "Isso aconteceu de verdade: no pouso, restava menos de um minuto de combustível.",
+   "fala": "De repente, o computador dispara um alarme. O código era um mil duzentos e dois, e ninguém na cabine sabia ao certo o que significava.",
+   "emocao": "misterioso",
    "visuais": [
-    "fuel gauge nearly empty in a vintage space cockpit, close up"
+    "cinematic scene"
    ],
+   "destaques": [
+    "mil duzentos e dois"
+   ],
+   "amb": "laboratorio"
+  },
+  {
+   "fala": "Em Houston, um jovem engenheiro respondeu em segundos: pode continuar. E a descida seguiu.",
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "destaques": [
+    "pode continuar"
+   ],
+   "amb": "laboratorio"
+  },
+  {
+   "fala": "Mas o pouso automático ia direto para um campo de pedras enormes. Armstrong assumiu o controle manual.",
    "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
    "destaques": [
-    "minuto"
-   ]
+    "controle manual"
+   ],
+   "amb": "lua"
   },
   {
-   "fala": "Neil Armstrong assumiu o controle manual para fugir de um campo de pedras e pousou com segurança.",
-   "visuais": [
-    "lunar module descending over a rocky crater field on the moon, cinematic"
-   ],
+   "fala": "Ele voou procurando um lugar plano, e o combustível acabava. No fim, restava menos de um minuto.",
    "emocao": "surpreso",
-   "ano": "20 JUL",
+   "visuais": [
+    "cinematic scene"
+   ],
    "destaques": [
-    "Armstrong"
-   ]
+    "menos de um minuto"
+   ],
+   "amb": "lua"
   },
   {
-   "fala": "Mas pense no pior: sem o motor de subida, não havia plano B para voltar!",
+   "fala": "Vinte de julho de mil novecentos e sessenta e nove. Armstrong disse: a Águia pousou.",
+   "emocao": "feliz",
    "visuais": [
-    "astronauts standing on the moon next to a lunar module, black sky, earth far away"
+    "cinematic scene"
    ],
+   "ano": "1969",
+   "destaques": [
+    "a Águia pousou"
+   ],
+   "amb": "lua"
+  },
+  {
+   "fala": "Se fosse você, pousava ou abortava? Comenta VERMELHO pra pousar, ou AZUL pra abortar. E lembra: um simples alarme quase cancelou a Lua.",
    "emocao": "preocupado",
-   "destaques": [
-    "motor"
-   ]
-  },
-  {
-   "fala": "Você teria coragem de descer lá? Comenta sim ou não!",
    "visuais": [
-    "earthrise over the lunar horizon, astronaut silhouette, cinematic"
+    "cinematic scene"
    ],
-   "emocao": "feliz"
+   "destaques": [
+    "VERMELHO",
+    "AZUL"
+   ],
+   "amb": "lua"
   }
  ],
- "thumb_texto": "APOLLO 11 FALHOU"
+ "thumb_texto": "O ALARME DA LUA",
+ "titulo_youtube": "Apollo 11: o alarme que quase cancelou a Lua",
+ "titulo_curto": "O ALARME DA LUA",
+ "comentario_fixado": "Vermelho: você pousava. Azul: você abortava. Qual o seu voto?"
 }

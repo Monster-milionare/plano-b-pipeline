@@ -1,0 +1,114 @@
+{
+ "id": "22-idos-de-marco",
+ "ordem": 5,
+ "formato": "voce-acorda",
+ "estilo": "epico",
+ "titulo": "Você acorda em Roma no dia em que César vai morrer",
+ "titulo_youtube": "Você acorda em Roma no dia em que César morre",
+ "titulo_curto": "OS IDOS DE MARÇO",
+ "thumb_texto": "O DIA EM QUE CÉSAR MORREU",
+ "descricao": "Roma, quinze de março de quarenta e quatro antes de Cristo. Você sabe o que vai acontecer com César. Vermelho para avisar, azul para ficar calado.",
+ "comentario_fixado": "Vermelho: avisa César. Azul: fica calado. Qual o seu voto?",
+ "tags": [
+  "julio cesar",
+  "roma antiga",
+  "idos de marco",
+  "voce acorda",
+  "historia",
+  "brutus"
+ ],
+ "cenas": [
+  {
+   "fala": "Você sabe que Júlio César vai morrer hoje. E ele ainda não sabe.",
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "destaques": [
+    "vai morrer hoje"
+   ],
+   "amb": "cidade-antiga"
+  },
+  {
+   "fala": "Quinze de março do ano quarenta e quatro antes de Cristo. Os Idos de Março, em Roma.",
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "ano": "44 a.C.",
+   "destaques": [
+    "Idos de Março"
+   ],
+   "amb": "cidade-antiga"
+  },
+  {
+   "fala": "Um adivinho já tinha avisado César para tomar cuidado com esse dia, segundo os historiadores antigos.",
+   "emocao": "misterioso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "destaques": [
+    "avisado"
+   ],
+   "amb": "cidade-antiga"
+  },
+  {
+   "fala": "Sua esposa, Calpúrnia, pediu para ele não sair de casa naquela manhã, depois de um sonho ruim.",
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "destaques": [
+    "Calpúrnia"
+   ],
+   "amb": "palacio"
+  },
+  {
+   "fala": "Mas César foi ao Senado. E mais de sessenta conspiradores o esperavam, entre eles Brutus, alguém em quem ele confiava.",
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "destaques": [
+    "sessenta conspiradores",
+    "Brutus"
+   ],
+   "amb": "arena"
+  },
+  {
+   "fala": "Segundo os relatos, César levou cerca de vinte e três golpes de punhal.",
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "destaques": [
+    "vinte e três golpes"
+   ],
+   "amb": "arena"
+  },
+  {
+   "fala": "Os conspiradores queriam salvar a república. Em poucos anos, Roma virou um império, com Augusto.",
+   "emocao": "misterioso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "ano": "27 a.C.",
+   "destaques": [
+    "império"
+   ],
+   "amb": "cidade-antiga"
+  },
+  {
+   "fala": "Se fosse você, avisava César ou ficava calado? Comenta VERMELHO pra avisar, ou AZUL pra ficar calado. E lembra: você sabia que ele ia morrer hoje.",
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "destaques": [
+    "VERMELHO",
+    "AZUL"
+   ],
+   "amb": "palacio"
+  }
+ ]
+}
