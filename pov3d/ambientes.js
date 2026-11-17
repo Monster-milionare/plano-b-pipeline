@@ -274,7 +274,7 @@ construirCidade('cidade-antiga', [0xf0ece0, 0xe8dcc4, 0xd8ccb0, 0xf4efe4, 0xe0c9
 
 // ---- LUA ----
 (function () {
-  const a = novoAmb('lua', {hemiCeu: 0x7a7a9a, hemiChao: 0x3a3a44, hemiInt: 0.8, pontoCor: 0xffffff, pontoInt: 0.001, pontoDist: 8, pontoPos: [0, 5, 0], dirCor: 0xffffff, dirInt: 1.5, dirPos: [-14, 9, 8],
+  const a = novoAmb('lua', {hemiCeu: 0x7a7a9a, hemiChao: 0x6a6a78, hemiInt: 1.9, pontoCor: 0xffffff, pontoInt: 0.001, pontoDist: 8, pontoPos: [0, 5, 0], dirCor: 0xffffff, dirInt: 2.4, dirPos: [-14, 9, 8],
     fundo: 0x000008, nevoa: [0x000008, 120, 400], ceu: [0x000004, 0x000008, 0x05050f]});
   a.g.position.x = 2400;
   const solo = mesh(new THREE.PlaneGeometry(500, 500, 40, 40), M(0x9a9aa2, {flatShading: true}), 0, 0, -60, a.g); solo.rotation.x = -Math.PI / 2; solo.receiveShadow = true;

@@ -6,13 +6,22 @@
 <script>
 // Motor 3D low-poly "joguinho" para os POVs. Dirigido por dados: setShots([...]) e frame(t, amp).
 const W = window.__W || 1080, H = window.__H || 1920;
-const renderer = new THREE.WebGLRenderer({antialias: true, preserveDrawingBuffer: true});
+const renderer = new THREE.WebGLRenderer({antialias: false, preserveDrawingBuffer: true});
 renderer.setSize(W, H); renderer.setPixelRatio(1);
 renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 document.body.appendChild(renderer.domElement);
 const scene = new THREE.Scene();
 const cam = new THREE.PerspectiveCamera(65, W / H, 0.05, 400);
-const M = (c, o) => new THREE.MeshLambertMaterial(Object.assign({color: c}, o || {}));
+let _semRuido = false;
+const RUIDO_GLSL = 'varying vec3 vWP;\nfloat h3(vec3 p){p=fract(p*0.3183099+.1);p*=17.;return fract(p.x*p.y*p.z*(p.x+p.y+p.z));}\nfloat vn(vec3 x){vec3 i=floor(x),f=fract(x);f=f*f*(3.-2.*f);return mix(mix(mix(h3(i),h3(i+vec3(1,0,0)),f.x),mix(h3(i+vec3(0,1,0)),h3(i+vec3(1,1,0)),f.x),f.y),mix(mix(h3(i+vec3(0,0,1)),h3(i+vec3(1,0,1)),f.x),mix(h3(i+vec3(0,1,1)),h3(i+vec3(1,1,1)),f.x),f.y),f.z);}';
+function patchRuido(m, forca) {
+  m.onBeforeCompile = sh => {
+    sh.vertexShader = sh.vertexShader.replace('#include <common>', '#include <common>\nvarying vec3 vWP;').replace('#include <begin_vertex>', '#include <begin_vertex>\nvWP = (modelMatrix * vec4(transformed, 1.0)).xyz;');
+    sh.fragmentShader = sh.fragmentShader.replace('#include <common>', '#include <common>\n' + RUIDO_GLSL).replace('#include <color_fragment>', '#include <color_fragment>\nfloat rr = vn(vWP*2.1)*0.5 + vn(vWP*6.3)*0.3 + vn(vWP*17.0)*0.2; diffuseColor.rgb *= ' + (1 - forca / 2).toFixed(3) + ' + ' + forca.toFixed(3) + '*rr;');
+  };
+  m.customProgramCacheKey = () => 'rn' + forca;
+}
+const M = (c, o) => { const m = new THREE.MeshStandardMaterial(Object.assign({color: c, roughness: 0.78, metalness: 0.0}, o || {})); patchRuido(m, _semRuido ? 0.07 : 0.30); return m; };
 const B = c => new THREE.MeshBasicMaterial({color: c});
 const rnd = (() => { let s = 12345; return () => (s = (s * 16807) % 2147483647) / 2147483647; })();
 const lerp = (a, b, u) => a + (b - a) * u;
@@ -42,6 +51,7 @@ const mapaTex = canvasTex(512, 384, (g, w, h) => {
 const chars = {};
 function personagem(id, o) {
   if (o.dino && window.dinoBuild) return window.dinoBuild(id, o);
+  _semRuido = true;
   const g = new THREE.Group();
   const corpo = mesh(o.vestido ? new THREE.CylinderGeometry(0.4, 0.82, 1.25, 18) : new THREE.CylinderGeometry(0.42, 0.52, 1.15, 16), M(o.roupa), 0, o.vestido ? 0.8 : 0.78, 0, g); corpo.castShadow = true;
   mesh(new THREE.CylinderGeometry(0.5, 0.5, 0.2, 16), M(o.bota || 0x2a1a10), 0, 0.12, 0, g);
@@ -85,6 +95,16 @@ function personagem(id, o) {
     mesh(new THREE.SphereGeometry(0.13, 10, 8), M(o.pele), 0, -0.84, 0, ag);
     ag.rotation.z = 0.25 * s; g.add(ag); bracos.push(ag);
   }
+  // ---- detalhes extras: orelhas, palpebras, ombros, bainha, biqueiras, sombra de contato
+  for (const s2 of [-1, 1]) {
+    const orelha = mesh(new THREE.SphereGeometry(0.1, 10, 8), M(o.pele), 0.53 * s2, -0.02, 0, cab); orelha.scale.set(0.6, 1, 0.8);
+    const lid = mesh(new THREE.SphereGeometry(0.17, 14, 8, 0, Math.PI * 2, 0, Math.PI * 0.42), M(o.pele), 0.2 * s2, 0.08, 0.43, cab); lid.rotation.x = -0.35;
+    mesh(new THREE.SphereGeometry(0.17, 10, 8), M(o.roupa), 0.45 * s2, 1.2, 0, g).scale.set(1, 0.8, 1);
+    const bico = mesh(new THREE.SphereGeometry(0.13, 10, 8), M(o.bota || 0x2a1a10), 0.2 * s2, 0.1, 0.5, g); bico.scale.set(0.9, 0.7, 1.3);
+  }
+  mesh(new THREE.CylinderGeometry(0.535, 0.545, 0.05, 16), M(0xffffff, {transparent: true, opacity: 0.18}), 0, 0.3, 0, g);
+  { const sb = mesh(new THREE.CircleGeometry(0.85, 20), new THREE.MeshBasicMaterial({map: brilhoTex, color: 0x000000, transparent: true, opacity: 0.55, depthWrite: false, fog: false}), 0, 0.012, 0, g); sb.rotation.x = -Math.PI / 2; }
+  _semRuido = false;
   g.userData = {cab, boca, olhos, bracos, base: 0, fase: rnd() * 6, id, prot: !!o.protagonista};
   g.scale.setScalar(o.escala || 1);
   chars[id] = g; return g;
@@ -142,7 +162,7 @@ function novoAmb(nome, cfg) {
   const dome = new THREE.Mesh(new THREE.SphereGeometry(180, 24, 16), new THREE.ShaderMaterial({side: THREE.BackSide, depthWrite: false, fog: false,
     uniforms: {topo: {value: new THREE.Color(cfg.ceu[0])}, meio: {value: new THREE.Color(cfg.ceu[1])}, hor: {value: new THREE.Color(cfg.ceu[2])}},
     vertexShader: 'varying vec3 vP; void main(){ vP = position; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }',
-    fragmentShader: 'varying vec3 vP; uniform vec3 topo; uniform vec3 meio; uniform vec3 hor; void main(){ float h = normalize(vP).y; vec3 c = mix(hor, meio, smoothstep(-0.05, 0.25, h)); c = mix(c, topo, smoothstep(0.2, 0.8, h)); gl_FragColor = vec4(c, 1.0); }'}));
+    fragmentShader: 'varying vec3 vP; uniform vec3 topo; uniform vec3 meio; uniform vec3 hor; void main(){ float h = normalize(vP).y; vec3 c = mix(hor, meio, smoothstep(-0.05, 0.25, h)); c = mix(c, topo, smoothstep(0.2, 0.8, h)); gl_FragColor = vec4(pow(c, vec3(1.45)), 1.0); }'}));
   g.add(dome);
   if (!cfg.semEstrelas) {
     const pts = []; for (let i = 0; i < 420; i++) { const an = rnd() * Math.PI * 2, e = 0.12 + rnd() * 1.3, r = 170; pts.push(Math.cos(an) * Math.cos(e) * r, Math.sin(e) * r, Math.sin(an) * Math.cos(e) * r); }
@@ -328,6 +348,7 @@ const PROTO_ROT = (dx, dz) => Math.atan2(dx, dz);
 
 </script>
 <script src="ambientes.js"></script>
+<script src="polir.js"></script>
 <script>
 // ---------------------------------------------------------------- loop de quadro
 let shots = [], ativo = null;
@@ -377,7 +398,7 @@ window.frame = function (t, amp, fmt) {
     d.bracos[0].rotation.z = 0.25 + (fala ? Math.sin(t * 4.5) * 0.35 + 0.2 : bob * 0.05);
     d.bracos[1].rotation.z = -0.25 - (fala ? Math.sin(t * 4.0 + 1) * 0.3 + 0.2 : bob * 0.05);
   }
-  renderer.render(scene, cam);
+  window.posRender(t);
   return fmt === 'png' ? renderer.domElement.toDataURL('image/png') : renderer.domElement.toDataURL('image/jpeg', 0.93);
 };
 window.ambientes = () => Object.fromEntries(Object.entries(amb).map(([k, v]) => [k, Object.keys(v.cams)]));
