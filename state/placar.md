@@ -1,6 +1,6 @@
-# Placar do Plano B - 17/11/2026 09:02 UTC
+# Placar do Plano B - 18/11/2026 08:27 UTC
 
-Fonte das views: oauth. Videos medidos (20h+ no ar): 0. Media geral: 0.0 views/dia (janela de 4 dias).
+Fonte das views: oauth. Videos medidos (20h+ no ar): 3. Media geral: 2.9 views/dia (janela de 4 dias).
 
 Amostra ainda pequena (minimo 5): pesos neutros por enquanto.
 
@@ -8,6 +8,9 @@ Amostra ainda pequena (minimo 5): pesos neutros por enquanto.
 
 | video | estilo | formato | views |
 |---|---|---|---|
-| Você acorda em 1500 como capitão da frota de Cabral | sepia | voce-acorda | 0 |
-| POV: você é Pedro Álvares Cabral e avista o Brasil pela | sepia | pov | 3 |
-| E se o Brasil tivesse sido colonizado pelos ingleses? | epico | e-se | 4 |
+| Você é o piloto da Apollo 11 e o motor falha | noir | voce-acorda | 88 |
+| Quem inventou o avião? Os EUA e o Brasil não concordam | sepia | debate | 1141 |
+| POV: você é Cabral e o mar não acaba — EPI. 01 | sepia | pov3d | 794 |
+| Você acorda em 1500 como capitão da frota de Cabral | sepia | voce-acorda | 1 |
+| POV: você é Pedro Álvares Cabral e avista o Brasil pela | sepia | pov | 5 |
+| E se o Brasil tivesse sido colonizado pelos ingleses? | epico | e-se | 6 |
