@@ -9,7 +9,7 @@ import re
 import unicodedata
 
 CENARIOS = ["conves", "terra", "cabine", "palacio", "cidade", "cidade-antiga", "campo", "laboratorio", "lua", "arena",
-            "deserto", "aerodromo", "selva"]
+            "deserto", "aerodromo", "selva", "vapor"]
 
 PERFIS = {
     "cabral": dict(kw=["cabral", "1500", "descobrimento", "frota", "caravela", "pau-brasil", "pero vaz"], prot="cabral",
@@ -39,7 +39,7 @@ PERFIS = {
                   ambientes=["deserto", "palacio", "cidade-antiga"]),
     "dino": dict(kw=["dinossauro", "dinossauros", "jurassico", "extincao", "meteoro"], prot="cientista", f=["dino", "dino2", "dino3"], ambientes=["selva", "campo"]),
     "viking": dict(kw=["viking", "vikings"], prot="viking", f=["viking", "nativo", "marujo"], ambientes=["conves", "terra", "campo"]),
-    "titanic": dict(kw=["titanic"], prot="marujo", f=["cidadao", "cidada", "marujo2"], ambientes=["conves", "palacio"]),
+    "titanic": dict(kw=["titanic"], prot="marujo", f=["cidadao", "cidada", "marujo2"], ambientes=["vapor", "palacio"]),
     "medieval": dict(kw=["medieval", "cavaleiro", "castelo", "idade media", "mongol", "gengis"], prot="cavaleiro", f=["rei", "rainha", "cavaleiro"], ambientes=["campo", "palacio", "cidade"]),
     "asteca": dict(kw=["asteca", "tenochtitlan", "espanhol", "cortes", "maia", "inca"], prot="asteca", f=["asteca", "cavaleiro", "nativo"], ambientes=["selva", "cidade-antiga", "deserto"]),
     "guerra": dict(kw=["guerra mundial", "segunda guerra", "trincheira"], prot="soldado-ingles", f=["soldado-frances", "cidadao", "cidada"], ambientes=["campo", "cidade"]),
@@ -54,6 +54,7 @@ PERFIS = {
 }
 
 CHAVES_AMB = [
+    ("vapor", r"\b(titanic|transatlantico|transatlanticos|navio a vapor|iceberg|icebergs|chamine|chamines|casco de aco)\b"),
     ("conves", r"\b(navio|navios|mar|oceano|frota|caravela|barco|marujo|bordo|ship|ocean|fleet|sailor|deck|porto|viagem)\b"),
     ("terra", r"\b(praia|costa|terra a vista|desembarc|beach|coast|shore|litoral|ilha)\b"),
     ("palacio", r"\b(palacio|trono|corte|rei|rainha|imperador|imperatriz|palace|throne|king|queen|castelo|nobre|assin)\w*"),
