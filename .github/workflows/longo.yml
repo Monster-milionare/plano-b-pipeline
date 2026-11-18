@@ -1,0 +1,152 @@
+name: Video longo (render paralelo)
+
+on:
+  workflow_dispatch:
+    inputs:
+      id:
+        description: "ID do roteiro longo (formato: longo), ex.: 40-pompeia-longo"
+        required: true
+      publicar:
+        description: "true = publicar no YouTube ao final; false = so gerar o video (artefato)"
+        required: false
+        default: "true"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: planob-longo
+  cancel-in-progress: false
+
+env:
+  TZ: America/Sao_Paulo
+
+jobs:
+  preparar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    outputs:
+      matriz: ${{ steps.p.outputs.matriz }}
+      n: ${{ steps.p.outputs.n }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Garantir ffmpeg
+        run: which ffmpeg >/dev/null 2>&1 || (sudo apt-get update -y -qq && sudo apt-get install -y -qq ffmpeg)
+      - run: pip install -r requirements.txt
+      - name: Voz, musica e plano de cameras
+        id: p
+        run: |
+          python render_longo.py preparar "${{ github.event.inputs.id }}"
+          python - <<'PY'
+          import json, math, os
+          p = json.load(open(f"out/_longo_{os.environ['ID']}/plano.json"))
+          n = min(20, max(2, math.ceil(p["nframes"] / 1000)))
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write(f"n={n}\nmatriz={json.dumps(list(range(n)))}\n")
+          print("trechos:", n, "quadros:", p["nframes"])
+          PY
+        env:
+          ID: ${{ github.event.inputs.id }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: plano
+          path: out/_longo_${{ github.event.inputs.id }}/plano.json
+          retention-days: 2
+      - uses: actions/upload-artifact@v4
+        with:
+          name: audio
+          path: |
+            out/_longo_${{ github.event.inputs.id }}/voz.wav
+            out/_longo_${{ github.event.inputs.id }}/musica.wav
+          retention-days: 2
+
+  trechos:
+    needs: preparar
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        trecho: ${{ fromJSON(needs.preparar.outputs.matriz) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Garantir ffmpeg
+        run: which ffmpeg >/dev/null 2>&1 || (sudo apt-get update -y -qq && sudo apt-get install -y -qq ffmpeg)
+      - run: pip install -r requirements.txt
+      - name: Motor 3D (Chromium headless + three.js)
+        run: |
+          python -m playwright install --with-deps chromium
+          (cd pov3d && npm install three@0.160.0 --no-audit --no-fund)
+      - uses: actions/download-artifact@v4
+        with:
+          name: plano
+          path: out/_longo_${{ github.event.inputs.id }}
+      - name: Renderizar o trecho
+        run: python render_longo.py trecho "${{ github.event.inputs.id }}" ${{ matrix.trecho }} ${{ needs.preparar.outputs.n }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: trecho-${{ matrix.trecho }}
+          path: out/_longo_${{ github.event.inputs.id }}/trecho_*.mp4
+          retention-days: 2
+
+  montar:
+    needs: [preparar, trechos]
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Garantir ffmpeg
+        run: which ffmpeg >/dev/null 2>&1 || (sudo apt-get update -y -qq && sudo apt-get install -y -qq ffmpeg)
+      - run: pip install -r requirements.txt
+      - uses: actions/download-artifact@v4
+        with:
+          name: plano
+          path: out/_longo_${{ github.event.inputs.id }}
+      - uses: actions/download-artifact@v4
+        with:
+          name: audio
+          path: out/_longo_${{ github.event.inputs.id }}
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: trecho-*
+          merge-multiple: true
+          path: out/_longo_${{ github.event.inputs.id }}
+      - name: Montar (juntar trechos + mixar audio)
+        run: python render_longo.py montar "${{ github.event.inputs.id }}" ${{ needs.preparar.outputs.n }} "out/${{ github.event.inputs.id }}.mp4"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: video-longo
+          path: out/${{ github.event.inputs.id }}.mp4
+          retention-days: 3
+      - name: Publicar no YouTube
+        if: github.event.inputs.publicar == 'true'
+        env:
+          YOUTUBE_TOKEN_JSON: ${{ secrets.YOUTUBE_TOKEN_JSON }}
+        run: |
+          printf '%s' "$YOUTUBE_TOKEN_JSON" > token.json
+          set +e
+          python publicar_longo.py "${{ github.event.inputs.id }}" "out/${{ github.event.inputs.id }}.mp4"
+          COD=$?
+          rm -f token.json
+          git config user.name "planob-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -f state/*.json 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "chore: estado da publicacao (longo)"
+          for i in 1 2 3 4 5; do
+            if git push; then break; fi
+            git pull --rebase --autostash origin main
+            sleep 5
+          done
+          exit $COD
