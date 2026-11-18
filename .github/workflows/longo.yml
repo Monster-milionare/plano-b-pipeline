@@ -36,6 +36,7 @@ jobs:
           cache: pip
       - name: Garantir ffmpeg
         run: which ffmpeg >/dev/null 2>&1 || (sudo apt-get update -y -qq && sudo apt-get install -y -qq ffmpeg)
+        timeout-minutes: 6
       - run: pip install -r requirements.txt
       - name: Voz, musica e plano de cameras
         id: p
@@ -80,6 +81,7 @@ jobs:
           cache: pip
       - name: Garantir ffmpeg
         run: which ffmpeg >/dev/null 2>&1 || (sudo apt-get update -y -qq && sudo apt-get install -y -qq ffmpeg)
+        timeout-minutes: 6
       - run: pip install -r requirements.txt
       - name: Motor 3D (Chromium headless + three.js)
         run: |
@@ -109,6 +111,7 @@ jobs:
           cache: pip
       - name: Garantir ffmpeg
         run: which ffmpeg >/dev/null 2>&1 || (sudo apt-get update -y -qq && sudo apt-get install -y -qq ffmpeg)
+        timeout-minutes: 6
       - run: pip install -r requirements.txt
       - uses: actions/download-artifact@v4
         with:
