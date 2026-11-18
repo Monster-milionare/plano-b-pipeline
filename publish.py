@@ -50,7 +50,7 @@ def pendentes() -> list:
             c = json.loads(arq.read_text(encoding="utf-8"))
         except Exception:
             continue
-        if c.get("id") and c["id"] not in feitos and not c["id"].startswith("00-") and not c.get("desativado"):
+        if c.get("id") and c["id"] not in feitos and not c["id"].startswith("00-") and not c.get("desativado") and c.get("formato") != "longo":
             itens.append(c)
     itens.sort(key=lambda c: (c.get("ordem", 999), c["id"]))
     return itens
