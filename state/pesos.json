@@ -1,8 +1,18 @@
 {
- "estilos": {},
- "formatos": {},
- "amostra": 3,
- "media_views_dia": 2.9,
- "atualizado": "2026-11-18T08:27+00:00",
+ "estilos": {
+  "epico": 0.671,
+  "sepia": 1.264,
+  "noir": 0.802
+ },
+ "formatos": {
+  "e-se": 0.671,
+  "pov": 0.671,
+  "voce-acorda": 0.602,
+  "pov3d": 1.409,
+  "debate": 1.78
+ },
+ "amostra": 6,
+ "media_views_dia": 247.0,
+ "atualizado": "2026-11-19T08:39+00:00",
  "fonte_views": "oauth"
 }
