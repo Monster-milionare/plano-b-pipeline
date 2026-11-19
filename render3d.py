@@ -16,6 +16,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 import config
 import cenografo
+import chamada_longo
 import estilos
 import musica
 import musica_real
@@ -112,6 +113,28 @@ def _barra_ep(ep, titulo):
     return im
 
 
+def _cartao_longo(chamada):
+    """Cartao final: aponta para o video longo sobre o mesmo assunto."""
+    w = 940
+    f1 = R._fonte(58)
+    im = Image.new("RGBA", (w, 330), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    d.rounded_rectangle([0, 0, w - 1, 120], radius=40, fill=(229, 32, 32, 252), outline=(255, 255, 255, 255), width=7)
+    txt = "VÍDEO COMPLETO NO CANAL"
+    bb = f1.getbbox(txt)
+    d.text(((w - (bb[2] - bb[0])) // 2 - bb[0] + 34, 60 - (bb[3] - bb[1]) // 2 - bb[1]), txt, font=f1, fill=(255, 255, 255, 255))
+    d.polygon([(90, 36), (90, 84), (132, 60)], fill=(255, 255, 255, 255))
+    if chamada:
+        t = R._texto_contorno(chamada.upper(), 74, (255, 214, 10), 9)
+        if t.width > w:
+            k = w / t.width
+            t = t.resize((int(t.width * k), int(t.height * k)), Image.LANCZOS)
+        im.alpha_composite(t, ((w - t.width) // 2, 142))
+    sub = R._texto_contorno("ASSISTE NA ABA VÍDEOS DO CANAL", 46, (255, 255, 255), 7)
+    im.alpha_composite(sub, ((w - sub.width) // 2, 248))
+    return im
+
+
 # ---------------------------------------------------------------- render
 def render_pov3d(conteudo: dict, out_path: Path, estilo_nome: str | None = None, fake_tts: bool = False,
                  largura: int | None = None):
@@ -158,7 +181,9 @@ def render_pov3d(conteudo: dict, out_path: Path, estilo_nome: str | None = None,
         tempos_cena.append((a, b))
     palavras = R._palavras_abs(todos, inicios)
     blocos = R._blocos_legenda(palavras)
-    total = dur_voz + 1.6
+    longo = chamada_longo.info(conteudo)
+    total = dur_voz + (3.4 if longo else 1.6)
+    cartao_longo = _cartao_longo(longo["chamada"]) if longo else None
     nframes = int(total * FPS)
     shots = _linha_do_tempo(cenas, tempos_cena, spans_por_cena)
 
@@ -249,6 +274,14 @@ def render_pov3d(conteudo: dict, out_path: Path, estilo_nome: str | None = None,
                 pop = 1.0 + 0.12 * max(0.0, 1 - (t - bl[ativa][1]) / 0.12)
                 im = spr if pop < 1.01 else spr.resize((int(spr.width * pop), int(spr.height * pop)), Image.BILINEAR)
                 R._blit(frame, im, (W - im.width) // 2, int(H * (0.235 if t < 3.2 else 0.17)) - im.height // 2)
+
+            # chamada final para o video longo (ultimos ~3.7 s)
+            if cartao_longo is not None and t >= dur_voz - 0.3:
+                ent = min(1.0, (t - (dur_voz - 0.3)) / 0.3)
+                k = 0.7 + 0.3 * (1 - (1 - ent) ** 3)
+                pulso = 1.0 + 0.03 * np.sin(t * 7)
+                im = cartao_longo.resize((int(cartao_longo.width * k * pulso), int(cartao_longo.height * k * pulso)), Image.BILINEAR)
+                R._blit(frame, im, (W - im.width) // 2, int(H * 0.56), opac=ent)
 
             cv2.rectangle(frame, (0, 0), (int(W * fi / nframes), 10), (255, 214, 10), -1)
             if t > 3.2:

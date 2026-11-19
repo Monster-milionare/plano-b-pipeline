@@ -57,8 +57,11 @@ def pendentes() -> list:
 
 
 def _descricao(c: dict) -> str:
+    import chamada_longo
     fixo = c.get("comentario_fixado")
-    return ((f"{fixo}\n\n" if fixo else "") + f"{c['descricao']}\n\nSe inscreva no Plano B da História: toda semana, um \"e se...\" que muda o mundo.\n"
+    lg = chamada_longo.info(c)
+    topo = (f"▶ Vídeo completo sobre isso no canal: {lg['url']}\n\n" if lg else "")
+    return (topo + (f"{fixo}\n\n" if fixo else "") + f"{c['descricao']}\n\nSe inscreva no Plano B da História: toda semana, um \"e se...\" que muda o mundo.\n"
             f"Comente qual história alternativa você quer ver no próximo vídeo!\n\n"
             f"Conteúdo especulativo e educativo: os fatos citados são históricos, as hipóteses são imaginação.\n\n{HASHTAGS}")
 
