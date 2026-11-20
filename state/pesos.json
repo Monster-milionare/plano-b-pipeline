@@ -1,18 +1,19 @@
 {
  "estilos": {
-  "epico": 0.671,
-  "sepia": 1.264,
-  "noir": 0.802
+  "epico": 1.085,
+  "sepia": 1.038,
+  "noir": 0.754
  },
  "formatos": {
-  "e-se": 0.671,
+  "e-se": 0.783,
   "pov": 0.671,
-  "voce-acorda": 0.602,
-  "pov3d": 1.409,
-  "debate": 1.78
+  "voce-acorda": 1.116,
+  "pov3d": 1.17,
+  "debate": 1.567,
+  "longo": 0.687
  },
- "amostra": 6,
- "media_views_dia": 247.0,
- "atualizado": "2026-11-19T08:39+00:00",
+ "amostra": 9,
+ "media_views_dia": 220.9,
+ "atualizado": "2026-11-20T08:22+00:00",
  "fonte_views": "oauth"
 }
