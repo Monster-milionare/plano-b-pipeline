@@ -61,7 +61,7 @@ def _linha_do_tempo(cenas, tempos_cena, spans_por_cena=None):
                 fal = quem
             for i, cam in enumerate(cams):
                 shots.append({"t0": sa + dur * i / n, "t1": sa + dur * (i + 1) / n, "amb": c["amb"], "cam": cam,
-                              "falante": fal, "hora": c.get("hora")})
+                              "falante": fal, "hora": c.get("hora"), "fx": c.get("fx", "")})
     shots[0]["t0"] = 0.0
     shots[-1]["t1"] = tempos_cena[-1][1] + 2.0
     return shots

@@ -146,6 +146,17 @@ def main() -> int:
             pass
 
     fila = pendentes()
+    if not a.id:
+        import coerencia
+        validos = []
+        for c in fila:
+            r = coerencia.validar(c)
+            if r["erros"]:
+                print(f"[publish] {c['id']} BLOQUEADO pela checagem de coerencia (fica na fila, nao e removido): {r['erros'][0]}"
+                      f"{' (+' + str(len(r['erros']) - 1) + ')' if len(r['erros']) > 1 else ''}", flush=True)
+                continue
+            validos.append(c)
+        fila = validos
     if a.id:
         todos = {json.loads(p.read_text(encoding="utf-8"))["id"]: json.loads(p.read_text(encoding="utf-8"))
                  for p in config.CONTEUDO_DIR.glob("*.json")}
@@ -163,6 +174,8 @@ def main() -> int:
     for c in fila[: a.max]:
         estilo = c.get("estilo") or estilos.sortear(c["id"], evitar=ultimo_estilo)
         saida = config.OUT_DIR / f"{c['id']}.mp4"
+        import coerencia
+        coerencia.exigir(c)          # mesmo com --id: nunca renderiza roteiro incoerente
         print(f"[publish] {c['id']} | estilo={estilo}", flush=True)
         try:
             _renderizar(c, saida, estilo)

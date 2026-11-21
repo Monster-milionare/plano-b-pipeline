@@ -23,8 +23,8 @@ def longos():
     out = {}
     for p in config.CONTEUDO_DIR.glob("*.json"):
         c = _ler(p, {})
-        if c.get("formato") == "longo" and c.get("id") and not c["id"].startswith("00-") and not c.get("desativado"):
-            out[c["id"]] = c
+        if c.get("formato") == "longo" and c.get("id") and not c["id"].startswith("00-") and not c.get("desativado") and c.get("revisado") is True:
+            out[c["id"]] = c        # so entra roteiro marcado "revisado": true (conferido com o quadro de contato)
     return out
 
 
@@ -49,7 +49,13 @@ def escolher():
         import roteirista_longo
         novo = roteirista_longo.main_gerar()
         return novo or ""
-    return fila[0]["id"]
+    import coerencia
+    for c in fila:
+        r = coerencia.validar(c)
+        if not r["erros"]:
+            return c["id"]
+        print(f"[longo_diario] {c['id']} bloqueado pela coerencia: {r['erros'][0]}")
+    return ""
 
 
 if __name__ == "__main__":

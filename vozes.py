@@ -21,8 +21,10 @@ def _hz(base: str, extra: int) -> str:
 
 def papel_de(quem: str, cena: dict, elenco: dict) -> str:
     """'prot' -> papel do protagonista; 'f1' -> papel do 2o figurante daquele cenario."""
+    if quem == "radio":
+        return "radio"                      # voz fora de cena (Houston no radio): voz propria, sem personagem na tela
     if quem == "prot":
-        return elenco.get("prot", "cidadao")
+        return (elenco.get("protAmb") or {}).get(cena.get("amb")) or elenco.get("prot", "cidadao")
     if quem.startswith("f") and quem[1:].isdigit():
         lista = (elenco.get("amb") or {}).get(cena.get("amb")) or elenco.get("f") or ["cidadao"]
         return lista[int(quem[1:]) % len(lista)]
@@ -39,7 +41,7 @@ class Elenco:
         """-> (voz, tom_Hz) para quem fala nessa cena."""
         if quem in ("", "narrador", None):
             return NARRADOR
-        papel = papel_de(quem, cena, self.elenco)
+        papel = papel_de(quem, cena, self.elenco).replace("-traje", "")     # mesma pessoa = mesma voz, com ou sem traje
         if papel not in self.por_papel:
             if papel in FEMININOS:
                 v = FEMININAS[self.nf % len(FEMININAS)]

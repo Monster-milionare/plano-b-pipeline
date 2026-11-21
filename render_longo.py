@@ -47,6 +47,8 @@ def preparar(id_: str, fake_tts: bool = False) -> dict:
     conteudo = _conteudo(id_)
     work = _work(id_)
     estilo = estilos.ESTILOS[conteudo.get("estilo") or "sepia"]
+    import coerencia
+    coerencia.exigir(conteudo)       # roteiro x cenario x elenco: nada incoerente chega ao render
     conteudo = cenografo.preparar(conteudo)
     cenas = conteudo["cenas"]
     sintetizar = tts.synthesize_sentences
@@ -99,7 +101,7 @@ def preparar(id_: str, fake_tts: bool = False) -> dict:
         "shots": shots, "palavras": [[p[0], p[1], p[2]] for p in palavras],
         "tempos_cena": tempos_cena, "env": [float(x) for x in env],
         "cenas": [{"ano": c.get("ano"), "ui": c.get("ui")} for c in cenas],
-        "elenco": conteudo.get("elenco"), "formato": conteudo.get("formato"),
+        "elenco": conteudo.get("elenco"), "formato": conteudo.get("formato"), "motor": conteudo.get("motor", "3d"),
         "titulo": conteudo.get("titulo_curto") or conteudo["titulo"], "episodio": conteudo.get("episodio"),
         "estilo": estilo.nome,
         "capitulos": [(c.get("capitulo"), tempos_cena[i][0]) for i, c in enumerate(cenas) if c.get("capitulo")],
@@ -148,9 +150,10 @@ def trecho(id_: str, i: int, n: int, ate_quadro: int | None = None) -> Path:
     bloco_idx = 0
     with sync_playwright() as pw:
         br = pw.chromium.launch(args=R3.FLAGS)
-        pg = br.new_page(viewport={"width": LW, "height": LH})
-        pg.add_init_script(f"window.__W={LW};window.__H={LH};")
-        pg.goto(R3.MOTOR.resolve().as_uri())
+        dw, dh = (1920, 1080) if p.get("motor") == "2d" else (LW, LH)      # o motor 2D desenha em 1920x1080 e o quadro e reduzido
+        pg = br.new_page(viewport={"width": dw, "height": dh})
+        pg.add_init_script(f"window.__W={dw};window.__H={dh};")
+        pg.goto((R3.MOTOR.parent / ("engine2d.html" if p.get("motor") == "2d" else R3.MOTOR.name)).resolve().as_uri())
         pg.wait_for_timeout(600)
         if p.get("elenco"):
             pg.evaluate("e => window.setElenco(e)", p["elenco"])
