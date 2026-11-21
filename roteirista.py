@@ -138,20 +138,34 @@ def gerar(fmt: str, titulo: str):
     return melhor
 
 
+FILA_ALVO = 10     # 4 Shorts por dia: a fila nunca deve ficar abaixo de ~2 dias e meio
+MAX_POR_DISPARO = 3
+
+
 def main() -> int:
     if "--se-fila-curta" in sys.argv:
         import publish
-        if len(publish.pendentes()) >= 3:
-            print("[roteirista] fila com 3+ roteiros - nada a escrever.")
-            return 0
+        escritos = 0
+        while len(publish.pendentes()) < FILA_ALVO and escritos < MAX_POR_DISPARO:
+            if _um() is None:
+                break
+            escritos += 1
+        if not escritos:
+            print(f"[roteirista] fila com {FILA_ALVO}+ roteiros - nada a escrever.")
+        return 0
+    _um()
+    return 0
+
+
+def _um():
     t = proximo_tema()
     if not t:
         print("[roteirista] temas.txt acabou - adicione mais temas.")
-        return 0
+        return None
     fmt, titulo = t
     d = gerar(fmt, titulo)
     if not d:
-        return 0
+        return None
     ordem = 1 + max([json.loads(p.read_text(encoding="utf-8")).get("ordem", 0) for p in config.CONTEUDO_DIR.glob("*.json")] or [0])
     c = {"id": f"{ordem:02d}-{_slug(titulo)}", "ordem": ordem, "formato": fmt, "titulo": titulo,
          "descricao": d.get("descricao", titulo), "tags": d.get("tags", []), "cenas": d["cenas"],
@@ -162,7 +176,7 @@ def main() -> int:
             cena["amb"] = cena.pop("cenario")
     (config.CONTEUDO_DIR / f"{c['id']}.json").write_text(json.dumps(c, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"[roteirista] novo roteiro: {c['id']}")
-    return 0
+    return c["id"]
 
 
 if __name__ == "__main__":
