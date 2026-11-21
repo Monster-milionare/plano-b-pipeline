@@ -2,8 +2,8 @@ name: Publicar proximo video
 
 on:
   schedule:
-    - cron: "7 12-23,0-2 * * *"   # de hora em hora, 09h-23h (Brasilia); meta_dia.py decide se publica
-    - cron: "37 14,17,20 * * *"   # reforco (o GitHub as vezes pula execucoes agendadas)
+    - cron: "17,47 12-23,0-2 * * *"   # de hora em hora, 09h-23h (Brasilia); meta_dia.py decide se publica
+    - cron: "27 14,17,20 * * *"   # reforco (o GitHub as vezes pula execucoes agendadas)
   workflow_dispatch:
     inputs:
       id:
