@@ -1,0 +1,73 @@
+name: Video longo do dia (escolhe, escreve se preciso e dispara)
+
+on:
+  schedule:
+    - cron: "23 14 * * *"   # ~11h23 Brasilia (o render leva ~25 min)
+    - cron: "23 17 * * *"   # reforco (o GitHub as vezes pula execucoes agendadas)
+    - cron: "23 20 * * *"   # segundo reforco
+  workflow_dispatch:
+    inputs:
+      so_escrever:
+        description: "true = so escrever o roteiro longo novo e salvar (nao disparar o render)"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: planob-longo-diario
+  cancel-in-progress: false
+
+env:
+  TZ: America/Sao_Paulo
+
+jobs:
+  longo_diario:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install requests python-dotenv pyyaml || true
+
+      - name: Ja existe render do longo em andamento?
+        id: andamento
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          N=$(gh run list --workflow longo.yml --json status -q '[.[] | select(.status=="in_progress" or .status=="queued")] | length')
+          echo "em andamento: $N"
+          echo "n=$N" >> "$GITHUB_OUTPUT"
+
+      - name: Escolher (ou escrever) o longo do dia
+        id: escolha
+        if: steps.andamento.outputs.n == '0'
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: python longo_diario.py
+
+      - name: Salvar roteiro novo no repositorio
+        if: steps.escolha.outputs.id != ''
+        run: |
+          git config user.name "planob-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -f conteudo/*.json 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "chore: roteiro longo novo"
+          for i in 1 2 3 4 5; do
+            if git push; then break; fi
+            git pull --rebase --autostash origin main
+            sleep 5
+          done
+
+      - name: Disparar o render e a publicacao do longo
+        if: steps.escolha.outputs.id != '' && github.event.inputs.so_escrever != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          echo "disparando longo.yml para ${{ steps.escolha.outputs.id }}"
+          gh workflow run longo.yml -f id="${{ steps.escolha.outputs.id }}" -f publicar=true
