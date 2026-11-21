@@ -2,10 +2,8 @@ name: Publicar proximo video
 
 on:
   schedule:
-    - cron: "17 13 * * *"   # ~10h Brasilia
-    - cron: "43 21 * * *"   # ~18h40 Brasilia
-    - cron: "47 14 * * *"   # reforco da manha (o GitHub as vezes pula execucoes agendadas)
-    - cron: "13 23 * * *"   # reforco da noite
+    - cron: "7 12-23,0-2 * * *"   # de hora em hora, 09h-23h (Brasilia); meta_dia.py decide se publica
+    - cron: "37 14,17,20 * * *"   # reforco (o GitHub as vezes pula execucoes agendadas)
   workflow_dispatch:
     inputs:
       id:
@@ -34,39 +32,52 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Decidir se este horario publica (meta de 4 Shorts por dia)
+        id: d
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ]; then python3 meta_dia.py; else echo "publicar=true" >> "$GITHUB_OUTPUT"; fi
+
       - uses: actions/setup-python@v5
+        if: steps.d.outputs.publicar == 'true'
         with:
           python-version: "3.11"
           cache: pip
 
       - name: Garantir ffmpeg (a imagem do runner pode nao trazer)
+        if: steps.d.outputs.publicar == 'true'
         run: |
           which ffmpeg >/dev/null 2>&1 || (sudo apt-get update -y -qq && sudo apt-get install -y -qq ffmpeg)
           ffmpeg -version | head -1
 
       - run: pip install -r requirements.txt
+        if: steps.d.outputs.publicar == 'true'
       - name: Motor 3D (Chromium headless + three.js)
+        if: steps.d.outputs.publicar == 'true'
         run: |
           python -m playwright install --with-deps chromium
           (cd pov3d && npm install three@0.160.0 --no-audit --no-fund)
 
 
       - name: Profundidade por IA (opcional; cai na heuristica se falhar)
+        if: steps.d.outputs.publicar == 'true'
         run: |
           pip install torch --index-url https://download.pytorch.org/whl/cpu || true
           pip install transformers || true
 
       - uses: actions/cache@v4
+        if: steps.d.outputs.publicar == 'true'
         with:
           path: ~/.cache/huggingface
           key: hf-depth-anything-v2-small
 
       - name: Escrever roteiro novo se a fila estiver curta
+        if: steps.d.outputs.publicar == 'true'
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: python roteirista.py --se-fila-curta || true
 
       - name: Renderizar e publicar
+        if: steps.d.outputs.publicar == 'true'
         env:
           YOUTUBE_TOKEN_JSON: ${{ secrets.YOUTUBE_TOKEN_JSON }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
@@ -75,7 +86,7 @@ jobs:
         run: |
           printf '%s' "$YOUTUBE_TOKEN_JSON" > token.json
           ARGS=""
-          if [ "${{ github.event_name }}" = "schedule" ]; then ARGS="--se-nao-publicou-ha 3"; fi
+          if [ "${{ github.event_name }}" = "schedule" ]; then ARGS=""; fi
           if [ -n "${{ github.event.inputs.id }}" ]; then ARGS="--id ${{ github.event.inputs.id }}"; fi
           if [ "${{ github.event.inputs.so_instagram }}" = "true" ]; then ARGS="$ARGS --so-instagram"; fi
           set +e
