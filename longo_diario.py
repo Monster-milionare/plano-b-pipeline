@@ -43,6 +43,9 @@ def escolher():
     feitos = {d["id"] for d in pubs}
     fila = sorted((c for i, c in todos.items() if i not in feitos), key=lambda c: (c.get("ordem", 999), c["id"]))
     if not fila:
+        if os.environ.get("AUTO_GERAR_LONGO") != "1":
+            print("[longo_diario] fila de longos vazia; geracao automatica desligada (roteiros precisam de revisao)")
+            return ""
         import roteirista_longo
         novo = roteirista_longo.main_gerar()
         return novo or ""
