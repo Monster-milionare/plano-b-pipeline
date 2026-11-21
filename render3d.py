@@ -210,7 +210,7 @@ def render_pov3d(conteudo: dict, out_path: Path, estilo_nome: str | None = None,
     with sync_playwright() as pw:
         br = pw.chromium.launch(args=FLAGS)
         pg = br.new_page(viewport={"width": W, "height": H})
-        pg.goto(MOTOR.resolve().as_uri())
+        pg.goto((MOTOR.parent / ("engine2d.html" if conteudo.get("motor") == "2d" else MOTOR.name)).resolve().as_uri())
         pg.wait_for_timeout(600)
         if conteudo.get("elenco"):
             pg.evaluate("e => window.setElenco(e)", conteudo["elenco"])

@@ -3,7 +3,7 @@
 Cada papel (cabral, rei, cidada...) recebe UMA voz e UM tom, o mesmo em todas as cenas do video.
 Se uma voz sumir do catalogo, tts.py cai sozinho para a voz padrao (o video nunca para).
 """
-FEMININOS = {"rainha", "cidada", "cleopatra", "isabel"}
+FEMININOS = {"rainha", "cidada", "cleopatra", "isabel", "cidada-berlim", "cidada-berlim2", "exploradora", "bebe-tricera"}
 GRAVES = {"rei", "imperador", "cabral", "general-romano", "faraoh", "viking", "napoleao"}   # tom mais grave
 AGUDOS = {"cidadao2", "marujo2", "nativo3", "newton"}                                       # tom mais agudo
 
