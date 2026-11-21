@@ -14,28 +14,28 @@ import config
 POV = Path(config.BASE_DIR) / "pov3d"
 
 # metadados dos cenarios 2D ---------------------------------------------------------------------------------------
-# formato: "horizontal" (16:9, videos longos) | "vertical" (Shorts 9:16)
+# formato: "horizontal" (16:9, so longos) | "vertical" (so Shorts 9:16) | "ambos" (o cenario se adapta aos dois)
 # ceu: o cenario mostra o ceu (a hora do dia importa) | fx: efeitos validos (a chave '' = padrao)
 # max_f: quantos figurantes o cenario comporta (alem do protagonista) | vazio: cenario sem personagens
 AMB_2D = {
     "selva-cretaceo": dict(mostra="selva do Cretaceo com vulcao, dinossauros e lago", formato="vertical", ceu=True, fx=[""], max_f=3,
                            horas=["manha", "dia", "tarde", "entardecer", "impacto", "noite"]),
     "lancamento": dict(mostra="base de lancamento (Kennedy, Florida): foguete Saturn V na plataforma, torre de servico, edificio de montagem",
-                       formato="horizontal", ceu=True, fx=["", "decolagem"], max_f=3, horas=["dia", "manha", "tarde", "noite"]),
-    "nave-cabine": dict(mostra="interior do modulo de comando Odyssey: paineis, escotilhas com a Terra", formato="horizontal", ceu=False,
+                       formato="ambos", ceu=True, fx=["", "decolagem"], max_f=3, horas=["dia", "manha", "tarde", "noite"]),
+    "nave-cabine": dict(mostra="interior do modulo de comando Odyssey: paineis, escotilhas com a Terra", formato="ambos", ceu=False,
                         fx=["", "alarme", "escuro", "frio"], max_f=3),
-    "modulo-lunar": dict(mostra="interior apertado do modulo lunar Aquarius ou Eagle (paredes douradas, janelas triangulares com a Lua)", formato="horizontal",
+    "modulo-lunar": dict(mostra="interior apertado do modulo lunar Aquarius ou Eagle (paredes douradas, janelas triangulares com a Lua)", formato="ambos",
                          ceu=False, fx=["", "frio", "escuro", "alarme"], max_f=3),
-    "espaco": dict(mostra="o espaco: Terra, Lua e a nave Apollo vista de fora (sem personagens)", formato="horizontal", ceu=False,
+    "espaco": dict(mostra="o espaco: Terra, Lua e a nave Apollo vista de fora (sem personagens)", formato="ambos", ceu=False,
                    fx=["", "terra", "lua", "vazamento", "perto", "reentrada"], max_f=0, vazio=True),
-    "houston": dict(mostra="centro de controle de missao em Houston: telao de trajetoria, fileiras de consoles, controladores", formato="horizontal",
+    "houston": dict(mostra="centro de controle de missao em Houston: telao de trajetoria, fileiras de consoles, controladores", formato="ambos",
                     ceu=False, fx=["", "tensao"], max_f=3),
-    "oceano": dict(mostra="oceano Pacifico: capsula com paraquedas ou boiando, navio de resgate, helicoptero (sem personagens)", formato="horizontal",
+    "oceano": dict(mostra="oceano Pacifico: capsula com paraquedas ou boiando, navio de resgate, helicoptero (sem personagens)", formato="ambos",
                    ceu=True, fx=["", "paraquedas", "pouso"], max_f=0, vazio=True, horas=["dia"]),
     "superficie-lunar": dict(mostra="superficie da Lua: chao cinza com crateras, modulo lunar Eagle, Terra no ceu preto, astronautas de traje (e a bandeira)",
-                             formato="horizontal", ceu=False, fx=["", "bandeira"], max_f=3),
+                             formato="ambos", ceu=False, fx=["", "bandeira"], max_f=3),
     "descida-lunar": dict(mostra="o modulo lunar Eagle visto de fora, descendo com o motor aceso ou ja pousado na Lua (sem personagens)",
-                          formato="horizontal", ceu=False, fx=["", "descida", "poeira", "pousado"], max_f=0, vazio=True),
+                          formato="ambos", ceu=False, fx=["", "descida", "poeira", "pousado"], max_f=0, vazio=True),
 }
 
 # cenarios 3D (motor three.js). 'era' = a que epoca/tema o cenario pertence (usado para barrar anacronismo).

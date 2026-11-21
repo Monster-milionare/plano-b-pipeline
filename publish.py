@@ -56,6 +56,40 @@ def pendentes() -> list:
     return itens
 
 
+def _motor(c: dict) -> str:
+    return "2d" if c.get("motor") == "2d" else "3d"
+
+
+def alternar(fila: list) -> list:
+    """Alterna 2D/3D: o proximo Short usa o motor oposto ao do ultimo publicado (meta: 2 de cada por dia).
+    Sem estoque do motor desejado, segue a fila normal (e avisa no log)."""
+    if not fila:
+        return fila
+    pub = _ler(PUB, [])
+    ultimo = None
+    por_id = {}
+    for arq in config.CONTEUDO_DIR.glob("*.json"):
+        try:
+            d = json.loads(arq.read_text(encoding="utf-8"))
+            por_id[d.get("id")] = d
+        except Exception:
+            pass
+    for d in reversed(pub):
+        c = por_id.get(d.get("id"))
+        if c and c.get("formato") != "longo":
+            ultimo = _motor(c)
+            break
+    if ultimo is None:
+        return fila
+    quer = "3d" if ultimo == "2d" else "2d"
+    pref = [c for c in fila if _motor(c) == quer]
+    if not pref:
+        print(f"[publish] rodizio: ultimo Short foi {ultimo.upper()}, mas nao ha estoque {quer.upper()} - seguindo a fila normal. CRIE MAIS Shorts {quer.upper()}.", flush=True)
+        return fila
+    print(f"[publish] rodizio: ultimo Short foi {ultimo.upper()} -> agora {quer.upper()} ({pref[0]['id']}).", flush=True)
+    return pref + [c for c in fila if c not in pref]
+
+
 def _descricao(c: dict) -> str:
     import chamada_longo
     fixo = c.get("comentario_fixado")
@@ -156,7 +190,7 @@ def main() -> int:
                       f"{' (+' + str(len(r['erros']) - 1) + ')' if len(r['erros']) > 1 else ''}", flush=True)
                 continue
             validos.append(c)
-        fila = validos
+        fila = alternar(validos)
     if a.id:
         todos = {json.loads(p.read_text(encoding="utf-8"))["id"]: json.loads(p.read_text(encoding="utf-8"))
                  for p in config.CONTEUDO_DIR.glob("*.json")}
