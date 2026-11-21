@@ -29,7 +29,7 @@ function ell(c, x, y, rx, ry, rot) { c.beginPath(); c.ellipse(x, y, rx, ry, rot 
 
 // ---------------------------------------------------------------- personagens (frente, estilo "boneco" fofo)
 const ROLES = {};   // preenchido pelos arquivos de cenario/papeis
-function papel2d(nome) { return Object.assign({}, ROLES[nome] || ROLES['explorador']); }
+function papel2d(nome) { if (!ROLES[nome]) throw new Error('papel 2D inexistente: ' + nome); return Object.assign({}, ROLES[nome]); }
 
 function olhos(c, o, ox, oy, abre, piscar, olhaX) {
   for (const s of [-1, 1]) {
@@ -65,6 +65,8 @@ function humano(c, o, x, y, s, t, falando, amp, olhaX) {
     c.fillStyle = 'rgba(0,0,0,0.16)'; rrect(c, -62, -250, 40, 44, 6); c.fill(); rrect(c, 22, -250, 40, 44, 6); c.fill(); }
   c.fillStyle = o.cinto || '#4a3220'; c.fillRect(-68, -150, 136, 14);
   if (o.binoculos) { c.strokeStyle = '#2a2a30'; c.lineWidth = 5; c.beginPath(); c.moveTo(-34, -330); c.quadraticCurveTo(0, -240, 34, -330); c.stroke(); c.fillStyle = '#2a2a34'; rrect(c, -34, -262, 26, 40, 8); c.fill(); rrect(c, 8, -262, 26, 40, 8); c.fill(); c.fillStyle = '#5a8ad0'; ell(c, -21, -222, 9, 6); c.fill(); ell(c, 21, -222, 9, 6); c.fill(); }
+  if (o.gravata) { c.fillStyle = o.gravata; c.beginPath(); c.moveTo(-10, -332); c.lineTo(10, -332); c.lineTo(15, -300); c.lineTo(0, -214); c.lineTo(-15, -300); c.closePath(); c.fill(); }
+  if (o.emblema) { c.fillStyle = o.emblema; ell(c, -40, -262, 17, 17); c.fill(); c.fillStyle = 'rgba(255,255,255,0.85)'; ell(c, -40, -262, 9, 9); c.fill(); }
   if (o.lenco) { c.fillStyle = o.lenco; c.beginPath(); c.moveTo(-44, -332); c.quadraticCurveTo(0, -300, 44, -332); c.lineTo(0, -270); c.closePath(); c.fill(); }
   if (o.jaleco) { c.fillStyle = 'rgba(255,255,255,0.0)'; }
   // bracos
@@ -102,6 +104,10 @@ function humano(c, o, x, y, s, t, falando, amp, olhaX) {
   if (ab > 0.08) { c.fillStyle = '#4a1410'; ell(c, 0, 64 + ab * 6, 20 - ab * 3, 6 + ab * 24); c.fill(); c.fillStyle = '#e8706a'; ell(c, 0, 64 + ab * 16, 12, 4 + ab * 9); c.fill(); }
   else { c.strokeStyle = '#6a2a20'; c.lineWidth = 6; c.beginPath(); c.arc(0, 52, 18, 0.25, Math.PI - 0.25); c.stroke(); }
   if (o.bigode) { c.fillStyle = o.bigode; c.beginPath(); c.moveTo(-40, 46); c.quadraticCurveTo(0, 30, 40, 46); c.quadraticCurveTo(0, 58, -40, 46); c.fill(); }
+  // headset (controlador)
+  if (o.headset) { c.strokeStyle = '#1a1a20'; c.lineWidth = 12; c.lineCap = 'round'; c.beginPath(); c.arc(0, -8, 120, Math.PI * 1.08, Math.PI * 1.92); c.stroke(); c.fillStyle = '#26262e'; ell(c, -118, 10, 20, 30); c.fill(); ell(c, 118, 10, 20, 30); c.fill(); c.strokeStyle = '#1a1a20'; c.lineWidth = 7; c.beginPath(); c.moveTo(-118, 36); c.quadraticCurveTo(-96, 90, -40, 78); c.stroke(); c.fillStyle = '#1a1a20'; ell(c, -36, 78, 12, 9); c.fill(); }
+  // capacete de astronauta (bolha de vidro + argola)
+  if (o.capacete) { c.fillStyle = 'rgba(190,225,255,0.20)'; ell(c, 0, -2, 150, 148); c.fill(); c.strokeStyle = 'rgba(255,255,255,0.65)'; c.lineWidth = 7; ell(c, 0, -2, 150, 148); c.stroke(); c.fillStyle = 'rgba(255,255,255,0.45)'; ell(c, -66, -70, 30, 14, -0.7); c.fill(); c.fillStyle = o.argola || '#d8dde6'; rrect(c, -104, 118, 208, 34, 14); c.fill(); c.fillStyle = 'rgba(0,0,0,0.18)'; rrect(c, -104, 140, 208, 12, 6); c.fill(); }
   // chapeus
   if (o.chapeu === 'safari') { c.fillStyle = o.corChapeu || '#c9b27a'; ell(c, 0, -68, 150, 34); c.fill(); c.fillStyle = mix(o.corChapeu || '#c9b27a', '#ffffff', 0.12); c.beginPath(); c.moveTo(-84, -70); c.quadraticCurveTo(-88, -168, 0, -170); c.quadraticCurveTo(88, -168, 84, -70); c.closePath(); c.fill(); c.fillStyle = o.faixa || '#6a4a2a'; c.fillRect(-84, -96, 168, 20); }
   if (o.chapeu === 'bone') { c.fillStyle = o.corChapeu || '#c8281e'; c.beginPath(); c.moveTo(-108, -30); c.quadraticCurveTo(-110, -148, 0, -150); c.quadraticCurveTo(110, -148, 108, -30); c.closePath(); c.fill(); c.fillRect(-20, -60, 190, 20); }
@@ -157,7 +163,7 @@ const scenes = {};      // nome -> {build(hora) -> inst}
 const cache = {};
 function getInst(amb, hora) {
   const key = amb + '|' + (hora || 'padrao');
-  if (!cache[key]) { const S = scenes[amb] || scenes[Object.keys(scenes)[0]]; cache[key] = S.build(hora || 'manha'); }
+  if (!cache[key]) { const S = scenes[amb]; if (!S) throw new Error('cenario 2D inexistente: ' + amb); cache[key] = S.build(hora || 'manha'); }
   return cache[key];
 }
 
@@ -201,8 +207,12 @@ window.frame = function (t, amp, fmt) {
   // quem aparece em cena
   const lista = (cast.amb && cast.amb[s.amb]) || cast.f || [];
   const elenco = [];
-  elenco.push({id: 'prot', role: cast.prot, pos: inst.slots.prot});
-  inst.slots.f.forEach((p, i) => { if (lista.length) elenco.push({id: 'f' + i, role: lista[i % lista.length], pos: p}); });
+  const vazio = (cast.vazio || []).indexOf(s.amb) >= 0;
+  const protRole = (cast.protAmb && cast.protAmb[s.amb]) || cast.prot;
+  if (!vazio) {
+    elenco.push({id: 'prot', role: protRole, pos: inst.slots.prot});
+    inst.slots.f.forEach((p, i) => { if (lista.length && i < lista.length) elenco.push({id: 'f' + i, role: lista[i], pos: p}); });
+  }
   inst.draw(g, t, cam, {
     layer: L => layerDraw(inst, L, cam),
     personagens: () => {
@@ -212,7 +222,7 @@ window.frame = function (t, amp, fmt) {
         const o = papel2d(e.role); o.fase = e.id.length * 1.7 + e.id.charCodeAt(e.id.length - 1);
         const sx = W / 2 + (e.pos[0] - cam.cx) * cam.z, sy = H / 2 + (e.pos[1] - cam.cy) * cam.z;
         const fala = falante === e.id || (e.id === 'prot' && falante === 'prot');
-        const eP = elenco.find(q => q.id === 'prot').pos[0];
+        const eP = (elenco.find(q => q.id === 'prot') || {pos: inst.slots.prot}).pos[0];
         const olha = e.id === 'prot' ? -0.4 : (e.pos[0] < eP ? 0.8 : -0.8);
         const esc = (o.escala || 1) * cam.z * (e.pos[2] || 1);
         (o.tipo === 'tricera' ? tricera : humano)(g, o, sx, sy, esc, t, fala, amp, olha);
@@ -229,4 +239,5 @@ window.ambientes = () => Object.fromEntries(Object.keys(scenes).map(k => [k, ['a
 window.posRender = () => {};
 </script>
 <script src="cena2d_cretaceo.js"></script>
+<script src="cena2d_nasa.js"></script>
 </body></html>
