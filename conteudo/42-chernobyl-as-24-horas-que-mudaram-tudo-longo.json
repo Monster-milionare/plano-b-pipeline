@@ -1,0 +1,1294 @@
+{
+ "id": "42-chernobyl-as-24-horas-que-mudaram-tudo-longo",
+ "ordem": 902,
+ "formato": "longo",
+ "estilo": "epico",
+ "titulo": "Chernobyl: As 24 Horas que Mudaram Tudo",
+ "titulo_youtube": "Chernobyl: 24 Horas de Pânico – O Dia 26/04/1986 que Parou o Mundo",
+ "titulo_curto": "CHERNOBYL 24H",
+ "thumb_texto": "24 HORAS CRÍTICAS",
+ "descricao": "Em apenas um dia, o desastre de Chernobyl mudou a história da energia nuclear. Descubra, passo a passo, o que aconteceu nas 24 horas que abalaram o mundo.",
+ "comentario_fixado": "Qual atitude você acha que teria sido mais eficaz na hora? A) Evacuar imediatamente B) Contenção com helicópteros",
+ "tags": [
+  "Chernobyl",
+  "Desastre nuclear",
+  "História",
+  "1986",
+  "Zona de exclusão",
+  "Energia nuclear",
+  "União Soviética",
+  "Documentário"
+ ],
+ "cenas": [
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você sente o peso do futuro no ar, 25 de abril."
+    }
+   ],
+   "emocao": "misterioso",
+   "destaques": "peso futuro",
+   "hora": "manha",
+   "fala": "Você sente o peso do futuro no ar, 25 de abril.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio",
+   "capitulo": "Preparativos para o teste",
+   "ano": "25/04/1986"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "No laboratório, a equipe reduz a potência para duzentas megawatts, preparando a descida."
+    },
+    {
+     "quem": "prot",
+     "texto": "Estamos em duzentas megawatts, pronto para baixar."
+    }
+   ],
+   "emocao": "preocupado",
+   "destaques": "duzentas megawatts",
+   "hora": "manha",
+   "fala": "No laboratório, a equipe reduz a potência para duzentas megawatts, preparando a descida. Estamos em duzentas megawatts, pronto para baixar.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A potência cai lentamente, chegando a trinta megawatts antes do teste."
+    },
+    {
+     "quem": "f0",
+     "texto": "Tudo calmo, mas o silêncio preocupa."
+    }
+   ],
+   "emocao": "preocupado",
+   "destaques": "trinta megawatts",
+   "hora": "manha",
+   "fala": "A potência cai lentamente, chegando a trinta megawatts antes do teste. Tudo calmo, mas o silêncio preocupa.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você vê os indicadores: o ECCS está desligado, como exigido."
+    },
+    {
+     "quem": "prot",
+     "texto": "Desativei o ECCS, seguimos o protocolo."
+    }
+   ],
+   "emocao": "surpreso",
+   "destaques": "ECCS desligado",
+   "hora": "manha",
+   "fala": "Você vê os indicadores: o ECCS está desligado, como exigido. Desativei o ECCS, seguimos o protocolo.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O botão AZ‑5 permanece livre, aguardando o comando final."
+    },
+    {
+     "quem": "f1",
+     "texto": "Não apertaremos ainda, falta confiança."
+    }
+   ],
+   "emocao": "preocupado",
+   "destaques": "AZ‑5 livre",
+   "hora": "manha",
+   "fala": "O botão AZ‑5 permanece livre, aguardando o comando final. Não apertaremos ainda, falta confiança.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Imagine a tensão crescendo, cada cabo vibra como um suspiro."
+    }
+   ],
+   "emocao": "misterioso",
+   "destaques": "tensão",
+   "hora": "manha",
+   "fala": "Imagine a tensão crescendo, cada cabo vibra como um suspiro.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A equipe verifica as válvulas; o ar cheira a metal frio."
+    },
+    {
+     "quem": "f2",
+     "texto": "Tudo pronto, só falta iniciar o teste."
+    }
+   ],
+   "emocao": "neutro",
+   "destaques": "válvulas",
+   "hora": "manha",
+   "fala": "A equipe verifica as válvulas; o ar cheira a metal frio. Tudo pronto, só falta iniciar o teste.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A contagem regressiva inicia, seu coração bate mais rápido."
+    },
+    {
+     "quem": "prot",
+     "texto": "Vamos lá, três, dois, um."
+    }
+   ],
+   "emocao": "surpreso",
+   "destaques": "contagem",
+   "hora": "manha",
+   "fala": "A contagem regressiva inicia, seu coração bate mais rápido. Vamos lá, três, dois, um.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O reator está pronto; o que acontecerá nos próximos minutos?"
+    }
+   ],
+   "emocao": "misterioso",
+   "destaques": "próximos minutos",
+   "hora": "manha",
+   "fala": "O reator está pronto; o que acontecerá nos próximos minutos?",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você está no laboratório da Usina de Chernobyl, 25 de abril de mil novecentos e oitenta e seis, noite adentro. O ar está frio, as luzes piscam, e o relógio marca o início do teste."
+    }
+   ],
+   "emocao": "misterioso",
+   "destaques": "laboratório",
+   "hora": "noite",
+   "fala": "Você está no laboratório da Usina de Chernobyl, 25 de abril de mil novecentos e oitenta e seis, noite adentro. O ar está frio, as luzes piscam, e o relógio marca o início do teste.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio",
+   "capitulo": "Início da instabilidade",
+   "ano": "25/04/1986"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "À vinte e três horas e quatro minutos, a potência despenca para trinta megawatts, abaixo do limite seguro. Você observa os indicadores, sentindo o peso da decisão que se aproxima."
+    }
+   ],
+   "emocao": "preocupado",
+   "destaques": "trinta megawatts",
+   "fala": "À vinte e três horas e quatro minutos, a potência despenca para trinta megawatts, abaixo do limite seguro. Você observa os indicadores, sentindo o peso da decisão que se aproxima.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio"
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Não conseguimos manter a energia, está muito baixa."
+    }
+   ],
+   "emocao": "preocupado",
+   "destaques": "energia baixa",
+   "fala": "Não conseguimos manter a energia, está muito baixa.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Para compensar, vocês retiram a maioria das hastes de controle, aumentando a reatividade do núcleo. A cada haste removida, a reação se intensifica, como se o núcleo respirasse."
+    }
+   ],
+   "emocao": "misterioso",
+   "destaques": "reatividade",
+   "fala": "Para compensar, vocês retiram a maioria das hastes de controle, aumentando a reatividade do núcleo. A cada haste removida, a reação se intensifica, como se o núcleo respirasse.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio"
+  },
+  {
+   "falas": [
+    {
+     "quem": "f0",
+     "texto": "Cada haste fora aumenta o risco, mas precisamos de potência."
+    }
+   ],
+   "emocao": "preocupado",
+   "destaques": "risco",
+   "fala": "Cada haste fora aumenta o risco, mas precisamos de potência.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O nível de energia começa a subir de forma incontrolável, os medidores disparam. Os números sobem rapidamente, ultrapassando o que os cálculos previam."
+    }
+   ],
+   "emocao": "surpreso",
+   "destaques": "incontrolável",
+   "hora": "madrugada",
+   "fala": "O nível de energia começa a subir de forma incontrolável, os medidores disparam. Os números sobem rapidamente, ultrapassando o que os cálculos previam.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio"
+  },
+  {
+   "falas": [
+    {
+     "quem": "f1",
+     "texto": "Alarme! A temperatura está subindo rapidamente!"
+    }
+   ],
+   "emocao": "surpreso",
+   "destaques": "alarme",
+   "fala": "Alarme! A temperatura está subindo rapidamente!",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Imagine se o sistema de segurança falhar agora, talvez o reator não aguente."
+    }
+   ],
+   "emocao": "misterioso",
+   "destaques": "falhar",
+   "fala": "Imagine se o sistema de segurança falhar agora, talvez o reator não aguente.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você sente o coração acelerar, porque a próxima decisão pode selar o destino da usina."
+    }
+   ],
+   "emocao": "misterioso",
+   "destaques": "destino",
+   "fala": "Você sente o coração acelerar, porque a próxima decisão pode selar o destino da usina.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você está no laboratório, luzes fracas, o teste está prestes a começar."
+    },
+    {
+     "quem": "narrador",
+     "texto": "Os monitores piscam, indicando pressão instável."
+    }
+   ],
+   "emocao": "misterioso",
+   "destaques": "preparativos",
+   "hora": "madrugada",
+   "fala": "Você está no laboratório, luzes fracas, o teste está prestes a começar. Os monitores piscam, indicando pressão instável.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio",
+   "capitulo": "Primeira explosão",
+   "ano": "26/04/1986"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Às zero um e vinte e três, um estrondo de vapor rompe o teto do reator."
+    },
+    {
+     "quem": "narrador",
+     "texto": "O som corta o silêncio da madrugada, como um trovão abafado."
+    }
+   ],
+   "emocao": "surpreso",
+   "destaques": "primeira explosão",
+   "fala": "Às zero um e vinte e três, um estrondo de vapor rompe o teto do reator. O som corta o silêncio da madrugada, como um trovão abafado.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você vê pedaços de metal cair."
+    },
+    {
+     "quem": "prot",
+     "texto": "O teto acabou de se abrir!"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Fragmentos voam, atingindo o painel de controle."
+    }
+   ],
+   "emocao": "preocupado",
+   "destaques": "teto rompido",
+   "fala": "Você vê pedaços de metal cair. O teto acabou de se abrir! Fragmentos voam, atingindo o painel de controle.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A nuvem de vapor carrega radiação invisível, espalhando-se pelo ar quente."
+    },
+    {
+     "quem": "narrador",
+     "texto": "Os sensores registram picos que jamais haviam sido vistos."
+    }
+   ],
+   "emocao": "misterioso",
+   "destaques": "radiação",
+   "fala": "A nuvem de vapor carrega radiação invisível, espalhando-se pelo ar quente. Os sensores registram picos que jamais haviam sido vistos.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Segundos depois, uma segunda explosão ecoa, aumentando a nuvem radioativa."
+    },
+    {
+     "quem": "narrador",
+     "texto": "A pressão interna dispara, forçando a estrutura a ceder ainda mais."
+    }
+   ],
+   "emocao": "surpreso",
+   "destaques": "segunda explosão",
+   "fala": "Segundos depois, uma segunda explosão ecoa, aumentando a nuvem radioativa. A pressão interna dispara, forçando a estrutura a ceder ainda mais.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio"
+  },
+  {
+   "falas": [
+    {
+     "quem": "f0",
+     "texto": "Está pegando fogo!"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Você sente o calor subir rapidamente."
+    },
+    {
+     "quem": "narrador",
+     "texto": "Chamas lambem as tubulações, soltando fumaça densa."
+    }
+   ],
+   "emocao": "preocupado",
+   "destaques": "fogo",
+   "fala": "Está pegando fogo! Você sente o calor subir rapidamente. Chamas lambem as tubulações, soltando fumaça densa.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Chamas lambem os painéis, alarmes gritam, o pânico começa a crescer."
+    },
+    {
+     "quem": "narrador",
+     "texto": "O alarme vermelho pulsa, anunciando perigo imediato."
+    }
+   ],
+   "emocao": "preocupado",
+   "destaques": "alarme",
+   "fala": "Chamas lambem os painéis, alarmes gritam, o pânico começa a crescer. O alarme vermelho pulsa, anunciando perigo imediato.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio"
+  },
+  {
+   "falas": [
+    {
+     "quem": "f1",
+     "texto": "Precisamos evacuar agora!"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Você corre para a saída, mas a fumaça bloqueia a visão."
+    }
+   ],
+   "fala": "Precisamos evacuar agora! Você corre para a saída, mas a fumaça bloqueia a visão.",
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você chega à cabine de comando, a manhã ainda pesada de fumaça."
+    }
+   ],
+   "emocao": "misterioso",
+   "destaques": [
+    "cabine",
+    "manhã"
+   ],
+   "hora": "manha",
+   "fala": "Você chega à cabine de comando, a manhã ainda pesada de fumaça.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "capitulo": "Chegada dos bombeiros",
+   "ano": "26/04/1986"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Vinte e oito bombeiros são enviados, sem máscara, sem traje, sem tempo para dúvidas, correndo contra o relógio."
+    }
+   ],
+   "emocao": "preocupado",
+   "destaques": [
+    "vinte e oito",
+    "bombeiros"
+   ],
+   "fala": "Vinte e oito bombeiros são enviados, sem máscara, sem traje, sem tempo para dúvidas, correndo contra o relógio.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine"
+  },
+  {
+   "falas": [
+    {
+     "quem": "f0",
+     "texto": "Não temos roupa de chumbo, mas vamos entrar agora."
+    }
+   ],
+   "emocao": "preocupado",
+   "destaques": [
+    "sem roupa",
+    "entrar"
+   ],
+   "fala": "Não temos roupa de chumbo, mas vamos entrar agora.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O incêndio no teto do reator é combatido apenas com água de mangueiras, jorrando sob pressão, enquanto chamas negras lambem o aço."
+    }
+   ],
+   "emocao": "preocupado",
+   "destaques": [
+    "incêndio",
+    "água"
+   ],
+   "fala": "O incêndio no teto do reator é combatido apenas com água de mangueiras, jorrando sob pressão, enquanto chamas negras lambem o aço.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine"
+  },
+  {
+   "falas": [
+    {
+     "quem": "f1",
+     "texto": "A água parece não chegar, o calor nos queima a pele."
+    }
+   ],
+   "emocao": "preocupado",
+   "destaques": [
+    "calor",
+    "queima"
+   ],
+   "fala": "A água parece não chegar, o calor nos queima a pele.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Vários recebem doses superiores a cinco Gray, a síndrome aguda de radiação se instala rapidamente, roubando a força dos corpos."
+    }
+   ],
+   "emocao": "preocupado",
+   "destaques": [
+    "cinco Gray",
+    "síndrome"
+   ],
+   "fala": "Vários recebem doses superiores a cinco Gray, a síndrome aguda de radiação se instala rapidamente, roubando a força dos corpos.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine"
+  },
+  {
+   "falas": [
+    {
+     "quem": "f2",
+     "texto": "O fogo sobe, a água escorre, mas o metal ainda brilha."
+    }
+   ],
+   "emocao": "preocupado",
+   "destaques": [
+    "fogo",
+    "metal"
+   ],
+   "fala": "O fogo sobe, a água escorre, mas o metal ainda brilha.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Imagine o brilho verde que se espalha, talvez o seu destino já esteja selado, como se o futuro fosse um fogo silencioso."
+    }
+   ],
+   "emocao": "misterioso",
+   "destaques": [
+    "brilho verde",
+    "destino"
+   ],
+   "fala": "Imagine o brilho verde que se espalha, talvez o seu destino já esteja selado, como se o futuro fosse um fogo silencioso.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Quando o relógio marca a meia‑noite, a verdade sobre a explosão começa a emergir, e o medo se torna palpável."
+    }
+   ],
+   "emocao": "misterioso",
+   "destaques": [
+    "meia‑noite",
+    "verdade"
+   ],
+   "fala": "Quando o relógio marca a meia‑noite, a verdade sobre a explosão começa a emergir, e o medo se torna palpável.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você está na cabine de controle. O alarme soa estridente. Luz vermelha pisca. O reator acabou de explodir."
+    }
+   ],
+   "emocao": "surpreso",
+   "destaques": "alarme",
+   "hora": "manha",
+   "fala": "Você está na cabine de controle. O alarme soa estridente. Luz vermelha pisca. O reator acabou de explodir.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "capitulo": "Primeiros relatos oficiais",
+   "ano": "26/04/1986"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Monitores de radiação registram trêscentas Roentgens por hora. Você sente o peso da ameaça invisível."
+    },
+    {
+     "quem": "narrador",
+     "texto": "Os indicadores tremem, sinalizando perigo extremo."
+    }
+   ],
+   "emocao": "preocupado",
+   "destaques": "trêscentas",
+   "hora": "manha",
+   "fala": "Monitores de radiação registram trêscentas Roentgens por hora. Você sente o peso da ameaça invisível. Os indicadores tremem, sinalizando perigo extremo.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine"
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Não é nada grave, tudo sob controle."
+    }
+   ],
+   "emocao": "neutro",
+   "destaques": "controle",
+   "fala": "Não é nada grave, tudo sob controle.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "As autoridades soviéticas ainda dizem que o acidente é pequeno. Você escuta a transmissão oficial."
+    },
+    {
+     "quem": "narrador",
+     "texto": "Os oficiais mantêm a calma, mas o silêncio pesa."
+    }
+   ],
+   "emocao": "misterioso",
+   "destaques": "acidente",
+   "hora": "tarde",
+   "fala": "As autoridades soviéticas ainda dizem que o acidente é pequeno. Você escuta a transmissão oficial. Os oficiais mantêm a calma, mas o silêncio pesa.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine"
+  },
+  {
+   "falas": [
+    {
+     "quem": "f0",
+     "texto": "Os níveis estão subindo, não podemos ignorar."
+    }
+   ],
+   "emocao": "preocupado",
+   "destaques": "subindo",
+   "fala": "Os níveis estão subindo, não podemos ignorar.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A população de Pripyat ainda não recebeu ordem de evacuação. As crianças brincam como se nada mudasse."
+    },
+    {
+     "quem": "narrador",
+     "texto": "As ruas ainda ecoam o som das máquinas."
+    }
+   ],
+   "emocao": "surpreso",
+   "destaques": "evacuação",
+   "hora": "entardecer",
+   "fala": "A população de Pripyat ainda não recebeu ordem de evacuação. As crianças brincam como se nada mudasse. As ruas ainda ecoam o som das máquinas.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine"
+  },
+  {
+   "falas": [
+    {
+     "quem": "f1",
+     "texto": "Precisamos fechar o ventilador imediatamente."
+    }
+   ],
+   "emocao": "preocupado",
+   "destaques": "fechar",
+   "fala": "Precisamos fechar o ventilador imediatamente.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você sente o relógio correr. Cada segundo traz mais radiação. O próximo relatório pode mudar tudo."
+    },
+    {
+     "quem": "narrador",
+     "texto": "Os sensores piscam, anunciando a contaminação que avança."
+    }
+   ],
+   "emocao": "misterioso",
+   "destaques": "próximo",
+   "hora": "noite",
+   "fala": "Você sente o relógio correr. Cada segundo traz mais radiação. O próximo relatório pode mudar tudo. Os sensores piscam, anunciando a contaminação que avança.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Imagine o que acontecerá quando a verdade for forçada ao público. Prepare-se para a noite que virá."
+    }
+   ],
+   "emocao": "preocupado",
+   "destaques": "noite",
+   "hora": "noite",
+   "fala": "Imagine o que acontecerá quando a verdade for forçada ao público. Prepare-se para a noite que virá.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você pisa no aeródromo ainda coberto de névoa."
+    }
+   ],
+   "emocao": "misterioso",
+   "destaques": "aeródromo",
+   "hora": "manha",
+   "fala": "Você pisa no aeródromo ainda coberto de névoa.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "aerodromo",
+   "capitulo": "Operação de contenção aérea",
+   "ano": "26/04/1986"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O comandante reúne a equipe ao redor de um mapa esfarrapado."
+    },
+    {
+     "quem": "narrador",
+     "texto": "Você sente o peso da responsabilidade."
+    }
+   ],
+   "emocao": "preocupado",
+   "destaques": "responsabilidade",
+   "hora": "manha",
+   "fala": "O comandante reúne a equipe ao redor de um mapa esfarrapado. Você sente o peso da responsabilidade.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "aerodromo"
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Carregamos areia, chumbo, boro e argila."
+    }
+   ],
+   "emocao": "surpreso",
+   "destaques": "areia chumbo",
+   "hora": "manha",
+   "fala": "Carregamos areia, chumbo, boro e argila.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "aerodromo"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Seis helicópteros rugem, as pás cortam o ar frio."
+    },
+    {
+     "quem": "narrador",
+     "texto": "As hélices levantam nuvens de poeira radioativa."
+    }
+   ],
+   "emocao": "misterioso",
+   "destaques": "helicópteros",
+   "hora": "manha",
+   "fala": "Seis helicópteros rugem, as pás cortam o ar frio. As hélices levantam nuvens de poeira radioativa.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "aerodromo"
+  },
+  {
+   "falas": [
+    {
+     "quem": "f0",
+     "texto": "Mantenha a altitude baixa, a nuvem está alta."
+    }
+   ],
+   "emocao": "preocupado",
+   "destaques": "altitude",
+   "hora": "manha",
+   "fala": "Mantenha a altitude baixa, a nuvem está alta.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "aerodromo"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você vê a chuva de areia, chumbo, boro e argila cair sobre o reator."
+    },
+    {
+     "quem": "narrador",
+     "texto": "Cada grão de argila tenta bloquear o caminho dos gases."
+    }
+   ],
+   "emocao": "surpreso",
+   "destaques": "chuva",
+   "hora": "tarde",
+   "fala": "Você vê a chuva de areia, chumbo, boro e argila cair sobre o reator. Cada grão de argila tenta bloquear o caminho dos gases.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "aerodromo"
+  },
+  {
+   "falas": [
+    {
+     "quem": "f1",
+     "texto": "A poeira parece brilhar, como se fosse fogo."
+    }
+   ],
+   "emocao": "surpreso",
+   "destaques": "poeira",
+   "hora": "tarde",
+   "fala": "A poeira parece brilhar, como se fosse fogo.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "aerodromo"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Ao todo, duas mil toneladas de materiais absorventes foram despejadas, tentando reduzir a liberação de partículas radioativas."
+    },
+    {
+     "quem": "narrador",
+     "texto": "A esperança se mistura ao medo, enquanto o céu escurece."
+    }
+   ],
+   "emocao": "preocupado",
+   "destaques": "duas mil toneladas",
+   "hora": "tarde",
+   "fala": "Ao todo, duas mil toneladas de materiais absorventes foram despejadas, tentando reduzir a liberação de partículas radioativas. A esperança se mistura ao medo, enquanto o céu escurece.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "aerodromo"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Mas a tempestade ainda não acabou. Imagine a madrugada seguinte, quando outra decisão crucial será tomada."
+    }
+   ],
+   "emocao": "misterioso",
+   "destaques": "madrugada",
+   "hora": "noite",
+   "fala": "Mas a tempestade ainda não acabou. Imagine a madrugada seguinte, quando outra decisão crucial será tomada.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "aerodromo"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você vê a nuvem escura sobre a usina. O governo anuncia a zona de exclusão. Trinta quilômetros ao redor. Dois mil e seiscentos quilômetros quadrados de terra proibida."
+    }
+   ],
+   "emocao": "misterioso",
+   "destaques": "nuvem escura",
+   "fala": "Você vê a nuvem escura sobre a usina. O governo anuncia a zona de exclusão. Trinta quilômetros ao redor. Dois mil e seiscentos quilômetros quadrados de terra proibida.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cidade",
+   "capitulo": "Criação da zona de exclusão",
+   "ano": "26/04/1986",
+   "hora": "entardecer"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você acompanha os oficiais. Eles dizem que cento e quinze mil pessoas serão realocadas. Famílias carregam caixas, olhos cheios de medo."
+    }
+   ],
+   "emocao": "preocupado",
+   "destaques": "realocadas",
+   "fala": "Você acompanha os oficiais. Eles dizem que cento e quinze mil pessoas serão realocadas. Famílias carregam caixas, olhos cheios de medo.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cidade"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você sente a tensão nos olhos dos moradores."
+    },
+    {
+     "quem": "prot",
+     "texto": "Não acredito que vamos deixar tudo assim."
+    },
+    {
+     "quem": "f0",
+     "texto": "É ordem. Saia agora."
+    }
+   ],
+   "emocao": "preocupado",
+   "destaques": "tensão",
+   "fala": "Você sente a tensão nos olhos dos moradores. Não acredito que vamos deixar tudo assim. É ordem. Saia agora.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cidade"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você observa o relógio marcar dezoito horas. As sirenes ecoam. As ruas de Pripyat se esvaziam rapidamente."
+    }
+   ],
+   "emocao": "surpreso",
+   "destaques": "sirene",
+   "hora": "tarde",
+   "fala": "Você observa o relógio marcar dezoito horas. As sirenes ecoam. As ruas de Pripyat se esvaziam rapidamente.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cidade"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você vê famílias correndo para os veículos."
+    },
+    {
+     "quem": "f1",
+     "texto": "Leve meus filhos, por favor."
+    },
+    {
+     "quem": "f2",
+     "texto": "Vamos, não há tempo."
+    }
+   ],
+   "emocao": "preocupado",
+   "destaques": "filhos",
+   "hora": "tarde",
+   "fala": "Você vê famílias correndo para os veículos. Leve meus filhos, por favor. Vamos, não há tempo.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cidade"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você vê caminhões lotados percorrendo estradas enlameadas. Cada veículo leva esperança e tristeza."
+    }
+   ],
+   "emocao": "preocupado",
+   "destaques": "caminhões",
+   "fala": "Você vê caminhões lotados percorrendo estradas enlameadas. Cada veículo leva esperança e tristeza.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cidade"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você sente o silêncio pesado nas casas vazias. Elas parecem respirar, como se aguardassem algo."
+    }
+   ],
+   "emocao": "misterioso",
+   "destaques": "silêncio",
+   "fala": "Você sente o silêncio pesado nas casas vazias. Elas parecem respirar, como se aguardassem algo.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cidade"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você acompanha o mapa digital. A zona de exclusão se expande, ainda perigosa."
+    }
+   ],
+   "emocao": "neutro",
+   "destaques": "mapa",
+   "fala": "Você acompanha o mapa digital. A zona de exclusão se expande, ainda perigosa.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cidade"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você se pergunta quem ainda está dentro. O próximo passo será conter o reactor. Prepare-se para a operação de contenção aérea."
+    }
+   ],
+   "emocao": "misterioso",
+   "destaques": "próximo",
+   "fala": "Você se pergunta quem ainda está dentro. O próximo passo será conter o reactor. Prepare-se para a operação de contenção aérea.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cidade"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você pisa na terra enegrecida, onde a luz parece se curvar ao silêncio."
+    }
+   ],
+   "emocao": "misterioso",
+   "destaques": [
+    "terra",
+    "luz",
+    "silêncio"
+   ],
+   "fala": "Você pisa na terra enegrecida, onde a luz parece se curvar ao silêncio.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "terra",
+   "capitulo": "Legado imediato",
+   "ano": "26/04/1986",
+   "hora": "noite"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você sente o peso das vítimas: vinte e oito primeiros socorristas morreram nas semanas seguintes."
+    },
+    {
+     "quem": "narrador",
+     "texto": "Você percebe a terra ainda quente, como se o próprio planeta chorasse."
+    }
+   ],
+   "emocao": "preocupado",
+   "destaques": [
+    "vítimas",
+    "vinte e oito",
+    "socorristas"
+   ],
+   "fala": "Você sente o peso das vítimas: vinte e oito primeiros socorristas morreram nas semanas seguintes. Você percebe a terra ainda quente, como se o próprio planeta chorasse.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "terra"
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Eu cheguei ainda fumegando, mas o ar já matava."
+    }
+   ],
+   "emocao": "surpreso",
+   "destaques": [
+    "fumegando",
+    "matava"
+   ],
+   "fala": "Eu cheguei ainda fumegando, mas o ar já matava.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "terra"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você lê o relatório: cerca de quatro mil pessoas sofreram mortes por exposição aguda."
+    }
+   ],
+   "emocao": "preocupado",
+   "destaques": [
+    "quatro mil",
+    "exposição aguda"
+   ],
+   "fala": "Você lê o relatório: cerca de quatro mil pessoas sofreram mortes por exposição aguda.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "terra"
+  },
+  {
+   "falas": [
+    {
+     "quem": "f0",
+     "texto": "Meu filho não entende por que o céu mudou."
+    }
+   ],
+   "emocao": "surpreso",
+   "destaques": [
+    "céu",
+    "mudou"
+   ],
+   "fala": "Meu filho não entende por que o céu mudou.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "terra"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você vê o mundo reagir, normas nucleares mudam drasticamente, segurança nunca mais será a mesma."
+    },
+    {
+     "quem": "narrador",
+     "texto": "Você observa as equipes internacionais instalando sensores, medindo cada partícula que ainda escapa."
+    }
+   ],
+   "emocao": "surpreso",
+   "destaques": [
+    "normas nucleares",
+    "segurança"
+   ],
+   "fala": "Você vê o mundo reagir, normas nucleares mudam drasticamente, segurança nunca mais será a mesma. Você observa as equipes internacionais instalando sensores, medindo cada partícula que ainda escapa.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "terra"
+  },
+  {
+   "falas": [
+    {
+     "quem": "f1",
+     "texto": "Precisamos mudar tudo agora."
+    }
+   ],
+   "emocao": "preocupado",
+   "destaques": [
+    "mudar tudo"
+   ],
+   "fala": "Precisamos mudar tudo agora.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "terra"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Comenta A para evacuar imediatamente a população de Pripyat, ou B para priorizar a contenção com helicópteros e materiais absorventes. A mais votada vira o próximo episódio. Você já ouviu falar da noite que mudou o mundo."
+    }
+   ],
+   "emocao": "neutro",
+   "destaques": [
+    "Comenta",
+    "evacuar",
+    "próximo episódio"
+   ],
+   "fala": "Comenta A para evacuar imediatamente a população de Pripyat, ou B para priorizar a contenção com helicópteros e materiais absorventes. A mais votada vira o próximo episódio. Você já ouviu falar da noite que mudou o mundo.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "terra"
+  }
+ ]
+}
