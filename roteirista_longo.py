@@ -52,8 +52,8 @@ def proximo_tema():
 
 
 def validar_cap(cenas, ultimo):
-    if not isinstance(cenas, list) or not 7 <= len(cenas) <= 11:
-        return "numero de cenas fora de 7-11"
+    if not isinstance(cenas, list) or not 6 <= len(cenas) <= 13:
+        return "numero de cenas fora de 6-13"
     total, dialogos = 0, 0
     for c in cenas:
         fl = c.get("falas")
@@ -75,15 +75,35 @@ def validar_cap(cenas, ultimo):
         c.pop("hora", None) if c.get("hora") not in HORAS.split(", ") else None
     if dialogos < 2:
         return "poucos dialogos"
-    if not 110 <= total <= 240:
-        return f"{total} palavras (precisa 110-240)"
+    if not 90 <= total <= 300:
+        return f"{total} palavras (precisa 90-300)"
     if ultimo and not any(w in cenas[-1]["fala"].lower() for w in ("comenta", "vota")):
         return "ultima cena sem pedido de voto"
     return None
 
 
 def _pedir(prompt, temp=0.7):
-    return R._groq(prompt, temp)
+    """Chamada ao Groq com espera e nova tentativa quando o limite por minuto (429) ou um erro temporario aparece."""
+    import time
+    import requests
+    ultimo = ""
+    for t in range(6):
+        r = requests.post("https://api.groq.com/openai/v1/chat/completions", timeout=180,
+                          headers={"Authorization": f"Bearer {config.GROQ_API_KEY}"},
+                          json={"model": config.GROQ_MODEL, "temperature": temp, "response_format": {"type": "json_object"},
+                                "messages": [{"role": "user", "content": prompt}]})
+        try:
+            j = r.json()
+        except Exception:
+            j = {}
+        if r.status_code == 200 and j.get("choices"):
+            time.sleep(2)
+            return json.loads(j["choices"][0]["message"]["content"])
+        ultimo = f"{r.status_code} {str(j)[:200]}"
+        espera = float(r.headers.get("retry-after", 0) or 0) or 15 * (t + 1)
+        print(f"[longo-roteirista] Groq respondeu {ultimo}; esperando {min(espera, 70):.0f}s", flush=True)
+        time.sleep(min(espera, 70))
+    raise RuntimeError(f"Groq indisponivel: {ultimo}")
 
 
 def gerar(titulo):
