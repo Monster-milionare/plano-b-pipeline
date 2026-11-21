@@ -31,10 +31,12 @@ LUGARES = [
     ("houston", r"\b(centro de controle|sala de controle|diretor de voo|kranz|controladores?|centro de missao)\b",
      {"houston", "laboratorio"}, "o texto fala do centro de controle (precisa de 'houston')"),
     ("lado-lua", r"\b(lado escondido|lado oculto|lado escuro da lua|superficie da lua)\b",
-     {"espaco", "modulo-lunar", "lua"}, "o texto fala da Lua vista de perto"),
+     {"espaco", "modulo-lunar", "lua", "superficie-lunar", "descida-lunar"}, "o texto fala da Lua vista de perto"),
     ("oceano", r"\b(oceano pacifico|ilhas samoa|samoa|navio de resgate|amerissag\w*|caiu na agua|cai na agua)\b",
      {"oceano", "conves", "vapor", "terra"}, "o texto fala do mar/resgate (precisa de 'oceano')"),
     ("paraquedas", r"\b(paraquedas)\b", {"oceano", "espaco"}, "paraquedas aparece so em 'oceano'/'espaco'"),
+    ("pouso-lua", r"\b(pisa|pisou|pisam|primeiro passo|passo na lua|bandeira|mar da tranquilidade|base da tranquilidade|caminhar na lua|caminham na lua)\b",
+     {"superficie-lunar", "descida-lunar"}, "o texto fala de estar na superficie da Lua (precisa de 'superficie-lunar'/'descida-lunar')"),
     ("marte", r"\b(marte|marciano\w*|planeta vermelho)\b", {"marte"}, "o texto fala de Marte (precisa de um cenario 'marte' vermelho; a Lua e cinza)"),
     ("reentrada", r"\b(reentrada|reentra)\b", {"espaco", "oceano", "nave-cabine", "houston"}, "reentrada: espaco/cabine/oceano"),
 ]

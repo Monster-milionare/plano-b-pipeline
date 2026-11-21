@@ -24,14 +24,18 @@ AMB_2D = {
                        formato="horizontal", ceu=True, fx=["", "decolagem"], max_f=3, horas=["dia", "manha", "tarde", "noite"]),
     "nave-cabine": dict(mostra="interior do modulo de comando Odyssey: paineis, escotilhas com a Terra", formato="horizontal", ceu=False,
                         fx=["", "alarme", "escuro", "frio"], max_f=3),
-    "modulo-lunar": dict(mostra="interior apertado do modulo lunar Aquarius (paredes douradas, janelas triangulares com a Lua)", formato="horizontal",
-                         ceu=False, fx=["", "frio", "escuro"], max_f=3),
+    "modulo-lunar": dict(mostra="interior apertado do modulo lunar Aquarius ou Eagle (paredes douradas, janelas triangulares com a Lua)", formato="horizontal",
+                         ceu=False, fx=["", "frio", "escuro", "alarme"], max_f=3),
     "espaco": dict(mostra="o espaco: Terra, Lua e a nave Apollo vista de fora (sem personagens)", formato="horizontal", ceu=False,
                    fx=["", "terra", "lua", "vazamento", "perto", "reentrada"], max_f=0, vazio=True),
     "houston": dict(mostra="centro de controle de missao em Houston: telao de trajetoria, fileiras de consoles, controladores", formato="horizontal",
                     ceu=False, fx=["", "tensao"], max_f=3),
     "oceano": dict(mostra="oceano Pacifico: capsula com paraquedas ou boiando, navio de resgate, helicoptero (sem personagens)", formato="horizontal",
                    ceu=True, fx=["", "paraquedas", "pouso"], max_f=0, vazio=True, horas=["dia"]),
+    "superficie-lunar": dict(mostra="superficie da Lua: chao cinza com crateras, modulo lunar Eagle, Terra no ceu preto, astronautas de traje (e a bandeira)",
+                             formato="horizontal", ceu=False, fx=["", "bandeira"], max_f=3),
+    "descida-lunar": dict(mostra="o modulo lunar Eagle visto de fora, descendo com o motor aceso ou ja pousado na Lua (sem personagens)",
+                          formato="horizontal", ceu=False, fx=["", "descida", "poeira", "pousado"], max_f=0, vazio=True),
 }
 
 # cenarios 3D (motor three.js). 'era' = a que epoca/tema o cenario pertence (usado para barrar anacronismo).
