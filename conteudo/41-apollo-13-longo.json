@@ -1,0 +1,1233 @@
+{
+ "id": "41-apollo-13-longo",
+ "ordem": 901,
+ "formato": "longo",
+ "estilo": "epico",
+ "titulo": "Apollo 13: as horas que quase terminaram em tragédia",
+ "titulo_youtube": "Apollo 13: as 87 horas que quase terminaram em tragédia no espaço",
+ "titulo_curto": "APOLLO 13: O SALVA-VIDAS",
+ "thumb_texto": "HOUSTON, TIVEMOS UM PROBLEMA",
+ "descricao": "Abril de 1970. Você é o comandante Jim Lovell, a caminho da Lua, quando um tanque de oxigênio explode. A história real da Apollo 13, baseada nos relatos da Nasa: o módulo lunar virando bote salva-vidas, o filtro improvisado e a volta para casa. E você: qual rota teria escolhido? Comenta A (retorno livre pela Lua) ou B (volta direta).",
+ "comentario_fixado": "A: usar a Lua como estilingue de volta. B: arriscar o motor principal e voltar direto. Qual a sua escolha?",
+ "tags": [
+  "apollo 13",
+  "nasa",
+  "houston tivemos um problema",
+  "jim lovell",
+  "espaco",
+  "documentario",
+  "historia",
+  "1970",
+  "missao lunar"
+ ],
+ "cenas": [
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você é o comandante Jim Lovell. Hoje começa a Apollo treze, a terceira missão para pousar na Lua."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "aerodromo",
+   "fala": "Você é o comandante Jim Lovell. Hoje começa a Apollo treze, a terceira missão para pousar na Lua.",
+   "hora": "dia",
+   "destaques": [
+    "Apollo treze"
+   ],
+   "capitulo": "Lançamento",
+   "ano": "11 abr 1970"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "É onze de abril de mil novecentos e setenta, no Centro Espacial Kennedy, na Flórida."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "aerodromo",
+   "fala": "É onze de abril de mil novecentos e setenta, no Centro Espacial Kennedy, na Flórida.",
+   "hora": "dia",
+   "destaques": [
+    "Kennedy"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Três dias antes, um dos astronautas foi cortado da tripulação. Ken Mattingly foi exposto ao sarampo."
+    },
+    {
+     "quem": "f0",
+     "texto": "Sinto muito, Ken. Vou cuidar bem da nave."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "aerodromo",
+   "fala": "Três dias antes, um dos astronautas foi cortado da tripulação. Ken Mattingly foi exposto ao sarampo. Sinto muito, Ken. Vou cuidar bem da nave.",
+   "hora": "dia",
+   "destaques": [
+    "Mattingly"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Jack Swigert, o reserva, entra no lugar dele. A tripulação tem Lovell, Swigert e Fred Haise."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "aerodromo",
+   "fala": "Jack Swigert, o reserva, entra no lugar dele. A tripulação tem Lovell, Swigert e Fred Haise.",
+   "hora": "dia",
+   "destaques": [
+    "Swigert"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O foguete Saturn cinco tem mais de cem metros de altura. Ele sobe com você dentro do módulo de comando."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "aerodromo",
+   "fala": "O foguete Saturn cinco tem mais de cem metros de altura. Ele sobe com você dentro do módulo de comando.",
+   "hora": "dia",
+   "destaques": [
+    "trezentos"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O módulo de comando se chama Odyssey. O módulo lunar, que vai pousar na Lua, se chama Aquarius."
+    },
+    {
+     "quem": "f1",
+     "texto": "Aquarius vai ser meu lar na Lua, comandante."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "aerodromo",
+   "fala": "O módulo de comando se chama Odyssey. O módulo lunar, que vai pousar na Lua, se chama Aquarius. Aquarius vai ser meu lar na Lua, comandante.",
+   "hora": "dia",
+   "destaques": [
+    "Odyssey"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O lançamento corre bem, apesar de um motor do segundo estágio desligar antes da hora. A nave entra em órbita."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "aerodromo",
+   "fala": "O lançamento corre bem, apesar de um motor do segundo estágio desligar antes da hora. A nave entra em órbita.",
+   "hora": "dia",
+   "destaques": [
+    "órbita"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Parece uma missão perfeita. E quase ninguém imagina o que vem pela frente."
+    }
+   ],
+   "emocao": "misterioso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "aerodromo",
+   "fala": "Parece uma missão perfeita. E quase ninguém imagina o que vem pela frente.",
+   "hora": "dia",
+   "destaques": [
+    "tudo perfeito"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A nave sai da órbita e segue rumo à Lua. Lá fora, só o escuro e a Terra encolhendo na janela."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "A nave sai da órbita e segue rumo à Lua. Lá fora, só o escuro e a Terra encolhendo na janela.",
+   "hora": "noite",
+   "destaques": [
+    "Lua"
+   ],
+   "capitulo": "Dois dias de viagem",
+   "ano": "11 a 13 abr 1970"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A tripulação faz uma transmissão de televisão para o mundo, mostrando a vida dentro da nave."
+    },
+    {
+     "quem": "f0",
+     "texto": "Boa noite, Terra. Está tudo ótimo por aqui."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "A tripulação faz uma transmissão de televisão para o mundo, mostrando a vida dentro da nave. Boa noite, Terra. Está tudo ótimo por aqui.",
+   "hora": "noite",
+   "destaques": [
+    "televisão"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Pouca gente assiste. As emissoras nem transmitem ao vivo, porque o público já acha as viagens à Lua rotina."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "Pouca gente assiste. As emissoras nem transmitem ao vivo, porque o público já acha as viagens à Lua rotina.",
+   "hora": "noite",
+   "destaques": [
+    "rotina"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Fred Haise e você passam pelo túnel até o Aquarius para testar os sistemas do módulo lunar."
+    },
+    {
+     "quem": "f1",
+     "texto": "Os sistemas do Aquarius estão perfeitos, comandante."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "Fred Haise e você passam pelo túnel até o Aquarius para testar os sistemas do módulo lunar. Os sistemas do Aquarius estão perfeitos, comandante.",
+   "hora": "noite",
+   "destaques": [
+    "Haise"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Mais de cinquenta horas de voo. A Lua já está cada vez mais perto."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "Mais de cinquenta horas de voo. A Lua já está cada vez mais perto.",
+   "hora": "noite",
+   "destaques": [
+    "sessenta horas"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Houston pede uma tarefa de rotina: mexer os tanques de oxigênio, para evitar que o gás congele em camadas."
+    },
+    {
+     "quem": "f2",
+     "texto": "Apollo treze, aqui Houston. Pode ligar os ventiladores dos tanques."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "Houston pede uma tarefa de rotina: mexer os tanques de oxigênio, para evitar que o gás congele em camadas. Apollo treze, aqui Houston. Pode ligar os ventiladores dos tanques.",
+   "hora": "noite",
+   "destaques": [
+    "tanque"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Swigert aperta o interruptor. Você está a cerca de trezentos e vinte mil quilômetros da Terra."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "Swigert aperta o interruptor. Você está a cerca de trezentos e vinte mil quilômetros da Terra.",
+   "hora": "noite",
+   "destaques": [
+    "Swigert"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Segundos depois, a nave estremece."
+    }
+   ],
+   "emocao": "misterioso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "Segundos depois, a nave estremece.",
+   "hora": "noite",
+   "destaques": [
+    "segundos"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Um estrondo sacode tudo. Você sente a nave inteira tremer."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "Um estrondo sacode tudo. Você sente a nave inteira tremer.",
+   "hora": "noite",
+   "destaques": [
+    "estrondo"
+   ],
+   "capitulo": "A explosão",
+   "ano": "13 abr 1970"
+  },
+  {
+   "falas": [
+    {
+     "quem": "f0",
+     "texto": "Ok, Houston, tivemos um problema aqui."
+    },
+    {
+     "quem": "f2",
+     "texto": "Repita, Apollo treze, por favor."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "Ok, Houston, tivemos um problema aqui. Repita, Apollo treze, por favor.",
+   "hora": "noite",
+   "destaques": [
+    "problema"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Houston, tivemos um problema."
+    },
+    {
+     "quem": "narrador",
+     "texto": "Essas palavras viram uma das frases mais famosas da história da exploração espacial."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "Houston, tivemos um problema. Essas palavras viram uma das frases mais famosas da história da exploração espacial.",
+   "hora": "noite",
+   "destaques": [
+    "Houston"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O tanque dois de oxigênio explodeu. E o tanque um começa a vazar, rápido."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "O tanque dois de oxigênio explodeu. E o tanque um começa a vazar, rápido.",
+   "hora": "noite",
+   "destaques": [
+    "oxigênio"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Alarmes acendem. Voltagem cai. Os painéis que dão energia e água à nave começam a falhar."
+    },
+    {
+     "quem": "f1",
+     "texto": "Comandante, estamos perdendo energia nas células de combustível."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "Alarmes acendem. Voltagem cai. Os painéis que dão energia e água à nave começam a falhar. Comandante, estamos perdendo energia nas células de combustível.",
+   "hora": "noite",
+   "destaques": [
+    "luzes"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Olhando pela janela, você vê um gás escapando para o espaço. É o oxigênio da nave, a sua vida, indo embora."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "Olhando pela janela, você vê um gás escapando para o espaço. É o oxigênio da nave, a sua vida, indo embora.",
+   "hora": "noite",
+   "destaques": [
+    "janela"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você tinha a Lua na sua frente. Agora a pergunta é outra: como voltar para casa?"
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "Você tinha a Lua na sua frente. Agora a pergunta é outra: como voltar para casa?",
+   "hora": "noite",
+   "destaques": [
+    "Lua"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A investigação depois mostraria um defeito na fiação do tanque, ligado a um teste feito em solo, antes do lançamento."
+    }
+   ],
+   "emocao": "misterioso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "A investigação depois mostraria um defeito na fiação do tanque, ligado a um teste feito em solo, antes do lançamento.",
+   "hora": "noite",
+   "destaques": [
+    "causa"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Na Terra, o diretor de voo Gene Kranz reúne a equipe no centro de controle em Houston."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio",
+   "fala": "Na Terra, o diretor de voo Gene Kranz reúne a equipe no centro de controle em Houston.",
+   "hora": "noite",
+   "destaques": [
+    "Kranz"
+   ],
+   "capitulo": "Houston entra em ação",
+   "ano": "13 abr 1970"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Em poucos minutos, ficou claro: o módulo de comando está morrendo. Pousar na Lua está cancelado."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio",
+   "fala": "Em poucos minutos, ficou claro: o módulo de comando está morrendo. Pousar na Lua está cancelado.",
+   "hora": "noite",
+   "destaques": [
+    "decisão"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "f2",
+     "texto": "Precisamos economizar tudo. O módulo de comando só tem bateria para a descida final."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio",
+   "fala": "Precisamos economizar tudo. O módulo de comando só tem bateria para a descida final.",
+   "hora": "noite",
+   "destaques": [
+    "bateria"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A ideia ousada: usar o módulo lunar Aquarius como bote salva-vidas."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio",
+   "fala": "A ideia ousada: usar o módulo lunar Aquarius como bote salva-vidas.",
+   "hora": "noite",
+   "destaques": [
+    "salva-vidas"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O Aquarius foi feito para sustentar dois astronautas por dois dias. Agora precisa sustentar três por quase quatro."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio",
+   "fala": "O Aquarius foi feito para sustentar dois astronautas por dois dias. Agora precisa sustentar três por quase quatro.",
+   "hora": "noite",
+   "destaques": [
+    "três pessoas"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Havia duas opções: tentar uma volta direta usando o motor principal, que podia estar danificado, ou dar a volta na Lua."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio",
+   "fala": "Havia duas opções: tentar uma volta direta usando o motor principal, que podia estar danificado, ou dar a volta na Lua.",
+   "hora": "noite",
+   "destaques": [
+    "rota"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "f2",
+     "texto": "Comandante, recomendamos o caminho pela Lua. Não vamos arriscar o motor."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio",
+   "fala": "Comandante, recomendamos o caminho pela Lua. Não vamos arriscar o motor.",
+   "hora": "noite",
+   "destaques": [
+    "tensão"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Esse caminho se chama trajetória de retorno livre. A gravidade da Lua funciona como um estilingue de volta à Terra."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "laboratorio",
+   "fala": "Esse caminho se chama trajetória de retorno livre. A gravidade da Lua funciona como um estilingue de volta à Terra.",
+   "hora": "noite",
+   "destaques": [
+    "decisão"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você, Swigert e Haise passam para dentro do módulo lunar, apertados como em um armário."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "Você, Swigert e Haise passam para dentro do módulo lunar, apertados como em um armário.",
+   "hora": "noite",
+   "destaques": [
+    "Aquarius"
+   ],
+   "capitulo": "O bote chamado Aquarius",
+   "ano": "14 abr 1970"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Vocês desligam quase tudo no Odyssey para guardar a pouca energia que resta."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "Vocês desligam quase tudo no Odyssey para guardar a pouca energia que resta.",
+   "hora": "noite",
+   "destaques": [
+    "ligar"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Cerca de cinco horas depois da explosão, vocês acendem o motor do Aquarius para acertar o caminho."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "Cerca de cinco horas depois da explosão, vocês acendem o motor do Aquarius para acertar o caminho.",
+   "hora": "noite",
+   "destaques": [
+    "motor"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Motor do Aquarius ligado. Ajustando a trajetória, Houston."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "Motor do Aquarius ligado. Ajustando a trajetória, Houston.",
+   "hora": "noite",
+   "destaques": [
+    "gravidade"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Esse motor foi projetado para pousar na Lua. Nunca antes alguém o usou assim, no meio do caminho."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "Esse motor foi projetado para pousar na Lua. Nunca antes alguém o usou assim, no meio do caminho.",
+   "hora": "noite",
+   "destaques": [
+    "ninguém"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Para economizar baterias, os sistemas do Aquarius são cortados ao mínimo."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "Para economizar baterias, os sistemas do Aquarius são cortados ao mínimo.",
+   "hora": "noite",
+   "destaques": [
+    "energia"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O aquecimento também é desligado. O frio começa a se espalhar."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "O aquecimento também é desligado. O frio começa a se espalhar.",
+   "hora": "noite",
+   "destaques": [
+    "frio"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Enquanto isso, a Lua aparece enorme na janela."
+    }
+   ],
+   "emocao": "misterioso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "Enquanto isso, a Lua aparece enorme na janela.",
+   "hora": "noite",
+   "destaques": [
+    "Lua"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Vocês passam pelo lado escondido da Lua, a cerca de duzentos e cinquenta quilômetros da superfície."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "lua",
+   "fala": "Vocês passam pelo lado escondido da Lua, a cerca de duzentos e cinquenta quilômetros da superfície.",
+   "hora": "noite",
+   "destaques": [
+    "lado escuro"
+   ],
+   "capitulo": "Dando a volta na Lua",
+   "ano": "15 abr 1970"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Por alguns minutos, o rádio com a Terra fica mudo. Ninguém na Terra sabe se vocês estão bem."
+    }
+   ],
+   "emocao": "misterioso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "lua",
+   "fala": "Por alguns minutos, o rádio com a Terra fica mudo. Ninguém na Terra sabe se vocês estão bem.",
+   "hora": "noite",
+   "destaques": [
+    "silêncio"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Nesse ponto, vocês estão mais longe da Terra do que qualquer ser humano esteve até hoje, a mais de quatrocentos mil quilômetros."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "lua",
+   "fala": "Nesse ponto, vocês estão mais longe da Terra do que qualquer ser humano esteve até hoje, a mais de quatrocentos mil quilômetros.",
+   "hora": "noite",
+   "destaques": [
+    "distância"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "f1",
+     "texto": "Olha a cratera lá embaixo. Era onde íamos pousar."
+    },
+    {
+     "quem": "prot",
+     "texto": "Fica para a próxima, Fred."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "lua",
+   "fala": "Olha a cratera lá embaixo. Era onde íamos pousar. Fica para a próxima, Fred.",
+   "hora": "noite",
+   "destaques": [
+    "Lua"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Cerca de duas horas depois, o motor do Aquarius é ligado de novo, para acelerar a volta."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "lua",
+   "fala": "Cerca de duas horas depois, o motor do Aquarius é ligado de novo, para acelerar a volta.",
+   "hora": "noite",
+   "destaques": [
+    "segundo motor"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Mesmo assim, vocês tiram fotos da Lua, porque a missão ainda deve render ciência."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "lua",
+   "fala": "Mesmo assim, vocês tiram fotos da Lua, porque a missão ainda deve render ciência.",
+   "hora": "noite",
+   "destaques": [
+    "fotos"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Agora a Terra volta a aparecer, pequena, azul e longe."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "lua",
+   "fala": "Agora a Terra volta a aparecer, pequena, azul e longe.",
+   "hora": "noite",
+   "destaques": [
+    "Terra"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Mas um novo problema surge dentro do bote."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "lua",
+   "fala": "Mas um novo problema surge dentro do bote.",
+   "hora": "noite",
+   "destaques": [
+    "ar"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O gás carbônico que vocês exalam está se acumulando, e isso pode matar."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "O gás carbônico que vocês exalam está se acumulando, e isso pode matar.",
+   "hora": "noite",
+   "destaques": [
+    "gás carbônico"
+   ],
+   "capitulo": "Frio, sede e um filtro improvisado",
+   "ano": "15 a 16 abr 1970"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Os filtros do Aquarius estão saturados. Os do módulo de comando são quadrados e não encaixam no Aquarius, que usa encaixe redondo."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "Os filtros do Aquarius estão saturados. Os do módulo de comando são quadrados e não encaixam no Aquarius, que usa encaixe redondo.",
+   "hora": "noite",
+   "destaques": [
+    "filtros"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Em Houston, engenheiros recebem uma tarefa quase impossível: criar um adaptador com o que existe a bordo."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "Em Houston, engenheiros recebem uma tarefa quase impossível: criar um adaptador com o que existe a bordo.",
+   "hora": "noite",
+   "destaques": [
+    "improvisar"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "f2",
+     "texto": "Peguem as meias, os sacos plásticos, a capa de papelão e a fita adesiva."
+    },
+    {
+     "quem": "f1",
+     "texto": "Isso vai funcionar mesmo, Houston?"
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "Peguem as meias, os sacos plásticos, a capa de papelão e a fita adesiva. Isso vai funcionar mesmo, Houston?",
+   "hora": "noite",
+   "destaques": [
+    "fita"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Passo a passo, a equipe na Terra descreve o adaptador pelo rádio. Vocês montam e instalam. O gás carbônico começa a cair."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "Passo a passo, a equipe na Terra descreve o adaptador pelo rádio. Vocês montam e instalam. O gás carbônico começa a cair.",
+   "hora": "noite",
+   "destaques": [
+    "funciona"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A temperatura dentro da nave cai para perto de três graus Celsius. Vocês tremem e mal dormem."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "A temperatura dentro da nave cai para perto de três graus Celsius. Vocês tremem e mal dormem.",
+   "hora": "noite",
+   "destaques": [
+    "frio"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A água é racionada: pouco mais de duzentos gramas por dia, por pessoa. Haise adoece com febre."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "A água é racionada: pouco mais de duzentos gramas por dia, por pessoa. Haise adoece com febre.",
+   "hora": "noite",
+   "destaques": [
+    "água"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Mesmo assim, vocês seguem. A Terra cresce na janela a cada hora."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cabine",
+   "fala": "Mesmo assim, vocês seguem. A Terra cresce na janela a cada hora.",
+   "hora": "noite",
+   "destaques": [
+    "esperança"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Pouco antes da volta, vocês voltam ao Odyssey, que está gelado, e ligam seus sistemas com a bateria que sobrou."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "conves",
+   "fala": "Pouco antes da volta, vocês voltam ao Odyssey, que está gelado, e ligam seus sistemas com a bateria que sobrou.",
+   "hora": "dia",
+   "destaques": [
+    "Odyssey"
+   ],
+   "capitulo": "A volta para casa",
+   "ano": "17 abr 1970"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Vocês soltam o módulo de serviço. Pela janela, veem que um painel inteiro foi arrancado pela explosão."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "conves",
+   "fala": "Vocês soltam o módulo de serviço. Pela janela, veem que um painel inteiro foi arrancado pela explosão.",
+   "hora": "dia",
+   "destaques": [
+    "módulo de serviço"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O escudo térmico do módulo de comando está intacto? Ninguém sabe ao certo."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "conves",
+   "fala": "O escudo térmico do módulo de comando está intacto? Ninguém sabe ao certo.",
+   "hora": "dia",
+   "destaques": [
+    "escudo"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Na reentrada, o rádio fica mudo por mais tempo que o previsto. São minutos de silêncio, na Terra e no mundo todo."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "conves",
+   "fala": "Na reentrada, o rádio fica mudo por mais tempo que o previsto. São minutos de silêncio, na Terra e no mundo todo.",
+   "hora": "dia",
+   "destaques": [
+    "apagão"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Então três paraquedas se abrem sobre o oceano Pacífico, perto das ilhas Samoa."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "conves",
+   "fala": "Então três paraquedas se abrem sobre o oceano Pacífico, perto das ilhas Samoa.",
+   "hora": "dia",
+   "destaques": [
+    "paraquedas"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O Odyssey cai na água, bem perto do navio de resgate. Os três astronautas estão vivos, cerca de cento e quarenta e três horas depois do lançamento."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "conves",
+   "fala": "O Odyssey cai na água, bem perto do navio de resgate. Os três astronautas estão vivos, cerca de cento e quarenta e três horas depois do lançamento.",
+   "hora": "dia",
+   "destaques": [
+    "sucesso"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A Nasa chamou a missão de fracasso bem-sucedido. A pergunta que fica é a de sempre: e se tivesse dado errado?"
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "conves",
+   "fala": "A Nasa chamou a missão de fracasso bem-sucedido. A pergunta que fica é a de sempre: e se tivesse dado errado?",
+   "hora": "dia",
+   "destaques": [
+    "lição"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A decisão mais difícil foi não tentar a volta direta. Qual teria sido a sua? Comenta A para usar a Lua como estilingue de volta, ou B para arriscar o motor principal e voltar direto. A mais votada vira o próximo episódio."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "conves",
+   "fala": "A decisão mais difícil foi não tentar a volta direta. Qual teria sido a sua? Comenta A para usar a Lua como estilingue de volta, ou B para arriscar o motor principal e voltar direto. A mais votada vira o próximo episódio.",
+   "hora": "dia",
+   "destaques": [
+    "voto"
+   ]
+  }
+ ]
+}
