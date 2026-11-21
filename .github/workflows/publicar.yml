@@ -19,7 +19,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: planob-publicar
+  group: estado-publicacao
   cancel-in-progress: false
 
 env:
