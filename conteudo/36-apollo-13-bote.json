@@ -1,0 +1,209 @@
+{
+ "id": "36-apollo-13-bote",
+ "ordem": 120,
+ "formato": "escolha",
+ "estilo": "epico",
+ "motor": "2d",
+ "titulo": "Você é o comandante da Apollo 13: o oxigênio explode. A ou B?",
+ "titulo_youtube": "Apollo 13: o oxigênio explodiu a caminho da Lua. Qual caminho você escolhe? A ou B",
+ "titulo_curto": "APOLLO 13: O BOTE",
+ "thumb_texto": "A OU B: VOLTAR DA LUA",
+ "descricao": "Abril de 1970. Você é o comandante da Apollo 13, a caminho da Lua, quando um tanque de oxigênio explode. Dramatização baseada em fatos históricos e relatos da Nasa. A mais votada vira o próximo vídeo.",
+ "comentario_fixado": "A: dar a volta na Lua usando a gravidade. B: arriscar o motor principal e voltar direto. Qual a sua escolha?",
+ "tags": [
+  "apollo 13",
+  "nasa",
+  "houston tivemos um problema",
+  "espaco",
+  "voce decide",
+  "historia"
+ ],
+ "elenco": {
+  "prot": "lovell",
+  "f": [
+   "swigert"
+  ],
+  "amb": {
+   "houston": [
+    "controlador"
+   ],
+   "modulo-lunar": [
+    "haise"
+   ]
+  },
+  "protAmb": {
+   "houston": "kranz"
+  },
+  "vazio": [
+   "espaco",
+   "oceano"
+  ]
+ },
+ "perfil": "generico",
+ "cenas": [
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você é o comandante da Apollo treze, a caminho da Lua. De repente, uma explosão sacode a nave."
+    },
+    {
+     "quem": "prot",
+     "texto": "Houston, tivemos um problema."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Você é o comandante da Apollo treze, a caminho da Lua. De repente, uma explosão sacode a nave. Houston, tivemos um problema.",
+   "destaques": [
+    "explosão"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f0"
+   ],
+   "fx": "alarme"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Um tanque de oxigênio estourou, e o gás escapa para o espaço."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "Um tanque de oxigênio estourou, e o gás escapa para o espaço.",
+   "destaques": [
+    "oxigênio"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica"
+   ],
+   "fx": "vazamento"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Em Houston, a equipe decide: o pouso na Lua está cancelado."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Em Houston, a equipe decide: o pouso na Lua está cancelado.",
+   "destaques": [
+    "Houston"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f0"
+   ],
+   "fx": "tensao"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A saída é usar o módulo lunar como bote salva-vidas, feito para dois, agora com três."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "modulo-lunar",
+   "fala": "A saída é usar o módulo lunar como bote salva-vidas, feito para dois, agora com três.",
+   "destaques": [
+    "salva-vidas"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f0"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O frio chega perto de três graus, e a água é racionada."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "modulo-lunar",
+   "fala": "O frio chega perto de três graus, e a água é racionada.",
+   "destaques": [
+    "frio"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f0"
+   ],
+   "fx": "frio"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Quatro dias depois da explosão, a cápsula cai no oceano Pacífico. Os três astronautas estão vivos."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "oceano",
+   "fala": "Quatro dias depois da explosão, a cápsula cai no oceano Pacífico. Os três astronautas estão vivos.",
+   "destaques": [
+    "vivos"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica"
+   ],
+   "fx": "pouso",
+   "hora": "dia"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Houston ofereceu dois caminhos. Comenta A para dar a volta na Lua usando a gravidade dela, ou B para arriscar o motor principal e voltar direto."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Houston ofereceu dois caminhos. Comenta A para dar a volta na Lua usando a gravidade dela, ou B para arriscar o motor principal e voltar direto.",
+   "destaques": [
+    "escolha"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f0"
+   ]
+  }
+ ],
+ "longo_id": "43-apollo-13-2d-longo",
+ "longo_chamada": "A história completa da Apollo 13"
+}

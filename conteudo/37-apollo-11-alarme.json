@@ -1,0 +1,217 @@
+{
+ "id": "37-apollo-11-alarme",
+ "ordem": 121,
+ "formato": "escolha",
+ "estilo": "epico",
+ "motor": "2d",
+ "titulo": "Você é Armstrong: um alarme soa antes do pouso. A ou B?",
+ "titulo_youtube": "Apollo 11: o alarme que quase cancelou o pouso na Lua. Continuar ou abortar? A ou B",
+ "titulo_curto": "APOLLO 11: O ALARME",
+ "thumb_texto": "A OU B: POUSAR?",
+ "descricao": "Julho de 1969. Você é Neil Armstrong, a minutos de pousar na Lua, quando um alarme desconhecido soa no computador. Dramatização baseada em fatos históricos e relatos da Nasa. A mais votada vira o próximo vídeo.",
+ "comentario_fixado": "A: continuar a descida mesmo com o alarme. B: abortar o pouso. Qual a sua escolha?",
+ "tags": [
+  "apollo 11",
+  "nasa",
+  "neil armstrong",
+  "alarme 1202",
+  "pouso na lua",
+  "voce decide",
+  "historia"
+ ],
+ "elenco": {
+  "prot": "armstrong",
+  "f": [
+   "aldrin"
+  ],
+  "amb": {
+   "modulo-lunar": [
+    "aldrin-traje"
+   ],
+   "superficie-lunar": [
+    "aldrin-traje"
+   ],
+   "houston": [
+    "controlador"
+   ]
+  },
+  "protAmb": {
+   "modulo-lunar": "armstrong-traje",
+   "superficie-lunar": "armstrong-traje",
+   "houston": "kranz"
+  },
+  "vazio": [
+   "descida-lunar"
+  ]
+ },
+ "perfil": "generico",
+ "cenas": [
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você é Neil Armstrong, a minutos de pousar na Lua."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "modulo-lunar",
+   "fala": "Você é Neil Armstrong, a minutos de pousar na Lua.",
+   "destaques": [
+    "Armstrong"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f0"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "De repente, um alarme soa no computador."
+    },
+    {
+     "quem": "prot",
+     "texto": "Houston, estamos com um alarme. Doze zero dois."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "modulo-lunar",
+   "fala": "De repente, um alarme soa no computador. Houston, estamos com um alarme. Doze zero dois.",
+   "destaques": [
+    "alarme"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f0"
+   ],
+   "fx": "alarme"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Em Houston, ninguém sabia o que aquilo significava. Abortar ou seguir?"
+    },
+    {
+     "quem": "f0",
+     "texto": "Estamos liberados para continuar."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Em Houston, ninguém sabia o que aquilo significava. Abortar ou seguir? Estamos liberados para continuar.",
+   "destaques": [
+    "abortar"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f0"
+   ],
+   "fx": "tensao"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O computador leva o Eagle para uma cratera cheia de pedras. Você assume o controle manual."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "descida-lunar",
+   "fala": "O computador leva o Eagle para uma cratera cheia de pedras. Você assume o controle manual.",
+   "destaques": [
+    "pedras"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica"
+   ],
+   "fx": "descida"
+  },
+  {
+   "falas": [
+    {
+     "quem": "radio",
+     "texto": "Trinta segundos de combustível, Eagle."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Trinta segundos de combustível, Eagle.",
+   "destaques": [
+    "combustível"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f0"
+   ],
+   "fx": "tensao"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O Eagle pousa, e você dá o primeiro passo na Lua."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "superficie-lunar",
+   "fala": "O Eagle pousa, e você dá o primeiro passo na Lua.",
+   "destaques": [
+    "Lua"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f0"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Se você estivesse em Houston, qual seria a sua decisão? Comenta A para continuar a descida, ou B para abortar o pouso."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Se você estivesse em Houston, qual seria a sua decisão? Comenta A para continuar a descida, ou B para abortar o pouso.",
+   "destaques": [
+    "escolha"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f0"
+   ]
+  }
+ ],
+ "longo_id": "44-apollo-11-2d-longo",
+ "longo_chamada": "A história completa do pouso na Lua"
+}

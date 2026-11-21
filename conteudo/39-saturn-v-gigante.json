@@ -1,0 +1,184 @@
+{
+ "id": "39-saturn-v-gigante",
+ "ordem": 123,
+ "formato": "escolha",
+ "estilo": "epico",
+ "motor": "2d",
+ "titulo": "Você está diante do Saturn V: o gigante que levou a Lua. A ou B?",
+ "titulo_youtube": "Saturn V: o gigante de 110 metros que levou humanos à Lua. Qual foi o maior feito? A ou B",
+ "titulo_curto": "SATURN V: O GIGANTE",
+ "thumb_texto": "A OU B: O MAIOR FEITO",
+ "descricao": "Você está diante do Saturn V, o foguete que levou os astronautas da Apollo à Lua. Dramatização baseada em fatos históricos e relatos da Nasa. A mais votada vira o próximo vídeo.",
+ "comentario_fixado": "A: o pouso na Lua foi o maior feito. B: o foguete que levou até lá foi o maior feito. Qual a sua escolha?",
+ "tags": [
+  "saturn v",
+  "nasa",
+  "apollo 11",
+  "foguete",
+  "voce decide",
+  "historia",
+  "espaco"
+ ],
+ "elenco": {
+  "prot": "armstrong-traje",
+  "f": [
+   "aldrin-traje"
+  ],
+  "amb": {
+   "houston": [
+    "controlador"
+   ],
+   "superficie-lunar": [
+    "aldrin-traje"
+   ]
+  },
+  "protAmb": {
+   "houston": "kranz",
+   "superficie-lunar": "armstrong-traje"
+  },
+  "vazio": [
+   "espaco"
+  ]
+ },
+ "perfil": "generico",
+ "cenas": [
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você está diante do foguete Saturn cinco, com cento e dez metros de altura."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "lancamento",
+   "fala": "Você está diante do foguete Saturn cinco, com cento e dez metros de altura.",
+   "destaques": [
+    "Saturn"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f0"
+   ],
+   "hora": "dia"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Ele pesa quase três mil toneladas, com combustível. Só o primeiro estágio tem cinco motores."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "lancamento",
+   "fala": "Ele pesa quase três mil toneladas, com combustível. Só o primeiro estágio tem cinco motores.",
+   "destaques": [
+    "toneladas"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f0"
+   ],
+   "hora": "dia"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Os motores acendem, e o gigante sobe com os astronautas dentro."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "lancamento",
+   "fala": "Os motores acendem, e o gigante sobe com os astronautas dentro.",
+   "destaques": [
+    "decolagem"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f0"
+   ],
+   "fx": "decolagem",
+   "hora": "dia"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Em onze minutos, você está em órbita da Terra."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "Em onze minutos, você está em órbita da Terra.",
+   "destaques": [
+    "onze minutos"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica"
+   ],
+   "fx": "terra"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Quatro dias e meio depois, você pisa na Lua."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "superficie-lunar",
+   "fala": "Quatro dias e meio depois, você pisa na Lua.",
+   "destaques": [
+    "Lua"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f0"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Qual foi o maior feito? Comenta A para o pouso na Lua, ou B para o foguete que levou até lá."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Qual foi o maior feito? Comenta A para o pouso na Lua, ou B para o foguete que levou até lá.",
+   "destaques": [
+    "escolha"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f0"
+   ]
+  }
+ ],
+ "longo_id": "44-apollo-11-2d-longo",
+ "longo_chamada": "A história completa do pouso na Lua"
+}

@@ -1,0 +1,227 @@
+{
+ "id": "38-apollo-13-filtro",
+ "ordem": 122,
+ "formato": "escolha",
+ "estilo": "epico",
+ "motor": "2d",
+ "titulo": "Você é engenheiro da Nasa: salve a Apollo 13 com fita adesiva. A ou B?",
+ "titulo_youtube": "Apollo 13: o filtro de fita adesiva que salvou três astronautas. Qual item você usa primeiro? A ou B",
+ "titulo_curto": "O FILTRO DE FITA",
+ "thumb_texto": "A OU B: SALVE A MISSÃO",
+ "descricao": "Abril de 1970. Você é engenheiro da Nasa e precisa inventar um filtro de ar para a Apollo 13 usando só o que existe a bordo. Dramatização baseada em fatos históricos e relatos da Nasa. A mais votada vira o próximo vídeo.",
+ "comentario_fixado": "A: começar pela fita adesiva. B: começar pelo papelão do plano de voo. Qual a sua escolha?",
+ "tags": [
+  "apollo 13",
+  "nasa",
+  "engenharia",
+  "fita adesiva",
+  "voce decide",
+  "historia"
+ ],
+ "elenco": {
+  "prot": "engenheiro",
+  "f": [
+   "controlador"
+  ],
+  "amb": {
+   "modulo-lunar": [
+    "haise"
+   ]
+  },
+  "protAmb": {
+   "modulo-lunar": "lovell"
+  },
+  "vazio": [
+   "oceano"
+  ]
+ },
+ "perfil": "generico",
+ "cenas": [
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você é engenheiro da Nasa. A Apollo treze está em perigo, e o tempo está acabando."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Você é engenheiro da Nasa. A Apollo treze está em perigo, e o tempo está acabando.",
+   "destaques": [
+    "engenheiro"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f0"
+   ],
+   "fx": "tensao"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Lá em cima, o gás carbônico sobe dentro do módulo lunar. Os astronautas podem não resistir."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "modulo-lunar",
+   "fala": "Lá em cima, o gás carbônico sobe dentro do módulo lunar. Os astronautas podem não resistir.",
+   "destaques": [
+    "gás carbônico"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f0"
+   ],
+   "fx": "frio"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O problema: os filtros do módulo lunar são redondos, mas os que sobraram são quadrados."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "O problema: os filtros do módulo lunar são redondos, mas os que sobraram são quadrados.",
+   "destaques": [
+    "quadrados"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f0"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Sua mesa tem o mesmo que os astronautas têm a bordo: um saco plástico, papelão, uma mangueira de traje e fita adesiva."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Sua mesa tem o mesmo que os astronautas têm a bordo: um saco plástico, papelão, uma mangueira de traje e fita adesiva.",
+   "destaques": [
+    "fita adesiva"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f0"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Vocês montam um adaptador na Terra e descrevem cada passo pelo rádio."
+    },
+    {
+     "quem": "f0",
+     "texto": "Primeiro, a fita em volta da mangueira."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Vocês montam um adaptador na Terra e descrevem cada passo pelo rádio. Primeiro, a fita em volta da mangueira.",
+   "destaques": [
+    "rádio"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f0"
+   ],
+   "fx": "tensao"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Lá em cima, os astronautas montam o adaptador. Funciona, e o gás carbônico começa a cair."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "modulo-lunar",
+   "fala": "Lá em cima, os astronautas montam o adaptador. Funciona, e o gás carbônico começa a cair.",
+   "destaques": [
+    "funciona"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f0"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Quatro dias depois da explosão, os três astronautas caem no oceano Pacífico, vivos."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "oceano",
+   "fala": "Quatro dias depois da explosão, os três astronautas caem no oceano Pacífico, vivos.",
+   "destaques": [
+    "vivos"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica"
+   ],
+   "fx": "pouso",
+   "hora": "dia"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Qual item você usaria primeiro? Comenta A para a fita adesiva, ou B para o papelão do plano de voo."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Qual item você usaria primeiro? Comenta A para a fita adesiva, ou B para o papelão do plano de voo.",
+   "destaques": [
+    "escolha"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f0"
+   ]
+  }
+ ],
+ "longo_id": "43-apollo-13-2d-longo",
+ "longo_chamada": "A história completa da Apollo 13"
+}
