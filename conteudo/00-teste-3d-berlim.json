@@ -1,0 +1,229 @@
+{
+ "id": "00-teste-3d-berlim",
+ "ordem": 900,
+ "formato": "escolha",
+ "estilo": "noir",
+ "titulo": "Você é guarda em Berlim: A abre o portão, B mantém fechado",
+ "titulo_youtube": "Você é guarda na noite que o Muro de Berlim caiu: A abre ou B fecha?",
+ "titulo_curto": "ABRIR OU FECHAR?",
+ "thumb_texto": "A OU B: BERLIM 1989",
+ "descricao": "Berlim, 9 de novembro de 1989. Você é guarda de fronteira. Dramatização baseada em fatos históricos. A mais votada vira o próximo episódio.",
+ "comentario_fixado": "A: abre o portão. B: mantém fechado. A mais votada vira o próximo episódio!",
+ "tags": [
+  "berlim",
+  "muro de berlim",
+  "1989",
+  "escolha",
+  "voce decide",
+  "historia"
+ ],
+ "elenco": {
+  "prot": "oficial-ddr",
+  "f": [
+   "cidadao-berlim",
+   "guarda-ddr",
+   "cidada-berlim"
+  ]
+ },
+ "perfil": "generico",
+ "cenas": [
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você é guarda de fronteira em Berlim. E a cidade inteira está na sua porta."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "muro",
+   "fala": "Você é guarda de fronteira em Berlim. E a cidade inteira está na sua porta.",
+   "hora": "noite",
+   "destaques": [
+    "guarda"
+   ],
+   "cams": [
+    "ampla",
+    "portao",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Nove de novembro de mil novecentos e oitenta e nove. O muro dividia Berlim havia vinte e oito anos."
+    }
+   ],
+   "emocao": "misterioso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "muro",
+   "fala": "Nove de novembro de mil novecentos e oitenta e nove. O muro dividia Berlim havia vinte e oito anos.",
+   "hora": "noite",
+   "ano": "9 NOV 1989",
+   "destaques": [
+    "muro"
+   ],
+   "cams": [
+    "muro",
+    "torre",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "f0",
+     "texto": "Ouvimos no rádio que a fronteira abriu!"
+    },
+    {
+     "quem": "prot",
+     "texto": "Eu não recebi nenhuma ordem."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "muro",
+   "fala": "Ouvimos no rádio que a fronteira abriu! Eu não recebi nenhuma ordem.",
+   "hora": "noite",
+   "destaques": [
+    "fronteira"
+   ],
+   "cams": [
+    "f0",
+    "eu-costas",
+    "f0c"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Milhares de pessoas se juntavam no portão, e o telefone dos seus chefes não dava resposta clara."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "muro",
+   "fala": "Milhares de pessoas se juntavam no portão, e o telefone dos seus chefes não dava resposta clara.",
+   "hora": "noite",
+   "destaques": [
+    "milhares"
+   ],
+   "cams": [
+    "alto",
+    "panoramica",
+    "portao"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "f1",
+     "texto": "Chefe, a multidão está empurrando a grade!"
+    },
+    {
+     "quem": "prot",
+     "texto": "Mantenham a calma, ninguém atira."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "muro",
+   "fala": "Chefe, a multidão está empurrando a grade! Mantenham a calma, ninguém atira.",
+   "hora": "noite",
+   "destaques": [
+    "multidão"
+   ],
+   "cams": [
+    "f1",
+    "eu-frente",
+    "f1c"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Cada minuto parecia uma hora, e o povo só crescia. Alguns carregavam cartazes, outros só choravam de ansiedade."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "muro",
+   "fala": "Cada minuto parecia uma hora, e o povo só crescia. Alguns carregavam cartazes, outros só choravam de ansiedade.",
+   "hora": "noite",
+   "destaques": [
+    "crescia"
+   ],
+   "cams": [
+    "ampla",
+    "eu-lado",
+    "torre"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "f2",
+     "texto": "Meu irmão mora do outro lado. Por favor, abra."
+    },
+    {
+     "quem": "narrador",
+     "texto": "Você sabia que a sua decisão ia entrar para a história."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "muro",
+   "fala": "Meu irmão mora do outro lado. Por favor, abra. Você sabia que a sua decisão ia entrar para a história.",
+   "hora": "noite",
+   "destaques": [
+    "abra"
+   ],
+   "cams": [
+    "f2",
+    "f2c",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Comenta A para abrir o portão, ou B para manter fechado. A mais votada vira o próximo episódio."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "muro",
+   "fala": "Comenta A para abrir o portão, ou B para manter fechado. A mais votada vira o próximo episódio.",
+   "hora": "madrugada",
+   "destaques": [
+    "A",
+    "B"
+   ],
+   "cams": [
+    "portao",
+    "eu-frente",
+    "ampla"
+   ]
+  }
+ ]
+}

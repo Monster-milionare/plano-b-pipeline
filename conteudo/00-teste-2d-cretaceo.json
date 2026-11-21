@@ -1,0 +1,226 @@
+{
+ "id": "00-teste-2d-cretaceo",
+ "ordem": 901,
+ "formato": "escolha",
+ "estilo": "epico",
+ "motor": "2d",
+ "titulo": "Você acorda no Cretáceo: A volta pra máquina do tempo, B fica pra ver o asteroide",
+ "titulo_youtube": "Você acorda no último dia dos dinossauros: A foge ou B fica? ",
+ "titulo_curto": "O DIA DO ASTEROIDE",
+ "thumb_texto": "A OU B: ÚLTIMO DIA",
+ "descricao": "Cretáceo, 66 milhões de anos atrás. Você é um explorador do tempo. Dramatização baseada em hipóteses científicas. A mais votada vira o próximo episódio.",
+ "comentario_fixado": "A: volta pra máquina do tempo. B: fica pra ver. A mais votada vira o próximo episódio!",
+ "tags": [
+  "dinossauros",
+  "asteroide",
+  "cretaceo",
+  "escolha",
+  "voce decide",
+  "ciencia"
+ ],
+ "elenco": {
+  "prot": "explorador",
+  "f": [
+   "exploradora",
+   "guia",
+   "bebe-tricera"
+  ]
+ },
+ "perfil": "generico",
+ "cenas": [
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você acorda no Cretáceo. E hoje é o último dia dos dinossauros."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "selva-cretaceo",
+   "hora": "manha",
+   "fala": "Você acorda no Cretáceo. E hoje é o último dia dos dinossauros.",
+   "ano": "66 MI DE ANOS",
+   "destaques": [
+    "dinossauros"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f2"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Sessenta e seis milhões de anos atrás, a Terra era cheia de vida gigante."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "selva-cretaceo",
+   "hora": "dia",
+   "fala": "Sessenta e seis milhões de anos atrás, a Terra era cheia de vida gigante.",
+   "destaques": [
+    "gigante"
+   ],
+   "cams": [
+    "panoramica",
+    "alto",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Doutora, que bicho é esse?"
+    },
+    {
+     "quem": "f0",
+     "texto": "Um filhote de tricerátopo. Ele é curioso!"
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "selva-cretaceo",
+   "hora": "dia",
+   "fala": "Doutora, que bicho é esse? Um filhote de tricerátopo. Ele é curioso!",
+   "destaques": [
+    "tricerátopo"
+   ],
+   "cams": [
+    "eu-frente",
+    "f0",
+    "f2"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Segundo os cientistas, um asteroide de uns dez quilômetros vinha em direção à Terra."
+    }
+   ],
+   "emocao": "misterioso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "selva-cretaceo",
+   "hora": "tarde",
+   "fala": "Segundo os cientistas, um asteroide de uns dez quilômetros vinha em direção à Terra.",
+   "destaques": [
+    "asteroide"
+   ],
+   "cams": [
+    "alto",
+    "ampla",
+    "eu-costas"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "f1",
+     "texto": "Olha o céu! Aquela luz não é o sol!"
+    },
+    {
+     "quem": "prot",
+     "texto": "Ela está caindo rápido."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "selva-cretaceo",
+   "hora": "entardecer",
+   "fala": "Olha o céu! Aquela luz não é o sol! Ela está caindo rápido.",
+   "destaques": [
+    "céu"
+   ],
+   "cams": [
+    "f1",
+    "eu-frente",
+    "alto"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O impacto, onde hoje é o México, abriu uma cratera de cerca de cento e oitenta quilômetros."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "selva-cretaceo",
+   "hora": "impacto",
+   "fala": "O impacto, onde hoje é o México, abriu uma cratera de cerca de cento e oitenta quilômetros.",
+   "destaques": [
+    "cratera"
+   ],
+   "cams": [
+    "ampla",
+    "f1c",
+    "eu-lado"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Poeira e fumaça esconderam o sol por muito tempo, e a maioria dos dinossauros desapareceu."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "selva-cretaceo",
+   "hora": "noite",
+   "fala": "Poeira e fumaça esconderam o sol por muito tempo, e a maioria dos dinossauros desapareceu.",
+   "destaques": [
+    "desapareceu"
+   ],
+   "cams": [
+    "panoramica",
+    "eu-frente",
+    "f2"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Comenta A para voltar à máquina do tempo agora, ou B para ficar vendo o impacto. A mais votada vira o próximo episódio."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "selva-cretaceo",
+   "hora": "noite",
+   "fala": "Comenta A para voltar à máquina do tempo agora, ou B para ficar vendo o impacto. A mais votada vira o próximo episódio.",
+   "destaques": [
+    "A",
+    "B"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f0c"
+   ]
+  }
+ ]
+}
