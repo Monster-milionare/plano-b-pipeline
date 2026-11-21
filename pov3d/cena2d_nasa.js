@@ -389,7 +389,7 @@ scenes['houston'] = {
       x.strokeStyle = 'rgba(80,220,200,0.18)'; x.lineWidth = 1; for (let i = 0; i <= 20; i++) { x.beginPath(); x.moveTo(sx + (sw / 20) * i, sy); x.lineTo(sx + (sw / 20) * i, sy + sh); x.stroke(); } for (let i = 0; i <= 10; i++) { x.beginPath(); x.moveTo(sx, sy + (sh / 10) * i); x.lineTo(sx + sw, sy + (sh / 10) * i); x.stroke(); }
       terra(x, sx + sw * 0.14, sy + sh * 0.56, sh * 0.2, 0.45); lua(x, sx + sw * 0.86, sy + sh * 0.4, sh * 0.09, 0.4);
       x.strokeStyle = '#5affc8'; x.lineWidth = 4; x.setLineDash([14, 10]); x.beginPath(); x.moveTo(sx + sw * 0.2, sy + sh * 0.5); x.bezierCurveTo(sx + sw * 0.4, sy + sh * 0.05, sx + sw * 0.75, sy + sh * 0.08, sx + sw * 0.84, sy + sh * 0.36); x.stroke(); x.setLineDash([]);
-      x.fillStyle = '#5affc8'; x.font = 'bold 26px monospace'; x.fillText('APOLLO 13  TRAJETORIA', sx + 30, sy + 44);
+      x.fillStyle = '#5affc8'; x.font = 'bold 26px monospace'; x.fillText('APOLLO  TRAJETORIA', sx + 30, sy + 44);
       for (const [fx, c1] of [[0.04, '#b8282a'], [0.9, '#1a3a8a']]) { x.fillStyle = c1; x.fillRect(w * fx, hh * 0.06, w * 0.06, hh * 0.18); x.fillStyle = '#f2f2f2'; for (let i = 0; i < 3; i++) x.fillRect(w * fx, hh * 0.09 + i * hh * 0.05, w * 0.06, hh * 0.02); }
     });
     const fileiras = mkL(0.5, 0, H, (x, w, hh) => {   // fileiras de consoles com controladores de costas
