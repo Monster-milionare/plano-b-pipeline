@@ -1,0 +1,1585 @@
+{
+ "id": "44-apollo-11-2d-longo",
+ "ordem": 904,
+ "formato": "longo",
+ "estilo": "epico",
+ "motor": "2d",
+ "revisado": true,
+ "titulo": "Apollo 11: o pouso que quase foi abortado",
+ "titulo_youtube": "Apollo 11: o alarme que quase cancelou o pouso na Lua",
+ "titulo_curto": "APOLLO 11: O ALARME 1202",
+ "thumb_texto": "O ALARME QUE QUASE CANCELOU A LUA",
+ "descricao": "Julho de 1969. Você é Neil Armstrong, a minutos de pousar na Lua, quando um alarme desconhecido soa no computador. A história real da Apollo 11, baseada nos relatos da Nasa: a decisão de segundos em Houston, o pouso quase às cegas com pouco combustível e o primeiro passo na Lua. E você: continuaria ou abortaria? Comente A ou B.\n\nSe inscreva no Plano B da História: toda semana, o pior dia da história contado em 2D.\n\nDramatização baseada em fatos históricos e relatos da época. Diálogos e cenas são recriações.\n\n#historia #apollo11 #nasa #historiadobrasil #planobdahistoria",
+ "comentario_fixado": "A: continuar a descida mesmo com o alarme. B: abortar o pouso. Qual a sua escolha?",
+ "tags": [
+  "apollo 11",
+  "nasa",
+  "neil armstrong",
+  "alarme 1202",
+  "pouso na lua",
+  "espaco",
+  "documentario",
+  "historia",
+  "1969"
+ ],
+ "elenco": {
+  "prot": "armstrong",
+  "f": [
+   "aldrin",
+   "collins"
+  ],
+  "amb": {
+   "lancamento": [
+    "aldrin-traje",
+    "collins-traje"
+   ],
+   "modulo-lunar": [
+    "aldrin-traje"
+   ],
+   "superficie-lunar": [
+    "aldrin-traje"
+   ],
+   "houston": [
+    "controlador",
+    "controlador2",
+    "engenheiro"
+   ]
+  },
+  "protAmb": {
+   "lancamento": "armstrong-traje",
+   "modulo-lunar": "armstrong-traje",
+   "superficie-lunar": "armstrong-traje",
+   "houston": "kranz"
+  },
+  "vazio": [
+   "espaco",
+   "oceano",
+   "descida-lunar"
+  ]
+ },
+ "cenas": [
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você é Neil Armstrong, comandante da Apollo onze. Hoje o seu destino é a Lua."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "lancamento",
+   "fala": "Você é Neil Armstrong, comandante da Apollo onze. Hoje o seu destino é a Lua.",
+   "destaques": [
+    "Apollo onze"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ],
+   "hora": "manha",
+   "capitulo": "Lançamento",
+   "ano": "16 jul 1969"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "É dezesseis de julho de mil novecentos e sessenta e nove, no Centro Espacial Kennedy, na Flórida."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "lancamento",
+   "fala": "É dezesseis de julho de mil novecentos e sessenta e nove, no Centro Espacial Kennedy, na Flórida.",
+   "destaques": [
+    "Kennedy"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "ampla"
+   ],
+   "hora": "manha"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Ao seu lado estão Buzz Aldrin, que vai pousar com você, e Michael Collins, que vai ficar em órbita."
+    },
+    {
+     "quem": "f0",
+     "texto": "Pronto para o maior passeio da história, Neil?"
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "lancamento",
+   "fala": "Ao seu lado estão Buzz Aldrin, que vai pousar com você, e Michael Collins, que vai ficar em órbita. Pronto para o maior passeio da história, Neil?",
+   "destaques": [
+    "Aldrin"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ],
+   "hora": "manha"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O foguete Saturn cinco, com mais de cem metros de altura, espera vocês na plataforma. Ele é um dos foguetes mais poderosos já construídos."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "lancamento",
+   "fala": "O foguete Saturn cinco, com mais de cem metros de altura, espera vocês na plataforma. Ele é um dos foguetes mais poderosos já construídos.",
+   "destaques": [
+    "Saturn"
+   ],
+   "cams": [
+    "eu-frente",
+    "f1",
+    "ampla"
+   ],
+   "hora": "manha"
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Tudo certo, Houston. Estamos prontos para a contagem final."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "lancamento",
+   "fala": "Tudo certo, Houston. Estamos prontos para a contagem final.",
+   "destaques": [
+    "três"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ],
+   "hora": "manha"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Nove e trinta e dois da manhã. Os motores acendem e o gigante sobe, com vocês dentro."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "lancamento",
+   "fala": "Nove e trinta e dois da manhã. Os motores acendem e o gigante sobe, com vocês dentro.",
+   "destaques": [
+    "decolagem"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "ampla"
+   ],
+   "fx": "decolagem",
+   "hora": "manha"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Em pouco mais de onze minutos, a nave está em órbita da Terra. Depois, um último impulso a coloca no caminho da Lua."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "Em pouco mais de onze minutos, a nave está em órbita da Terra. Depois, um último impulso a coloca no caminho da Lua.",
+   "destaques": [
+    "órbita"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica",
+    "alto"
+   ],
+   "fx": "terra"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O módulo de comando se chama Columbia. O módulo lunar, que vai descer até a Lua, se chama Eagle, que quer dizer águia."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "O módulo de comando se chama Columbia. O módulo lunar, que vai descer até a Lua, se chama Eagle, que quer dizer águia.",
+   "destaques": [
+    "Columbia"
+   ],
+   "cams": [
+    "eu-frente",
+    "f1",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A viagem dura cerca de três dias. Lá fora, só o escuro e a Terra encolhendo."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "A viagem dura cerca de três dias. Lá fora, só o escuro e a Terra encolhendo.",
+   "destaques": [
+    "viagem"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica",
+    "alto"
+   ],
+   "fx": "terra",
+   "capitulo": "Três dias rumo à Lua",
+   "ano": "16 a 19 jul 1969"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Michael Collins pilota a Columbia durante todo o caminho."
+    },
+    {
+     "quem": "f1",
+     "texto": "Está tudo ótimo por aqui, Neil. A Lua já está bem grande."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Michael Collins pilota a Columbia durante todo o caminho. Está tudo ótimo por aqui, Neil. A Lua já está bem grande.",
+   "destaques": [
+    "Collins"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Vocês fazem transmissões de televisão para a Terra, e milhões de pessoas acompanham."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Vocês fazem transmissões de televisão para a Terra, e milhões de pessoas acompanham.",
+   "destaques": [
+    "televisão"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "No quarto dia, a Lua preenche toda a janela. Vocês passam por trás dela e perdem o contato de rádio com a Terra."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "No quarto dia, a Lua preenche toda a janela. Vocês passam por trás dela e perdem o contato de rádio com a Terra.",
+   "destaques": [
+    "Lua"
+   ],
+   "cams": [
+    "panoramica",
+    "ampla"
+   ],
+   "fx": "lua"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Em Houston, durante esses minutos, só há silêncio no rádio. Ninguém sabe ainda se a nave entrou em órbita lunar."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Em Houston, durante esses minutos, só há silêncio no rádio. Ninguém sabe ainda se a nave entrou em órbita lunar.",
+   "destaques": [
+    "silêncio"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente",
+    "f1"
+   ],
+   "fx": "tensao"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Mas deu certo. A Columbia entra em órbita da Lua."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "Mas deu certo. A Columbia entra em órbita da Lua.",
+   "destaques": [
+    "órbita lunar"
+   ],
+   "cams": [
+    "panoramica",
+    "ampla"
+   ],
+   "fx": "lua"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "No dia seguinte, vinte de julho, chega o momento que todos esperavam: separar o Eagle da Columbia."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "No dia seguinte, vinte de julho, chega o momento que todos esperavam: separar o Eagle da Columbia.",
+   "destaques": [
+    "Eagle"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você e Buzz Aldrin passam para o módulo lunar, apertado e cheio de painéis."
+    },
+    {
+     "quem": "f0",
+     "texto": "Sistemas do Eagle prontos, Neil."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "modulo-lunar",
+   "fala": "Você e Buzz Aldrin passam para o módulo lunar, apertado e cheio de painéis. Sistemas do Eagle prontos, Neil.",
+   "destaques": [
+    "Aldrin"
+   ],
+   "cams": [
+    "eu-frente",
+    "f0",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O Eagle se solta da Columbia. Agora são só vocês dois, e a Lua lá embaixo."
+    },
+    {
+     "quem": "radio",
+     "texto": "Eagle, aqui Houston. Vocês estão liberados para a descida."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "modulo-lunar",
+   "fala": "O Eagle se solta da Columbia. Agora são só vocês dois, e a Lua lá embaixo. Eagle, aqui Houston. Vocês estão liberados para a descida.",
+   "destaques": [
+    "separação"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ],
+   "capitulo": "A separação",
+   "ano": "20 jul 1969"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Collins fica sozinho na Columbia, dando voltas em torno da Lua, esperando vocês voltarem."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "Collins fica sozinho na Columbia, dando voltas em torno da Lua, esperando vocês voltarem.",
+   "destaques": [
+    "Collins"
+   ],
+   "cams": [
+    "panoramica",
+    "ampla"
+   ],
+   "fx": "perto"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Pouco depois, você liga o motor de descida do Eagle. A descida até a Lua leva cerca de doze minutos."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "modulo-lunar",
+   "fala": "Pouco depois, você liga o motor de descida do Eagle. A descida até a Lua leva cerca de doze minutos.",
+   "destaques": [
+    "motor"
+   ],
+   "cams": [
+    "alto",
+    "eu-frente",
+    "f0"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Motor de descida aceso. Tudo normal por aqui."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "modulo-lunar",
+   "fala": "Motor de descida aceso. Tudo normal por aqui.",
+   "destaques": [
+    "trajetória"
+   ],
+   "cams": [
+    "eu-frente",
+    "f0",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O Eagle começa a descer, com o motor aceso, rumo ao Mar da Tranquilidade."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "descida-lunar",
+   "fala": "O Eagle começa a descer, com o motor aceso, rumo ao Mar da Tranquilidade.",
+   "destaques": [
+    "descida"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica",
+    "alto"
+   ],
+   "fx": "descida"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O computador de bordo guia a descida. Ele tem menos memória do que uma calculadora moderna."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "modulo-lunar",
+   "fala": "O computador de bordo guia a descida. Ele tem menos memória do que uma calculadora moderna.",
+   "destaques": [
+    "computador"
+   ],
+   "cams": [
+    "f0c",
+    "eu-lado",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Cerca de cinco minutos depois do início da descida, o computador faz um barulho que ninguém queria ouvir."
+    }
+   ],
+   "emocao": "misterioso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "modulo-lunar",
+   "fala": "Cerca de cinco minutos depois do início da descida, o computador faz um barulho que ninguém queria ouvir.",
+   "destaques": [
+    "cinco minutos"
+   ],
+   "cams": [
+    "alto",
+    "eu-frente",
+    "f0"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Houston, estamos com um alarme no computador. Doze zero dois."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "modulo-lunar",
+   "fala": "Houston, estamos com um alarme no computador. Doze zero dois.",
+   "destaques": [
+    "alarme"
+   ],
+   "cams": [
+    "eu-frente",
+    "f0",
+    "ampla"
+   ],
+   "fx": "alarme",
+   "capitulo": "O alarme",
+   "ano": "20 jul 1969"
+  },
+  {
+   "falas": [
+    {
+     "quem": "f0",
+     "texto": "Doze zero dois, Neil? Eu nunca vi esse alarme antes."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "modulo-lunar",
+   "fala": "Doze zero dois, Neil? Eu nunca vi esse alarme antes.",
+   "destaques": [
+    "Doze zero dois"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Em Houston, ninguém na sala sabia ao certo o que aquele alarme significava. A descida podia ser abortada ali mesmo."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Em Houston, ninguém na sala sabia ao certo o que aquele alarme significava. A descida podia ser abortada ali mesmo.",
+   "destaques": [
+    "Houston"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "f2",
+    "ampla"
+   ],
+   "fx": "tensao"
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Equipe, preciso de uma resposta agora. Seguimos ou abortamos?"
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Equipe, preciso de uma resposta agora. Seguimos ou abortamos?",
+   "destaques": [
+    "Kranz"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ],
+   "fx": "tensao"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A decisão estava nas mãos de Steve Bales, o controlador de guiagem, um engenheiro muito jovem."
+    },
+    {
+     "quem": "f0",
+     "texto": "Estamos liberados para continuar nesse alarme."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "A decisão estava nas mãos de Steve Bales, o controlador de guiagem, um engenheiro muito jovem. Estamos liberados para continuar nesse alarme.",
+   "destaques": [
+    "Bales"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente",
+    "f1"
+   ],
+   "fx": "tensao"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O computador estava sobrecarregado de tarefas, mas continuava guiando a nave. Segundo a explicação dada depois, o radar de encontro, ligado por precaução, havia gerado dados demais."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "O computador estava sobrecarregado de tarefas, mas continuava guiando a nave. Segundo a explicação dada depois, o radar de encontro, ligado por precaução, havia gerado dados demais.",
+   "destaques": [
+    "sobrecarga"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "f2",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "radio",
+     "texto": "Eagle, aqui Houston. Estamos liberados para a descida."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Eagle, aqui Houston. Estamos liberados para a descida.",
+   "destaques": [
+    "segundos"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ],
+   "fx": "tensao"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Os alarmes ainda voltam algumas vezes. Cada um deles pode terminar a missão."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "modulo-lunar",
+   "fala": "Os alarmes ainda voltam algumas vezes. Cada um deles pode terminar a missão.",
+   "destaques": [
+    "alarmes"
+   ],
+   "cams": [
+    "alto",
+    "eu-frente",
+    "f0"
+   ],
+   "fx": "alarme"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Pela janela, você finalmente vê o lugar do pouso. E tem um problema."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "modulo-lunar",
+   "fala": "Pela janela, você finalmente vê o lugar do pouso. E tem um problema.",
+   "destaques": [
+    "janela"
+   ],
+   "cams": [
+    "eu-frente",
+    "f0",
+    "ampla"
+   ],
+   "capitulo": "Um pouso quase às cegas",
+   "ano": "20 jul 1969"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O computador está levando o Eagle para uma cratera, cercada de pedras enormes. Pousar ali seria o fim."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "descida-lunar",
+   "fala": "O computador está levando o Eagle para uma cratera, cercada de pedras enormes. Pousar ali seria o fim.",
+   "destaques": [
+    "pedras"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica",
+    "alto"
+   ],
+   "fx": "descida"
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Vou assumir o controle manual."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "modulo-lunar",
+   "fala": "Vou assumir o controle manual.",
+   "destaques": [
+    "controle"
+   ],
+   "cams": [
+    "f0c",
+    "eu-lado",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Armstrong passa o Eagle para o controle manual e voa na horizontal, procurando um lugar plano para pousar."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "descida-lunar",
+   "fala": "Armstrong passa o Eagle para o controle manual e voa na horizontal, procurando um lugar plano para pousar.",
+   "destaques": [
+    "procurar"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica",
+    "alto"
+   ],
+   "fx": "poeira"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Em Houston, todos olham para o mesmo número: o combustível que sobra no Eagle."
+    },
+    {
+     "quem": "radio",
+     "texto": "Sessenta segundos de combustível, Eagle."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Em Houston, todos olham para o mesmo número: o combustível que sobra no Eagle. Sessenta segundos de combustível, Eagle.",
+   "destaques": [
+    "combustível"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ],
+   "fx": "tensao"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Dentro do módulo, Aldrin vai cantando a altura e a velocidade, em voz baixa e firme."
+    },
+    {
+     "quem": "f0",
+     "texto": "Quarenta pés, descendo dois e meio. Poeira subindo."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "modulo-lunar",
+   "fala": "Dentro do módulo, Aldrin vai cantando a altura e a velocidade, em voz baixa e firme. Quarenta pés, descendo dois e meio. Poeira subindo.",
+   "destaques": [
+    "Aldrin"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O jato do motor levanta uma nuvem de poeira que quase esconde o chão. Armstrong continua descendo, quase às cegas."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "descida-lunar",
+   "fala": "O jato do motor levanta uma nuvem de poeira que quase esconde o chão. Armstrong continua descendo, quase às cegas.",
+   "destaques": [
+    "poeira"
+   ],
+   "cams": [
+    "panoramica",
+    "ampla"
+   ],
+   "fx": "poeira"
+  },
+  {
+   "falas": [
+    {
+     "quem": "radio",
+     "texto": "Trinta segundos, Eagle."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Trinta segundos, Eagle.",
+   "destaques": [
+    "trinta"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ],
+   "fx": "tensao"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Uma luz azul acende no painel. Quer dizer que as sapatas do Eagle tocaram a Lua."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "descida-lunar",
+   "fala": "Uma luz azul acende no painel. Quer dizer que as sapatas do Eagle tocaram a Lua.",
+   "destaques": [
+    "luz"
+   ],
+   "cams": [
+    "panoramica",
+    "ampla"
+   ],
+   "fx": "pousado",
+   "capitulo": "A Águia pousou",
+   "ano": "20 jul 1969"
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Houston, aqui Base da Tranquilidade. A Águia pousou."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "modulo-lunar",
+   "fala": "Houston, aqui Base da Tranquilidade. A Águia pousou.",
+   "destaques": [
+    "motor"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ],
+   "permite": [
+    "lugar"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "radio",
+     "texto": "Entendido, Tranquilidade. Vocês deixaram um monte de gente prestes a ficar azul. Estamos respirando de novo. Muito obrigado."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Entendido, Tranquilidade. Vocês deixaram um monte de gente prestes a ficar azul. Estamos respirando de novo. Muito obrigado.",
+   "destaques": [
+    "respirando"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Nas contas feitas depois, restavam menos de trinta segundos de combustível. A margem foi mínima."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "descida-lunar",
+   "fala": "Nas contas feitas depois, restavam menos de trinta segundos de combustível. A margem foi mínima.",
+   "destaques": [
+    "segundos"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica",
+    "alto"
+   ],
+   "fx": "pousado"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Na sala de controle, a tensão vira comemoração. Em casa, milhões de pessoas aplaudem diante da televisão."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Na sala de controle, a tensão vira comemoração. Em casa, milhões de pessoas aplaudem diante da televisão.",
+   "destaques": [
+    "comemoração"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "f2",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O plano previa um descanso, mas você e Aldrin estão ansiosos demais. Vocês decidem sair logo."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "modulo-lunar",
+   "fala": "O plano previa um descanso, mas você e Aldrin estão ansiosos demais. Vocês decidem sair logo.",
+   "destaques": [
+    "descanso"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Cerca de seis horas depois do pouso, vocês vestem os trajes e deixam o ar do módulo escapar."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "modulo-lunar",
+   "fala": "Cerca de seis horas depois do pouso, vocês vestem os trajes e deixam o ar do módulo escapar.",
+   "destaques": [
+    "trajes"
+   ],
+   "cams": [
+    "f0c",
+    "eu-lado",
+    "ampla"
+   ],
+   "capitulo": "O primeiro passo",
+   "ano": "20 a 21 jul 1969"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você desce a escada devagar, degrau por degrau, até o último."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "superficie-lunar",
+   "fala": "Você desce a escada devagar, degrau por degrau, até o último.",
+   "destaques": [
+    "escada"
+   ],
+   "cams": [
+    "eu-frente",
+    "eu-lado"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "É um pequeno passo para o homem, mas um salto gigante para a humanidade."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "superficie-lunar",
+   "fala": "É um pequeno passo para o homem, mas um salto gigante para a humanidade.",
+   "destaques": [
+    "primeiro passo"
+   ],
+   "cams": [
+    "eu-frente",
+    "eu-lado"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O chão é de poeira fina e cinza, que fica marcada na bota. Vinte minutos depois, Buzz Aldrin também desce."
+    },
+    {
+     "quem": "f0",
+     "texto": "Que visão magnífica, Neil. Uma desolação magnífica."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "superficie-lunar",
+   "fala": "O chão é de poeira fina e cinza, que fica marcada na bota. Vinte minutos depois, Buzz Aldrin também desce. Que visão magnífica, Neil. Uma desolação magnífica.",
+   "destaques": [
+    "poeira"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Vocês fincam a bandeira dos Estados Unidos no chão e deixam uma placa que diz que viemos em paz em nome de toda a humanidade."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "superficie-lunar",
+   "fala": "Vocês fincam a bandeira dos Estados Unidos no chão e deixam uma placa que diz que viemos em paz em nome de toda a humanidade.",
+   "destaques": [
+    "bandeira"
+   ],
+   "cams": [
+    "f0c",
+    "eu-lado",
+    "ampla"
+   ],
+   "fx": "bandeira"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Ao longo de pouco mais de duas horas, vocês montam experimentos científicos e recolhem cerca de vinte e um quilos de rochas lunares."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "superficie-lunar",
+   "fala": "Ao longo de pouco mais de duas horas, vocês montam experimentos científicos e recolhem cerca de vinte e um quilos de rochas lunares.",
+   "destaques": [
+    "rochas"
+   ],
+   "cams": [
+    "alto",
+    "eu-frente",
+    "f0"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "No céu preto, a Terra brilha pequena e azul. Daqui, tudo que você conhece cabe na ponta do dedo."
+    }
+   ],
+   "emocao": "misterioso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "No céu preto, a Terra brilha pequena e azul. Daqui, tudo que você conhece cabe na ponta do dedo.",
+   "destaques": [
+    "Terra"
+   ],
+   "cams": [
+    "panoramica",
+    "ampla"
+   ],
+   "fx": "terra"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Hora de voltar. Vocês entram de novo no Eagle e fecham a escotilha."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "superficie-lunar",
+   "fala": "Hora de voltar. Vocês entram de novo no Eagle e fecham a escotilha.",
+   "destaques": [
+    "voltar"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Dentro do Eagle, vocês tentam dormir um pouco. Faz frio e tudo está barulhento."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "modulo-lunar",
+   "fala": "Dentro do Eagle, vocês tentam dormir um pouco. Faz frio e tudo está barulhento.",
+   "destaques": [
+    "descanso"
+   ],
+   "cams": [
+    "f0c",
+    "eu-lado",
+    "ampla"
+   ],
+   "capitulo": "A volta para casa",
+   "ano": "21 a 24 jul 1969"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Então o motor de subida liga e leva o módulo de volta à órbita, deixando a parte de baixo para trás, na Lua."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "Então o motor de subida liga e leva o módulo de volta à órbita, deixando a parte de baixo para trás, na Lua.",
+   "destaques": [
+    "subida"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica",
+    "alto"
+   ],
+   "fx": "perto"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Na órbita, a Columbia espera. Michael Collins, depois de mais de um dia sozinho, recebe os dois colegas de volta a bordo."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "Na órbita, a Columbia espera. Michael Collins, depois de mais de um dia sozinho, recebe os dois colegas de volta a bordo.",
+   "destaques": [
+    "Collins"
+   ],
+   "cams": [
+    "panoramica",
+    "ampla"
+   ],
+   "fx": "terra"
+  },
+  {
+   "falas": [
+    {
+     "quem": "f1",
+     "texto": "Bem-vindos de volta, rapazes. Que viagem, hein?"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Vocês soltam o Eagle e partem rumo à Terra."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Bem-vindos de volta, rapazes. Que viagem, hein? Vocês soltam o Eagle e partem rumo à Terra.",
+   "destaques": [
+    "reunidos"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Na volta, a cápsula entra na atmosfera da Terra a uma velocidade enorme, e o escudo térmico fica em brasa."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "Na volta, a cápsula entra na atmosfera da Terra a uma velocidade enorme, e o escudo térmico fica em brasa.",
+   "destaques": [
+    "reentrada"
+   ],
+   "cams": [
+    "panoramica",
+    "ampla"
+   ],
+   "fx": "reentrada"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Então três paraquedas se abrem sobre o oceano Pacífico."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "oceano",
+   "fala": "Então três paraquedas se abrem sobre o oceano Pacífico.",
+   "destaques": [
+    "paraquedas"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica",
+    "alto"
+   ],
+   "fx": "paraquedas",
+   "hora": "dia"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A Columbia cai na água, perto do navio de resgate. É vinte e quatro de julho de mil novecentos e sessenta e nove."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "oceano",
+   "fala": "A Columbia cai na água, perto do navio de resgate. É vinte e quatro de julho de mil novecentos e sessenta e nove.",
+   "destaques": [
+    "navio"
+   ],
+   "cams": [
+    "panoramica",
+    "ampla"
+   ],
+   "fx": "pouso",
+   "hora": "dia"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Os astronautas são recebidos pelo navio de resgate e, por precaução, ficam em quarentena antes de reencontrar a família."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "oceano",
+   "fala": "Os astronautas são recebidos pelo navio de resgate e, por precaução, ficam em quarentena antes de reencontrar a família.",
+   "destaques": [
+    "quarentena"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica",
+    "alto"
+   ],
+   "fx": "pouso",
+   "hora": "dia"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Atrás dessa conquista havia centenas de milhares de pessoas: engenheiros, técnicos, controladores, cientistas."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Atrás dessa conquista havia centenas de milhares de pessoas: engenheiros, técnicos, controladores, cientistas.",
+   "destaques": [
+    "equipe"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "f2",
+    "ampla"
+   ],
+   "capitulo": "O que ficou",
+   "ano": "1969"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Em pouco mais de oito anos, a humanidade foi do primeiro voo ao espaço até a Lua."
+    }
+   ],
+   "emocao": "misterioso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "Em pouco mais de oito anos, a humanidade foi do primeiro voo ao espaço até a Lua.",
+   "destaques": [
+    "Lua"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica",
+    "alto"
+   ],
+   "fx": "lua"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "E a missão quase não aconteceu. Um alarme desconhecido e uma decisão de poucos segundos mudaram a história."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "E a missão quase não aconteceu. Um alarme desconhecido e uma decisão de poucos segundos mudaram a história.",
+   "destaques": [
+    "decisão"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente",
+    "f1"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Se você estivesse em Houston ouvindo o alarme doze zero dois, qual seria a sua escolha? Comenta A para continuar a descida ou B para abortar o pouso. A mais votada vira o próximo vídeo."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Se você estivesse em Houston ouvindo o alarme doze zero dois, qual seria a sua escolha? Comenta A para continuar a descida ou B para abortar o pouso. A mais votada vira o próximo vídeo.",
+   "destaques": [
+    "voto"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "f2",
+    "ampla"
+   ]
+  }
+ ]
+}
