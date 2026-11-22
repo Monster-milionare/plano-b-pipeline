@@ -140,7 +140,17 @@ def _pesos_por_grupo(medidas: list, campo: str, media: float) -> tuple:
     return pesos, resumo
 
 
+def _votos():
+    """Le os comentarios dos Shorts com votacao (nao derruba o placar se falhar)."""
+    try:
+        import votos
+        votos.coletar()
+    except Exception as exc:
+        print(f"[metricas] leitor de votos falhou: {str(exc)[:150]}")
+
+
 def main() -> int:
+    _votos()
     videos = _ler_json(VIDEOS_ARQ, [])
     if not videos:
         print("[metricas] state/videos.json vazio (nenhum video publicado ainda).")
