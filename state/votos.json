@@ -1,1 +1,26 @@
-{}
+{
+ "YWf1QMn23t0": {
+  "item_id": "34-pompeia-79",
+  "titulo": "Você acorda em Pompeia: o dia em que o Vesúvio explodiu",
+  "rotulos": {
+   "A": "VERMELHO: fugir agora",
+   "B": "AZUL: ficar e esperar"
+  },
+  "contagem": {
+   "A": 0,
+   "B": 1
+  },
+  "vencedora": "B",
+  "comentarios_lidos": 2,
+  "votantes": [
+   {
+    "autor": "@Juliae_Patricia",
+    "voto": "B",
+    "likes": 1,
+    "texto": "Azul, quero ver o caos",
+    "comentario_id": "c1"
+   }
+  ],
+  "atualizado": "2026-11-22T00:16+00:00"
+ }
+}
