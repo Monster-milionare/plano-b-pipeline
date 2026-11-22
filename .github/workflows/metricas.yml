@@ -38,7 +38,7 @@ jobs:
           rm -f token.json
           git config user.name "planob-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add -f state/pesos.json state/placar.md state/views.json 2>/dev/null || true
+          git add -f state/pesos.json state/placar.md state/views.json state/votos.json state/respostas_sugeridas.json 2>/dev/null || true
           git diff --cached --quiet || git commit -m "chore: placar de metricas"
           for i in 1 2 3 4 5; do
             if git push; then break; fi
