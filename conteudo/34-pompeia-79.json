@@ -178,5 +178,26 @@
     "AZUL"
    ]
   }
- ]
+ ],
+ "votacao": {
+  "A": {
+   "rotulo": "VERMELHO: fugir agora",
+   "palavras": [
+    "vermelho",
+    "vermelha",
+    "foge",
+    "fugir",
+    "fuga"
+   ]
+  },
+  "B": {
+   "rotulo": "AZUL: ficar e esperar",
+   "palavras": [
+    "azul",
+    "fica",
+    "ficar",
+    "esperar"
+   ]
+  }
+ }
 }
