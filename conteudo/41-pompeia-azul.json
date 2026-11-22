@@ -1,0 +1,175 @@
+{
+ "id": "41-pompeia-azul",
+ "ordem": 12,
+ "formato": "voce-acorda",
+ "estilo": "noir",
+ "titulo": "Você ficou em Pompeia: o caminho AZUL que vocês escolheram",
+ "titulo_youtube": "Você ficou em Pompeia: o caminho AZUL que vocês escolheram (e deu nisso)",
+ "titulo_curto": "POMPEIA: VOCÊ FICOU",
+ "thumb_texto": "VOCÊ FICOU EM POMPEIA",
+ "descricao": "Continuação do Short de Pompeia: vocês votaram AZUL (ficar e esperar) e este é o resultado. Dramatização baseada em relatos de Plínio, o Jovem.",
+ "comentario_fixado": "Obrigado @Juliae_Patricia por escolher AZUL! Quer ver o caminho VERMELHO (fugir)? Comenta VERMELHO.",
+ "tags": [
+  "pompeia",
+  "vesuvio",
+  "79",
+  "roma antiga",
+  "voce acorda",
+  "historia",
+  "vulcao"
+ ],
+ "votacao": {
+  "A": {
+   "rotulo": "VERMELHO: ver o caminho de quem fugiu",
+   "palavras": [
+    "vermelho",
+    "vermelha",
+    "fugir",
+    "foge"
+   ]
+  },
+  "B": {
+   "rotulo": "AZUL: seguir quem ficou",
+   "palavras": [
+    "azul"
+   ]
+  }
+ },
+ "continuacao_de": "34-pompeia-79",
+ "cenas": [
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você escolheu AZUL: ficar e esperar. A decisão veio dos comentários, e o crédito é da Juliae Patricia."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cidade-antiga",
+   "fala": "Você escolheu AZUL: ficar e esperar. A decisão veio dos comentários, e o crédito é da Juliae Patricia.",
+   "hora": "tarde",
+   "destaques": [
+    "AZUL"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Se a cidade aguentou tantos tremores, aguenta mais um."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cidade-antiga",
+   "fala": "Se a cidade aguentou tantos tremores, aguenta mais um.",
+   "hora": "tarde",
+   "destaques": [
+    "tremores"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você tranca a casa e se abriga lá dentro. Lá fora, cinzas e pedras-pomes caem como chuva."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cidade-antiga",
+   "fala": "Você tranca a casa e se abriga lá dentro. Lá fora, cinzas e pedras-pomes caem como chuva.",
+   "hora": "tarde",
+   "destaques": [
+    "pedras-pomes"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "f0",
+     "texto": "Os telhados estão cedendo com o peso!"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Pedras leves, mas em grande quantidade, desabaram vários tetos em Pompeia."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cidade-antiga",
+   "fala": "Os telhados estão cedendo com o peso! Pedras leves, mas em grande quantidade, desabaram vários tetos em Pompeia.",
+   "hora": "noite",
+   "destaques": [
+    "telhados"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Na noite seguinte, correntes de gás e cinza quente desceram do vulcão a mais de cem quilômetros por hora."
+    }
+   ],
+   "emocao": "misterioso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cidade-antiga",
+   "fala": "Na noite seguinte, correntes de gás e cinza quente desceram do vulcão a mais de cem quilômetros por hora.",
+   "hora": "noite",
+   "destaques": [
+    "cem quilômetros por hora"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Quem ficou não teve tempo de reagir. Pompeia foi soterrada, e só foi redescoberta mais de mil e setecentos anos depois."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cidade-antiga",
+   "fala": "Quem ficou não teve tempo de reagir. Pompeia foi soterrada, e só foi redescoberta mais de mil e setecentos anos depois.",
+   "hora": "amanhecer",
+   "destaques": [
+    "redescoberta"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Ficar custou caro. Será que fugir teria salvado você?"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Comenta aí: quer ver o outro caminho, o VERMELHO? E marca quem escolheu diferente!"
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cidade-antiga",
+   "fala": "Ficar custou caro. Será que fugir teria salvado você? Comenta aí: quer ver o outro caminho, o VERMELHO? E marca quem escolheu diferente!",
+   "hora": "tarde",
+   "destaques": [
+    "VERMELHO"
+   ]
+  }
+ ]
+}
