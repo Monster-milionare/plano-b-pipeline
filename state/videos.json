@@ -150,5 +150,13 @@
   "estilo": "epico",
   "formato": "longo",
   "publicado_em": "2026-11-22T16:04:52+00:00"
+ },
+ {
+  "video_id": "gDEACDntFSM",
+  "item_id": "37-apollo-11-alarme",
+  "titulo": "Você é Armstrong: um alarme soa antes do pouso. A ou B?",
+  "estilo": "epico",
+  "formato": "escolha",
+  "publicado_em": "2026-11-22T17:15:50+00:00"
  }
 ]
