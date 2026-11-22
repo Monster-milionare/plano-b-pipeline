@@ -169,7 +169,11 @@ def coletar() -> dict:
         try:
             coms = _comentarios(p["video_id"])
         except Exception as exc:
-            print(f"[votos] {p['id']}: nao consegui ler comentarios ({str(exc)[:100]})", flush=True)
+            det = getattr(exc, "content", b"")
+            det = det.decode("utf-8", "ignore") if isinstance(det, bytes) else str(det)
+            mot = re.search(r'"reason":\s*"([^"]+)"', det)
+            print(f"[votos] {p['id']}: nao consegui ler comentarios (HTTP {getattr(getattr(exc, 'resp', None), 'status', '?')} "
+                  f"{mot.group(1) if mot else str(exc)[:80]})", flush=True)
             if p["video_id"] in antigo:
                 novo[p["video_id"]] = antigo[p["video_id"]]
             continue
