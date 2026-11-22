@@ -1,0 +1,181 @@
+{
+ "id": "905-e-se-os-dinossauros-nunca-tivessem-sido-",
+ "ordem": 905,
+ "formato": "e-se",
+ "titulo": "E se os dinossauros nunca tivessem sido extintos?",
+ "descricao": "Um mundo onde os dinossauros nunca foram extintos domina a história humana, revelando segredos surpreendentes e escolhas decisivas para o futuro da espécie.",
+ "tags": [
+  "dinossauros",
+  "historia alternativa",
+  "suspense",
+  "curiosidades",
+  "e se"
+ ],
+ "cenas": [
+  {
+   "fala": "Os dinossauros nunca morreram, e dominam a Terra hoje.",
+   "emocao": "misterioso",
+   "destaques": [
+    "dinossauros",
+    "dominam"
+   ],
+   "visuais": [
+    "dinosaurs roaming modern city"
+   ],
+   "hora": "dia",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Os dinossauros nunca morreram, e dominam a Terra hoje."
+    }
+   ],
+   "amb": "cidade"
+  },
+  {
+   "fala": "Descubra o segredo que mudou o curso da evolução humana.",
+   "emocao": "misterioso",
+   "destaques": [
+    "segredo"
+   ],
+   "visuais": [
+    "secret laboratory"
+   ],
+   "hora": "noite",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Descubra o segredo que mudou o curso da evolução humana."
+    }
+   ],
+   "amb": "laboratorio"
+  },
+  {
+   "fala": "Em 66 milhões de anos atrás, o asteroide nunca colidiu.",
+   "emocao": "surpreso",
+   "destaques": [
+    "asteróide"
+   ],
+   "visuais": [
+    "asteroid missing"
+   ],
+   "hora": "dia",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Em 66 milhões de anos atrás, o asteroide nunca colidiu."
+    }
+   ],
+   "amb": "terra"
+  },
+  {
+   "fala": "Imagine que o Tiranossauro Rex desenvolveu inteligência semelhante à humana. Como viver ao lado deles? Eles nos estudam como nós estudamos eles.",
+   "emocao": "misterioso",
+   "destaques": [
+    "inteligência"
+   ],
+   "visuais": [
+    "smart T-rex"
+   ],
+   "hora": "tarde",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Imagine que o Tiranossauro Rex desenvolveu inteligência semelhante à humana."
+    },
+    {
+     "quem": "prot",
+     "texto": "Como viver ao lado deles?"
+    },
+    {
+     "quem": "f0",
+     "texto": "Eles nos estudam como nós estudamos eles."
+    }
+   ],
+   "amb": "cidade-antiga"
+  },
+  {
+   "fala": "Cidades modernas são construídas ao redor de ninhos de braquiossauros gigantes. É assustador mas fascinante.",
+   "emocao": "surpreso",
+   "destaques": [
+    "ninhos"
+   ],
+   "visuais": [
+    "city with brachiosaur"
+   ],
+   "hora": "amanhecer",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Cidades modernas são construídas ao redor de ninhos de braquiossauros gigantes."
+    },
+    {
+     "quem": "f1",
+     "texto": "É assustador mas fascinante."
+    }
+   ],
+   "amb": "cidade"
+  },
+  {
+   "fala": "A energia dos dinossauros alimenta a rede elétrica mundial desde 1990. Nunca vi tanta luz verde.",
+   "emocao": "preocupado",
+   "destaques": [
+    "energia"
+   ],
+   "visuais": [
+    "dinosaur power plant"
+   ],
+   "hora": "noite",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A energia dos dinossauros alimenta a rede elétrica mundial desde 1990."
+    },
+    {
+     "quem": "f2",
+     "texto": "Nunca vi tanta luz verde."
+    }
+   ],
+   "amb": "aerodromo"
+  },
+  {
+   "fala": "A verdade: a humanidade virou espécie protegida, observada pelos dinossauros.",
+   "emocao": "misterioso",
+   "destaques": [
+    "humanidade"
+   ],
+   "visuais": [
+    "human reserve"
+   ],
+   "hora": "entardecer",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A verdade: a humanidade virou espécie protegida, observada pelos dinossauros."
+    }
+   ],
+   "amb": "campo"
+  },
+  {
+   "fala": "Comenta VERMELHO se você acha que devemos lutar ou AZUL se devemos nos adaptar. Os dinossauros nunca morreram, e dominam a Terra hoje.",
+   "emocao": "misterioso",
+   "destaques": [
+    "votar"
+   ],
+   "visuais": [
+    "voting signs"
+   ],
+   "hora": "noite",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Comenta VERMELHO se você acha que devemos lutar ou AZUL se devemos nos adaptar. Os dinossauros nunca morreram, e dominam a Terra hoje."
+    }
+   ],
+   "amb": "arena"
+  }
+ ],
+ "thumb_texto": "DINOSSAUROS DOMINAM",
+ "titulo_curto": "E SE DINOSSAUROS VIVEM",
+ "titulo_youtube": "E se os dinossauros nunca foram extintos? O choque da nova história",
+ "comentario_fixado": "Comenta VERMELHO se acha que devemos lutar ou AZUL se devemos nos adaptar – a votação decide o próximo episódio!"
+}
