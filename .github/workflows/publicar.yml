@@ -99,7 +99,7 @@ jobs:
           git diff --cached --quiet || git commit -m "chore: estado da publicacao"
           for i in 1 2 3 4 5; do
             if git push; then break; fi
-            git pull --rebase --autostash origin main
+            git pull --rebase --autostash origin main || { python3 state_merge.py && GIT_EDITOR=true git rebase --continue; } || git rebase --abort
             sleep 5
           done
           exit $COD
