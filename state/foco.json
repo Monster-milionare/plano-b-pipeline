@@ -1,0 +1,35 @@
+{
+ "atualizado": "23/11/2026 21:06 UTC",
+ "tema_peso": {
+  "ingles": 0.669,
+  "cabral": 0.528,
+  "dumont": 0.981,
+  "apollo": 0.698,
+  "roma": 1.702,
+  "napoleao": 0.832,
+  "futuro": 1.069,
+  "titanic": 1.056,
+  "ciencia": 1.188,
+  "nasa": 1.065
+ },
+ "formato_peso": {
+  "e-se": 1.142,
+  "pov": 0.669,
+  "voce-acorda": 0.576,
+  "pov3d": 0.876,
+  "debate": 1.015,
+  "escolha": 1.054,
+  "futuro": 1.069,
+  "quem-venceria": 1.646
+ },
+ "alertas": [
+  "REPETICAO de tema: 'nasa' em 4 dos ultimos 8 Shorts.",
+  "REPETICAO de tema: 'roma' em 3 dos ultimos 8 Shorts.",
+  "ESTOQUE baixo de Shorts 2D liberados: 0 (meta >= 3)."
+ ],
+ "tarefas": [
+  "Criar roteiros de OUTROS temas (nao 'nasa') e novos cenarios/modelos para sair da mesmice.",
+  "Criar roteiros de OUTROS temas (nao 'roma') e novos cenarios/modelos para sair da mesmice.",
+  "Escrever mais Shorts 2D (temas novos, cenarios novos)."
+ ]
+}
