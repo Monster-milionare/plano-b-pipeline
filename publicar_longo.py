@@ -57,7 +57,7 @@ def main() -> int:
     print(f"[longo] YouTube OK: https://youtu.be/{vid}", flush=True)
     try:
         import thumb
-        th = thumb.gerar(c, c.get("estilo") or "sepia", config.OUT_DIR / f"{id_}_thumb.jpg")
+        th = thumb.gerar(c, c.get("estilo") or "sepia", config.OUT_DIR / f"{id_}_thumb.jpg", video=video)
         upload.set_thumbnail(vid, th)
         print("[longo] thumbnail customizada enviada", flush=True)
     except Exception as exc:
