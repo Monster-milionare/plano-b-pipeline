@@ -1,46 +1,47 @@
-# Placar do Plano B - 22/11/2026 07:56 UTC
+# Placar do Plano B - 23/11/2026 08:53 UTC
 
-Fonte das views: oauth. Videos medidos (20h+ no ar): 13. Media geral: 306.7 views/dia (janela de 4 dias).
+Fonte das views: oauth. Videos medidos (20h+ no ar): 17. Media geral: 239.7 views/dia (janela de 4 dias).
 
 
 ## Estilos de edicao
 
 | nome | videos | views/dia | peso |
 |---|---|---|---|
-| neon | 2 | 735.2 | 1.699 |
-| noir | 2 | 456.4 | 1.244 |
-| sepia | 5 | 214.6 | 0.786 |
-| epico | 4 | 132.6 | 0.622 |
+| aquarela | 1 | 705.0 | 1.647 |
+| neon | 2 | 456.8 | 1.453 |
+| noir | 2 | 259.3 | 1.041 |
+| sepia | 5 | 182.7 | 0.83 |
+| epico | 7 | 146.4 | 0.697 |
 
 ## Formatos
 
 | nome | videos | views/dia | peso |
 |---|---|---|---|
-| futuro | 2 | 735.2 | 1.699 |
-| escolha | 2 | 691.8 | 1.628 |
-| debate | 1 | 354.8 | 1.052 |
-| pov3d | 1 | 213.2 | 0.898 |
-| voce-acorda | 3 | 114.6 | 0.624 |
-| e-se | 2 | 106.8 | 0.674 |
-| longo | 1 | 4.8 | 0.672 |
-| pov | 1 | 2.5 | 0.669 |
+| escolha | 3 | 469.5 | 1.575 |
+| futuro | 2 | 456.8 | 1.453 |
+| debate | 1 | 354.8 | 1.16 |
+| e-se | 3 | 291.7 | 1.13 |
+| pov3d | 1 | 213.8 | 0.964 |
+| voce-acorda | 3 | 99.6 | 0.649 |
+| longo | 3 | 2.8 | 0.407 |
+| pov | 1 | 2.5 | 0.67 |
 
 ## Ultimos videos
 
 | video | estilo | formato | views |
 |---|---|---|---|
-| Você é o comandante da Apollo 13: o oxigênio explode. A | epico | escolha | 710 |
-| E se Einstein tivesse descoberto a gravidade e Newton a | aquarela | e-se | 983 |
-| Apollo 13: as horas que quase terminaram em tragédia | epico | longo | 4 |
+| Você é engenheiro da Nasa: salve a Apollo 13 com fita a | epico | escolha | 216 |
+| E se Roma nunca tivesse caído? | noir | e-se | 1042 |
+| Você é Armstrong: um alarme soa antes do pouso. A ou B? | epico | escolha | 523 |
+| Apollo 11: o alarme que quase cancelou o pouso na Lua | epico | longo | 6 |
+| Quem venceria: Império Romano no auge vs Brasil de hoje | neon | quem-venceria | 1195 |
+| Você é o comandante da Apollo 13: o oxigênio explode. A | epico | escolha | 825 |
+| E se Einstein tivesse descoberto a gravidade e Newton a | aquarela | e-se | 1057 |
+| Apollo 13: as horas que quase terminaram em tragédia | epico | longo | 6 |
 | Apollo 13: as horas que quase terminaram em tragédia | epico | longo | 1 |
-| Você é marujo no Titanic: A pega o bote, B avisa os pas | noir | escolha | 1061 |
-| Você acorda em 2100 e a comida mudou completamente | neon | futuro | 1235 |
-| Você acorda em 2100 e as máquinas fazem todo o trabalho | neon | futuro | 1356 |
-| Você é o piloto do 14-Bis: A decola agora, B espera o v | sepia | escolha | 1217 |
-| Napoleão perdeu a Europa por causa de uma chuva? | epico | e-se | 676 |
+| Você é marujo no Titanic: A pega o bote, B avisa os pas | noir | escolha | 1093 |
+| Você acorda em 2100 e a comida mudou completamente | neon | futuro | 1244 |
+| Você acorda em 2100 e as máquinas fazem todo o trabalho | neon | futuro | 1340 |
+| Você é o piloto do 14-Bis: A decola agora, B espera o v | sepia | escolha | 1185 |
+| Napoleão perdeu a Europa por causa de uma chuva? | epico | e-se | 673 |
 | As últimas 18 horas de Pompeia: o que realmente acontec | epico | longo | 16 |
-| Você acorda em Roma no dia em que César vai morrer | epico | voce-acorda | 1064 |
-| Você é o piloto da Apollo 11 e o motor falha | noir | voce-acorda | 126 |
-| Quem inventou o avião? Os EUA e o Brasil não concordam | sepia | debate | 1419 |
-| POV: você é Cabral e o mar não acaba — EPI. 01 | sepia | pov3d | 853 |
-| Você acorda em 1500 como capitão da frota de Cabral | sepia | voce-acorda | 1 |
