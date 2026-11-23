@@ -2,8 +2,8 @@ name: Publicar proximo video
 
 on:
   schedule:
-    - cron: "17,47 12-23,0-2 * * *"   # de hora em hora, 09h-23h (Brasilia); meta_dia.py decide se publica
-    - cron: "27 14,17,20 * * *"   # reforco (o GitHub as vezes pula execucoes agendadas)
+    - cron: "7 12-23,0-2 * * *"   # de hora em hora, 09h-23h (Brasilia); meta_dia.py decide se publica
+    - cron: "37 12-23,0-2 * * *"   # segundo disparo por hora (o GitHub atrasa/pula agendados); casa com a antecedencia de 45 min da agenda
   workflow_dispatch:
     inputs:
       id:
@@ -19,7 +19,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: estado-publicacao
+  group: planob-publicar
   cancel-in-progress: false
 
 env:
@@ -99,7 +99,7 @@ jobs:
           git diff --cached --quiet || git commit -m "chore: estado da publicacao"
           for i in 1 2 3 4 5; do
             if git push; then break; fi
-            git pull --rebase --autostash origin main || { python3 state_merge.py && GIT_EDITOR=true git rebase --continue; } || git rebase --abort
+            git pull --rebase --autostash origin main
             sleep 5
           done
           exit $COD
