@@ -35,10 +35,11 @@ jobs:
         run: |
           if [ -n "$YOUTUBE_TOKEN_JSON" ]; then printf '%s' "$YOUTUBE_TOKEN_JSON" > token.json; fi
           python metricas.py || true
+          python supervisor.py || true
           rm -f token.json
           git config user.name "planob-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add -f state/pesos.json state/placar.md state/views.json state/votos.json state/respostas_sugeridas.json 2>/dev/null || true
+          git add -f state/pesos.json state/placar.md state/views.json state/votos.json state/respostas_sugeridas.json state/supervisor.md state/foco.json 2>/dev/null || true
           git diff --cached --quiet || git commit -m "chore: placar de metricas"
           for i in 1 2 3 4 5; do
             if git push; then break; fi
