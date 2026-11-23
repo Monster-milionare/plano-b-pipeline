@@ -1,0 +1,204 @@
+{
+ "id": "45-cretaceo-pterossauro",
+ "ordem": 131,
+ "formato": "escolha",
+ "estilo": "epico",
+ "motor": "2d",
+ "tema": "cretaceo",
+ "titulo": "Você acorda no Cretáceo: o maior bicho que já voou. A ou B?",
+ "titulo_youtube": "O maior animal voador de todos os tempos: você segue ou foge? A ou B",
+ "titulo_curto": "O GIGANTE DO CÉU",
+ "thumb_texto": "A OU B: O GIGANTE VOADOR",
+ "descricao": "Cretáceo, perto do fim dos dinossauros. Um pterossauro gigante, do tamanho de uma girafa, cruza o céu. Dramatização baseada em fósseis e hipóteses científicas. A mais votada vira o próximo vídeo.",
+ "comentario_fixado": "A: seguir o pterossauro até o lago. B: ficar escondido na mata. Qual a sua escolha?",
+ "tags": [
+  "pterossauro",
+  "cretaceo",
+  "dinossauros",
+  "ciencia",
+  "voce decide",
+  "historia"
+ ],
+ "elenco": {
+  "prot": "explorador",
+  "f": [
+   "exploradora",
+   "guia",
+   "bebe-tricera"
+  ]
+ },
+ "perfil": "generico",
+ "cenas": [
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você acorda no Cretáceo, e uma sombra gigante passa por cima de você."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "selva-cretaceo",
+   "hora": "manha",
+   "fala": "Você acorda no Cretáceo, e uma sombra gigante passa por cima de você.",
+   "destaques": [
+    "sombra"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f0"
+   ],
+   "ano": "66 MI DE ANOS"
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Isso é uma ave?"
+    },
+    {
+     "quem": "f0",
+     "texto": "Não. É um pterossauro, parente dos dinossauros, mas não um deles."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "selva-cretaceo",
+   "hora": "manha",
+   "fala": "Isso é uma ave? Não. É um pterossauro, parente dos dinossauros, mas não um deles.",
+   "destaques": [
+    "pterossauro"
+   ],
+   "cams": [
+    "eu-frente",
+    "f0",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O maior deles, o Quetzalcoatlus, tinha asas de uns dez metros e a altura de uma girafa."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "selva-cretaceo",
+   "hora": "dia",
+   "fala": "O maior deles, o Quetzalcoatlus, tinha asas de uns dez metros e a altura de uma girafa.",
+   "destaques": [
+    "girafa"
+   ],
+   "cams": [
+    "panoramica",
+    "alto",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "f1",
+     "texto": "Ele andava no chão sobre as quatro patas, como um enorme guarda-chuva dobrado."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "selva-cretaceo",
+   "hora": "dia",
+   "fala": "Ele andava no chão sobre as quatro patas, como um enorme guarda-chuva dobrado.",
+   "destaques": [
+    "quatro patas"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Os cientistas acham que ele pegava presas pequenas no chão, e não que caçava em voo."
+    }
+   ],
+   "emocao": "misterioso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "selva-cretaceo",
+   "hora": "dia",
+   "fala": "Os cientistas acham que ele pegava presas pequenas no chão, e não que caçava em voo.",
+   "destaques": [
+    "presas pequenas"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "f2",
+     "texto": "O filhote de tricerátopo olha pro céu, assustado."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "selva-cretaceo",
+   "hora": "tarde",
+   "fala": "O filhote de tricerátopo olha pro céu, assustado.",
+   "destaques": [
+    "filhote"
+   ],
+   "cams": [
+    "f2",
+    "eu-frente",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Será que ele nos viu?"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Comenta A para seguir o pterossauro até o lago, ou B para ficar escondido na mata."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "selva-cretaceo",
+   "hora": "tarde",
+   "fala": "Será que ele nos viu? Comenta A para seguir o pterossauro até o lago, ou B para ficar escondido na mata.",
+   "destaques": [
+    "A",
+    "B"
+   ],
+   "cams": [
+    "eu-frente",
+    "f0",
+    "ampla"
+   ]
+  }
+ ]
+}

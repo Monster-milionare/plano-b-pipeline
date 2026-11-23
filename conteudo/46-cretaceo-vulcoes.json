@@ -1,0 +1,200 @@
+{
+ "id": "46-cretaceo-vulcoes",
+ "ordem": 132,
+ "formato": "escolha",
+ "estilo": "epico",
+ "motor": "2d",
+ "tema": "cretaceo",
+ "titulo": "Os vulcões que já matavam os dinossauros antes do asteroide. A ou B?",
+ "titulo_youtube": "Antes do asteroide, os vulcões já estavam matando os dinossauros? A ou B",
+ "titulo_curto": "ANTES DO ASTEROIDE",
+ "thumb_texto": "A OU B: OS VULCÕES",
+ "descricao": "Antes do asteroide, enormes vulcões na região da Índia já mudavam o clima da Terra. Dramatização baseada em hipóteses científicas. A mais votada vira o próximo vídeo.",
+ "comentario_fixado": "A: subir até o vulcão para ver a lava de perto. B: ir embora antes que o céu escureça. Qual a sua escolha?",
+ "tags": [
+  "vulcoes",
+  "dinossauros",
+  "cretaceo",
+  "ciencia",
+  "voce decide",
+  "extincao"
+ ],
+ "elenco": {
+  "prot": "explorador",
+  "f": [
+   "exploradora",
+   "guia",
+   "bebe-tricera"
+  ]
+ },
+ "perfil": "generico",
+ "cenas": [
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O asteroide não foi o único problema dos dinossauros. Antes dele, a Terra já estava queimando."
+    }
+   ],
+   "emocao": "misterioso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "selva-cretaceo",
+   "hora": "manha",
+   "fala": "O asteroide não foi o único problema dos dinossauros. Antes dele, a Terra já estava queimando.",
+   "destaques": [
+    "queimando"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f0"
+   ],
+   "ano": "66 MI DE ANOS"
+  },
+  {
+   "falas": [
+    {
+     "quem": "f0",
+     "texto": "Olha a fumaça no horizonte. Esse vulcão não para de soltar cinza."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "selva-cretaceo",
+   "hora": "dia",
+   "fala": "Olha a fumaça no horizonte. Esse vulcão não para de soltar cinza.",
+   "destaques": [
+    "fumaça"
+   ],
+   "cams": [
+    "f0",
+    "eu-frente",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Onde hoje é a Índia, vulcões gigantes, os Deccan Traps, cobriram uma área enorme de lava."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "selva-cretaceo",
+   "hora": "dia",
+   "fala": "Onde hoje é a Índia, vulcões gigantes, os Deccan Traps, cobriram uma área enorme de lava.",
+   "destaques": [
+    "Deccan Traps"
+   ],
+   "cams": [
+    "panoramica",
+    "alto",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "f1",
+     "texto": "Esses vulcões soltaram gases que mudaram o clima durante milhares de anos."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "selva-cretaceo",
+   "hora": "tarde",
+   "fala": "Esses vulcões soltaram gases que mudaram o clima durante milhares de anos.",
+   "destaques": [
+    "gases"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Muitos cientistas acham que o clima já estava instável quando o asteroide chegou, e isso piorou tudo."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "selva-cretaceo",
+   "hora": "entardecer",
+   "fala": "Muitos cientistas acham que o clima já estava instável quando o asteroide chegou, e isso piorou tudo.",
+   "destaques": [
+    "instável"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Então foram duas catástrofes?"
+    },
+    {
+     "quem": "f0",
+     "texto": "É uma das hipóteses. Os cientistas ainda discutem o peso de cada uma."
+    }
+   ],
+   "emocao": "misterioso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "selva-cretaceo",
+   "hora": "entardecer",
+   "fala": "Então foram duas catástrofes? É uma das hipóteses. Os cientistas ainda discutem o peso de cada uma.",
+   "destaques": [
+    "duas catástrofes"
+   ],
+   "cams": [
+    "eu-frente",
+    "f0",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Comenta A para subir até o vulcão, ou B para ir embora antes que o céu escureça."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "selva-cretaceo",
+   "hora": "entardecer",
+   "fala": "Comenta A para subir até o vulcão, ou B para ir embora antes que o céu escureça.",
+   "destaques": [
+    "A",
+    "B"
+   ],
+   "cams": [
+    "eu-frente",
+    "ampla",
+    "f0"
+   ]
+  }
+ ]
+}

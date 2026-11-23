@@ -1,0 +1,204 @@
+{
+ "id": "47-cretaceo-filhote",
+ "ordem": 133,
+ "formato": "escolha",
+ "estilo": "epico",
+ "motor": "2d",
+ "tema": "cretaceo",
+ "titulo": "Você achou um filhote de tricerátopo sozinho. O que faz? A ou B?",
+ "titulo_youtube": "Você achou um filhote de dinossauro sozinho na mata: A ou B?",
+ "titulo_curto": "O FILHOTE PERDIDO",
+ "thumb_texto": "A OU B: O FILHOTE",
+ "descricao": "Cretáceo: você encontra um filhote de tricerátopo longe do bando. Dramatização baseada em fósseis e hipóteses científicas. A mais votada vira o próximo vídeo.",
+ "comentario_fixado": "A: levar o filhote de volta ao bando. B: seguir a trilha de pegadas gigantes. Qual a sua escolha?",
+ "tags": [
+  "triceratopo",
+  "cretaceo",
+  "dinossauros",
+  "ciencia",
+  "voce decide",
+  "filhote"
+ ],
+ "elenco": {
+  "prot": "explorador",
+  "f": [
+   "exploradora",
+   "guia",
+   "bebe-tricera"
+  ]
+ },
+ "perfil": "generico",
+ "cenas": [
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você acorda no Cretáceo e ouve um chorinho vindo dos arbustos."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "selva-cretaceo",
+   "hora": "manha",
+   "fala": "Você acorda no Cretáceo e ouve um chorinho vindo dos arbustos.",
+   "destaques": [
+    "chorinho"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f2"
+   ],
+   "ano": "66 MI DE ANOS"
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "É um filhote de tricerátopo!"
+    },
+    {
+     "quem": "f0",
+     "texto": "Está sozinho. O bando deve estar longe."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "selva-cretaceo",
+   "hora": "manha",
+   "fala": "É um filhote de tricerátopo! Está sozinho. O bando deve estar longe.",
+   "destaques": [
+    "sozinho"
+   ],
+   "cams": [
+    "f2",
+    "eu-frente",
+    "f0"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Tricerátopos andavam em grupos, e os adultos podiam passar de oito metros de comprimento."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "selva-cretaceo",
+   "hora": "dia",
+   "fala": "Tricerátopos andavam em grupos, e os adultos podiam passar de oito metros de comprimento.",
+   "destaques": [
+    "oito metros"
+   ],
+   "cams": [
+    "panoramica",
+    "alto",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "f1",
+     "texto": "Olha essas pegadas no barro. São enormes, e bem recentes."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "selva-cretaceo",
+   "hora": "dia",
+   "fala": "Olha essas pegadas no barro. São enormes, e bem recentes.",
+   "destaques": [
+    "pegadas"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Os três chifres e o grande babado ósseo ajudavam a defender o animal de predadores."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "selva-cretaceo",
+   "hora": "tarde",
+   "fala": "Os três chifres e o grande babado ósseo ajudavam a defender o animal de predadores.",
+   "destaques": [
+    "três chifres"
+   ],
+   "cams": [
+    "ampla",
+    "f2",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "f2",
+     "texto": "O filhote cutuca a sua mão. Ele confia em você."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "selva-cretaceo",
+   "hora": "tarde",
+   "fala": "O filhote cutuca a sua mão. Ele confia em você.",
+   "destaques": [
+    "confia"
+   ],
+   "cams": [
+    "f2",
+    "eu-frente",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "E agora?"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Comenta A para levar o filhote de volta ao bando, ou B para seguir a trilha de pegadas gigantes."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "selva-cretaceo",
+   "hora": "tarde",
+   "fala": "E agora? Comenta A para levar o filhote de volta ao bando, ou B para seguir a trilha de pegadas gigantes.",
+   "destaques": [
+    "A",
+    "B"
+   ],
+   "cams": [
+    "eu-frente",
+    "f0",
+    "ampla"
+   ]
+  }
+ ]
+}
