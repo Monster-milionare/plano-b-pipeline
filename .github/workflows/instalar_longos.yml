@@ -1,0 +1,20 @@
+name: Instalar longos
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  instalar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Descompactar, ajustar o motor e commitar
+        run: |
+          unzip -o planob_longos.zip
+          python3 patch_engine.py
+          rm -f planob_longos.zip patch_engine.py
+          git config user.name "setup-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -m "feat: longos Apollo 12 e Apollo 8 em 2D"
+          git push
