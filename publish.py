@@ -198,6 +198,11 @@ def main() -> int:
                 continue
             validos.append(c)
         fila = alternar(validos)
+        try:
+            import diversidade
+            fila = diversidade.diversificar(fila)
+        except Exception as exc:
+            print(f"[publish] trava de variedade falhou ({str(exc)[:80]}): fila normal", flush=True)
     if a.id:
         todos = {json.loads(p.read_text(encoding="utf-8"))["id"]: json.loads(p.read_text(encoding="utf-8"))
                  for p in config.CONTEUDO_DIR.glob("*.json")}

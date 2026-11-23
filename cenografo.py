@@ -16,7 +16,7 @@ PERFIS = {
                    f=["marujo", "marujo2", "caminha"], amb={"terra": ["nativo", "nativo2", "nativo3"], "cabine": ["caminha", "marujo", "marujo2"],
                                                            "palacio": ["rei", "caminha", "cidadao"], "cidade": ["cidadao", "cidada", "marujo"]},
                    ambientes=["conves", "terra", "cabine", "cidade", "palacio"]),
-    "roma": dict(kw=["roma", "romano", "romana", "cesar", "gladiador", "coliseu", "legiao", "imperio romano"], prot="general-romano",
+    "roma": dict(kw=["roma", "romano", "romana", "pompeia", "vesuvio", "cesar", "gladiador", "coliseu", "legiao", "imperio romano"], prot="general-romano",
                  f=["soldado-romano", "cidadao", "gladiador"], amb={"arena": ["gladiador", "soldado-romano", "imperador"], "palacio": ["imperador", "soldado-romano", "cidada"]},
                  ambientes=["cidade-antiga", "arena", "palacio", "campo"]),
     "napoleao": dict(kw=["napoleao", "waterloo", "wellington", "frances", "franca"], prot="napoleao", f=["soldado-frances", "soldado-ingles", "soldado-frances"],
