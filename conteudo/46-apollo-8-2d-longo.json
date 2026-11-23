@@ -1,0 +1,1220 @@
+{
+ "id": "46-apollo-8-2d-longo",
+ "ordem": 906,
+ "formato": "longo",
+ "estilo": "epico",
+ "motor": "2d",
+ "revisado": true,
+ "titulo": "Apollo 8: a primeira viagem até a Lua",
+ "titulo_youtube": "Apollo 8: a primeira viagem até a Lua, na véspera de Natal de 1968",
+ "titulo_curto": "APOLLO 8: ATÉ A LUA",
+ "thumb_texto": "A PRIMEIRA VIAGEM ATÉ A LUA",
+ "descricao": "Dezembro de 1968. Você é Frank Borman, comandante da Apollo oito, a primeira missão com gente a sair da órbita da Terra e dar a volta na Lua. A história real, baseada nos relatos da Nasa: a aposta ousada, o motor que tinha só uma chance, o Nascer da Terra e a leitura do Gênesis na véspera de Natal. E você: iria agora ou esperaria mais um teste? Comente A ou B.\n\nSe inscreva no Plano B da História: toda semana, o pior dia da história contado em 2D.\n\nDramatização baseada em fatos históricos e relatos da época. Diálogos e cenas são recriações.\n\n#historia #apollo8 #nasa #historiadobrasil #planobdahistoria",
+ "comentario_fixado": "A: ir à Lua agora, sem o módulo lunar. B: esperar mais um teste em órbita da Terra. Qual a sua escolha?",
+ "tags": [
+  "apollo 8",
+  "nasa",
+  "frank borman",
+  "nascer da terra",
+  "natal 1968",
+  "volta na lua",
+  "espaco",
+  "documentario",
+  "historia",
+  "1968"
+ ],
+ "elenco": {
+  "prot": "borman",
+  "f": [
+   "lovell",
+   "anders"
+  ],
+  "amb": {
+   "lancamento": [
+    "lovell-traje",
+    "anders-traje"
+   ],
+   "houston": [
+    "controlador",
+    "controlador2",
+    "engenheiro"
+   ]
+  },
+  "protAmb": {
+   "lancamento": "borman-traje",
+   "houston": "griffin"
+  },
+  "vazio": [
+   "espaco",
+   "oceano"
+  ]
+ },
+ "cenas": [
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você é Frank Borman, comandante da Apollo oito. Hoje o seu destino é a Lua, e ninguém nunca foi tão longe."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "lancamento",
+   "fala": "Você é Frank Borman, comandante da Apollo oito. Hoje o seu destino é a Lua, e ninguém nunca foi tão longe.",
+   "destaques": [
+    "Apollo oito"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ],
+   "hora": "manha",
+   "capitulo": "Lançamento",
+   "ano": "21 dez 1968"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "É vinte e um de dezembro de mil novecentos e sessenta e oito, no Centro Espacial Kennedy, na Flórida."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "lancamento",
+   "fala": "É vinte e um de dezembro de mil novecentos e sessenta e oito, no Centro Espacial Kennedy, na Flórida.",
+   "destaques": [
+    "Kennedy"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "ampla"
+   ],
+   "hora": "manha"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Ao seu lado estão Jim Lovell e Bill Anders. Vocês três vão ser os primeiros a deixar a órbita da Terra."
+    },
+    {
+     "quem": "f0",
+     "texto": "Pronto para o maior passeio da nossa vida, Frank?"
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "lancamento",
+   "fala": "Ao seu lado estão Jim Lovell e Bill Anders. Vocês três vão ser os primeiros a deixar a órbita da Terra. Pronto para o maior passeio da nossa vida, Frank?",
+   "destaques": [
+    "Lovell"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ],
+   "hora": "manha"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O foguete Saturn cinco, com mais de cem metros de altura, nunca levou uma tripulação. O último teste sem gente teve sérios problemas."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "lancamento",
+   "fala": "O foguete Saturn cinco, com mais de cem metros de altura, nunca levou uma tripulação. O último teste sem gente teve sérios problemas.",
+   "destaques": [
+    "Saturn"
+   ],
+   "cams": [
+    "eu-frente",
+    "f1",
+    "ampla"
+   ],
+   "hora": "manha"
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Tudo certo, Houston. Estamos prontos para a contagem final."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "lancamento",
+   "fala": "Tudo certo, Houston. Estamos prontos para a contagem final.",
+   "destaques": [
+    "contagem"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ],
+   "hora": "manha"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Sete e cinquenta e um da manhã. Os motores acendem e o gigante sobe, com vocês dentro."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "lancamento",
+   "fala": "Sete e cinquenta e um da manhã. Os motores acendem e o gigante sobe, com vocês dentro.",
+   "destaques": [
+    "decolagem"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "ampla"
+   ],
+   "hora": "manha",
+   "fx": "decolagem"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Meses antes, a Nasa tinha feito uma aposta ousada. O módulo lunar ainda não estava pronto para voar."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Meses antes, a Nasa tinha feito uma aposta ousada. O módulo lunar ainda não estava pronto para voar.",
+   "destaques": [
+    "módulo lunar"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "f2",
+    "ampla"
+   ],
+   "capitulo": "A aposta",
+   "ano": "agosto de 1968"
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Se os soviéticos mandarem alguém até a Lua primeiro, nós perdemos a corrida. Mas a nave nunca foi testada tão longe."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Se os soviéticos mandarem alguém até a Lua primeiro, nós perdemos a corrida. Mas a nave nunca foi testada tão longe.",
+   "destaques": [
+    "corrida"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ],
+   "fx": "tensao"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A decisão foi mudar o plano. A Apollo oito não pousaria na Lua. Ela daria voltas em torno dela, e voltaria para casa."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "A decisão foi mudar o plano. A Apollo oito não pousaria na Lua. Ela daria voltas em torno dela, e voltaria para casa.",
+   "destaques": [
+    "decisão"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente",
+    "f1"
+   ],
+   "fx": "tensao"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Era uma missão mais perigosa do que qualquer outra, e a Nasa assumiu o risco com a primeira tripulação no foguete gigante."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Era uma missão mais perigosa do que qualquer outra, e a Nasa assumiu o risco com a primeira tripulação no foguete gigante.",
+   "destaques": [
+    "risco"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "f2",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Em poucos minutos, a nave está em órbita da Terra. Quase três horas depois, o último estágio do foguete acende de novo."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "Em poucos minutos, a nave está em órbita da Terra. Quase três horas depois, o último estágio do foguete acende de novo.",
+   "destaques": [
+    "órbita"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica",
+    "alto"
+   ],
+   "fx": "terra",
+   "capitulo": "Rumo à Lua",
+   "ano": "21 a 24 dez 1968"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Agora vocês estão a caminho da Lua. Nenhum ser humano tinha passado dessa fronteira, e a Terra vai ficando cada vez menor na janela."
+    },
+    {
+     "quem": "f1",
+     "texto": "Frank, a Terra parece uma bolinha de gude azul."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Agora vocês estão a caminho da Lua. Nenhum ser humano tinha passado dessa fronteira, e a Terra vai ficando cada vez menor na janela. Frank, a Terra parece uma bolinha de gude azul.",
+   "destaques": [
+    "Terra"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "No primeiro dia, Frank Borman passa mal, com enjoo e cansaço. Mesmo assim, ele continua no comando da nave."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "No primeiro dia, Frank Borman passa mal, com enjoo e cansaço. Mesmo assim, ele continua no comando da nave.",
+   "destaques": [
+    "Borman"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A viagem até a Lua dura quase três dias. Vocês dormem em turnos, conferem os sistemas e ajustam a rota."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "A viagem até a Lua dura quase três dias. Vocês dormem em turnos, conferem os sistemas e ajustam a rota.",
+   "destaques": [
+    "viagem"
+   ],
+   "cams": [
+    "panoramica",
+    "ampla"
+   ],
+   "fx": "terra"
+  },
+  {
+   "falas": [
+    {
+     "quem": "f0",
+     "texto": "Houston, a trajetória está certa. Estamos indo exatamente para onde queríamos."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Houston, a trajetória está certa. Estamos indo exatamente para onde queríamos.",
+   "destaques": [
+    "trajetória"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "No terceiro dia, a Lua fica enorme na janela. Ninguém tinha visto uma imagem tão próxima dela."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "No terceiro dia, a Lua fica enorme na janela. Ninguém tinha visto uma imagem tão próxima dela.",
+   "destaques": [
+    "Lua"
+   ],
+   "cams": [
+    "panoramica",
+    "ampla"
+   ],
+   "fx": "lua"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "É a véspera de Natal. Chega a hora mais difícil: acender o motor para entrar em órbita da Lua, do lado onde não há rádio."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "É a véspera de Natal. Chega a hora mais difícil: acender o motor para entrar em órbita da Lua, do lado onde não há rádio.",
+   "destaques": [
+    "motor"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ],
+   "capitulo": "Atrás da Lua",
+   "ano": "24 dez 1968"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A nave passa por trás da Lua e perde o contato com a Terra. Se o motor falhar, vocês vão ser jogados para o espaço."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "A nave passa por trás da Lua e perde o contato com a Terra. Se o motor falhar, vocês vão ser jogados para o espaço.",
+   "destaques": [
+    "perde o contato"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica",
+    "alto"
+   ],
+   "fx": "lua"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Em Houston, todos esperam em silêncio. Os minutos passam devagar, e a tela fica sem nenhum sinal da nave."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Em Houston, todos esperam em silêncio. Os minutos passam devagar, e a tela fica sem nenhum sinal da nave.",
+   "destaques": [
+    "silêncio"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente",
+    "f1"
+   ],
+   "fx": "tensao"
+  },
+  {
+   "falas": [
+    {
+     "quem": "radio",
+     "texto": "Houston chamando Apollo oito. Apollo oito, está me ouvindo?"
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Houston chamando Apollo oito. Apollo oito, está me ouvindo?",
+   "destaques": [
+    "chamando"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ],
+   "fx": "tensao"
+  },
+  {
+   "falas": [
+    {
+     "quem": "f1",
+     "texto": "Houston, aqui é a Apollo oito. O motor funcionou. Estamos em órbita da Lua."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Houston, aqui é a Apollo oito. O motor funcionou. Estamos em órbita da Lua.",
+   "destaques": [
+    "órbita lunar"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A sala inteira explode em comemoração. A Apollo oito virou a primeira nave com gente a orbitar outro mundo."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "A sala inteira explode em comemoração. A Apollo oito virou a primeira nave com gente a orbitar outro mundo.",
+   "destaques": [
+    "comemoração"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "f2",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Do lado de lá, vocês veem a superfície cinzenta e cheia de crateras, passando a poucas dezenas de quilômetros da janela."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "Do lado de lá, vocês veem a superfície cinzenta e cheia de crateras, passando a poucas dezenas de quilômetros da janela.",
+   "destaques": [
+    "crateras"
+   ],
+   "cams": [
+    "panoramica",
+    "ampla"
+   ],
+   "fx": "perto"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Na órbita seguinte, a nave gira e algo aparece na janela. Uma esfera azul e branca surge acima do horizonte da Lua."
+    },
+    {
+     "quem": "prot",
+     "texto": "Olha só aquilo! É a Terra nascendo!"
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Na órbita seguinte, a nave gira e algo aparece na janela. Uma esfera azul e branca surge acima do horizonte da Lua. Olha só aquilo! É a Terra nascendo!",
+   "destaques": [
+    "Terra"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ],
+   "capitulo": "O nascer da Terra",
+   "ano": "24 dez 1968"
+  },
+  {
+   "falas": [
+    {
+     "quem": "f1",
+     "texto": "Que imagem incrível! Alguém me passa a câmera, rápido!"
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Que imagem incrível! Alguém me passa a câmera, rápido!",
+   "destaques": [
+    "câmera"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Bill Anders tira a foto. Ela vai ficar conhecida como o Nascer da Terra, e vai mudar a forma como todos se enxergam."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "Bill Anders tira a foto. Ela vai ficar conhecida como o Nascer da Terra, e vai mudar a forma como todos se enxergam.",
+   "destaques": [
+    "foto"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica",
+    "alto"
+   ],
+   "fx": "terra"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Do lugar onde vocês estão, a Terra é pequena, frágil e sozinha no meio do escuro. Não dá para ver nenhuma fronteira."
+    }
+   ],
+   "emocao": "misterioso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Do lugar onde vocês estão, a Terra é pequena, frágil e sozinha no meio do escuro. Não dá para ver nenhuma fronteira.",
+   "destaques": [
+    "frágil"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Pela janela, também aparece um mar de poeira e rocha sem nenhum sinal de vida. A Lua parece um deserto cinzento."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Pela janela, também aparece um mar de poeira e rocha sem nenhum sinal de vida. A Lua parece um deserto cinzento.",
+   "destaques": [
+    "deserto"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Na noite de Natal, vocês preparam a transmissão de televisão mais importante da missão. Centenas de milhões de pessoas vão assistir."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Na noite de Natal, vocês preparam a transmissão de televisão mais importante da missão. Centenas de milhões de pessoas vão assistir.",
+   "destaques": [
+    "transmissão"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ],
+   "capitulo": "A noite de Natal",
+   "ano": "24 dez 1968"
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Boa noite, aqui é a tripulação da Apollo oito. Vamos mostrar o que vemos daqui."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Boa noite, aqui é a tripulação da Apollo oito. Vamos mostrar o que vemos daqui.",
+   "destaques": [
+    "Apollo oito"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Vocês mostram o solo cinzento da Lua passando abaixo da nave, e a Terra, minúscula, lá longe."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Vocês mostram o solo cinzento da Lua passando abaixo da nave, e a Terra, minúscula, lá longe.",
+   "destaques": [
+    "superfície"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Então, um depois do outro, vocês leem os primeiros versos do livro do Gênesis: No princípio, Deus criou os céus e a Terra."
+    },
+    {
+     "quem": "f1",
+     "texto": "E a Terra era sem forma e vazia, e havia trevas sobre a face do abismo."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Então, um depois do outro, vocês leem os primeiros versos do livro do Gênesis: No princípio, Deus criou os céus e a Terra. E a Terra era sem forma e vazia, e havia trevas sobre a face do abismo.",
+   "destaques": [
+    "Gênesis"
+   ],
+   "cams": [
+    "eu-frente",
+    "f1",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Para todos vocês na boa e velha Terra: boa noite, boa sorte, um feliz Natal, e que Deus abençoe a todos."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Para todos vocês na boa e velha Terra: boa noite, boa sorte, um feliz Natal, e que Deus abençoe a todos.",
+   "destaques": [
+    "Natal"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Em Houston, e em casas ao redor do mundo, muita gente chora de emoção. Foi um ano duro, de guerra e tristeza, e aquelas vozes deram um alento."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Em Houston, e em casas ao redor do mundo, muita gente chora de emoção. Foi um ano duro, de guerra e tristeza, e aquelas vozes deram um alento.",
+   "destaques": [
+    "emoção"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "f2",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Depois de dez voltas em torno da Lua, chega a hora mais temida: voltar para casa."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Depois de dez voltas em torno da Lua, chega a hora mais temida: voltar para casa.",
+   "destaques": [
+    "dez voltas"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ],
+   "capitulo": "A volta para casa",
+   "ano": "25 a 27 dez 1968"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você precisa acender o mesmo motor de novo, atrás da Lua, sem rádio. É um motor só, sem nenhum reserva. Se ele não ligar, ninguém volta."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Você precisa acender o mesmo motor de novo, atrás da Lua, sem rádio. É um motor só, sem nenhum reserva. Se ele não ligar, ninguém volta.",
+   "destaques": [
+    "motor"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A nave passa por trás da Lua outra vez, e o contato com a Terra se perde de novo."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "A nave passa por trás da Lua outra vez, e o contato com a Terra se perde de novo.",
+   "destaques": [
+    "contato"
+   ],
+   "cams": [
+    "panoramica",
+    "ampla"
+   ],
+   "fx": "lua"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Em Houston, ninguém respira. Os controladores olham para o relógio, esperando o minuto em que o sinal deveria voltar."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Em Houston, ninguém respira. Os controladores olham para o relógio, esperando o minuto em que o sinal deveria voltar.",
+   "destaques": [
+    "relógio"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente",
+    "f1"
+   ],
+   "fx": "tensao"
+  },
+  {
+   "falas": [
+    {
+     "quem": "radio",
+     "texto": "Apollo oito, aqui Houston. Estamos ouvindo vocês?"
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Apollo oito, aqui Houston. Estamos ouvindo vocês?",
+   "destaques": [
+    "ouvindo"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ],
+   "fx": "tensao"
+  },
+  {
+   "falas": [
+    {
+     "quem": "f0",
+     "texto": "Por favor, fiquem sabendo: existe mesmo um Papai Noel."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Por favor, fiquem sabendo: existe mesmo um Papai Noel.",
+   "destaques": [
+    "Papai Noel"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O motor funcionou. A nave está a caminho da Terra, e o Natal de mil novecentos e sessenta e oito termina com todos aliviados."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "O motor funcionou. A nave está a caminho da Terra, e o Natal de mil novecentos e sessenta e oito termina com todos aliviados.",
+   "destaques": [
+    "aliviados"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "f2",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Durante dois dias, vocês voltam em queda livre, com a Terra crescendo na janela."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "Durante dois dias, vocês voltam em queda livre, com a Terra crescendo na janela.",
+   "destaques": [
+    "queda"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica",
+    "alto"
+   ],
+   "fx": "terra"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Na reentrada, a cápsula atinge a atmosfera a quase quarenta mil quilômetros por hora, e o calor envolve a nave."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "Na reentrada, a cápsula atinge a atmosfera a quase quarenta mil quilômetros por hora, e o calor envolve a nave.",
+   "destaques": [
+    "reentrada"
+   ],
+   "cams": [
+    "panoramica",
+    "ampla"
+   ],
+   "fx": "reentrada"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Então três paraquedas se abrem sobre o oceano Pacífico."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "oceano",
+   "fala": "Então três paraquedas se abrem sobre o oceano Pacífico.",
+   "destaques": [
+    "paraquedas"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica",
+    "alto"
+   ],
+   "hora": "dia",
+   "fx": "paraquedas"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A cápsula cai na água, perto do navio de resgate. É vinte e sete de dezembro."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "oceano",
+   "fala": "A cápsula cai na água, perto do navio de resgate. É vinte e sete de dezembro.",
+   "destaques": [
+    "navio"
+   ],
+   "cams": [
+    "panoramica",
+    "ampla"
+   ],
+   "hora": "dia",
+   "fx": "pouso"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Os três astronautas são recolhidos pelo navio de resgate. A missão que ninguém tinha feito acabou em perfeita segurança."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "oceano",
+   "fala": "Os três astronautas são recolhidos pelo navio de resgate. A missão que ninguém tinha feito acabou em perfeita segurança.",
+   "destaques": [
+    "resgate"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica",
+    "alto"
+   ],
+   "hora": "dia",
+   "fx": "pouso"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Atrás dessa conquista havia centenas de milhares de pessoas: engenheiros, técnicos e controladores, muitos deles jovens."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Atrás dessa conquista havia centenas de milhares de pessoas: engenheiros, técnicos e controladores, muitos deles jovens.",
+   "destaques": [
+    "equipe"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "f2",
+    "ampla"
+   ],
+   "capitulo": "O que ficou",
+   "ano": "1968"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Sete meses depois, a Apollo onze usou tudo o que a Apollo oito tinha ensinado para pousar na Lua."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "Sete meses depois, a Apollo onze usou tudo o que a Apollo oito tinha ensinado para pousar na Lua.",
+   "destaques": [
+    "Lua"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica",
+    "alto"
+   ],
+   "fx": "lua"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Alguns dias depois, um desconhecido mandou um telegrama a Frank Borman: Obrigado, Apollo oito. Vocês salvaram mil novecentos e sessenta e oito."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Alguns dias depois, um desconhecido mandou um telegrama a Frank Borman: Obrigado, Apollo oito. Vocês salvaram mil novecentos e sessenta e oito.",
+   "destaques": [
+    "telegrama"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente",
+    "f1"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Agora é com você. Se estivesse na Nasa em mil novecentos e sessenta e oito: mandava a Apollo oito até a Lua sem o módulo lunar, ou esperava mais um teste? Comente A para ir agora, ou B para esperar."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Agora é com você. Se estivesse na Nasa em mil novecentos e sessenta e oito: mandava a Apollo oito até a Lua sem o módulo lunar, ou esperava mais um teste? Comente A para ir agora, ou B para esperar.",
+   "destaques": [
+    "escolha"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "f2",
+    "ampla"
+   ]
+  }
+ ]
+}

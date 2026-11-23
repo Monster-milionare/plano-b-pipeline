@@ -1,0 +1,1736 @@
+{
+ "id": "45-apollo-12-2d-longo",
+ "ordem": 905,
+ "formato": "longo",
+ "estilo": "epico",
+ "motor": "2d",
+ "revisado": true,
+ "titulo": "Apollo 12: o raio que atingiu o foguete",
+ "titulo_youtube": "Apollo 12: o raio que atingiu o foguete a caminho da Lua",
+ "titulo_curto": "APOLLO 12: OS RAIOS",
+ "thumb_texto": "O RAIO QUE ATINGIU O FOGUETE",
+ "descricao": "Novembro de 1969. Você é Pete Conrad, comandante da Apollo doze. Trinta e seis segundos depois da decolagem, um raio atinge o foguete, e depois outro. A história real da missão, baseada nos relatos da Nasa: a chave que salvou a nave, o pouso de precisão ao lado da sonda Surveyor três e a volta para casa. E você: abortaria ou seguiria para a órbita? Comente A ou B.\n\nSe inscreva no Plano B da História: toda semana, o pior dia da história contado em 2D.\n\nDramatização baseada em fatos históricos e relatos da época. Diálogos e cenas são recriações.\n\n#historia #apollo12 #nasa #historiadobrasil #planobdahistoria",
+ "comentario_fixado": "A: abortar a missão depois do raio. B: seguir para a órbita e conferir os sistemas. Qual a sua escolha?",
+ "tags": [
+  "apollo 12",
+  "nasa",
+  "pete conrad",
+  "raio",
+  "surveyor 3",
+  "pouso na lua",
+  "espaco",
+  "documentario",
+  "historia",
+  "1969"
+ ],
+ "elenco": {
+  "prot": "conrad",
+  "f": [
+   "bean",
+   "gordon"
+  ],
+  "amb": {
+   "lancamento": [
+    "bean-traje",
+    "gordon-traje"
+   ],
+   "modulo-lunar": [
+    "bean-traje"
+   ],
+   "superficie-lunar": [
+    "bean-traje"
+   ],
+   "houston": [
+    "controlador",
+    "controlador2",
+    "engenheiro"
+   ]
+  },
+  "protAmb": {
+   "lancamento": "conrad-traje",
+   "modulo-lunar": "conrad-traje",
+   "superficie-lunar": "conrad-traje",
+   "houston": "griffin"
+  },
+  "vazio": [
+   "espaco",
+   "oceano",
+   "descida-lunar"
+  ]
+ },
+ "cenas": [
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você é Pete Conrad, comandante da Apollo doze. Hoje a sua missão é voltar à Lua."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "lancamento",
+   "fala": "Você é Pete Conrad, comandante da Apollo doze. Hoje a sua missão é voltar à Lua.",
+   "destaques": [
+    "Apollo doze"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ],
+   "hora": "manha",
+   "capitulo": "Lançamento",
+   "ano": "14 nov 1969"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "É quatorze de novembro de mil novecentos e sessenta e nove, no Centro Espacial Kennedy, na Flórida."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "lancamento",
+   "fala": "É quatorze de novembro de mil novecentos e sessenta e nove, no Centro Espacial Kennedy, na Flórida.",
+   "destaques": [
+    "Kennedy"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "ampla"
+   ],
+   "hora": "manha"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Ao seu lado estão Alan Bean, que vai pousar com você, e Richard Gordon, que vai pilotar a nave principal."
+    },
+    {
+     "quem": "f0",
+     "texto": "Pronto para a nossa viagem, Pete?"
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "lancamento",
+   "fala": "Ao seu lado estão Alan Bean, que vai pousar com você, e Richard Gordon, que vai pilotar a nave principal. Pronto para a nossa viagem, Pete?",
+   "destaques": [
+    "Bean"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ],
+   "hora": "manha"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O foguete Saturn cinco espera na plataforma. É a segunda missão que vai pousar na Lua, quatro meses depois da Apollo onze."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "lancamento",
+   "fala": "O foguete Saturn cinco espera na plataforma. É a segunda missão que vai pousar na Lua, quatro meses depois da Apollo onze.",
+   "destaques": [
+    "Saturn"
+   ],
+   "cams": [
+    "eu-frente",
+    "f1",
+    "ampla"
+   ],
+   "hora": "manha"
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Tudo certo, Houston. Estamos prontos para a contagem final."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "lancamento",
+   "fala": "Tudo certo, Houston. Estamos prontos para a contagem final.",
+   "destaques": [
+    "contagem"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ],
+   "hora": "manha"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Onze e vinte e dois da manhã. Os motores acendem e o gigante sobe, com vocês dentro."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "lancamento",
+   "fala": "Onze e vinte e dois da manhã. Os motores acendem e o gigante sobe, com vocês dentro.",
+   "destaques": [
+    "decolagem"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "ampla"
+   ],
+   "hora": "manha",
+   "fx": "decolagem"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Trinta e seis segundos depois da decolagem, uma luz branca invade a cabine. Um raio acaba de atingir o foguete."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Trinta e seis segundos depois da decolagem, uma luz branca invade a cabine. Um raio acaba de atingir o foguete.",
+   "destaques": [
+    "raio"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ],
+   "fx": "alarme",
+   "capitulo": "O raio",
+   "ano": "14 nov 1969"
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Houston, aqui é a Apollo doze. Acho que perdemos as células de combustível. Todas as luzes acenderam!"
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Houston, aqui é a Apollo doze. Acho que perdemos as células de combustível. Todas as luzes acenderam!",
+   "destaques": [
+    "luzes"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ],
+   "fx": "alarme"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Dezesseis segundos depois, um segundo raio atinge a nave. O painel inteiro se enche de luzes de alerta."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Dezesseis segundos depois, um segundo raio atinge a nave. O painel inteiro se enche de luzes de alerta.",
+   "destaques": [
+    "segundo raio"
+   ],
+   "cams": [
+    "eu-frente",
+    "f1",
+    "ampla"
+   ],
+   "fx": "alarme"
+  },
+  {
+   "falas": [
+    {
+     "quem": "f0",
+     "texto": "Pete, estou vendo alarme em todo o painel. A energia está caindo!"
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Pete, estou vendo alarme em todo o painel. A energia está caindo!",
+   "destaques": [
+    "energia"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ],
+   "fx": "alarme"
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Perdemos a plataforma de navegação. Os instrumentos não fazem mais sentido."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Perdemos a plataforma de navegação. Os instrumentos não fazem mais sentido.",
+   "destaques": [
+    "plataforma"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "ampla"
+   ],
+   "fx": "alarme"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Em Houston, as telas de dados viram uma confusão de números sem nenhum sentido."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Em Houston, as telas de dados viram uma confusão de números sem nenhum sentido.",
+   "destaques": [
+    "dados"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente",
+    "f1"
+   ],
+   "fx": "tensao"
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Preciso de uma decisão, e rápido. Abortamos a missão ou seguimos para a órbita?"
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Preciso de uma decisão, e rápido. Abortamos a missão ou seguimos para a órbita?",
+   "destaques": [
+    "decisão"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ],
+   "fx": "tensao"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Um jovem controlador chamado John Aaron reconhece aquele padrão estranho de dados. Ele já tinha visto algo parecido em um teste."
+    },
+    {
+     "quem": "f1",
+     "texto": "Mandem eles tentarem o SCE em auxiliar!"
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Um jovem controlador chamado John Aaron reconhece aquele padrão estranho de dados. Ele já tinha visto algo parecido em um teste. Mandem eles tentarem o SCE em auxiliar!",
+   "destaques": [
+    "Aaron"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "f2",
+    "ampla"
+   ],
+   "fx": "tensao"
+  },
+  {
+   "falas": [
+    {
+     "quem": "radio",
+     "texto": "Apollo doze, aqui Houston. Tentem o SCE em auxiliar."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Apollo doze, aqui Houston. Tentem o SCE em auxiliar.",
+   "destaques": [
+    "auxiliar"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ],
+   "fx": "tensao"
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "SCE em auxiliar? Que raio de chave é essa?"
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "SCE em auxiliar? Que raio de chave é essa?",
+   "destaques": [
+    "chave"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ],
+   "fx": "alarme"
+  },
+  {
+   "falas": [
+    {
+     "quem": "f0",
+     "texto": "Eu sei qual é, Pete! Fica no painel da esquerda."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Eu sei qual é, Pete! Fica no painel da esquerda.",
+   "destaques": [
+    "painel"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Alan Bean estica o braço e vira aquela chave. Em Houston, os dados voltam a aparecer. A nave volta à vida."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Alan Bean estica o braço e vira aquela chave. Em Houston, os dados voltam a aparecer. A nave volta à vida.",
+   "destaques": [
+    "Bean"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "radio",
+     "texto": "Estamos recebendo dados de novo, Apollo doze."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Estamos recebendo dados de novo, Apollo doze.",
+   "destaques": [
+    "dados"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Pouco depois, a nave entra em órbita da Terra. A plataforma de navegação precisa ser realinhada pelas estrelas."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "Pouco depois, a nave entra em órbita da Terra. A plataforma de navegação precisa ser realinhada pelas estrelas.",
+   "destaques": [
+    "órbita"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica",
+    "alto"
+   ],
+   "fx": "terra",
+   "capitulo": "A decisão de seguir",
+   "ano": "14 nov 1969"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Vocês passam duas voltas ao redor da Terra, conferindo cada sistema com Houston."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Vocês passam duas voltas ao redor da Terra, conferindo cada sistema com Houston.",
+   "destaques": [
+    "voltas"
+   ],
+   "cams": [
+    "eu-frente",
+    "f1",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Os engenheiros examinam todos os dados. Eles não encontram nenhum dano grave nas células de combustível."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Os engenheiros examinam todos os dados. Eles não encontram nenhum dano grave nas células de combustível.",
+   "destaques": [
+    "engenheiros"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "f2",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "radio",
+     "texto": "Apollo doze, vocês estão liberados para a injeção rumo à Lua."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Apollo doze, vocês estão liberados para a injeção rumo à Lua.",
+   "destaques": [
+    "liberados"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Mas ninguém sabe se os raios danificaram os paraquedas da cápsula. Isso só vai ser descoberto na volta."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "Mas ninguém sabe se os raios danificaram os paraquedas da cápsula. Isso só vai ser descoberto na volta.",
+   "destaques": [
+    "paraquedas"
+   ],
+   "cams": [
+    "panoramica",
+    "ampla"
+   ],
+   "fx": "terra"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A viagem até a Lua dura pouco mais de três dias. Lá fora, só o escuro e a Terra ficando pequena."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "A viagem até a Lua dura pouco mais de três dias. Lá fora, só o escuro e a Terra ficando pequena.",
+   "destaques": [
+    "viagem"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica",
+    "alto"
+   ],
+   "fx": "terra",
+   "capitulo": "Rumo à Lua",
+   "ano": "15 a 18 nov 1969"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Richard Gordon pilota a Yankee Clipper, o módulo de comando, durante o caminho."
+    },
+    {
+     "quem": "f1",
+     "texto": "Tudo ótimo por aqui, Pete. A Lua já está crescendo na janela."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Richard Gordon pilota a Yankee Clipper, o módulo de comando, durante o caminho. Tudo ótimo por aqui, Pete. A Lua já está crescendo na janela.",
+   "destaques": [
+    "Gordon"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Na cabine, vocês conferem os sistemas, comem, descansam e conversam com Houston pelo rádio."
+    },
+    {
+     "quem": "f0",
+     "texto": "Pete, a Lua já está bem maior do que ontem."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Na cabine, vocês conferem os sistemas, comem, descansam e conversam com Houston pelo rádio. Pete, a Lua já está bem maior do que ontem.",
+   "destaques": [
+    "rádio"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "No terceiro dia, a Lua preenche toda a janela. Vocês passam por trás dela, sem rádio, e acendem o motor para entrar em órbita."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "No terceiro dia, a Lua preenche toda a janela. Vocês passam por trás dela, sem rádio, e acendem o motor para entrar em órbita.",
+   "destaques": [
+    "Lua"
+   ],
+   "cams": [
+    "panoramica",
+    "ampla"
+   ],
+   "fx": "lua"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Em Houston, durante esses minutos, só há silêncio no rádio. Todos esperam o sinal da nave voltar."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Em Houston, durante esses minutos, só há silêncio no rádio. Todos esperam o sinal da nave voltar.",
+   "destaques": [
+    "silêncio"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente",
+    "f1"
+   ],
+   "fx": "tensao"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Mas dá tudo certo. A Yankee Clipper entra em órbita da Lua."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "Mas dá tudo certo. A Yankee Clipper entra em órbita da Lua.",
+   "destaques": [
+    "órbita lunar"
+   ],
+   "cams": [
+    "panoramica",
+    "ampla"
+   ],
+   "fx": "lua"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "No dia seguinte, dezenove de novembro, chega a hora da descida. Você e Alan Bean vão passar para o módulo lunar, o Intrepid."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "No dia seguinte, dezenove de novembro, chega a hora da descida. Você e Alan Bean vão passar para o módulo lunar, o Intrepid.",
+   "destaques": [
+    "Intrepid"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ],
+   "capitulo": "A separação",
+   "ano": "19 nov 1969"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O Intrepid é apertado e cheio de botões. Aqui dentro, só cabem vocês dois."
+    },
+    {
+     "quem": "f0",
+     "texto": "Sistemas do Intrepid prontos, Pete."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "modulo-lunar",
+   "fala": "O Intrepid é apertado e cheio de botões. Aqui dentro, só cabem vocês dois. Sistemas do Intrepid prontos, Pete.",
+   "destaques": [
+    "Bean"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O Intrepid se solta da Yankee Clipper. Gordon fica sozinho, dando voltas em torno da Lua."
+    },
+    {
+     "quem": "radio",
+     "texto": "Intrepid, aqui Houston. Vocês estão liberados para a descida."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "modulo-lunar",
+   "fala": "O Intrepid se solta da Yankee Clipper. Gordon fica sozinho, dando voltas em torno da Lua. Intrepid, aqui Houston. Vocês estão liberados para a descida.",
+   "destaques": [
+    "separação"
+   ],
+   "cams": [
+    "eu-frente",
+    "f0",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Gordon fica sozinho na nave principal, em órbita, enquanto vocês dois descem rumo ao Oceano das Tempestades."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "Gordon fica sozinho na nave principal, em órbita, enquanto vocês dois descem rumo ao Oceano das Tempestades.",
+   "destaques": [
+    "Gordon"
+   ],
+   "cams": [
+    "panoramica",
+    "ampla"
+   ],
+   "fx": "perto"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você acende o motor de descida. O Intrepid começa a cair devagar em direção à superfície."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "descida-lunar",
+   "fala": "Você acende o motor de descida. O Intrepid começa a cair devagar em direção à superfície.",
+   "destaques": [
+    "descida"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica",
+    "alto"
+   ],
+   "fx": "descida",
+   "capitulo": "Um pouso de precisão",
+   "ano": "19 nov 1969"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O objetivo desta missão é diferente. Vocês não querem só pousar na Lua. Querem pousar bem pertinho de uma sonda chamada Surveyor três."
+    }
+   ],
+   "emocao": "misterioso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "modulo-lunar",
+   "fala": "O objetivo desta missão é diferente. Vocês não querem só pousar na Lua. Querem pousar bem pertinho de uma sonda chamada Surveyor três.",
+   "destaques": [
+    "Surveyor"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A Surveyor três pousou ali mais de dois anos antes, sem ninguém a bordo. Se a Apollo doze acertar, provará que dá para pousar com precisão."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "modulo-lunar",
+   "fala": "A Surveyor três pousou ali mais de dois anos antes, sem ninguém a bordo. Se a Apollo doze acertar, provará que dá para pousar com precisão.",
+   "destaques": [
+    "precisão"
+   ],
+   "cams": [
+    "f0c",
+    "eu-lado",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Estou vendo a cratera da Surveyor. Vou guiar manualmente, Alan."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "modulo-lunar",
+   "fala": "Estou vendo a cratera da Surveyor. Vou guiar manualmente, Alan.",
+   "destaques": [
+    "cratera"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "f0",
+     "texto": "Quinze metros de altura, descendo devagar. Poeira subindo, Pete."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "modulo-lunar",
+   "fala": "Quinze metros de altura, descendo devagar. Poeira subindo, Pete.",
+   "destaques": [
+    "altura"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O jato do motor levanta uma nuvem de poeira que esconde parte do chão. Mesmo assim, você mantém a descida."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "descida-lunar",
+   "fala": "O jato do motor levanta uma nuvem de poeira que esconde parte do chão. Mesmo assim, você mantém a descida.",
+   "destaques": [
+    "poeira"
+   ],
+   "cams": [
+    "panoramica",
+    "ampla"
+   ],
+   "fx": "poeira"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Cerca de cento e oitenta metros da Surveyor, o Intrepid toca o solo. É o segundo pouso humano na Lua, e é perfeito."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "descida-lunar",
+   "fala": "Cerca de cento e oitenta metros da Surveyor, o Intrepid toca o solo. É o segundo pouso humano na Lua, e é perfeito.",
+   "destaques": [
+    "pousado"
+   ],
+   "cams": [
+    "panoramica",
+    "ampla"
+   ],
+   "fx": "pousado"
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Houston, aqui é o Intrepid. Estamos na Lua. E pertinho da Surveyor!"
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "modulo-lunar",
+   "fala": "Houston, aqui é o Intrepid. Estamos na Lua. E pertinho da Surveyor!",
+   "destaques": [
+    "Intrepid"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "radio",
+     "texto": "Entendido, Intrepid. Vocês acertaram o alvo em cheio. Parabéns!"
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Entendido, Intrepid. Vocês acertaram o alvo em cheio. Parabéns!",
+   "destaques": [
+    "alvo"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Na sala de controle, a tensão vira comemoração. A precisão do pouso era o que a Nasa mais queria provar."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Na sala de controle, a tensão vira comemoração. A precisão do pouso era o que a Nasa mais queria provar.",
+   "destaques": [
+    "comemoração"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "f2",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Algumas horas depois, vocês vestem os trajes e abrem a escotilha. Você sai primeiro, pela escada."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "modulo-lunar",
+   "fala": "Algumas horas depois, vocês vestem os trajes e abrem a escotilha. Você sai primeiro, pela escada.",
+   "destaques": [
+    "trajes"
+   ],
+   "cams": [
+    "f0c",
+    "eu-lado",
+    "ampla"
+   ],
+   "capitulo": "Os passeios na Lua",
+   "ano": "19 a 20 nov 1969"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você desce degrau por degrau até pisar na poeira cinzenta da Lua."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "superficie-lunar",
+   "fala": "Você desce degrau por degrau até pisar na poeira cinzenta da Lua.",
+   "destaques": [
+    "escada"
+   ],
+   "cams": [
+    "eu-frente",
+    "eu-lado"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Uau! Esse pode ter sido um passo pequeno para o Neil, mas para mim foi bem longo!"
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "superficie-lunar",
+   "fala": "Uau! Esse pode ter sido um passo pequeno para o Neil, mas para mim foi bem longo!",
+   "destaques": [
+    "passo"
+   ],
+   "cams": [
+    "eu-frente",
+    "eu-lado"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Pete Conrad era mais baixo que Neil Armstrong, e a piada foi um sucesso. Alan Bean desce logo atrás."
+    },
+    {
+     "quem": "f0",
+     "texto": "Que lugar incrível, Pete. Parece um deserto de cinza."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "superficie-lunar",
+   "fala": "Pete Conrad era mais baixo que Neil Armstrong, e a piada foi um sucesso. Alan Bean desce logo atrás. Que lugar incrível, Pete. Parece um deserto de cinza.",
+   "destaques": [
+    "Bean"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Vocês fincam a bandeira dos Estados Unidos no chão e começam a montar os experimentos científicos."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "superficie-lunar",
+   "fala": "Vocês fincam a bandeira dos Estados Unidos no chão e começam a montar os experimentos científicos.",
+   "destaques": [
+    "bandeira"
+   ],
+   "cams": [
+    "f0c",
+    "eu-lado",
+    "ampla"
+   ],
+   "fx": "bandeira"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Um aparelho com energia nuclear vai ficar ali, medindo tremores na Lua e enviando os dados para a Terra por anos."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "superficie-lunar",
+   "fala": "Um aparelho com energia nuclear vai ficar ali, medindo tremores na Lua e enviando os dados para a Terra por anos.",
+   "destaques": [
+    "experimentos"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Então Alan Bean monta a câmera de televisão e a aponta, sem querer, para o Sol. O sensor queima na hora."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "superficie-lunar",
+   "fala": "Então Alan Bean monta a câmera de televisão e a aponta, sem querer, para o Sol. O sensor queima na hora.",
+   "destaques": [
+    "televisão"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "f0",
+     "texto": "Pete, eu acho que a câmera acabou de queimar."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "superficie-lunar",
+   "fala": "Pete, eu acho que a câmera acabou de queimar.",
+   "destaques": [
+    "queimar"
+   ],
+   "cams": [
+    "f0c",
+    "eu-lado",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Por isso, o mundo não verá nenhuma imagem desse passeio. Só fotografias e as vozes de vocês no rádio."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "superficie-lunar",
+   "fala": "Por isso, o mundo não verá nenhuma imagem desse passeio. Só fotografias e as vozes de vocês no rádio.",
+   "destaques": [
+    "fotografias"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Quando o primeiro passeio termina, vocês voltam ao Intrepid, cansados e cobertos de poeira cinzenta."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "Quando o primeiro passeio termina, vocês voltam ao Intrepid, cansados e cobertos de poeira cinzenta.",
+   "destaques": [
+    "Terra"
+   ],
+   "cams": [
+    "panoramica",
+    "ampla"
+   ],
+   "fx": "terra"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "No segundo passeio, vocês caminham até a velha sonda Surveyor três, parada na borda de uma cratera."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "superficie-lunar",
+   "fala": "No segundo passeio, vocês caminham até a velha sonda Surveyor três, parada na borda de uma cratera.",
+   "destaques": [
+    "Surveyor"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ],
+   "capitulo": "A visita à Surveyor",
+   "ano": "20 nov 1969"
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Olha só, Alan. Ela está do jeito que a Terra deixou, só mais empoeirada."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "superficie-lunar",
+   "fala": "Olha só, Alan. Ela está do jeito que a Terra deixou, só mais empoeirada.",
+   "destaques": [
+    "sonda"
+   ],
+   "cams": [
+    "f0c",
+    "eu-lado",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Vocês cortam a câmera e algumas peças da sonda e guardam para levar de volta. Os cientistas querem saber como a Lua trata o metal."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "superficie-lunar",
+   "fala": "Vocês cortam a câmera e algumas peças da sonda e guardam para levar de volta. Os cientistas querem saber como a Lua trata o metal.",
+   "destaques": [
+    "peças"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Ao todo, vocês passam quase oito horas caminhando na Lua e recolhem rochas do Oceano das Tempestades."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "superficie-lunar",
+   "fala": "Ao todo, vocês passam quase oito horas caminhando na Lua e recolhem rochas do Oceano das Tempestades.",
+   "destaques": [
+    "rochas"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "f0",
+     "texto": "Já estamos com as sacolas cheias, Pete. Hora de voltar."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "superficie-lunar",
+   "fala": "Já estamos com as sacolas cheias, Pete. Hora de voltar.",
+   "destaques": [
+    "sacolas"
+   ],
+   "cams": [
+    "f0c",
+    "eu-lado",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Vocês entram de novo no Intrepid, fecham a escotilha e descansam. Faz frio, e a poeira da Lua gruda em tudo."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "modulo-lunar",
+   "fala": "Vocês entram de novo no Intrepid, fecham a escotilha e descansam. Faz frio, e a poeira da Lua gruda em tudo.",
+   "destaques": [
+    "descanso"
+   ],
+   "cams": [
+    "alto",
+    "f0c",
+    "eu-frente"
+   ],
+   "capitulo": "A volta para casa",
+   "ano": "20 a 24 nov 1969"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Então o motor de subida liga e leva o módulo de volta à órbita, deixando a parte de baixo na superfície."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "Então o motor de subida liga e leva o módulo de volta à órbita, deixando a parte de baixo na superfície.",
+   "destaques": [
+    "subida"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica",
+    "alto"
+   ],
+   "fx": "perto"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Na órbita, a Yankee Clipper espera. Richard Gordon, depois de mais de um dia sozinho, abre a escotilha com um sorriso."
+    },
+    {
+     "quem": "f1",
+     "texto": "Bem-vindos de volta, rapazes! Que viagem!"
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Na órbita, a Yankee Clipper espera. Richard Gordon, depois de mais de um dia sozinho, abre a escotilha com um sorriso. Bem-vindos de volta, rapazes! Que viagem!",
+   "destaques": [
+    "Gordon"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "ampla"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A parte de cima do Intrepid é solta e lançada de propósito contra a Lua. Os sismógrafos deixados lá registram tremores durante quase uma hora."
+    }
+   ],
+   "emocao": "misterioso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "A parte de cima do Intrepid é solta e lançada de propósito contra a Lua. Os sismógrafos deixados lá registram tremores durante quase uma hora.",
+   "destaques": [
+    "tremores"
+   ],
+   "cams": [
+    "panoramica",
+    "ampla"
+   ],
+   "fx": "lua"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Depois, a nave parte rumo à Terra, e a Lua vai ficando para trás."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "Depois, a nave parte rumo à Terra, e a Lua vai ficando para trás.",
+   "destaques": [
+    "Terra"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica",
+    "alto"
+   ],
+   "fx": "terra"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Na volta, a cápsula faz a reentrada na atmosfera a uma velocidade enorme, com o calor envolvendo toda a nave."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "Na volta, a cápsula faz a reentrada na atmosfera a uma velocidade enorme, com o calor envolvendo toda a nave.",
+   "destaques": [
+    "reentrada"
+   ],
+   "cams": [
+    "panoramica",
+    "ampla"
+   ],
+   "fx": "reentrada"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Então três paraquedas se abrem sobre o oceano Pacífico. Os raios não tinham estragado nada."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "oceano",
+   "fala": "Então três paraquedas se abrem sobre o oceano Pacífico. Os raios não tinham estragado nada.",
+   "destaques": [
+    "paraquedas"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica",
+    "alto"
+   ],
+   "hora": "dia",
+   "fx": "paraquedas"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A cápsula cai na água, perto do navio de resgate. É vinte e quatro de novembro de mil novecentos e sessenta e nove."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "oceano",
+   "fala": "A cápsula cai na água, perto do navio de resgate. É vinte e quatro de novembro de mil novecentos e sessenta e nove.",
+   "destaques": [
+    "navio"
+   ],
+   "cams": [
+    "panoramica",
+    "ampla"
+   ],
+   "hora": "dia",
+   "fx": "pouso"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Os três astronautas são recolhidos e recebidos pela equipe de resgate, e por precaução entram em quarentena."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "oceano",
+   "fala": "Os três astronautas são recolhidos e recebidos pela equipe de resgate, e por precaução entram em quarentena.",
+   "destaques": [
+    "quarentena"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica",
+    "alto"
+   ],
+   "hora": "dia",
+   "fx": "pouso"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Atrás desse sucesso havia centenas de milhares de pessoas: engenheiros, técnicos e controladores, muitos deles jovens."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Atrás desse sucesso havia centenas de milhares de pessoas: engenheiros, técnicos e controladores, muitos deles jovens.",
+   "destaques": [
+    "equipe"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "f2",
+    "ampla"
+   ],
+   "capitulo": "O que ficou",
+   "ano": "1969"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A Apollo doze provou que dava para pousar na Lua com precisão e trazer ciência de verdade de volta. Cinco meses depois, a Apollo treze passou por um perigo ainda maior."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "A Apollo doze provou que dava para pousar na Lua com precisão e trazer ciência de verdade de volta. Cinco meses depois, a Apollo treze passou por um perigo ainda maior.",
+   "destaques": [
+    "ciência"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica",
+    "alto"
+   ],
+   "fx": "lua"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "E esta missão quase não saiu da Terra. Dois raios e uma chave que quase ninguém conhecia decidiram tudo."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "E esta missão quase não saiu da Terra. Dois raios e uma chave que quase ninguém conhecia decidiram tudo.",
+   "destaques": [
+    "chave"
+   ],
+   "cams": [
+    "ampla",
+    "f0",
+    "eu-frente",
+    "f1"
+   ],
+   "fx": "tensao"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Agora é com você. Se estivesse em Houston, depois do raio: abortava a missão ou seguia para a órbita? Comente A para abortar, ou B para seguir."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "houston",
+   "fala": "Agora é com você. Se estivesse em Houston, depois do raio: abortava a missão ou seguia para a órbita? Comente A para abortar, ou B para seguir.",
+   "destaques": [
+    "escolha"
+   ],
+   "cams": [
+    "f1c",
+    "eu-lado",
+    "f2",
+    "ampla"
+   ]
+  }
+ ]
+}
