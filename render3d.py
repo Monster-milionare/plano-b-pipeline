@@ -161,7 +161,14 @@ def render_pov3d(conteudo: dict, out_path: Path, estilo_nome: str | None = None,
         import tts_fake
         sintetizar = tts_fake.synthesize_sentences
     import vozes
-    elenco_vozes = vozes.Elenco(conteudo.get("elenco") or {}, semente=conteudo["id"])
+    try:   # narrador alterna: um video voz masculina, o seguinte feminina (conta os videos ja publicados)
+        import json as _json
+        n_pub = len(_json.loads((config.STATE_DIR / "videos.json").read_text(encoding="utf-8")))
+    except Exception:
+        n_pub = R.hash_seed(conteudo["id"], 1, 1)
+    feminino = conteudo.get("narradora") if conteudo.get("narradora") is not None else bool(n_pub % 2)
+    elenco_vozes = vozes.Elenco(conteudo.get("elenco") or {}, semente=conteudo["id"], feminino=feminino)
+    print(f"[render3d] narracao: voz {'feminina' if feminino else 'masculina'} ({elenco_vozes.narrador[0]})", flush=True)
     P = diretor.planejar(conteudo, sintetizar, elenco_vozes, work)
     env, dur_voz, tempos_cena = P["env"], P["dur_voz"], P["tempos_cena"]
     shots, legendas = P["shots"], P["legendas"]

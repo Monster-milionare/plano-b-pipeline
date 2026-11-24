@@ -16,6 +16,8 @@ AGUDOS = {"cidadao2", "marujo2", "nativo3", "newton", "bebe-tricera", "menino"}
 NARRADORES = [("pt-BR-MacerioMultilingualNeural", "-1Hz"), ("pt-BR-ThalitaMultilingualNeural", "+0Hz"),
               ("pt-BR-MacerioMultilingualNeural", "-3Hz"), ("pt-BR-AntonioNeural", "-2Hz"), ("pt-BR-FranciscaNeural", "+0Hz")]
 NARRADOR = NARRADORES[0]
+NARRADORES_M = [("pt-BR-MacerioMultilingualNeural", "-1Hz"), ("pt-BR-AntonioNeural", "-2Hz"), ("pt-BR-MacerioMultilingualNeural", "-3Hz")]
+NARRADORES_F = [("pt-BR-ThalitaMultilingualNeural", "+0Hz"), ("pt-BR-FranciscaNeural", "+0Hz")]
 MASCULINAS = [("pt-BR-AntonioNeural", "+0Hz"), ("en-US-AndrewMultilingualNeural", "+0Hz"), ("en-US-BrianMultilingualNeural", "+0Hz"),
               ("fr-FR-RemyMultilingualNeural", "+0Hz"), ("de-DE-FlorianMultilingualNeural", "-2Hz"),
               ("it-IT-GiuseppeMultilingualNeural", "+0Hz"), ("pt-BR-MacerioMultilingualNeural", "+6Hz"), ("pt-PT-DuarteNeural", "+0Hz")]
@@ -46,11 +48,13 @@ def papel_de(quem: str, cena: dict, elenco: dict) -> str:
 
 
 class Elenco:
-    def __init__(self, elenco: dict, semente: str = ""):
+    def __init__(self, elenco: dict, semente: str = "", feminino=None):
+        """feminino: True/False alterna narradora/narrador entre videos (pedido do Andre); None = sorteio pelo id."""
         self.elenco = elenco
         self.por_papel = {}
         self.semente = semente or "planob"
-        self.narrador = (elenco.get("narrador_voz") and (elenco["narrador_voz"], "+0Hz")) or NARRADORES[_h(self.semente) % len(NARRADORES)]
+        lista = NARRADORES if feminino is None else (NARRADORES_F if feminino else NARRADORES_M)
+        self.narrador = (elenco.get("narrador_voz") and (elenco["narrador_voz"], "+0Hz")) or lista[_h(self.semente) % len(lista)]
         k = _h(self.semente + "m")
         self.masc = MASCULINAS[k % len(MASCULINAS):] + MASCULINAS[:k % len(MASCULINAS)]
         k = _h(self.semente + "f")
