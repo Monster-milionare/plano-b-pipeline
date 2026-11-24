@@ -152,7 +152,7 @@ def render_pov3d(conteudo: dict, out_path: Path, estilo_nome: str | None = None,
     import sfx as SFX
     work = config.OUT_DIR / f"_work_{conteudo['id']}"
     work.mkdir(parents=True, exist_ok=True)
-    estilo = estilos.ESTILOS[estilo_nome or conteudo.get("estilo") or "sepia"]
+    estilo = estilos.ESTILOS.get(estilo_nome or conteudo.get("estilo") or "sepia") or estilos.ESTILOS["sepia"]
     conteudo = cenografo.preparar(conteudo)
     cenas = conteudo["cenas"]
 

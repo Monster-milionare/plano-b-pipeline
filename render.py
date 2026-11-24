@@ -273,7 +273,7 @@ def render_video(conteudo: dict, out_path: Path, estilo_nome: str | None = None,
                  fim_cena_extra: float = 0.9):
     work = config.OUT_DIR / f"_work_{conteudo['id']}"
     work.mkdir(parents=True, exist_ok=True)
-    estilo = estilos.ESTILOS[estilo_nome or conteudo.get("estilo") or "epico"]
+    estilo = estilos.ESTILOS.get(estilo_nome or conteudo.get("estilo") or "epico") or estilos.ESTILOS["epico"]
     rng = random.Random(conteudo["id"])
     cenas = conteudo["cenas"]
 
