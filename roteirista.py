@@ -53,15 +53,18 @@ PRESETS_2D = {
     "roma": dict(rx=r"\broma\b|romano|marco aurelio|comodo|trajano|adriano|gladiador|coliseu|legiao|legionario|nero",
                  horas=["manha", "dia", "tarde", "entardecer", "noite", "incendio"],
                  nota="Forum Romano no seculo II com o Coliseu ao fundo (o Coliseu so ficou pronto em 80 d.C.: historia de antes disso usa SO a hora 'incendio', que mostra Roma em chamas no ano 64, sem o Coliseu)",
+                 comuns=["cidadao-romano", "cidada-romana", "legionario", "escravo", "senador"],
                  papeis=["marco-aurelio", "comodo", "nero", "galeno", "senador", "legionario", "centuriao", "cidadao-romano", "cidada-romana", "escravo"]),
     "chernobyl": dict(rx=r"chernobyl|tchernobyl|pripyat|reator nuclear|usina nuclear|radiacao",
                       horas=["noite", "madrugada", "dia", "evacuacao"],
                       nota="Usina de Chernobyl em 1986: bloco 4 destruido, chamine listrada, Pripyat ao fundo. Hora 'evacuacao' = 27/04 com os onibus.",
-                      papeis=["bombeiro", "bombeiro2", "operador", "engenheiro", "liquidador", "morador", "moradora", "oficial-sovietico"]),
+                      comuns=["bombeiro2", "morador", "moradora", "bombeiro", "operador"],
+                 papeis=["bombeiro", "bombeiro2", "operador", "engenheiro", "liquidador", "morador", "moradora", "oficial-sovietico"]),
     "selva-cretaceo": dict(rx=r"dinossaur|cretaceo|t-?rex|pterossaur|jurassic|asteroide",
                            horas=["manha", "dia", "tarde", "entardecer", "impacto", "noite"],
                            nota="Selva do Cretaceo com vulcao, lago e dinossauros. Hora 'impacto' = o dia do asteroide.",
-                           papeis=["explorador", "exploradora", "guia", "bebe-tricera"]),
+                           comuns=["exploradora", "guia", "explorador"],
+                 papeis=["explorador", "exploradora", "guia", "bebe-tricera"]),
 }
 
 
@@ -238,10 +241,15 @@ def _um():
          "descricao": d.get("descricao", titulo), "tags": d.get("tags", []), "cenas": d["cenas"],
          "thumb_texto": d.get("thumb_texto", ""), "titulo_curto": d.get("titulo_curto", ""),
          "titulo_youtube": d.get("titulo_youtube", ""), "comentario_fixado": d.get("comentario_fixado", "")}
-    amb2d, _ = preset_2d(titulo)
+    amb2d, p2d = preset_2d(titulo)
     if amb2d and d.get("elenco"):
         c["motor"], c["tema"] = "2d", amb2d
         c["elenco"] = {"prot": d["elenco"]["prot"], "f": list(d["elenco"]["f"])}
+        for extra in p2d.get("comuns") or p2d["papeis"]:      # o cenario tem 3 lugares de figurante: completa com gente comum
+            if len(c["elenco"]["f"]) >= 3:
+                break
+            if extra not in c["elenco"]["f"] and extra != c["elenco"]["prot"]:
+                c["elenco"]["f"].append(extra)
         for cena in c["cenas"]:
             cena.pop("cenario", None)
             cena["amb"] = amb2d
