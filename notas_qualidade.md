@@ -16,3 +16,16 @@ Regra: os videos publicados sao testes. Nao refazer o que ja saiu; anotar, corri
 - Votacao A/B: o proximo episodio deve seguir a opcao mais votada (falta ler os comentarios via API).
 - Formato "meme dancante" com ratos 3D (ideia do Andre, original, sem usar videos de terceiros).
 - Thumbnail 403 (canal sem verificacao de telefone).
+
+## Super atualizacao (24/11): DIRETOR (camera com historia), legenda certa, som novo
+- `diretor.py`: cada cena pode ter `beats` (batidas). Cada batida = uma fala OU uma acao muda (`"texto": "", "dur": 1.8`) e diz:
+  `cam` (alvo: ponto do cenario, personagem `f0/f1`, entidade `ptero/iceberg`, `grupo`), `mov` (corte/pan/chicote/zoom/recua/segue/tremor),
+  `pov` (camera = olho do protagonista), `maos` (aponta/binoculo/sino/telefone), `acoes` (olha/aponta/susto/anda/corre/esconde/abaixa/comemora),
+  `evento` (entidade com trajetoria entre pontos), `sfx` (whoosh/asas/impacto/susto/sino/telefone/gelo/vento/passos...), `clima` da musica.
+  Roteiro antigo (so `falas`) ganha direcao automatica: a camera vai para o que a fala cita, plano de reacao em fala longa, A/B em dois chicotes.
+- Pontos e entidades por cenario: `catalogo_cenas.PONTOS/ENTIDADES` (o `coerencia.py` bloqueia alvo/trajetoria que nao existe).
+  2D: `selva-cretaceo` (pontos em cena2d_cretaceo.js, pterossauro gigante voando/pousando/andando). 3D: `gavea` (cesto da gavea do Titanic, iceberg).
+- Legenda: um bloco por fala, so enquanto a pessoa fala (nunca junta o fim de uma fala com o comeco da outra).
+- Som: `sfx.py` (efeitos sintetizados, sem direitos), trilhas Kevin MacLeod CC-BY por clima (credito automatico na descricao), ducking da musica sob a voz,
+  narrador muda de video pra video e personagens ganham vozes Multilingual diferentes (`vozes.py`).
+- Rodizio diario: 3 Shorts 2D + 1 Short 3D (o 3D sai como 2o Short do dia) em `publish.alternar`.

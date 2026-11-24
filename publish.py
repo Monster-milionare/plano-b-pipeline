@@ -61,12 +61,12 @@ def _motor(c: dict) -> str:
 
 
 def alternar(fila: list) -> list:
-    """Alterna 2D/3D: o proximo Short usa o motor oposto ao do ultimo publicado (meta: 2 de cada por dia).
-    Sem estoque do motor desejado, segue a fila normal (e avisa no log)."""
+    """Rodizio do dia: 3 Shorts 2D + 1 Short 3D. O 3D entra como o 2o Short do dia (horario nobre da tarde);
+    os outros tres sao 2D. Sem estoque do motor desejado, segue a fila normal (e avisa no log)."""
     if not fila:
         return fila
+    from zoneinfo import ZoneInfo
     pub = _ler(PUB, [])
-    ultimo = None
     por_id = {}
     for arq in config.CONTEUDO_DIR.glob("*.json"):
         try:
@@ -74,19 +74,24 @@ def alternar(fila: list) -> list:
             por_id[d.get("id")] = d
         except Exception:
             pass
-    for d in reversed(pub):
+    tz = ZoneInfo("America/Sao_Paulo")
+    hoje = datetime.now(tz).date()
+    feitos_hoje = []
+    for d in pub:
         c = por_id.get(d.get("id"))
-        if c and c.get("formato") != "longo":
-            ultimo = _motor(c)
-            break
-    if ultimo is None:
-        return fila
-    quer = "3d" if ultimo == "2d" else "2d"
+        try:
+            dia = datetime.fromisoformat(d["publicado_em"]).astimezone(tz).date()
+        except Exception:
+            continue
+        if c and c.get("formato") != "longo" and dia == hoje:
+            feitos_hoje.append(_motor(c))
+    n, tem3d = len(feitos_hoje), "3d" in feitos_hoje
+    quer = "3d" if (n >= 1 and not tem3d) else "2d"
     pref = [c for c in fila if _motor(c) == quer]
     if not pref:
-        print(f"[publish] rodizio: ultimo Short foi {ultimo.upper()}, mas nao ha estoque {quer.upper()} - seguindo a fila normal. CRIE MAIS Shorts {quer.upper()}.", flush=True)
+        print(f"[publish] rodizio: hoje {n} Short(s) ({', '.join(feitos_hoje) or '-'}), queria {quer.upper()} mas nao ha estoque - seguindo a fila normal. CRIE MAIS Shorts {quer.upper()}.", flush=True)
         return fila
-    print(f"[publish] rodizio: ultimo Short foi {ultimo.upper()} -> agora {quer.upper()} ({pref[0]['id']}).", flush=True)
+    print(f"[publish] rodizio 3x2D+1x3D: hoje {n} Short(s) ({', '.join(feitos_hoje) or '-'}) -> agora {quer.upper()} ({pref[0]['id']}).", flush=True)
     return pref + [c for c in fila if c not in pref]
 
 
@@ -102,9 +107,12 @@ def _descricao(c: dict) -> str:
             topo += (cred + "\n\n") if cred else ""
         except Exception:
             pass
+    cred = ""
+    if c.get("_creditos_musica"):
+        cred = "\n\nMúsica:\n" + "\n".join(dict.fromkeys(c["_creditos_musica"]))
     return (topo + (f"{fixo}\n\n" if fixo else "") + f"{c['descricao']}\n\nSe inscreva no Plano B da História: toda semana, um \"e se...\" que muda o mundo.\n"
             f"Comente qual história alternativa você quer ver no próximo vídeo!\n\n"
-            f"Conteúdo especulativo e educativo: os fatos citados são históricos, as hipóteses são imaginação.\n\n{HASHTAGS}")
+            f"Conteúdo especulativo e educativo: os fatos citados são históricos, as hipóteses são imaginação.{cred}\n\n{HASHTAGS}")
 
 
 def _enviar_youtube(video: Path, c: dict) -> str:
@@ -224,11 +232,15 @@ def main() -> int:
         coerencia.exigir(c)          # mesmo com --id: nunca renderiza roteiro incoerente
         print(f"[publish] {c['id']} | estilo={estilo}", flush=True)
         try:
-            _renderizar(c, saida, estilo)
+            r = _renderizar(c, saida, estilo)
         except Exception as exc:
             print(f"[publish] render falhou: {exc!r}")
             erros += 1
             continue
+        try:
+            c["_creditos_musica"] = [f[2] for f in (r or {}).get("faixas") or [] if isinstance(f, tuple) and len(f) > 2 and f[2]]
+        except Exception:
+            pass
         ultimo_estilo = estilo
         if a.dry_run:
             print(f"[publish] dry-run: {saida}")

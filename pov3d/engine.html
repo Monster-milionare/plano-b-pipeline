@@ -352,6 +352,7 @@ const PROTO_ROT = (dx, dz) => Math.atan2(dx, dz);
 </script>
 <script src="ambientes.js"></script>
 <script src="ambiente_vapor.js"></script>
+<script src="ambiente_gavea.js"></script>
 <script src="ambiente_berlim.js"></script>
 <script src="polir.js"></script>
 <script>
@@ -447,4 +448,6 @@ window.frame = function (t, amp, fmt) {
   return fmt === 'png' ? renderer.domElement.toDataURL('image/png') : renderer.domElement.toDataURL('image/jpeg', 0.93);
 };
 window.ambientes = () => Object.fromEntries(Object.entries(amb).map(([k, v]) => [k, Object.keys(v.cams)]));
-</script></body></html>
+</script>
+<script src="diretor3d.js"></script>
+</body></html>

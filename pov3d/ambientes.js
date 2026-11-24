@@ -172,8 +172,9 @@ window.setElenco = function (spec) {
     const a = amb[k]; if (!a.slots) continue;
     for (const c of a.chars) a.g.remove(c); a.chars.length = 0;
     const f = (spec.amb && spec.amb[k]) || spec.f || [];
-    if (spec.prot) { const c = personagem('prot', Object.assign(papel(spec.prot), {protagonista: true})); c.position.set(a.P[0], 0, a.P[1]); c.rotation.y = a.Pry; a.g.add(c); a.chars.push(c); }
-    if (f.length) a.slots.forEach((q, i) => { const c = personagem('f' + i, papel(f[i % f.length])); c.position.set(q[0], 0, q[1]); c.rotation.y = Math.atan2(a.P[0] - q[0], a.P[1] - q[1]); a.g.add(c); a.chars.push(c); });
+    const pr = (spec.protAmb && spec.protAmb[k]) || spec.prot, y0 = a.chaoY || 0;
+    if (pr) { const c = personagem('prot', Object.assign(papel(pr), {protagonista: true})); c.position.set(a.P[0], y0, a.P[1]); c.rotation.y = a.Pry; c.userData.base = y0; a.g.add(c); a.chars.push(c); }
+    if (f.length) a.slots.forEach((q, i) => { if (i >= f.length && spec.exato) return; const c = personagem('f' + i, papel(f[i % f.length])); c.position.set(q[0], y0, q[1]); c.rotation.y = q[2] !== undefined ? q[2] : Math.atan2(a.P[0] - q[0], a.P[1] - q[1]); c.userData.base = y0; a.g.add(c); a.chars.push(c); });
   }
 };
 
