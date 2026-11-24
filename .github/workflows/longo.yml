@@ -35,7 +35,7 @@ jobs:
           python-version: "3.11"
           cache: pip
       - name: Garantir ffmpeg
-        run: which ffmpeg >/dev/null 2>&1 || (sudo apt-get update -y -qq && sudo apt-get install -y -qq ffmpeg)
+        run: for i in 1 2 3 4; do which ffmpeg >/dev/null 2>&1 && break; sudo apt-get update -y -qq; sudo apt-get install -y -qq ffmpeg && break; sleep 15; done; which ffmpeg
         timeout-minutes: 6
       - run: pip install -r requirements.txt
       - name: Voz, musica e plano de cameras
@@ -63,6 +63,7 @@ jobs:
           path: |
             out/_longo_${{ github.event.inputs.id }}/voz.wav
             out/_longo_${{ github.event.inputs.id }}/musica.wav
+            out/_longo_${{ github.event.inputs.id }}/sfx.wav
           retention-days: 2
 
   trechos:
@@ -80,7 +81,7 @@ jobs:
           python-version: "3.11"
           cache: pip
       - name: Garantir ffmpeg
-        run: which ffmpeg >/dev/null 2>&1 || (sudo apt-get update -y -qq && sudo apt-get install -y -qq ffmpeg)
+        run: for i in 1 2 3 4; do which ffmpeg >/dev/null 2>&1 && break; sudo apt-get update -y -qq; sudo apt-get install -y -qq ffmpeg && break; sleep 15; done; which ffmpeg
         timeout-minutes: 6
       - run: pip install -r requirements.txt
       - name: Motor 3D (Chromium headless + three.js)
@@ -110,7 +111,7 @@ jobs:
           python-version: "3.11"
           cache: pip
       - name: Garantir ffmpeg
-        run: which ffmpeg >/dev/null 2>&1 || (sudo apt-get update -y -qq && sudo apt-get install -y -qq ffmpeg)
+        run: for i in 1 2 3 4; do which ffmpeg >/dev/null 2>&1 && break; sudo apt-get update -y -qq; sudo apt-get install -y -qq ffmpeg && break; sleep 15; done; which ffmpeg
         timeout-minutes: 6
       - run: pip install -r requirements.txt
       - uses: actions/download-artifact@v4
