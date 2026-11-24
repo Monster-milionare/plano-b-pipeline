@@ -57,6 +57,9 @@
      "cam": "f0",
      "mov": "chicote"
     }
+   ],
+   "presentes": [
+    "f0"
    ]
   },
   {
@@ -228,5 +231,7 @@
     }
    ]
   }
- ]
+ ],
+ "desativado": true,
+ "motivo_desativado": "repete o tema do 33-escolha-titanic (pedido do Andre em 24/11/2026); reativar = apagar este campo"
 }

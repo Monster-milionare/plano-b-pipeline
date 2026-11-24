@@ -180,6 +180,23 @@ window.setQuadro = function (linhas) {
   g.fillStyle = '#9ff0ff'; g.font = 'bold 40px monospace'; linhas.slice(0, 5).forEach((t, i) => g.fillText(t, 26, 62 + i * 56));
   quadroTex.needsUpdate = true;
 };
+// figurante repetido NUNCA e clone: a 2a, 3a copia do mesmo papel muda pele, cabelo, barba, roupa e altura
+const _PELES3 = [0xf2c9a0, 0xd9a77c, 0xb57e55, 0x8d5733, 0xe8b890, 0x6e4227];
+const _CABELOS3 = [0x2a1a10, 0x6a4a2a, 0xc9a050, 0x111111, 0x8a3a1a, 0x9a9a9a];
+function _tom(cor, k) {      // gira levemente a cor da roupa
+  const c = new THREE.Color(cor), h = {}; c.getHSL(h); c.setHSL((h.h + 0.11 * k) % 1, Math.min(1, h.s * (0.8 + 0.15 * k)), Math.max(0.12, Math.min(0.85, h.l * (k % 2 ? 0.8 : 1.15)))); return c.getHex();
+}
+function variar3d(o, k) {
+  if (!k || o.dino) return o;
+  o = Object.assign({}, o);
+  o.pele = _PELES3[(_PELES3.indexOf(o.pele) + 1 + k * 2) % _PELES3.length];
+  if (o.cabelo !== undefined) o.cabelo = _CABELOS3[(k * 2 + 1) % _CABELOS3.length];
+  if (o.barba !== undefined || k % 2) o.barba = k % 2 ? (o.cabelo !== undefined ? o.cabelo : _CABELOS3[k % _CABELOS3.length]) : undefined;
+  if (o.roupa !== undefined) o.roupa = _tom(o.roupa, k);
+  o.escala = (o.escala || 1) * (k % 2 ? 0.93 : 1.07);
+  return o;
+}
+window.variar3d = variar3d;
 window.setElenco = function (spec) {
   if (spec.quadro) window.setQuadro(spec.quadro);
   for (const k in amb) {
@@ -188,7 +205,9 @@ window.setElenco = function (spec) {
     const f = (spec.amb && spec.amb[k]) || spec.f || [];
     const pr = (spec.protAmb && spec.protAmb[k]) || spec.prot, y0 = a.chaoY || 0;
     if (pr) { const c = personagem('prot', Object.assign(papel(pr), {protagonista: true})); c.position.set(a.P[0], y0, a.P[1]); c.rotation.y = a.Pry; c.userData.base = y0; a.g.add(c); a.chars.push(c); }
-    if (f.length) a.slots.forEach((q, i) => { if (i >= f.length && spec.exato) return; const c = personagem('f' + i, papel(f[i % f.length])); c.position.set(q[0], y0, q[1]); c.rotation.y = q[2] !== undefined ? q[2] : Math.atan2(a.P[0] - q[0], a.P[1] - q[1]); c.userData.base = y0; a.g.add(c); a.chars.push(c); });
+    const vistos = {};
+    if (f.length) a.slots.forEach((q, i) => { if (i >= f.length && spec.exato) return; const nome = f[i % f.length]; vistos[nome] = (vistos[nome] || 0) + 1;
+      const c = personagem('f' + i, variar3d(papel(nome), vistos[nome] - 1)); c.position.set(q[0], y0, q[1]); c.rotation.y = q[2] !== undefined ? q[2] : Math.atan2(a.P[0] - q[0], a.P[1] - q[1]); c.userData.base = y0; a.g.add(c); a.chars.push(c); });
   }
 };
 

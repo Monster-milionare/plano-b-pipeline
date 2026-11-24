@@ -98,6 +98,11 @@ function camDe(i, t) {
   } else if (mov === 'zoom') fov *= lerp(1.12, 0.92, ease(u));
   else if (mov === 'recua') fov *= lerp(0.82, 1.08, ease(u));
   else if (mov === 'corte') fov *= lerp(1.0, 0.96, u);
+  else if (mov === 'caminha') {   // voce anda (1a pessoa): a camera avanca na direcao do alvo, com o balanco do passo
+    const d = look.clone().sub(pos); d.y = 0; const dist = d.length(); d.normalize();
+    pos = pos.clone().add(d.multiplyScalar(Math.min(3.2, dist * 0.55) * ease(u))).add(_v(0, Math.abs(Math.sin(t * 7.5)) * 0.06 - 0.03, 0));
+    look = look.clone().add(_v(Math.sin(t * 3.75) * 0.08, 0, 0));
+  }
   return {pos, look, fov, tremor: (mov === 'tremor' || s.tremor) ? (s.tremor || 1) * 0.06 * Math.max(0.2, 1 - u) : (s.pov ? 0.006 : 0.01)};
 }
 
@@ -168,6 +173,16 @@ window.frame = function (t, amp, fmt) {
     const d = c.userData;
     if (d.p0 === undefined) d.p0 = c.position.clone(), d.ry0 = c.rotation.y;
     c.position.copy(d.p0); c.rotation.y = d.ry0;
+    // entrada progressiva (TL.presenca): ausente = invisivel; quem chega vem andando de lado
+    d._ausente = false; d._chegada = 1;
+    if (!d.prot && TL.presenca) {
+      const it = (TL.presenca[d.id] || []).find(i => i[2] === s.amb && i[0] <= t && t < i[1]);
+      if (!it) d._ausente = true;
+      else if (it[3]) {
+        d._chegada = Math.min(1, Math.max(0, (t - it[0]) / 1.1));
+        if (d._chegada < 1) { const lado = d.p0.x < 0 ? -1 : 1, k = ease(d._chegada); c.position.x += lado * (1 - k) * 4.5; c.rotation.y = lado > 0 ? -Math.PI / 2 : Math.PI / 2; }
+      }
+    }
     for (const ac of acoesDe(d.id, t, d.prot)) {
       if (!['anda', 'corre'].includes(ac.faz)) continue;
       const alvo = pontoLocal(a, ac.para); if (!alvo) continue;
@@ -186,9 +201,10 @@ window.frame = function (t, amp, fmt) {
   const falante = s.falante || '';
   for (const c of a.chars) {
     const d = c.userData, fala = (falante === d.id) || (d.prot && falante === 'prot');
-    c.visible = d.prot ? !(s.pov || TL.pov && !String(s.cam).startsWith('eu-')) : true;
+    c.visible = d.prot ? !(s.pov || TL.pov && !String(s.cam).startsWith('eu-')) : !d._ausente;
     const bob = Math.sin(t * 2.2 + d.fase);
     let y = d.base + (fala ? Math.abs(Math.sin(t * 6 + d.fase)) * 0.03 : 0);
+    if (d._chegada < 1) y += Math.abs(Math.sin(t * 9)) * 0.08;
     c.rotation.z = Math.sin(t * 1.7 + d.fase) * 0.025;
     // olhar padrao: quem fala olha pra camera (voce); os outros olham quem fala
     let alvoOlhar = null;

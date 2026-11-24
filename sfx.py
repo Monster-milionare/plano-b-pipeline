@@ -154,6 +154,19 @@ def passos(rng, dur=1.6):
     return out
 
 
+def porta(rng, dur=1.1):
+    """Maçaneta (clique metalico) + rangido grave da porta abrindo."""
+    n = int(dur * SR)
+    t = np.arange(n) / SR
+    out = np.zeros(n, np.float32)
+    m = int(0.05 * SR)
+    out[:m] += _passa_banda(_ruido(m, rng), 2000, 7000) * _env(m, 0.001, 0.01) * 1.2
+    f = 180 + 60 * np.sin(2 * np.pi * 1.3 * t) + 25 * np.sin(2 * np.pi * 7 * t)
+    range_ = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.clip((t - 0.12) / 0.1, 0, 1) * np.exp(-np.clip(t - 0.12, 0, None) / 0.45)
+    out += (range_ * 0.35 + _passa_banda(_ruido(n, rng), 100, 900) * 0.15 * np.exp(-t / 0.5)).astype(np.float32)
+    return out
+
+
 def agua(rng, dur=1.2):
     n = int(dur * SR)
     t = np.arange(n) / SR
@@ -212,10 +225,10 @@ def tambor(rng, dur=2.4):
 
 EFEITOS = {"whoosh": whoosh, "asas": asas, "impacto": impacto, "susto": susto, "rugido": rugido, "sino": sino,
            "telefone": telefone, "gelo": gelo, "vento": vento, "trovao": trovao, "passos": passos, "agua": agua,
-           "sirene": sirene, "fogo": fogo, "geiger": geiger, "tambor": tambor}
+           "sirene": sirene, "fogo": fogo, "geiger": geiger, "tambor": tambor, "porta": porta}
 VOLUME = {"whoosh": 0.32, "asas": 0.55, "impacto": 0.6, "susto": 0.5, "rugido": 0.55, "sino": 0.5, "telefone": 0.35,
           "gelo": 0.6, "vento": 0.3, "trovao": 0.55, "passos": 0.4, "agua": 0.45,
-          "sirene": 0.3, "fogo": 0.45, "geiger": 0.35, "tambor": 0.55}
+          "sirene": 0.3, "fogo": 0.45, "geiger": 0.35, "tambor": 0.55, "porta": 0.5}
 
 
 def gerar_trilha(cues, total: float, saida: str, seed: int = 7) -> int:

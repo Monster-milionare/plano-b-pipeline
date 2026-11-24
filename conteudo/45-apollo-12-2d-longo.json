@@ -225,7 +225,7 @@
     "f0c",
     "eu-frente"
    ],
-   "fx": "alarme",
+   "fx": "clarao",
    "capitulo": "O raio",
    "ano": "14 nov 1969"
   },
@@ -1731,6 +1731,38 @@
     "f2",
     "ampla"
    ]
+  }
+ ],
+ "pessoas": [
+  {
+   "nome": "Pete Conrad",
+   "papel": "prot",
+   "cargo": "Comandante da Apollo 12",
+   "info": [
+    "1930 - 1999",
+    "3o homem a pisar na Lua"
+   ],
+   "selo": "APOLLO 12"
+  },
+  {
+   "nome": "Alan Bean",
+   "papel": "f0",
+   "cargo": "Piloto do modulo lunar",
+   "info": [
+    "1932 - 2018",
+    "4o homem a pisar na Lua"
+   ],
+   "selo": "APOLLO 12"
+  },
+  {
+   "nome": "Richard Gordon",
+   "papel": "f1",
+   "cargo": "Piloto do modulo de comando",
+   "info": [
+    "1929 - 2017",
+    "Ficou orbitando a Lua sozinho"
+   ],
+   "selo": "APOLLO 12"
   }
  ]
 }

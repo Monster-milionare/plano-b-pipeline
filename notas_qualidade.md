@@ -40,3 +40,18 @@ Regra: os videos publicados sao testes. Nao refazer o que ja saiu; anotar, corri
 - Motor 2D tem cenarios proprios para isso: 'roma' (Forum + Coliseu; hora 'incendio' = ano 64, sem Coliseu) e 'chernobyl'
   (noite/madrugada/dia/evacuacao). O roteirista.py escreve direto em 2D quando o tema bate com esses cenarios (PRESETS_2D).
 - 3D: papeis novos gengis/mongol/mongol2 (perfil 'mongol') e campones/camponesa/medico-peste (perfil 'peste').
+
+## Regra do Andre: HISTORIA CONSTRUIDA (24/11/2026, 2a rodada)
+- O video e um FILME em primeira pessoa: comeca com VOCE sozinho no lugar; cada personagem ENTRA (chega andando)
+  quando fala, quando a camera vai nele ou quando o narrador o cita pelo nome. Nunca o elenco inteiro de cara.
+- Corte para um lugar novo: so aparece quem participa dali (quem mora no lugar ja esta la; ninguem e teletransportado).
+  Figurante generico que nao participa vira fundo do cenario (ex.: controladores em Houston), nunca na abertura.
+- Figurante repetido nunca e clone: a 2a/3a copia do mesmo papel muda pele, cabelo, barba, roupa e altura (2D e 3D).
+- Acao e deslocamento: cena com "acao": "anda" (voce caminha, camera avanca com passos) ou "porta" (abre a porta).
+- Legenda: fim de frase SEMPRE fecha o bloco ("LUA. 14" nunca mais).
+- Efeito de cena (decolagem etc.) anda pelo trecho inteiro, nao reinicia a cada corte (o foguete que subia e voltava).
+  Na decolagem a tripulacao esta DENTRO do foguete: ninguem fica na base.
+- Luz/efeito tem que bater com o texto (coerencia.py camada 7): "luz branca" com alarme vermelho = ERRO.
+- Longo: ficha-dossie (nome, cargo, datas, missao) quando a pessoa real e citada; sem foto de pessoa real.
+- Narracao: personas (voz + tom + ritmo fixos no video) em rodizio; dois videos seguidos nunca tem a mesma.
+- qualidade.py inspeciona a DIRECAO antes do render (programador pula o que tiver erro; supervisor lista tudo).
