@@ -1,0 +1,198 @@
+{
+ "id": "55-peste-negra-fuga",
+ "ordem": 3,
+ "formato": "escolha",
+ "estilo": "noir",
+ "titulo": "Você é camponês e a Peste Negra chegou na sua cidade. A ou B?",
+ "titulo_youtube": "Você é camponês em 1348 e a Peste Negra chegou na cidade. Fugir ou ficar? A ou B",
+ "titulo_curto": "PESTE NEGRA, 1348",
+ "thumb_texto": "A PESTE CHEGOU",
+ "descricao": "A Peste Negra chegou à Europa em 1347, em navios vindos do mar Negro, e nos anos seguintes matou algo entre um terço e metade da população do continente. Muita gente fugiu das cidades para o campo, como conta Boccaccio no Decamerão. Dramatização baseada em fatos históricos. A mais votada vira o próximo vídeo.",
+ "comentario_fixado": "A: fugir da cidade para o campo. B: ficar e cuidar da sua família. Qual a sua escolha?",
+ "tags": [
+  "peste negra",
+  "1348",
+  "idade media",
+  "europa",
+  "voce decide",
+  "historia",
+  "epidemia"
+ ],
+ "votacao": {
+  "A": {
+   "rotulo": "A: fugir para o campo",
+   "palavras": [
+    "a",
+    "fugir",
+    "foge",
+    "campo"
+   ]
+  },
+  "B": {
+   "rotulo": "B: ficar e cuidar da família",
+   "palavras": [
+    "b",
+    "ficar",
+    "fica",
+    "familia",
+    "cuidar"
+   ]
+  }
+ },
+ "perfil": "peste",
+ "elenco": {
+  "prot": "campones",
+  "f": [
+   "camponesa",
+   "campones"
+  ]
+ },
+ "cenas": [
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Ano de 1348. Você é camponês. E uma doença desconhecida está chegando na sua cidade."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cidade",
+   "fala": "Ano de 1348. Você é camponês. E uma doença desconhecida está chegando na sua cidade.",
+   "hora": "dia",
+   "ano": "ANO 1348",
+   "destaques": [
+    "doença"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Ela veio em navios que atracaram na Itália no ano anterior. Hoje já passou por boa parte da Europa."
+    }
+   ],
+   "emocao": "misterioso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cidade",
+   "fala": "Ela veio em navios que atracaram na Itália no ano anterior. Hoje já passou por boa parte da Europa.",
+   "hora": "dia",
+   "destaques": [
+    "navios"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Os vizinhos estão adoecendo, um atrás do outro."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cidade",
+   "fala": "Os vizinhos estão adoecendo, um atrás do outro.",
+   "hora": "dia",
+   "destaques": [
+    "vizinhos"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Ninguém sabe a causa. Ainda não se conhecia a existência de bactérias."
+    }
+   ],
+   "emocao": "misterioso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cidade",
+   "fala": "Ninguém sabe a causa. Ainda não se conhecia a existência de bactérias.",
+   "hora": "dia",
+   "destaques": [
+    "bactérias"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Ela mata tanta gente que, no fim, cerca de um terço dos europeus morre. Alguns historiadores estimam até metade."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cidade",
+   "fala": "Ela mata tanta gente que, no fim, cerca de um terço dos europeus morre. Alguns historiadores estimam até metade.",
+   "hora": "dia",
+   "destaques": [
+    "um terço"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Muitos ricos fogem para o campo. Boccaccio conta uma história assim, no livro Decamerão."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "campo",
+   "fala": "Muitos ricos fogem para o campo. Boccaccio conta uma história assim, no livro Decamerão.",
+   "hora": "dia",
+   "destaques": [
+    "Decamerão"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "camponesa",
+     "texto": "Se ficarmos aqui, a peste vai nos pegar. Vamos embora!"
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cidade",
+   "fala": "Se ficarmos aqui, a peste vai nos pegar. Vamos embora!",
+   "hora": "dia",
+   "destaques": [
+    "embora"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Comenta A pra fugir para o campo, ou B pra ficar e cuidar da sua família. A mais votada vira o próximo vídeo."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "cidade",
+   "fala": "Comenta A pra fugir para o campo, ou B pra ficar e cuidar da sua família. A mais votada vira o próximo vídeo.",
+   "hora": "dia",
+   "destaques": [
+    "A",
+    "B"
+   ]
+  }
+ ]
+}

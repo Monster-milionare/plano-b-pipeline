@@ -1,0 +1,198 @@
+{
+ "id": "56-piramide-quem-construiu",
+ "ordem": 4,
+ "formato": "voce-acorda",
+ "estilo": "epico",
+ "titulo": "Você acorda no Egito, ano 2560 a.C., e hoje a Grande Pirâmide cresce mais um pouco",
+ "titulo_youtube": "Quem construiu a Grande Pirâmide? Você acorda no Egito do faraó Quéops",
+ "titulo_curto": "QUEM FEZ A PIRÂMIDE?",
+ "thumb_texto": "QUEM CONSTRUIU?",
+ "descricao": "Egito, cerca de 2560 a.C. A Grande Pirâmide de Gizé foi feita para o faraó Quéops. Escavações perto das pirâmides mostraram uma vila de operários com padarias e cervejarias, o que indica trabalhadores alimentados pelo Estado e não escravos acorrentados. Dramatização baseada em descobertas arqueológicas. Vermelho para escravos, azul para operários pagos: qual você acha?",
+ "comentario_fixado": "Vermelho: escravos construíram a pirâmide. Azul: foram operários pagos. Qual o seu palpite?",
+ "tags": [
+  "egito",
+  "piramide",
+  "queops",
+  "gize",
+  "faraó",
+  "voce acorda",
+  "historia",
+  "arqueologia"
+ ],
+ "votacao": {
+  "A": {
+   "rotulo": "VERMELHO: escravos",
+   "palavras": [
+    "vermelho",
+    "vermelha",
+    "escravos",
+    "escravo"
+   ]
+  },
+  "B": {
+   "rotulo": "AZUL: operários pagos",
+   "palavras": [
+    "azul",
+    "operarios",
+    "operario",
+    "pagos"
+   ]
+  }
+ },
+ "perfil": "egito",
+ "elenco": {
+  "prot": "egipcio",
+  "f": [
+   "egipcio",
+   "faraoh"
+  ]
+ },
+ "cenas": [
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você acorda no Egito, ano 2560 antes de Cristo. E hoje a Grande Pirâmide vai ganhar mais uma camada."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "deserto",
+   "fala": "Você acorda no Egito, ano 2560 antes de Cristo. E hoje a Grande Pirâmide vai ganhar mais uma camada.",
+   "hora": "manha",
+   "ano": "2560 A.C.",
+   "destaques": [
+    "Grande Pirâmide"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "É a tumba do faraó Quéops. Quando ficou pronta, tinha quase 150 metros de altura."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "deserto",
+   "fala": "É a tumba do faraó Quéops. Quando ficou pronta, tinha quase 150 metros de altura.",
+   "hora": "dia",
+   "destaques": [
+    "150 metros"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "São mais de dois milhões de blocos de pedra. E cada um precisa ser arrastado até o lugar certo."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "deserto",
+   "fala": "São mais de dois milhões de blocos de pedra. E cada um precisa ser arrastado até o lugar certo.",
+   "hora": "dia",
+   "destaques": [
+    "dois milhões"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Eu acordo cedo, como todo mundo da equipe. Hoje a nossa turma puxa os blocos."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "deserto",
+   "fala": "Eu acordo cedo, como todo mundo da equipe. Hoje a nossa turma puxa os blocos.",
+   "hora": "dia",
+   "destaques": [
+    "equipe"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Por muito tempo se achou que escravos faziam tudo isso. Mas as escavações perto de Gizé contaram outra história."
+    }
+   ],
+   "emocao": "misterioso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "deserto",
+   "fala": "Por muito tempo se achou que escravos faziam tudo isso. Mas as escavações perto de Gizé contaram outra história.",
+   "hora": "dia",
+   "destaques": [
+    "escavações"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Acharam uma vila de operários, com padarias, cervejarias e carne todo dia. Essa gente era alimentada pelo Estado."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "deserto",
+   "fala": "Acharam uma vila de operários, com padarias, cervejarias e carne todo dia. Essa gente era alimentada pelo Estado.",
+   "hora": "dia",
+   "destaques": [
+    "vila de operários"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Os próprios túmulos dos trabalhadores ficaram ao lado da pirâmide, uma honra que escravos não teriam."
+    }
+   ],
+   "emocao": "misterioso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "deserto",
+   "fala": "Os próprios túmulos dos trabalhadores ficaram ao lado da pirâmide, uma honra que escravos não teriam.",
+   "hora": "dia",
+   "destaques": [
+    "túmulos"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Comenta VERMELHO se acha que foram escravos, ou AZUL se acha que foram operários pagos."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "deserto",
+   "fala": "Comenta VERMELHO se acha que foram escravos, ou AZUL se acha que foram operários pagos.",
+   "hora": "dia",
+   "destaques": [
+    "VERMELHO",
+    "AZUL"
+   ]
+  }
+ ]
+}

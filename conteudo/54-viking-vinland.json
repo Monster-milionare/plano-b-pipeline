@@ -1,0 +1,199 @@
+{
+ "id": "54-viking-vinland",
+ "ordem": 2,
+ "formato": "escolha",
+ "estilo": "epico",
+ "titulo": "Você é viking e avista uma terra nova do outro lado do mar. A ou B?",
+ "titulo_youtube": "Você é viking e avista a América 500 anos antes de Colombo. A ou B?",
+ "titulo_curto": "VIKINGS NA AMÉRICA",
+ "thumb_texto": "TERRA À VISTA!",
+ "descricao": "Por volta do ano 1000, vikings vindos da Groenlândia chegaram à costa da América do Norte, que as sagas chamam de Vinland. Em L'Anse aux Meadows, no Canadá, arqueólogos encontraram o único sítio viking confirmado na América, quase 500 anos antes de Colombo. Dramatização baseada nas sagas nórdicas e em descobertas arqueológicas. A mais votada vira o próximo vídeo.",
+ "comentario_fixado": "A: ficar e construir casas na terra nova. B: voltar pra Groenlândia com a notícia. Qual a sua escolha?",
+ "tags": [
+  "vikings",
+  "vinland",
+  "leif erikson",
+  "america",
+  "ano 1000",
+  "voce decide",
+  "historia",
+  "navegacao"
+ ],
+ "votacao": {
+  "A": {
+   "rotulo": "A: ficar e construir casas",
+   "palavras": [
+    "a",
+    "ficar",
+    "fica",
+    "construir",
+    "casas"
+   ]
+  },
+  "B": {
+   "rotulo": "B: voltar pra Groenlândia",
+   "palavras": [
+    "b",
+    "voltar",
+    "volta",
+    "groenlandia"
+   ]
+  }
+ },
+ "perfil": "viking",
+ "elenco": {
+  "prot": "viking",
+  "f": [
+   "viking",
+   "nativo"
+  ]
+ },
+ "cenas": [
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você é viking, e faz semanas que só existe mar à sua volta."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "conves",
+   "fala": "Você é viking, e faz semanas que só existe mar à sua volta.",
+   "hora": "dia",
+   "ano": "ANO 1000",
+   "destaques": [
+    "viking"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Seu navio saiu da Groenlândia, seguindo a rota que um comerciante contou ter visto, mais a oeste."
+    }
+   ],
+   "emocao": "misterioso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "conves",
+   "fala": "Seu navio saiu da Groenlândia, seguindo a rota que um comerciante contou ter visto, mais a oeste.",
+   "hora": "dia",
+   "destaques": [
+    "Groenlândia"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Terra! Tem terra à frente!"
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "conves",
+   "fala": "Terra! Tem terra à frente!",
+   "hora": "dia",
+   "destaques": [
+    "Terra"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Uma costa coberta de mata, rios cheios de salmão e capim alto. As sagas chamam esse lugar de Vinland."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "terra",
+   "fala": "Uma costa coberta de mata, rios cheios de salmão e capim alto. As sagas chamam esse lugar de Vinland.",
+   "hora": "dia",
+   "destaques": [
+    "Vinland"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Séculos depois, no Canadá, arqueólogos acharam restos de casas e oficinas dos vikings. É a prova de que eles estiveram aqui."
+    }
+   ],
+   "emocao": "misterioso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "terra",
+   "fala": "Séculos depois, no Canadá, arqueólogos acharam restos de casas e oficinas dos vikings. É a prova de que eles estiveram aqui.",
+   "hora": "dia",
+   "destaques": [
+    "prova"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Mas você não está sozinho. Pessoas que moram aqui há milênios observam seu navio da praia."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "terra",
+   "fala": "Mas você não está sozinho. Pessoas que moram aqui há milênios observam seu navio da praia.",
+   "hora": "dia",
+   "destaques": [
+    "observam"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "O inverno vem aí. E a Groenlândia fica muito longe."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "terra",
+   "fala": "O inverno vem aí. E a Groenlândia fica muito longe.",
+   "hora": "dia",
+   "destaques": [
+    "inverno"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Comenta A pra ficar e construir casas, ou B pra voltar pra Groenlândia. A mais votada vira o próximo vídeo."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "terra",
+   "fala": "Comenta A pra ficar e construir casas, ou B pra voltar pra Groenlândia. A mais votada vira o próximo vídeo.",
+   "hora": "dia",
+   "destaques": [
+    "A",
+    "B"
+   ]
+  }
+ ]
+}
