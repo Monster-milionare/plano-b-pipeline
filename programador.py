@@ -21,6 +21,7 @@ import config
 BRT = timezone(timedelta(hours=-3))
 AGENDA = config.STATE_DIR / "agenda.json"
 PUB = config.STATE_DIR / "publicados.json"
+PEDIDOS = config.STATE_DIR / "pedidos.json"   # {"2026-11-24": {"1": "51-chernobyl-bombeiro"}}: o Andre escolhe o video de um slot do dia
 MANHA = (7, 0)                  # o Short do trajeto da manha
 MINUTOS = [0, 10, 5, 15]        # pequenos deslocamentos (evita bater na hora cheia de todo mundo)
 ORDEM_MOTOR = ["2d", "3d", "2d", "2d"]
@@ -82,7 +83,9 @@ def planejar(d: date, gravar: bool = True) -> dict:
     pubs = {x["id"]: x for x in _ler(PUB, [])}
     horas = horas_do_dia(d)
     fila = _fila_valida()
-    usados = {s["id"] for s in ag["shorts"]}
+    pedidos = (_ler(PEDIDOS, {}).get(d.isoformat()) or {})
+    por_id = {c["id"]: c for c in fila}
+    usados = {s["id"] for s in ag["shorts"]} | set(pedidos.values())
     novos = []
     for i, (h, m) in enumerate(horas):
         quando = datetime(d.year, d.month, d.day, h, m, tzinfo=BRT)
@@ -94,7 +97,11 @@ def planejar(d: date, gravar: bool = True) -> dict:
             continue
         quer = ORDEM_MOTOR[i % len(ORDEM_MOTOR)]
         livres = [c for c in fila if c["id"] not in usados and c["id"] not in pubs]
-        escolha = next((c for c in livres if publish._motor(c) == quer), None) or (livres[0] if livres else None)
+        pedido = por_id.get(pedidos.get(str(i)))
+        if pedido and pedido["id"] not in pubs:
+            escolha = pedido               # slot escolhido a mao (state/pedidos.json)
+        else:
+            escolha = next((c for c in livres if publish._motor(c) == quer), None) or (livres[0] if livres else None)
         if not escolha:
             print(f"[programador] sem roteiro para o slot {h:02d}h{m:02d} (fila vazia)")
             continue
