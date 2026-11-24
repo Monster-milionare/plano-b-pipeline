@@ -238,5 +238,13 @@
   "estilo": "noir",
   "formato": "pov",
   "publicado_em": "2026-11-24T22:05:00Z"
+ },
+ {
+  "video_id": "rB399zh21JE",
+  "item_id": "51-chernobyl-bombeiro",
+  "titulo": "Você é bombeiro em Chernobyl na noite da explosão. A ou B?",
+  "estilo": "noir",
+  "formato": "escolha",
+  "publicado_em": "2026-11-24T16:10:00Z"
  }
 ]
