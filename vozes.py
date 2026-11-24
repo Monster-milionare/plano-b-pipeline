@@ -2,8 +2,8 @@
 
 - O narrador muda de video pra video (sorteio estavel pelo id): Macerio, Thalita, Antonio ou Francisca.
 - Cada papel (cabral, exploradora, guia...) recebe UMA voz e UM tom, o mesmo em todas as cenas do video,
-  nunca igual a do narrador. Alem das vozes brasileiras, usa as vozes "Multilingual" da Microsoft (falam
-  portugues com sotaque leve), o que da timbres bem diferentes entre os personagens.
+  diferente da do narrador. SO vozes com sotaque brasileiro (Antonio, Macerio, Francisca, Thalita); a variedade
+  entre personagens vem do tom.
 Se uma voz sumir do catalogo, tts.py cai sozinho para a voz padrao (o video nunca para).
 """
 import hashlib
@@ -18,12 +18,13 @@ NARRADORES = [("pt-BR-MacerioMultilingualNeural", "-1Hz"), ("pt-BR-ThalitaMultil
 NARRADOR = NARRADORES[0]
 NARRADORES_M = [("pt-BR-MacerioMultilingualNeural", "-1Hz"), ("pt-BR-AntonioNeural", "-2Hz"), ("pt-BR-MacerioMultilingualNeural", "-3Hz")]
 NARRADORES_F = [("pt-BR-ThalitaMultilingualNeural", "+0Hz"), ("pt-BR-FranciscaNeural", "+0Hz")]
-MASCULINAS = [("pt-BR-AntonioNeural", "+0Hz"), ("en-US-AndrewMultilingualNeural", "+0Hz"), ("en-US-BrianMultilingualNeural", "+0Hz"),
-              ("fr-FR-RemyMultilingualNeural", "+0Hz"), ("de-DE-FlorianMultilingualNeural", "-2Hz"),
-              ("it-IT-GiuseppeMultilingualNeural", "+0Hz"), ("pt-BR-MacerioMultilingualNeural", "+6Hz"), ("pt-PT-DuarteNeural", "+0Hz")]
-FEMININAS = [("pt-BR-FranciscaNeural", "+0Hz"), ("en-US-AvaMultilingualNeural", "+0Hz"), ("pt-BR-ThalitaMultilingualNeural", "+4Hz"),
-             ("en-US-EmmaMultilingualNeural", "+0Hz"), ("fr-FR-VivienneMultilingualNeural", "+0Hz"), ("de-DE-SeraphinaMultilingualNeural", "+0Hz")]
-PORTUGUESES = {"cabral", "caminha", "marujo", "marujo2", "rei"}       # personagens de Portugal: voz de Portugal
+# SO sotaque brasileiro (pedido do Andre): as vozes "Multilingual" estrangeiras e a de Portugal saiam com sotaque.
+# A variedade entre personagens vem do tom (Hz) de cada um.
+MASCULINAS = [("pt-BR-AntonioNeural", "+0Hz"), ("pt-BR-MacerioMultilingualNeural", "+4Hz"), ("pt-BR-AntonioNeural", "-6Hz"),
+              ("pt-BR-MacerioMultilingualNeural", "-5Hz"), ("pt-BR-AntonioNeural", "+7Hz")]
+FEMININAS = [("pt-BR-FranciscaNeural", "+0Hz"), ("pt-BR-ThalitaMultilingualNeural", "+3Hz"), ("pt-BR-FranciscaNeural", "+6Hz"),
+             ("pt-BR-ThalitaMultilingualNeural", "-4Hz")]
+PORTUGUESES = set()       # todos com sotaque brasileiro
 
 
 def _hz(base: str, extra: int) -> str:
@@ -62,11 +63,13 @@ class Elenco:
         self.nm = self.nf = 0
 
     def _proxima(self, lista, idx):
+        """proxima voz da lista, de preferencia diferente da do narrador (e se for a mesma, com tom bem diferente)."""
         for k in range(len(lista)):
             v = lista[(idx + k) % len(lista)]
             if v[0] != self.narrador[0]:
                 return v, idx + k + 1
-        return lista[idx % len(lista)], idx + 1
+        v = lista[idx % len(lista)]
+        return (v[0], _hz(v[1], 6)), idx + 1
 
     def voz(self, quem: str, cena: dict):
         """-> (voz, tom_Hz) para quem fala nessa cena."""
@@ -74,9 +77,7 @@ class Elenco:
             return self.narrador
         papel = papel_de(quem, cena, self.elenco).replace("-traje", "")     # mesma pessoa = mesma voz, com ou sem traje
         if papel not in self.por_papel:
-            if papel in PORTUGUESES:
-                v = ("pt-PT-DuarteNeural", "+0Hz")
-            elif papel in FEMININOS:
+            if papel in FEMININOS:
                 v, self.nf = self._proxima(self.fem, self.nf)
             else:
                 v, self.nm = self._proxima(self.masc, self.nm)
