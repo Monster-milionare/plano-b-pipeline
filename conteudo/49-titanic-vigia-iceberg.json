@@ -123,7 +123,7 @@
     {
      "quem": "prot",
      "texto": "Ponte! Iceberg, bem à frente!",
-     "cam": "telefone",
+     "cam": "iceberg",
      "mov": "chicote",
      "maos": "telefone",
      "sfx": "telefone",
@@ -133,7 +133,8 @@
       "de": "ice-frente",
       "para": "ice-perto",
       "dur": 6.5
-     }
+     },
+     "zoom": 1.3
     },
     {
      "quem": "radio",
@@ -182,8 +183,8 @@
     {
      "quem": "narrador",
      "texto": "O navio quase escapa. Mas o gelo raspa o lado direito do casco.",
-     "cam": "ext-alto",
-     "mov": "corte",
+     "cam": "iceberg",
+     "mov": "segue",
      "pov": false,
      "tremor": 0.3,
      "evento": {

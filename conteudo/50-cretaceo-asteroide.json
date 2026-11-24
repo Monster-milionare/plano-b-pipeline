@@ -1,0 +1,185 @@
+{
+ "id": "50-cretaceo-asteroide",
+ "ordem": 136,
+ "formato": "escolha",
+ "estilo": "epico",
+ "motor": "2d",
+ "tema": "cretaceo",
+ "titulo": "Você acorda no último dia dos dinossauros. A ou B?",
+ "titulo_youtube": "O último dia dos dinossauros: onde você se esconde? A ou B",
+ "titulo_curto": "O ÚLTIMO DIA",
+ "thumb_texto": "ONDE VOCÊ SE ESCONDE?",
+ "descricao": "Há 66 milhões de anos, uma rocha de uns 10 km caiu onde hoje é o México e acabou com a era dos dinossauros. Os animais que mais sobreviveram viviam na água ou em tocas. Dramatização baseada em hipóteses científicas. A mais votada vira o próximo vídeo.",
+ "comentario_fixado": "A: pular no lago. B: cavar uma toca na terra. Qual a sua escolha?",
+ "tags": [
+  "asteroide",
+  "dinossauros",
+  "extincao",
+  "cretaceo",
+  "chicxulub",
+  "voce decide",
+  "pov"
+ ],
+ "elenco": {
+  "prot": "explorador",
+  "f": [
+   "exploradora",
+   "guia",
+   "bebe-tricera"
+  ]
+ },
+ "perfil": "generico",
+ "cenas": [
+  {
+   "amb": "selva-cretaceo",
+   "hora": "manha",
+   "emocao": "misterioso",
+   "ano": "66 MI DE ANOS",
+   "clima": "misterio",
+   "beats": [
+    {
+     "quem": "narrador",
+     "texto": "Você acorda no último dia dos dinossauros.",
+     "cam": "ampla",
+     "mov": "zoom"
+    },
+    {
+     "quem": "f1",
+     "texto": "Tem uma estrela nova no céu. E ela tá crescendo.",
+     "cam": "f1",
+     "mov": "corte",
+     "acoes": [
+      {
+       "quem": "f1",
+       "faz": "aponta",
+       "para": "ceu"
+      },
+      {
+       "quem": "f0",
+       "faz": "olha",
+       "para": "ceu"
+      },
+      {
+       "quem": "f2",
+       "faz": "olha",
+       "para": "ceu"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "amb": "selva-cretaceo",
+   "hora": "impacto",
+   "emocao": "surpreso",
+   "clima": "tensa",
+   "beats": [
+    {
+     "texto": "",
+     "dur": 2.2,
+     "cam": "ceu",
+     "mov": "chicote",
+     "sfx": "trovao",
+     "acoes": [
+      {
+       "quem": "todos",
+       "faz": "olha",
+       "para": "ceu"
+      }
+     ]
+    },
+    {
+     "quem": "narrador",
+     "texto": "Uma rocha de uns dez quilômetros cai onde hoje é o México.",
+     "cam": "alto",
+     "mov": "recua"
+    },
+    {
+     "texto": "",
+     "dur": 1.6,
+     "cam": "grupo",
+     "mov": "tremor",
+     "tremor": 1.0,
+     "acoes": [
+      {
+       "quem": "todos",
+       "faz": "susto",
+       "para": "ceu",
+       "dur": 1.4
+      }
+     ]
+    },
+    {
+     "quem": "narrador",
+     "texto": "Minutos depois, o chão treme como nunca.",
+     "cam": "chao",
+     "mov": "corte",
+     "tremor": 0.7,
+     "sfx": "impacto",
+     "acoes": [
+      {
+       "quem": "todos",
+       "faz": "abaixa",
+       "para": "chao"
+      }
+     ]
+    },
+    {
+     "quem": "f0",
+     "texto": "O céu tá pegando fogo!",
+     "cam": "f0",
+     "mov": "chicote",
+     "acoes": [
+      {
+       "quem": "f0",
+       "faz": "susto",
+       "para": "ceu",
+       "dur": 1.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "amb": "selva-cretaceo",
+   "hora": "impacto",
+   "emocao": "preocupado",
+   "clima": "tensa",
+   "beats": [
+    {
+     "quem": "narrador",
+     "texto": "Os bichos que mais sobreviveram estavam na água ou embaixo da terra.",
+     "cam": "lago",
+     "mov": "pan"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Comenta A: pular no lago.",
+     "cam": "lago",
+     "mov": "chicote",
+     "pov": true,
+     "maos": "aponta"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Ou B: cavar uma toca na terra.",
+     "cam": "trilha",
+     "mov": "chicote"
+    },
+    {
+     "quem": "narrador",
+     "texto": "A mais votada vira o próximo vídeo.",
+     "cam": "grupo",
+     "mov": "zoom",
+     "acoes": [
+      {
+       "quem": "todos",
+       "faz": "olha",
+       "para": "camera"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

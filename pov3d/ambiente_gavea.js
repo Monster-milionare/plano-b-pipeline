@@ -8,8 +8,8 @@ Object.assign(PAPEIS, {
   oficial: {roupa: 0x10141f, pele: 0xf0c8a0, chapeu: 'bone', corChapeu: 0x10141f, barba: 0x8a7a6a, cinto: 0xc9a14a, botoes: 0xe8c14a, gola: true},
 });
 (function () {
-  const a = novoAmb('gavea', {hemiCeu: 0x7c90d8, hemiChao: 0x1a2030, hemiInt: 1.55, pontoCor: 0xc8d4ff, pontoInt: 1.6, pontoDist: 7, pontoPos: [-0.2, 14.2, -29.6],
-    dirCor: 0xa8bcff, dirInt: 1.15, dirPos: [-14, 34, -40], fundo: 0x0a1226, nevoa: [0x101c3c, 70, 240], ceu: [0x02040c, 0x0a1430, 0x22325e], semEstrelas: false});
+  const a = novoAmb('gavea', {hemiCeu: 0x8ea2e8, hemiChao: 0x26304a, hemiInt: 2.3, pontoCor: 0xc8d4ff, pontoInt: 1.6, pontoDist: 7, pontoPos: [-0.2, 14.2, -29.6],
+    dirCor: 0xb8c8ff, dirInt: 1.6, dirPos: [-14, 34, -40], fundo: 0x0a1226, nevoa: [0x16244a, 80, 250], ceu: [0x03060f, 0x0e1a3c, 0x2c3e70], semEstrelas: false});
   a.g.position.x = 4800;
   const aco = M(0x16181e), branco = M(0xece8dc), deck = M(0x9a7a52), ferro = M(0x2a2e36), bege = M(0xc99a3e), madeira = M(0x6a4526);
   const NEST_Y = 11, MAST_Z = -30;
@@ -77,14 +77,14 @@ Object.assign(PAPEIS, {
   parede.castShadow = true;
   for (const y of [0.05, 1.18]) { const r = mesh(new THREE.TorusGeometry(1.5, 0.05, 6, 32), M(0x14161c), 0, y, 0, cesto); r.rotation.x = Math.PI / 2; }
   // sino de bronze num suporte na frente do cesto, com a cordinha
-  const sinoG = new THREE.Group(); sinoG.position.set(0.35, 2.15, -1.3); cesto.add(sinoG);
+  const sinoG = new THREE.Group(); sinoG.position.set(-0.45, 2.95, -1.3); cesto.add(sinoG);
   mesh(new THREE.BoxGeometry(0.06, 0.06, 0.7), ferro, 0, 0.2, 0.32, sinoG).rotation.x = 0.0;
   mesh(new THREE.CylinderGeometry(0.03, 0.03, 0.85, 5), ferro, 0, -0.2, 0.68, sinoG);
   const sinoCorpo = new THREE.Group(); sinoCorpo.position.set(0, 0.2, 0); sinoG.add(sinoCorpo);
   { const perfil = [[0.0, 0.02], [0.08, 0.02], [0.1, -0.02], [0.11, -0.1], [0.14, -0.22], [0.2, -0.3], [0.25, -0.34], [0.24, -0.36], [0.0, -0.36]].map(([x, y]) => new THREE.Vector2(x, y));
     mesh(new THREE.LatheGeometry(perfil, 20), M(0xd4a23a, {metalness: 0.65, roughness: 0.3, emissive: 0x2a1a00, side: THREE.DoubleSide}), 0, 0, 0, sinoCorpo); }
   mesh(new THREE.TorusGeometry(0.235, 0.03, 6, 16), M(0xb8852a, {metalness: 0.6}), 0, -0.34, 0, sinoCorpo).rotation.x = Math.PI / 2;
-  const corda = mesh(new THREE.CylinderGeometry(0.015, 0.015, 0.9, 4), M(0xd8c8a0), 0, -0.75, 0, sinoCorpo);
+  const corda = mesh(new THREE.CylinderGeometry(0.015, 0.015, 0.55, 4), M(0x8a7a5a), 0, -0.6, 0, sinoCorpo);
   a.sino = {g: sinoCorpo, corda};
   // telefone da ponte de comando (caixa de madeira com o fone pendurado)
   const tel = new THREE.Group(); tel.position.set(-1.38, 1.3, 0.15); tel.rotation.y = Math.PI / 2; cesto.add(tel);
@@ -107,14 +107,16 @@ Object.assign(PAPEIS, {
   a.anim.push(t => { for (const o of fum) { const k = (t * 0.12 + o.f) % 1; o.b.position.set(-k * 2, 17 + k * 7, 16 + k * 10); o.b.scale.setScalar(0.8 + k * 2.6); o.b.material.opacity = 0.35 * (1 - k); } });
 
   // ---- elenco: voce (Frederick Fleet) e o outro vigia (Reginald Lee), em pe dentro do cesto
+  { const f = new THREE.PointLight(0xc8d6ff, 3.2, 6, 1.5); f.position.set(0.2, NEST_Y + 2.6, MAST_Z - 2.2); a.g.add(f); }
   a.chaoY = NEST_Y + 0.08;
   a.P = [-0.75, MAST_Z - 0.35]; a.Pry = Math.PI;
-  a.slots = [[0.85, MAST_Z - 0.75, Math.PI + 0.35]];
+  a.slots = [[0.8, MAST_Z - 1.0, Math.PI + 0.35]];
+  a.camExterna = [-16, 26, -6];
   a.pov = {pos: [-0.75, NEST_Y + 1.95, MAST_Z - 0.35]};
   const P = (x, y, z) => ({pos: [x, y, z]});
   a.pontos = {
     'proa': P(0, 0.5, -70), 'mar': P(0, -9, -150), 'horizonte': P(0, -6, -300), 'frente': P(0, -4, -200),
-    'ceu': P(-10, 60, -140), 'estrelas': P(30, 90, -100), 'sino': P(0.35, NEST_Y + 2.0, MAST_Z - 1.3), 'telefone': P(-1.38, NEST_Y + 1.3, MAST_Z + 0.15),
+    'ceu': P(-10, 60, -140), 'estrelas': P(30, 90, -100), 'sino': P(-0.45, NEST_Y + 2.8, MAST_Z - 1.3), 'telefone': P(-1.38, NEST_Y + 1.3, MAST_Z + 0.15),
     'ponte': P(0, 3.4, 2), 'chamine': P(0, 12, 16), 'baixo': P(0, 0, -42), 'lado': P(14, -6, -40),
     'ice-longe': P(4, -9, -235), 'ice-frente': P(3.5, -9, -140), 'ice-perto': P(6.5, -9, -92), 'ice-lado': P(11, -9, -42), 'ice-passou': P(12, -9, 25),
     // planos de fora (camera no ar, olhando o navio e o iceberg)

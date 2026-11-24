@@ -39,7 +39,7 @@ function idsDe(a) {
   for (const c of a.chars) m[c.userData.id] = c;
   return m;
 }
-function cabecaW(c) { const p = new THREE.Vector3(); c.userData.cab.getWorldPosition(p); return p; }
+function cabecaW(c) { const p = new THREE.Vector3(); c.updateMatrixWorld(true); c.userData.cab.getWorldPosition(p); return p; }
 function olho(a) {
   if (a.pov) return mundo(a, a.pov.pos);
   const P = a.P || [0, 2]; return mundo(a, [P[0], (a.chaoY || 0) + 1.8, P[1]]);
@@ -71,8 +71,9 @@ function camDe(i, t) {
   }
   const P = a.pontos || {}, ids = idsDe(a);
   if (s.pov) { pos = olho(a); look = L; fov = 62;
-    if (ids[s.cam]) { const d = L.clone().sub(pos); d.y = 0; d.normalize(); pos = pos.clone().sub(d.multiplyScalar(1.0)).add(_v(0, 0.05, 0)); look = L.clone().add(_v(0, -0.32, 0)); fov = 64; } }
+    if (ids[s.cam]) { const d = L.clone().sub(pos); d.y = 0; d.normalize(); pos = pos.clone().sub(d.multiplyScalar(0.4)).add(_v(0, 0.08, 0)); look = L.clone().add(_v(0, -0.3, 0)); fov = 66; } }
   else if (P[s.cam] && P[s.cam].cam) { pos = mundo(a, P[s.cam].cam); look = L; fov = 48; }
+  else if (ENTS3D[s.cam] && a.camExterna) { pos = mundo(a, a.camExterna); look = L.clone().add(_v(0, -3, 0)); fov = 46; }
   else if (ids[s.cam]) {
     const c = ids[s.cam], ry = c.rotation.y, f = _v(Math.sin(ry), 0, Math.cos(ry)), side = _v(f.z, 0, -f.x);
     pos = L.clone().add(f.multiplyScalar(2.3)).add(side.multiplyScalar(0.45)).add(_v(0, 0.12, 0)); look = L.clone(); fov = 46;
@@ -209,7 +210,7 @@ window.frame = function (t, amp, fmt) {
     }
     if (!acoesDe(d.id, t, d.prot).some(x => x.faz === 'abaixa' && t < x.t1) && c.userData.esc0) c.scale.y = c.userData.esc0;
     c.position.y = y;
-    const abre = fala ? Math.min(1, amp * 1.25) : 0.0;
+    const abre = fala ? Math.min(0.7, amp * 0.9) : 0.0;
     d.boca.scale.set(1.2 - abre * 0.35, 0.2 + abre * 1.0, 0.5);
     const piscar = (Math.sin(t * 1.3 + d.fase * 3) > 0.985) ? 0.1 : 1;
     for (const e of d.olhos) e.scale.y = piscar;
@@ -227,11 +228,16 @@ window.frame = function (t, amp, fmt) {
     corMaos(TL.maosCor || null);
     maosG.position.copy(cam.position); maosG.quaternion.copy(cam.quaternion);
     const bob = Math.sin(t * 3.3) * 0.012;
-    mE.position.set(pose.e[0], pose.e[1] + bob, pose.e[2]); mE.rotation.set(0, pose.e[3], 0);
-    mD.position.set(pose.d[0], pose.d[1] + bob, pose.d[2]); mD.rotation.set(0, pose.d[3], 0);
+    // mantem as maos dentro do quadro vertical (o campo horizontal do 9:16 e estreito)
+    const kv = Math.tan(cam.fov * Math.PI / 360), kh = kv * cam.aspect;
+    const caber = q => { const z = Math.abs(q[2]); return [Math.max(-0.78 * kh * z, Math.min(0.78 * kh * z, q[0])), Math.max(-0.92 * kv * z, q[1]), q[2], q[3]]; };
+    const pe = caber(pose.e), pd = caber(pose.d);
+    mE.scale.setScalar(0.78); mD.scale.setScalar(0.78);
+    mE.position.set(pe[0], pe[1] + bob, pe[2] - 0.08); mE.rotation.set(0, pe[3], 0);
+    mD.position.set(pd[0], pd[1] + bob, pd[2] - 0.08); mD.rotation.set(0, pd[3], 0);
     for (const l of [-1, 1]) luvas[l].dedos.forEach((dd, i) => { dd.rotation.x = -pose.curl * (0.85 + i * 0.05) + Math.sin(t * 2 + i) * 0.03; });
     for (const p of [propLuneta, propLanterna, propBussola, propFone]) p.visible = false;
-    if (pose.prop) { const p = pose.prop[0]; p.visible = true; p.position.set(pose.prop[1], pose.prop[2] + bob, pose.prop[3]); p.rotation.set(0.2, 0, 0.25); }
+    if (pose.prop) { const p = pose.prop[0]; p.visible = true; const q = caber([pose.prop[1], pose.prop[2], pose.prop[3], 0]); p.position.set(q[0] + 0.03, q[1] + 0.08 + bob, q[2]); p.rotation.set(0.2, 0, 0.25); }
   }
   window.posRender(t);
   return fmt === 'png' ? renderer.domElement.toDataURL('image/png') : renderer.domElement.toDataURL('image/jpeg', 0.93);
