@@ -36,7 +36,49 @@ CENAS: 7 a 9 cenas. Cada cena: "fala" (1 a 2 frases, o texto completo da cena), 
 - Se o formato for "futuro": o espectador acorda no ano indicado (ex.: 2100) no meio da sociedade; mostre COMO e a vida (trabalho, comida, moradia, governo, tecnologia), com consequencias surpreendentes e coerentes com tendencias reais de hoje. Deixe claro que e uma projecao ("segundo projecoes", "imagine"), nunca afirme o futuro como fato. Termine com voto A ou B sobre o que fazer.
 - Se o formato for "pov" ou "pov3d": narre em PRIMEIRA PESSOA, como se o espectador fosse o personagem, sempre com perigo ou decisao iminente.
 - Inclua "thumb_texto" (gancho de 2 a 4 palavras em MAIUSCULAS que gere curiosidade), "titulo_curto" (ate 24 caracteres, MAIUSCULAS), "titulo_youtube" (ate 62 caracteres, com lacuna de curiosidade e um nome ou numero concreto, sem clickbait falso) e "comentario_fixado" (1 frase que pergunta a opiniao e repete a votacao).
-Responda SOMENTE com JSON valido: {{"descricao": "...", "tags": ["..."], "thumb_texto": "...", "titulo_curto": "...", "titulo_youtube": "...", "comentario_fixado": "...", "cenas": [ ... ]}}"""
+TEMA QUENTE (regra do canal): o assunto e escolhido para gerar CLIQUE e debate (desastres, imperios, pestes, guerras,
+ditadores, decisoes impossiveis). Pese a mao no drama e na decisao, mas SEMPRE com fato real e sem glorificar violencia.
+Temas sensiveis (YouTube desmonetiza apologia):
+- Segunda Guerra/Alemanha de 1933-1945: NUNCA escreva as palavras "nazista", "nazismo", "Hitler" nem "suastica" e nunca descreva
+  simbolos do regime. Diga "Terceiro Reich", "o regime", "o partido", "o ditador de bigodinho". O ponto de vista e de gente comum
+  tentando sobreviver ou fugir do regime; humor so as custas do ditador e do regime, NUNCA das vitimas; sem piada com perseguicao,
+  campos ou mortes.
+- Desastres e pestes: respeito as vitimas, nada de piada com mortos; numeros so se forem reais.
+{bloco_2d}
+Responda SOMENTE com JSON valido: {{"descricao": "...", "tags": ["..."], "thumb_texto": "...", "titulo_curto": "...", "titulo_youtube": "...", "comentario_fixado": "...", {campo_elenco}"cenas": [ ... ]}}"""
+
+# Temas que tem cenario no motor 2D ilustrado (o motor principal: 3 de cada 4 Shorts do dia).
+# Se o titulo bater com "rx", o roteiro e escrito para esse cenario 2D (amb fixo, hora da lista, elenco do menu).
+PRESETS_2D = {
+    "roma": dict(rx=r"\broma\b|romano|marco aurelio|comodo|trajano|adriano|gladiador|coliseu|legiao|legionario|nero",
+                 horas=["manha", "dia", "tarde", "entardecer", "noite", "incendio"],
+                 nota="Forum Romano no seculo II com o Coliseu ao fundo (o Coliseu so ficou pronto em 80 d.C.: historia de antes disso usa SO a hora 'incendio', que mostra Roma em chamas no ano 64, sem o Coliseu)",
+                 papeis=["marco-aurelio", "comodo", "nero", "galeno", "senador", "legionario", "centuriao", "cidadao-romano", "cidada-romana", "escravo"]),
+    "chernobyl": dict(rx=r"chernobyl|tchernobyl|pripyat|reator nuclear|usina nuclear|radiacao",
+                      horas=["noite", "madrugada", "dia", "evacuacao"],
+                      nota="Usina de Chernobyl em 1986: bloco 4 destruido, chamine listrada, Pripyat ao fundo. Hora 'evacuacao' = 27/04 com os onibus.",
+                      papeis=["bombeiro", "bombeiro2", "operador", "engenheiro", "liquidador", "morador", "moradora", "oficial-sovietico"]),
+    "selva-cretaceo": dict(rx=r"dinossaur|cretaceo|t-?rex|pterossaur|jurassic|asteroide",
+                           horas=["manha", "dia", "tarde", "entardecer", "impacto", "noite"],
+                           nota="Selva do Cretaceo com vulcao, lago e dinossauros. Hora 'impacto' = o dia do asteroide.",
+                           papeis=["explorador", "exploradora", "guia", "bebe-tricera"]),
+}
+
+
+def preset_2d(titulo: str):
+    t = unicodedata.normalize("NFKD", titulo).encode("ascii", "ignore").decode().lower()
+    for amb, p in PRESETS_2D.items():
+        if re.search(p["rx"], t):
+            return amb, p
+    return None, None
+
+
+def _bloco_2d(amb, p) -> str:
+    if not amb:
+        return ""
+    return (f"\nCENARIO 2D FIXO: todas as cenas acontecem em '{amb}' ({p['nota']}). Nao use o campo 'cenario'. Cada cena TEM que ter "
+            f"'hora' de uma destas: {', '.join(p['horas'])}. ELENCO: escolha 'prot' (quem o espectador e) e de 1 a 3 figurantes 'f' "
+            f"(f0, f1, f2 nas falas, NESSA ordem) SO desta lista: {', '.join(p['papeis'])}. Quem nao estava la nao aparece.\n")
 
 CRITICO = """Voce e um editor severo de Shorts virais. Avalie este roteiro (JSON) para o tema "{titulo}".
 De nota de 0 a 10 para: gancho (a primeira cena faria alguem parar de deslizar em 2 segundos?), tensao crescente, final em loop com voto, continuidade (hora do dia, lugar, epoca e personagens batem com as falas? dialogos naturais e bem divididos entre narrador e personagens?) e risco factual (0 = nada inventado, 10 = muito inventado).
@@ -100,6 +142,24 @@ def _validar(d: dict):
     return None
 
 
+def _validar_2d(d: dict, amb: str, p: dict):
+    el = d.get("elenco") or {}
+    papeis = [el.get("prot")] + list(el.get("f") or [])
+    if not el.get("prot") or any(x not in p["papeis"] for x in papeis) or not 1 <= len(el.get("f") or []) <= 3:
+        return f"elenco 2D invalido: {el}"
+    n_f = len(el["f"])
+    for c in d.get("cenas", []):
+        if c.get("hora") not in p["horas"]:
+            c["hora"] = p["horas"][0] if not c.get("hora") else c["hora"]
+            if c["hora"] not in p["horas"]:
+                return f"hora '{c.get('hora')}' nao existe em {amb}"
+        for x in c.get("falas") or []:
+            q = x.get("quem", "narrador")
+            if q.startswith("f") and q[1:].isdigit() and int(q[1:]) >= n_f:
+                return f"fala de {q} mas o elenco so tem {n_f} figurantes"
+    return None
+
+
 def _groq(prompt: str, temp: float = 0.8):
     r = requests.post("https://api.groq.com/openai/v1/chat/completions", timeout=180,
                       headers={"Authorization": f"Bearer {config.GROQ_API_KEY}"},
@@ -116,7 +176,12 @@ def gerar(fmt: str, titulo: str):
     melhor = None
     for tentativa in range(4):
         try:
-            d = _groq(PROMPT.format(formato=fmt, titulo=titulo))
+            amb2d, p2d = preset_2d(titulo)
+            d = _groq(PROMPT.format(formato=fmt, titulo=titulo, bloco_2d=_bloco_2d(amb2d, p2d),
+                                    campo_elenco='"elenco": {"prot": "...", "f": ["...", "..."]}, ' if amb2d else ""))
+            if amb2d and _validar_2d(d, amb2d, p2d):
+                print(f"[roteirista] tentativa {tentativa + 1}: {_validar_2d(d, amb2d, p2d)}")
+                continue
             if _validar(d):
                 print(f"[roteirista] tentativa {tentativa + 1}: {_validar(d)}")
                 continue
@@ -125,7 +190,9 @@ def gerar(fmt: str, titulo: str):
                 n = av.get("notas", {})
                 print(f"[roteirista] notas do critico: {n}")
                 r2 = av.get("roteiro")
-                if isinstance(r2, dict) and not _validar(r2):
+                if isinstance(r2, dict) and amb2d and not r2.get("elenco"):
+                    r2["elenco"] = d.get("elenco")
+                if isinstance(r2, dict) and not _validar(r2) and not (amb2d and _validar_2d(r2, amb2d, p2d)):
                     d = r2
             except Exception as exc:
                 n = {}
@@ -171,6 +238,13 @@ def _um():
          "descricao": d.get("descricao", titulo), "tags": d.get("tags", []), "cenas": d["cenas"],
          "thumb_texto": d.get("thumb_texto", ""), "titulo_curto": d.get("titulo_curto", ""),
          "titulo_youtube": d.get("titulo_youtube", ""), "comentario_fixado": d.get("comentario_fixado", "")}
+    amb2d, _ = preset_2d(titulo)
+    if amb2d and d.get("elenco"):
+        c["motor"], c["tema"] = "2d", amb2d
+        c["elenco"] = {"prot": d["elenco"]["prot"], "f": list(d["elenco"]["f"])}
+        for cena in c["cenas"]:
+            cena.pop("cenario", None)
+            cena["amb"] = amb2d
     for cena in c["cenas"]:
         if cena.get("cenario") and not cena.get("amb"):
             cena["amb"] = cena.pop("cenario")

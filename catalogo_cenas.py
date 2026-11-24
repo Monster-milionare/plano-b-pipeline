@@ -36,6 +36,13 @@ AMB_2D = {
                              formato="ambos", ceu=False, fx=["", "bandeira"], max_f=3),
     "descida-lunar": dict(mostra="o modulo lunar Eagle visto de fora, descendo com o motor aceso ou ja pousado na Lua (sem personagens)",
                           formato="ambos", ceu=False, fx=["", "descida", "poeira", "pousado"], max_f=0, vazio=True),
+    "roma": dict(mostra="Forum Romano no seculo II: templos de colunas, arco do triunfo, pinheiros, o Coliseu ao fundo "
+                      "(hora 'incendio' = o Grande Incendio de 64 d.C., cidade em chamas e SEM o Coliseu, que so ficou pronto em 80 d.C.)",
+                 formato="vertical", ceu=True, fx=[""], max_f=3, horas=["manha", "dia", "tarde", "entardecer", "noite", "incendio"]),
+    "chernobyl": dict(mostra="usina nuclear de Chernobyl em 1986: bloco 4 destruido pegando fogo, chamine listrada, brilho azul subindo do "
+                           "reator, caminhoes de bombeiro, grafite no chao; ao fundo os predios de Pripyat e a roda-gigante amarela "
+                           "(hora 'dia' = 26/04 a tarde; 'evacuacao' = 27/04 com os onibus)",
+                      formato="vertical", ceu=True, fx=[""], max_f=3, horas=["noite", "madrugada", "dia", "evacuacao"]),
 }
 
 # cenarios 3D (motor three.js). 'era' = a que epoca/tema o cenario pertence (usado para barrar anacronismo).
@@ -62,10 +69,12 @@ AMB_3D = {
 PONTOS = {
     "selva-cretaceo": {"ampla", "ceu", "ceu-esq", "ceu-dir", "alto", "lago", "lago-ceu", "mata", "ninho", "vulcao", "trilha", "dinos",
                        "trex", "chao", "perto", "margem", "margem2", "beira"},
+    "roma": {"ampla", "ceu", "coliseu", "cidade", "templo", "arco", "fogo", "chao", "perto", "escadaria", "fora-esq", "fora-dir"},
+    "chernobyl": {"ampla", "ceu", "reator", "coluna", "chamine", "cidade", "roda", "caminhao", "grafite", "chao", "perto", "fora-esq", "fora-dir"},
     "gavea": {"proa", "mar", "horizonte", "frente", "ceu", "estrelas", "sino", "telefone", "ponte", "chamine", "baixo", "lado",
               "ice-longe", "ice-frente", "ice-perto", "ice-lado", "ice-passou", "ext-proa", "ext-lado", "ext-alto"},
 }
-ENTIDADES = {"selva-cretaceo": {"ptero", "sombra"}, "gavea": {"iceberg"}}
+ENTIDADES = {"selva-cretaceo": {"ptero", "sombra"}, "gavea": {"iceberg"}, "chernobyl": {"helicoptero"}}
 ALVOS_GERAIS = {"grupo", "ampla", "panoramica", "prot", "camera", "voce", "todos", "fora", "fora-esq", "fora-dir"}
 
 ERAS_ANTIGAS = {"vela", "antigo", "medieval"}

@@ -1,0 +1,203 @@
+{
+ "id": "53-roma-em-chamas-nero",
+ "ordem": 1,
+ "formato": "pov",
+ "estilo": "tensa",
+ "motor": "2d",
+ "tema": "roma",
+ "titulo": "POV: Roma está pegando fogo em 64 d.C. Foi o Nero?",
+ "titulo_youtube": "POV: você acorda com Roma pegando fogo. Foi o Nero? A ou B",
+ "titulo_curto": "ROMA EM CHAMAS",
+ "thumb_texto": "FOI O NERO?",
+ "descricao": "Julho do ano 64: um incêndio começa nas lojas perto do Circo Máximo e queima Roma por seis dias. Segundo Tácito, dos 14 bairros da cidade só 4 escaparam intactos. Nero estava em Âncio, voltou e abriu seus jardins para os desabrigados, mas correu o boato de que ele cantou enquanto a cidade queimava. Depois ele construiu a Casa Dourada no terreno queimado e culpou os cristãos. Dramatização baseada nos relatos de Tácito e Suetônio.",
+ "comentario_fixado": "A: foi o Nero. B: foi acidente. Em quem você acredita?",
+ "tags": [
+  "nero",
+  "roma antiga",
+  "incendio de roma",
+  "imperio romano",
+  "pov",
+  "historia",
+  "coliseu",
+  "tacito"
+ ],
+ "elenco": {
+  "prot": "cidadao-romano",
+  "f": [
+   "cidada-romana",
+   "legionario"
+  ]
+ },
+ "cenas": [
+  {
+   "amb": "roma",
+   "hora": "incendio",
+   "emocao": "surpreso",
+   "clima": "tensa",
+   "beats": [
+    {
+     "quem": "narrador",
+     "texto": "Roma, ano sessenta e quatro. Você acorda com cheiro de fumaça.",
+     "cam": "ampla",
+     "mov": "zoom",
+     "sfx": "fogo"
+    },
+    {
+     "quem": "f0",
+     "texto": "Fogo! Começou nas lojas perto do Circo Máximo!",
+     "cam": "f0",
+     "mov": "chicote",
+     "acoes": [
+      {
+       "quem": "f0",
+       "faz": "aponta",
+       "para": "fogo",
+       "dur": 1.8
+      }
+     ]
+    },
+    {
+     "quem": "narrador",
+     "texto": "O vento empurra as chamas de rua em rua.",
+     "cam": "fogo",
+     "mov": "pan",
+     "sfx": "vento"
+    }
+   ]
+  },
+  {
+   "amb": "roma",
+   "hora": "incendio",
+   "emocao": "preocupado",
+   "clima": "tensa",
+   "beats": [
+    {
+     "quem": "narrador",
+     "texto": "As ruas são estreitas e os prédios têm muita madeira.",
+     "cam": "cidade",
+     "mov": "zoom"
+    },
+    {
+     "quem": "f1",
+     "texto": "Todo mundo pra fora da cidade, agora!",
+     "cam": "f1",
+     "mov": "chicote",
+     "acoes": [
+      {
+       "quem": "f0",
+       "faz": "susto",
+       "para": "fogo",
+       "dur": 1.2
+      }
+     ]
+    },
+    {
+     "quem": "narrador",
+     "texto": "O incêndio dura seis dias.",
+     "cam": "fogo",
+     "mov": "recua",
+     "sfx": "fogo"
+    }
+   ]
+  },
+  {
+   "amb": "roma",
+   "hora": "incendio",
+   "emocao": "misterioso",
+   "clima": "misterio",
+   "beats": [
+    {
+     "quem": "narrador",
+     "texto": "Dos catorze bairros de Roma, só quatro escapam intactos.",
+     "cam": "ampla",
+     "mov": "pan"
+    },
+    {
+     "quem": "narrador",
+     "texto": "E o imperador Nero? Estava em Âncio, a uns cinquenta quilômetros.",
+     "cam": "ceu",
+     "mov": "zoom"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Ele volta e abre os próprios jardins para os desabrigados.",
+     "cam": "cidade",
+     "mov": "pan"
+    },
+    {
+     "quem": "f1",
+     "texto": "O imperador mandou abrir os jardins!",
+     "cam": "f1",
+     "mov": "chicote",
+     "acoes": [
+      {
+       "quem": "f1",
+       "faz": "aponta",
+       "para": "fora-dir",
+       "dur": 1.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "amb": "roma",
+   "hora": "incendio",
+   "emocao": "misterioso",
+   "clima": "misterio",
+   "beats": [
+    {
+     "quem": "narrador",
+     "texto": "Mesmo assim, corre um boato: Nero teria cantado vendo a cidade queimar.",
+     "cam": "fogo",
+     "mov": "zoom"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Depois, no terreno queimado, ele ergue um palácio gigante, a Casa Dourada.",
+     "cam": "cidade",
+     "mov": "pan"
+    },
+    {
+     "quem": "f0",
+     "texto": "Ele queria esse terreno. Foi ele!",
+     "cam": "f0",
+     "mov": "chicote",
+     "acoes": [
+      {
+       "quem": "f0",
+       "faz": "olha",
+       "para": "camera"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "amb": "roma",
+   "hora": "incendio",
+   "emocao": "surpreso",
+   "clima": "epica",
+   "beats": [
+    {
+     "quem": "narrador",
+     "texto": "Nero culpou os cristãos, e muitos foram executados.",
+     "cam": "cidade",
+     "mov": "corte"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Comenta A se foi o Nero, ou B se foi acidente.",
+     "cam": "ampla",
+     "mov": "recua"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Detalhe: onde ficava o lago desse palácio, hoje está o Coliseu.",
+     "cam": "ceu",
+     "mov": "zoom"
+    }
+   ]
+  }
+ ]
+}

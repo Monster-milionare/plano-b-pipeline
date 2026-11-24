@@ -59,6 +59,14 @@ window.chapeuExtra = function (o, cab, g) {
     mesh(new THREE.SphereGeometry(0.6, 14, 10, 0, Math.PI * 2, 0, Math.PI * 0.5), M(0xf2e8d0), 0, 0.1, 0, cab); mesh(new THREE.TorusGeometry(0.5, 0.15, 8, 16), M(0xe0d4b8), 0, 0.25, 0, cab).rotation.x = Math.PI / 2;
     mesh(new THREE.SphereGeometry(0.07, 8, 6), B(0x2fb86a), 0, 0.3, 0.55, cab);
   }
+  if (h === 'mongol') {   // chapeu mongol: copa conica colorida com aba de pele
+    mesh(new THREE.ConeGeometry(0.46, 0.75, 14), M(o.corChapeu || 0xa8281e), 0, 0.78, 0, cab);
+    mesh(new THREE.TorusGeometry(0.5, 0.17, 8, 18), M(o.pelo || 0x6a4a2a), 0, 0.42, 0, cab).rotation.x = Math.PI / 2;
+    mesh(new THREE.SphereGeometry(0.08, 8, 6), M(0xe8c14a, {emissive: 0x3a2a00}), 0, 1.18, 0, cab);
+  }
+  if (h === 'capuz') {    // capuz escuro (camponeses, monges, Peste Negra)
+    mesh(new THREE.SphereGeometry(0.66, 16, 10, 0, Math.PI * 2, 0, Math.PI * 0.62), M(o.corChapeu || 0x3a3028), 0, 0.02, -0.06, cab);
+  }
   if (h === 'coroa-rainha') {
     mesh(new THREE.CylinderGeometry(0.3, 0.38, 0.2, 14), M(0xe8c14a, {emissive: 0x3a2a00}), 0, 0.55, 0, cab);
     for (let i = 0; i < 5; i++) { const a = i / 5 * Math.PI * 2; mesh(new THREE.SphereGeometry(0.06, 6, 6), B(0x2a7aff), Math.cos(a) * 0.34, 0.72, Math.sin(a) * 0.34, cab); }
@@ -121,6 +129,12 @@ const PAPEIS = {
   cientista: {roupa: 0xf6f6fa, pele: 0xe3b48a, cabelo: 0x2a1a10, bigode: 0x2a1a10, cinto: 0xb0b0c0},
   astronauta: {roupa: 0xeeeeF4, pele: 0xf2c8a0, chapeu: 'capacete-astro', cinto: 0xc8281e, botoes: 0x2a7aff, bota: 0x9a9aa8},
   aviador:  {roupa: 0x7a4d26, pele: 0xf2c8a0, chapeu: 'aviador', bigode: 0x2a1a10, cinto: 0xd9b24a, punho: 0xf6f1e6, gola: true},
+  gengis:   {roupa: 0x1f3a6a, pele: 0xd9a77c, chapeu: 'mongol', corChapeu: 0xa8281e, pelo: 0x5a3a1e, bigode: 0x1a1410, barba: 0x1a1410, cinto: 0xe8c14a, manto: 0x8a1f1e, espada: true},
+  mongol:   {roupa: 0x7a3a22, pele: 0xd29a6c, chapeu: 'mongol', corChapeu: 0x2a4a7a, pelo: 0x6a4a2a, bigode: 0x1a1410, cinto: 0x3a2a1a, lanca: true},
+  mongol2:  {roupa: 0x3a5a3a, pele: 0xc89068, chapeu: 'mongol', corChapeu: 0x8a6a2a, pelo: 0x4a3a2a, cinto: 0x3a2a1a, escudo: 0x7a4a2a},
+  campones: {roupa: 0x6a5a44, pele: 0xe3b48a, chapeu: 'capuz', corChapeu: 0x4a3a2a, cinto: 0x3a2a1a, barba: 0x5a3a1e},
+  camponesa:{roupa: 0x7a4a3a, pele: 0xf0c8a0, chapeu: 'capuz', corChapeu: 0x5a4a3a, cinto: 0x3a2a1a},
+  'medico-peste': {roupa: 0x1a1a1e, pele: 0xe3b48a, chapeu: 'cartola', cinto: 0x3a2a1a, manto: 0x121214, bigode: 0xe8dcc0},
   egipcio:  {roupa: 0xf2eadc, pele: 0xb9824e, cabelo: 0x111111, cinto: 0xe8c14a, chapeu: 'turbante'},
   faraoh:   {roupa: 0xf6f1e6, pele: 0xb9824e, chapeu: 'nemes', cinto: 0xe8c14a, botoes: 0x1c4fa6, gola: true, barba: 0x1c4fa6},
   cleopatra: {roupa: 0xf6f1e6, pele: 0xc9966c, vestido: true, chapeu: 'coroa-rainha', cabelo: 0x0a0a0a, cinto: 0xe8c14a, gola: true},

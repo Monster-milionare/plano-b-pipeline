@@ -1,3 +1,13 @@
+escolha|Você é Gengis Khan e perdeu território: A para retomar o que perdeu ou B para conquistar terras novas
+voce-acorda|Você acorda em 1348 no meio da Peste Negra
+escolha|Você é bombeiro em Chernobyl e o reator explodiu: A para entrar no prédio do reator ou B para tirar todo mundo de Pripyat
+escolha|Você é um gladiador no Coliseu e o imperador Cômodo entra na arena: A para lutar de verdade ou B para deixar ele vencer
+escolha|Você é médico da peste em 1348: A para entrar na casa dos doentes ou B para fugir da cidade
+pov|POV: você mora em Pripyat e acorda no dia seguinte à explosão de Chernobyl
+escolha|Você é Napoleão em Moscou em 1812 e o inverno chegou: A para recuar ou B para esperar o czar se render
+escolha|Você é Marco Aurélio e a peste chegou a Roma: A para fechar a cidade ou B para seguir a guerra no Danúbio
+pov|POV: você é um legionário romano e Cômodo virou imperador
+escolha|Você é Gengis Khan e um rei mata os seus mensageiros: A para declarar guerra ou B para negociar
 e-se|E se os dinossauros nunca tivessem sido extintos?
 e-se|E se Cleópatra tivesse vencido Roma?
 e-se|E se a Segunda Guerra nunca tivesse acontecido?

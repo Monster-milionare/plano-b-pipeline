@@ -1,0 +1,244 @@
+{
+ "id": "51-chernobyl-bombeiro",
+ "ordem": 1,
+ "formato": "escolha",
+ "estilo": "tensa",
+ "motor": "2d",
+ "tema": "chernobyl",
+ "titulo": "Você é bombeiro em Chernobyl na noite da explosão. A ou B?",
+ "titulo_youtube": "Você é bombeiro em Chernobyl na noite da explosão. A ou B?",
+ "titulo_curto": "CHERNOBYL 1986",
+ "thumb_texto": "NÃO É FOGO COMUM",
+ "descricao": "26 de abril de 1986, 1h23 da madrugada: o reator 4 da usina de Chernobyl explode durante um teste. Os primeiros bombeiros chegaram achando que era um incêndio comum. Havia grafite do núcleo espalhado no chão, os medidores de radiação estouraram o limite e Pripyat, a 3 km, só foi evacuada no dia seguinte. Dramatização em primeira pessoa baseada em fatos reais. A mais votada vira o próximo vídeo.",
+ "comentario_fixado": "A: subir no telhado e segurar o fogo. B: correr pra Pripyat e avisar sua família. O que você faria?",
+ "tags": [
+  "chernobyl",
+  "pov",
+  "1986",
+  "radiacao",
+  "pripyat",
+  "bombeiro",
+  "voce decide",
+  "historia",
+  "desastre nuclear"
+ ],
+ "elenco": {
+  "prot": "bombeiro",
+  "f": [
+   "bombeiro2",
+   "operador",
+   "morador"
+  ]
+ },
+ "cenas": [
+  {
+   "amb": "chernobyl",
+   "hora": "noite",
+   "emocao": "surpreso",
+   "clima": "tensa",
+   "beats": [
+    {
+     "quem": "narrador",
+     "texto": "Você é bombeiro. Chernobyl, uma e vinte e três da madrugada.",
+     "cam": "ampla",
+     "mov": "zoom",
+     "sfx": "sirene",
+     "acoes": [
+      {
+       "quem": "todos",
+       "faz": "olha",
+       "para": "reator"
+      }
+     ]
+    },
+    {
+     "texto": "",
+     "dur": 1.6,
+     "cam": "reator",
+     "mov": "chicote",
+     "sfx": "fogo"
+    },
+    {
+     "quem": "f0",
+     "texto": "O telhado inteiro tá pegando fogo!",
+     "cam": "f0",
+     "mov": "corte",
+     "acoes": [
+      {
+       "quem": "f0",
+       "faz": "aponta",
+       "para": "reator",
+       "dur": 1.8
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "amb": "chernobyl",
+   "hora": "noite",
+   "emocao": "misterioso",
+   "clima": "misterio",
+   "beats": [
+    {
+     "quem": "narrador",
+     "texto": "Ninguém te avisa de nada. Pra você, é só mais um incêndio.",
+     "cam": "reator",
+     "mov": "recua",
+     "maos": "neutro"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Mas uma luz azulada sobe do prédio. Quem estava lá contou que viu.",
+     "cam": "coluna",
+     "mov": "pan"
+    },
+    {
+     "quem": "f1",
+     "texto": "Isso não é incêndio comum. O reator explodiu.",
+     "cam": "f1",
+     "mov": "corte",
+     "acoes": [
+      {
+       "quem": "f1",
+       "faz": "olha",
+       "para": "camera"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "amb": "chernobyl",
+   "hora": "noite",
+   "emocao": "preocupado",
+   "clima": "tensa",
+   "beats": [
+    {
+     "quem": "narrador",
+     "texto": "No chão, pedras pretas por todo lado.",
+     "cam": "grafite",
+     "mov": "zoom",
+     "sfx": "geiger"
+    },
+    {
+     "quem": "narrador",
+     "texto": "É grafite. Saiu de dentro do núcleo.",
+     "cam": "grafite",
+     "mov": "corte",
+     "zoom": 1.9
+    },
+    {
+     "quem": "f0",
+     "texto": "Tô sentindo um gosto de metal na boca.",
+     "cam": "f0",
+     "mov": "chicote",
+     "acoes": [
+      {
+       "quem": "f0",
+       "faz": "olha",
+       "para": "prot"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "amb": "chernobyl",
+   "hora": "noite",
+   "emocao": "preocupado",
+   "clima": "tensa",
+   "beats": [
+    {
+     "quem": "narrador",
+     "texto": "O medidor de radiação trava no máximo.",
+     "cam": "f1",
+     "mov": "zoom",
+     "sfx": "geiger"
+    },
+    {
+     "quem": "f1",
+     "texto": "Esse aparelho não mede tanto. A radiação real é muito maior.",
+     "cam": "f1",
+     "mov": "corte",
+     "acoes": [
+      {
+       "quem": "f1",
+       "faz": "susto",
+       "para": "reator",
+       "dur": 1.4
+      }
+     ]
+    },
+    {
+     "quem": "narrador",
+     "texto": "A três quilômetros, Pripyat dorme. Quase cinquenta mil pessoas.",
+     "cam": "cidade",
+     "mov": "pan"
+    },
+    {
+     "quem": "f2",
+     "texto": "Minha mulher e meus filhos estão lá.",
+     "cam": "f2",
+     "mov": "corte",
+     "acoes": [
+      {
+       "quem": "f2",
+       "faz": "olha",
+       "para": "cidade"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "amb": "chernobyl",
+   "hora": "noite",
+   "emocao": "surpreso",
+   "clima": "epica",
+   "beats": [
+    {
+     "quem": "f0",
+     "texto": "O fogo vai pular pro bloco três! Tem que subir agora!",
+     "cam": "f0",
+     "mov": "chicote",
+     "sfx": "sirene",
+     "acoes": [
+      {
+       "quem": "f0",
+       "faz": "aponta",
+       "para": "chamine",
+       "dur": 2.0
+      }
+     ]
+    },
+    {
+     "quem": "narrador",
+     "texto": "Comenta A: você sobe no telhado e segura o fogo.",
+     "cam": "reator",
+     "mov": "chicote",
+     "maos": "aponta"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Ou B: você corre pra Pripyat e avisa sua família.",
+     "cam": "cidade",
+     "mov": "chicote"
+    },
+    {
+     "quem": "narrador",
+     "texto": "A mais votada vira o próximo vídeo.",
+     "cam": "grupo",
+     "mov": "zoom",
+     "acoes": [
+      {
+       "quem": "todos",
+       "faz": "olha",
+       "para": "camera"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,198 @@
+{
+ "id": "52-marco-aurelio-comodo",
+ "ordem": 1,
+ "formato": "escolha",
+ "estilo": "epico",
+ "motor": "2d",
+ "tema": "roma",
+ "titulo": "Você é Marco Aurélio e precisa escolher quem herda Roma. A ou B?",
+ "titulo_youtube": "Você é Marco Aurélio: entrega Roma pro seu filho Cômodo? A ou B",
+ "titulo_curto": "O HERDEIRO DE ROMA",
+ "thumb_texto": "SEU FILHO OU ROMA?",
+ "descricao": "Ano 177: Marco Aurélio governa um império que vai do Egito à Britânia, enfrenta a Peste Antonina (descrita pelo médico Galeno) e a guerra no Danúbio. Por mais de oitenta anos os imperadores escolheram herdeiros por adoção; o próprio Marco foi adotado. Agora ele precisa decidir o futuro de Roma e o do seu filho, Cômodo. Dramatização baseada em fatos históricos. A mais votada vira o próximo vídeo.",
+ "comentario_fixado": "A: Cômodo no trono, ele é seu sangue. B: o general mais capaz e Cômodo fica de fora. Qual a sua escolha?",
+ "tags": [
+  "marco aurelio",
+  "comodo",
+  "roma antiga",
+  "imperio romano",
+  "gladiador",
+  "pov",
+  "voce decide",
+  "historia",
+  "estoicismo"
+ ],
+ "elenco": {
+  "prot": "marco-aurelio",
+  "f": [
+   "comodo",
+   "galeno",
+   "senador"
+  ]
+ },
+ "cenas": [
+  {
+   "amb": "roma",
+   "hora": "dia",
+   "emocao": "surpreso",
+   "clima": "epica",
+   "beats": [
+    {
+     "quem": "narrador",
+     "texto": "Você é Marco Aurélio, o homem mais poderoso do mundo.",
+     "cam": "eu-frente",
+     "mov": "zoom",
+     "sfx": "tambor"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Ano cento e setenta e sete. Roma manda do Egito à Britânia.",
+     "cam": "coliseu",
+     "mov": "pan"
+    },
+    {
+     "quem": "f2",
+     "texto": "César, o povo quer saber quem governa depois de você.",
+     "cam": "f2",
+     "mov": "corte",
+     "acoes": [
+      {
+       "quem": "f2",
+       "faz": "olha",
+       "para": "camera"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "amb": "roma",
+   "hora": "tarde",
+   "emocao": "preocupado",
+   "clima": "triste",
+   "beats": [
+    {
+     "quem": "narrador",
+     "texto": "Só que o seu império está doente. Uma peste já matou milhões.",
+     "cam": "chao",
+     "mov": "zoom"
+    },
+    {
+     "quem": "f1",
+     "texto": "Febre, manchas na pele, e ninguém conhece a cura.",
+     "cam": "f1",
+     "mov": "corte"
+    },
+    {
+     "quem": "narrador",
+     "texto": "E no Danúbio, os povos germânicos atacam a fronteira.",
+     "cam": "cidade",
+     "mov": "pan",
+     "sfx": "tambor"
+    }
+   ]
+  },
+  {
+   "amb": "roma",
+   "hora": "entardecer",
+   "emocao": "misterioso",
+   "clima": "misterio",
+   "beats": [
+    {
+     "quem": "narrador",
+     "texto": "Por mais de oitenta anos, nenhum imperador deixou o trono pro filho.",
+     "cam": "arco",
+     "mov": "zoom"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Eles escolhiam o mais capaz e adotavam. Você mesmo foi adotado assim.",
+     "cam": "eu-frente",
+     "mov": "corte"
+    },
+    {
+     "quem": "f0",
+     "texto": "Pai, eu sou seu filho. O trono é meu.",
+     "cam": "f0",
+     "mov": "chicote",
+     "sfx": "whoosh",
+     "acoes": [
+      {
+       "quem": "f0",
+       "faz": "olha",
+       "para": "camera"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "amb": "roma",
+   "hora": "noite",
+   "emocao": "preocupado",
+   "clima": "tensa",
+   "beats": [
+    {
+     "quem": "narrador",
+     "texto": "Mas Cômodo prefere a arena aos livros.",
+     "cam": "coliseu",
+     "mov": "recua"
+    },
+    {
+     "quem": "f1",
+     "texto": "Seu filho passa os dias com os gladiadores, César.",
+     "cam": "f1",
+     "mov": "corte",
+     "acoes": [
+      {
+       "quem": "f1",
+       "faz": "aponta",
+       "para": "coliseu",
+       "dur": 1.6
+      }
+     ]
+    },
+    {
+     "quem": "narrador",
+     "texto": "Na história real, uma dessas escolhas acabou com a melhor fase de Roma.",
+     "cam": "ampla",
+     "mov": "zoom"
+    }
+   ]
+  },
+  {
+   "amb": "roma",
+   "hora": "noite",
+   "emocao": "surpreso",
+   "clima": "epica",
+   "beats": [
+    {
+     "quem": "narrador",
+     "texto": "Comenta A: Cômodo no trono, ele é o seu sangue.",
+     "cam": "f0",
+     "mov": "chicote",
+     "maos": "aponta"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Ou B: o seu general mais capaz, e Cômodo fica de fora.",
+     "cam": "f2",
+     "mov": "chicote"
+    },
+    {
+     "quem": "narrador",
+     "texto": "A mais votada vira o próximo vídeo.",
+     "cam": "grupo",
+     "mov": "zoom",
+     "acoes": [
+      {
+       "quem": "todos",
+       "faz": "olha",
+       "para": "camera"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

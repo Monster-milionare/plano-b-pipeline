@@ -29,3 +29,14 @@ Regra: os videos publicados sao testes. Nao refazer o que ja saiu; anotar, corri
 - Som: `sfx.py` (efeitos sintetizados, sem direitos), trilhas Kevin MacLeod CC-BY por clima (credito automatico na descricao), ducking da musica sob a voz,
   narrador muda de video pra video e personagens ganham vozes Multilingual diferentes (`vozes.py`).
 - Rodizio diario: 3 Shorts 2D + 1 Short 3D (o 3D sai como 2o Short do dia) em `publish.alternar`.
+
+## Regra do Andre: TEMAS QUENTES (24/11/2026) - vale para TODOS os canais
+- Sempre escolher temas que geram clique e debate: Chernobyl, Peste Negra, "voce e o imperador de Roma / Marco Aurelio",
+  "voce e Gengis Khan perdendo terreno: retoma ou expande?", Napoleao na Russia, Nero e o incendio de Roma, decisoes impossiveis.
+- Pesar a mao no drama e na decisao (formato POV / escolha A ou B), sempre com fato real.
+- Terceiro Reich: nunca mostrar suastica nem simbolos, nunca escrever "nazista/nazismo/Hitler/suastica" (usar "Terceiro Reich",
+  "o regime", "o ditador de bigodinho"); ponto de vista de gente comum tentando sobreviver/fugir; humor so contra o ditador e o
+  regime, nunca contra as vitimas; nada de glorificar (YouTube desmonetiza apologia).
+- Motor 2D tem cenarios proprios para isso: 'roma' (Forum + Coliseu; hora 'incendio' = ano 64, sem Coliseu) e 'chernobyl'
+  (noite/madrugada/dia/evacuacao). O roteirista.py escreve direto em 2D quando o tema bate com esses cenarios (PRESETS_2D).
+- 3D: papeis novos gengis/mongol/mongol2 (perfil 'mongol') e campones/camponesa/medico-peste (perfil 'peste').
