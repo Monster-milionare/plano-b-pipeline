@@ -1,0 +1,886 @@
+{
+ "id": "47-apollo-17-2d-longo",
+ "ordem": 907,
+ "formato": "longo",
+ "estilo": "epico",
+ "motor": "2d",
+ "revisado": true,
+ "titulo": "Apollo 17: a última vez na Lua",
+ "titulo_youtube": "Apollo 17: o último homem a pisar na Lua (e o que ele deixou escrito lá)",
+ "titulo_curto": "APOLLO 17: A ÚLTIMA VEZ",
+ "thumb_texto": "O ÚLTIMO NA LUA",
+ "descricao": "Você é Gene Cernan, comandante da Apollo 17, a última missão a pousar na Lua, em dezembro de 1972. Decolagem de noite, a foto Bola de Gude Azul, o carro lunar consertado com mapas e fita adesiva, a terra laranja e três letras escritas na poeira. Fatos reais, narrados em primeira pessoa.",
+ "comentario_fixado": "A humanidade devia ter continuado indo à Lua depois de 1972? Comenta A (sim) ou B (foi certo parar).",
+ "tags": [
+  "apollo 17",
+  "gene cernan",
+  "harrison schmitt",
+  "ronald evans",
+  "lua",
+  "nasa",
+  "corrida espacial",
+  "historia",
+  "1972",
+  "blue marble"
+ ],
+ "elenco": {
+  "prot": "cernan",
+  "f": [
+   "schmitt",
+   "evans"
+  ],
+  "amb": {
+   "lancamento": [
+    "schmitt-traje",
+    "evans-traje"
+   ],
+   "superficie-lunar": [
+    "schmitt-traje"
+   ],
+   "modulo-lunar": [
+    "schmitt-traje"
+   ],
+   "nave-cabine": [
+    "schmitt",
+    "evans"
+   ],
+   "houston": [
+    "controlador",
+    "engenheiro"
+   ]
+  },
+  "protAmb": {
+   "lancamento": "cernan-traje",
+   "superficie-lunar": "cernan-traje",
+   "modulo-lunar": "cernan-traje",
+   "houston": "controlador2"
+  },
+  "vazio": [
+   "espaco",
+   "oceano",
+   "descida-lunar"
+  ]
+ },
+ "pessoas": [
+  {
+   "nome": "Gene Cernan",
+   "papel": "prot",
+   "cargo": "Comandante da Apollo 17",
+   "info": [
+    "1934 - 2017",
+    "Ultimo homem a andar na Lua"
+   ],
+   "selo": "APOLLO 17"
+  },
+  {
+   "nome": "Harrison Schmitt",
+   "papel": "f0",
+   "cargo": "Geologo e piloto do modulo lunar",
+   "info": [
+    "Nasceu em 1935",
+    "Unico cientista a andar na Lua"
+   ],
+   "selo": "APOLLO 17"
+  },
+  {
+   "nome": "Ronald Evans",
+   "papel": "f1",
+   "cargo": "Piloto do modulo de comando",
+   "info": [
+    "1933 - 1990",
+    "Orbitou a Lua sozinho"
+   ],
+   "selo": "APOLLO 17"
+  }
+ ],
+ "cenas": [
+  {
+   "capitulo": "A última viagem",
+   "ano": "dez 1972",
+   "amb": "lancamento",
+   "hora": "noite",
+   "emocao": "misterioso",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você é Gene Cernan, comandante da Apollo dezessete. É quase meia-noite, e você está sozinho diante do foguete."
+    }
+   ],
+   "fala": "Você é Gene Cernan, comandante da Apollo dezessete. É quase meia-noite, e você está sozinho diante do foguete.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "lancamento",
+   "hora": "noite",
+   "emocao": "misterioso",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O Saturn cinco brilha sob os holofotes. Nenhuma missão tripulada americana tinha decolado de noite."
+    }
+   ],
+   "fala": "O Saturn cinco brilha sob os holofotes. Nenhuma missão tripulada americana tinha decolado de noite.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "lancamento",
+   "hora": "noite",
+   "emocao": "neutro",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Passos atrás de você. É Harrison Schmitt, o geólogo da missão."
+    },
+    {
+     "quem": "f0",
+     "texto": "Gene! Tá todo mundo pronto. Só falta você."
+    }
+   ],
+   "fala": "Passos atrás de você. É Harrison Schmitt, o geólogo da missão. Gene! Tá todo mundo pronto. Só falta você.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "lancamento",
+   "hora": "noite",
+   "emocao": "surpreso",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Schmitt é o primeiro cientista de verdade mandado para a Lua. Até hoje, é o único cientista que andou na Lua."
+    }
+   ],
+   "fala": "Schmitt é o primeiro cientista de verdade mandado para a Lua. Até hoje, é o único cientista que andou na Lua.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "lancamento",
+   "hora": "noite",
+   "emocao": "feliz",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Logo depois chega Ronald Evans. Ele vai ficar sozinho na órbita, enquanto vocês dois descem."
+    },
+    {
+     "quem": "f1",
+     "texto": "Tragam uma pedra boa pra mim, hein?"
+    },
+    {
+     "quem": "prot",
+     "texto": "Pode deixar. Essa vai ser a melhor de todas."
+    }
+   ],
+   "fala": "Logo depois chega Ronald Evans. Ele vai ficar sozinho na órbita, enquanto vocês dois descem. Tragam uma pedra boa pra mim, hein? Pode deixar. Essa vai ser a melhor de todas.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "lancamento",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Para você, é a terceira viagem ao espaço. Na Apollo dez, você chegou a quinze quilômetros da Lua, mas não podia pousar."
+    },
+    {
+     "quem": "prot",
+     "texto": "Dessa vez, eu vou descer até o chão."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "hora": "noite",
+   "fala": "Para você, é a terceira viagem ao espaço. Na Apollo dez, você chegou a quinze quilômetros da Lua, mas não podia pousar. Dessa vez, eu vou descer até o chão."
+  },
+  {
+   "amb": "lancamento",
+   "hora": "noite",
+   "emocao": "neutro",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Sete de dezembro de mil novecentos e setenta e dois. A contagem regressiva começa."
+    }
+   ],
+   "fala": "Sete de dezembro de mil novecentos e setenta e dois. A contagem regressiva começa.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "lancamento",
+   "hora": "noite",
+   "emocao": "preocupado",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Faltando trinta segundos, tudo para. Uma falha no sequenciador automático trava a contagem."
+    }
+   ],
+   "fala": "Faltando trinta segundos, tudo para. Uma falha no sequenciador automático trava a contagem.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "capitulo": "Trinta segundos",
+   "amb": "houston",
+   "fx": "tensao",
+   "emocao": "preocupado",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Na sala de controle, ninguém sabe se a missão vai sair naquela noite."
+    },
+    {
+     "quem": "radio",
+     "texto": "Apollo dezessete, segura firme. Estamos resolvendo."
+    }
+   ],
+   "fala": "Na sala de controle, ninguém sabe se a missão vai sair naquela noite. Apollo dezessete, segura firme. Estamos resolvendo.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "houston",
+   "fx": "tensao",
+   "emocao": "preocupado",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Foram duas horas e quarenta minutos de espera, com vocês três amarrados no topo do foguete."
+    }
+   ],
+   "fala": "Foram duas horas e quarenta minutos de espera, com vocês três amarrados no topo do foguete.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "lancamento",
+   "hora": "noite",
+   "fx": "decolagem",
+   "emocao": "surpreso",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Meia-noite e trinta e três. Os motores acendem, e a noite da Flórida vira dia."
+    },
+    {
+     "quem": "prot",
+     "texto": "Lá vamos nós! Segura, pessoal!"
+    }
+   ],
+   "fala": "Meia-noite e trinta e três. Os motores acendem, e a noite da Flórida vira dia. Lá vamos nós! Segura, pessoal!",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "capitulo": "A bola de gude azul",
+   "amb": "espaco",
+   "fx": "terra",
+   "emocao": "misterioso",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Horas depois, a caminho da Lua, vocês olham pela janela da nave America."
+    }
+   ],
+   "fala": "Horas depois, a caminho da Lua, vocês olham pela janela da nave America.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "nave-cabine",
+   "emocao": "surpreso",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A Terra aparece inteira, toda iluminada pelo Sol."
+    },
+    {
+     "quem": "f0",
+     "texto": "Olha isso. Dá pra ver a África inteira."
+    }
+   ],
+   "fala": "A Terra aparece inteira, toda iluminada pelo Sol. Olha isso. Dá pra ver a África inteira.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "espaco",
+   "fx": "terra",
+   "emocao": "feliz",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A tripulação fotografa. A foto ficou conhecida como Bola de Gude Azul, uma das imagens mais vistas da história."
+    }
+   ],
+   "fala": "A tripulação fotografa. A foto ficou conhecida como Bola de Gude Azul, uma das imagens mais vistas da história.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "capitulo": "O vale de Taurus-Littrow",
+   "ano": "11 dez 1972",
+   "amb": "espaco",
+   "fx": "lua",
+   "emocao": "neutro",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Onze de dezembro. Evans fica na nave America, dando voltas em torno da Lua."
+    }
+   ],
+   "fala": "Onze de dezembro. Evans fica na nave America, dando voltas em torno da Lua.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "modulo-lunar",
+   "emocao": "preocupado",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você e Schmitt descem no módulo lunar Challenger."
+    },
+    {
+     "quem": "prot",
+     "texto": "Challenger, começando a descida."
+    }
+   ],
+   "fala": "Você e Schmitt descem no módulo lunar Challenger. Challenger, começando a descida.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "descida-lunar",
+   "fx": "descida",
+   "emocao": "misterioso",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O alvo é um vale cercado de montanhas, chamado Taurus-Littrow."
+    }
+   ],
+   "fala": "O alvo é um vale cercado de montanhas, chamado Taurus-Littrow.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "descida-lunar",
+   "fx": "poeira",
+   "emocao": "preocupado",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "A poeira sobe. Você guia a nave entre pedras e crateras."
+    }
+   ],
+   "fala": "A poeira sobe. Você guia a nave entre pedras e crateras.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "descida-lunar",
+   "fx": "pousado",
+   "emocao": "feliz",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Pouso perfeito. É o sexto e último pouso tripulado na Lua."
+    }
+   ],
+   "fala": "Pouso perfeito. É o sexto e último pouso tripulado na Lua.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "capitulo": "O carro lunar",
+   "amb": "superficie-lunar",
+   "acao": "anda",
+   "emocao": "misterioso",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você desce a escada. Lá fora, só cinza, preto e silêncio."
+    },
+    {
+     "quem": "prot",
+     "texto": "Parece que o tempo parou aqui."
+    }
+   ],
+   "fala": "Você desce a escada. Lá fora, só cinza, preto e silêncio. Parece que o tempo parou aqui.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "superficie-lunar",
+   "emocao": "feliz",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Schmitt vem logo atrás. Vocês tiram da nave um carro elétrico, o jipe lunar."
+    },
+    {
+     "quem": "f0",
+     "texto": "Carro pronto, comandante. Pode dirigir."
+    }
+   ],
+   "fala": "Schmitt vem logo atrás. Vocês tiram da nave um carro elétrico, o jipe lunar. Carro pronto, comandante. Pode dirigir.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "superficie-lunar",
+   "emocao": "surpreso",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Mas o seu martelo engancha no carro e arranca um pedaço do para-lama."
+    }
+   ],
+   "fala": "Mas o seu martelo engancha no carro e arranca um pedaço do para-lama.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "superficie-lunar",
+   "emocao": "preocupado",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Sem para-lama, as rodas jogam poeira em tudo. E a poeira da Lua esquenta os equipamentos."
+    },
+    {
+     "quem": "f0",
+     "texto": "Gene, a gente tá virando um saco de poeira."
+    }
+   ],
+   "fala": "Sem para-lama, as rodas jogam poeira em tudo. E a poeira da Lua esquenta os equipamentos. Gene, a gente tá virando um saco de poeira.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "houston",
+   "emocao": "neutro",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Em Houston, a equipe procura uma solução com o que vocês têm na nave."
+    },
+    {
+     "quem": "radio",
+     "texto": "Usem os mapas e a fita adesiva."
+    }
+   ],
+   "fala": "Em Houston, a equipe procura uma solução com o que vocês têm na nave. Usem os mapas e a fita adesiva.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "superficie-lunar",
+   "emocao": "feliz",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "No dia seguinte, um para-lama improvisado com quatro mapas, fita adesiva e grampos funciona."
+    }
+   ],
+   "fala": "No dia seguinte, um para-lama improvisado com quatro mapas, fita adesiva e grampos funciona.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "superficie-lunar",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Com o carro consertado, vocês percorrem mais de trinta quilômetros pelo vale. Vocês montam uma estação de experimentos, que mandou dados para a Terra por anos."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "fala": "Com o carro consertado, vocês percorrem mais de trinta quilômetros pelo vale. Vocês montam uma estação de experimentos, que mandou dados para a Terra por anos."
+  },
+  {
+   "capitulo": "Terra laranja",
+   "amb": "superficie-lunar",
+   "emocao": "misterioso",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "No segundo passeio, vocês param perto de uma cratera chamada Shorty."
+    }
+   ],
+   "fala": "No segundo passeio, vocês param perto de uma cratera chamada Shorty.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "superficie-lunar",
+   "emocao": "surpreso",
+   "falas": [
+    {
+     "quem": "f0",
+     "texto": "Tem terra laranja aqui! Laranja!"
+    },
+    {
+     "quem": "prot",
+     "texto": "Laranja? Na Lua? Deixa eu ver isso."
+    }
+   ],
+   "fala": "Tem terra laranja aqui! Laranja! Laranja? Na Lua? Deixa eu ver isso.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "superficie-lunar",
+   "emocao": "surpreso",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Eram bolinhas de vidro vulcânico, de erupções de bilhões de anos atrás."
+    }
+   ],
+   "fala": "Eram bolinhas de vidro vulcânico, de erupções de bilhões de anos atrás.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "superficie-lunar",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Felizes, vocês até cantam enquanto saltitam pela Lua."
+    },
+    {
+     "quem": "f0",
+     "texto": "Ninguém vai acreditar nisso lá embaixo."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "fala": "Felizes, vocês até cantam enquanto saltitam pela Lua. Ninguém vai acreditar nisso lá embaixo."
+  },
+  {
+   "capitulo": "Sozinho do outro lado",
+   "amb": "espaco",
+   "fx": "lua",
+   "emocao": "misterioso",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Enquanto isso, Evans dá volta após volta em torno da Lua, sozinho na nave America."
+    }
+   ],
+   "fala": "Enquanto isso, Evans dá volta após volta em torno da Lua, sozinho na nave America.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "espaco",
+   "fx": "perto",
+   "emocao": "misterioso",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Quando passa pelo lado escondido da Lua, perde o contato com a Terra."
+    }
+   ],
+   "fala": "Quando passa pelo lado escondido da Lua, perde o contato com a Terra.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "espaco",
+   "fx": "lua",
+   "emocao": "neutro",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Em boa parte de cada volta, ele é o ser humano mais isolado do universo."
+    }
+   ],
+   "fala": "Em boa parte de cada volta, ele é o ser humano mais isolado do universo.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "espaco",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Ao todo, Evans passa mais de três dias sozinho na órbita da Lua."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "fx": "lua",
+   "fala": "Ao todo, Evans passa mais de três dias sozinho na órbita da Lua."
+  },
+  {
+   "capitulo": "As letras na poeira",
+   "amb": "superficie-lunar",
+   "fx": "bandeira",
+   "emocao": "triste",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Terceiro e último passeio. Três dias na Lua chegam ao fim."
+    }
+   ],
+   "fala": "Terceiro e último passeio. Três dias na Lua chegam ao fim.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "superficie-lunar",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Numa das paradas, vocês encontram uma pedra enorme, rachada em pedaços. Ela ganha um apelido: Pedra da Tracy, o nome da sua filha."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "fx": "bandeira",
+   "fala": "Numa das paradas, vocês encontram uma pedra enorme, rachada em pedaços. Ela ganha um apelido: Pedra da Tracy, o nome da sua filha."
+  },
+  {
+   "amb": "superficie-lunar",
+   "fx": "bandeira",
+   "emocao": "triste",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Antes de ir embora, você escreve três letras na poeira: T, D, C."
+    },
+    {
+     "quem": "prot",
+     "texto": "Tracy Dawn Cernan. É pra minha filha."
+    }
+   ],
+   "fala": "Antes de ir embora, você escreve três letras na poeira: T, D, C. Tracy Dawn Cernan. É pra minha filha.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "superficie-lunar",
+   "fx": "bandeira",
+   "emocao": "neutro",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Sem vento e sem chuva, essas letras podem durar muito tempo."
+    }
+   ],
+   "fala": "Sem vento e sem chuva, essas letras podem durar muito tempo.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "superficie-lunar",
+   "fx": "bandeira",
+   "emocao": "triste",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Schmitt sobe primeiro. Você fica por último."
+    },
+    {
+     "quem": "f0",
+     "texto": "Te espero lá dentro, Gene."
+    }
+   ],
+   "fala": "Schmitt sobe primeiro. Você fica por último. Te espero lá dentro, Gene.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "superficie-lunar",
+   "fx": "bandeira",
+   "emocao": "triste",
+   "falas": [
+    {
+     "quem": "prot",
+     "texto": "Nós saímos como chegamos e, se Deus quiser, vamos voltar, com paz e esperança para toda a humanidade."
+    }
+   ],
+   "fala": "Nós saímos como chegamos e, se Deus quiser, vamos voltar, com paz e esperança para toda a humanidade.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "superficie-lunar",
+   "fx": "bandeira",
+   "emocao": "misterioso",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "E você sobe a escada. Ninguém pisou na Lua depois disso."
+    }
+   ],
+   "fala": "E você sobe a escada. Ninguém pisou na Lua depois disso.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "capitulo": "A volta",
+   "amb": "espaco",
+   "fx": "terra",
+   "emocao": "neutro",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Na volta, Evans sai da nave no meio do caminho para casa, para buscar os filmes das câmeras."
+    }
+   ],
+   "fala": "Na volta, Evans sai da nave no meio do caminho para casa, para buscar os filmes das câmeras.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "espaco",
+   "fx": "reentrada",
+   "ano": "19 dez 1972",
+   "emocao": "preocupado",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Dezenove de dezembro. A cápsula entra na atmosfera a quase quarenta mil quilômetros por hora."
+    }
+   ],
+   "fala": "Dezenove de dezembro. A cápsula entra na atmosfera a quase quarenta mil quilômetros por hora.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "oceano",
+   "fx": "paraquedas",
+   "emocao": "feliz",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Três paraquedas se abrem sobre o oceano Pacífico."
+    }
+   ],
+   "fala": "Três paraquedas se abrem sobre o oceano Pacífico.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "hora": "dia"
+  },
+  {
+   "amb": "oceano",
+   "fx": "pouso",
+   "emocao": "feliz",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O navio Ticonderoga resgata vocês. Missão cumprida, com cento e dez quilos de pedras da Lua."
+    }
+   ],
+   "fala": "O navio Ticonderoga resgata vocês. Missão cumprida, com cento e dez quilos de pedras da Lua.",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "hora": "dia"
+  },
+  {
+   "capitulo": "E agora?",
+   "amb": "espaco",
+   "fx": "lua",
+   "emocao": "misterioso",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Mais de cinquenta anos depois, as suas pegadas continuam lá."
+    }
+   ],
+   "fala": "Mais de cinquenta anos depois, as suas pegadas continuam lá.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "espaco",
+   "fx": "lua",
+   "emocao": "neutro",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Comenta A se a humanidade devia ter continuado indo à Lua, ou B se foi certo parar em mil novecentos e setenta e dois. A mais votada vira o próximo episódio."
+    }
+   ],
+   "fala": "Comenta A se a humanidade devia ter continuado indo à Lua, ou B se foi certo parar em mil novecentos e setenta e dois. A mais votada vira o próximo episódio.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "espaco",
+   "fx": "lua",
+   "emocao": "misterioso",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "E lembra: o último a sair da Lua foi você."
+    }
+   ],
+   "fala": "E lembra: o último a sair da Lua foi você.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  }
+ ]
+}

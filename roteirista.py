@@ -68,7 +68,7 @@ PRESETS_2D = {
                       horas=["noite", "madrugada", "dia", "evacuacao"],
                       nota="Usina de Chernobyl em 1986: bloco 4 destruido, chamine listrada, Pripyat ao fundo. Hora 'evacuacao' = 27/04 com os onibus.",
                       comuns=["bombeiro2", "morador", "moradora", "bombeiro", "operador"],
-                 papeis=["bombeiro", "bombeiro2", "operador", "engenheiro", "liquidador", "morador", "moradora", "oficial-sovietico"]),
+                 papeis=["bombeiro", "bombeiro2", "operador", "engenheiro-usina", "liquidador", "morador", "moradora", "oficial-sovietico"]),
     "selva-cretaceo": dict(rx=r"dinossaur|cretaceo|t-?rex|pterossaur|jurassic|asteroide",
                            horas=["manha", "dia", "tarde", "entardecer", "impacto", "noite"],
                            nota="Selva do Cretaceo com vulcao, lago e dinossauros. Hora 'impacto' = o dia do asteroide.",

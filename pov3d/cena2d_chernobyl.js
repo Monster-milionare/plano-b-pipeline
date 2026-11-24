@@ -7,7 +7,7 @@ Object.assign(ROLES, {
   'bombeiro':     {pele: '#e8b890', cabelo: '#3a2a1a', camisa: '#4a4a3a', manga: '#4a4a3a', calca: '#3a3a30', bota: '#1a1a1a', cinto: '#b8a040', chapeu: 'bombeiro', corChapeu: '#4a4a4a'},
   'bombeiro2':    {pele: '#eec29a', cabelo: '#6a4a2a', bigode: '#6a4a2a', camisa: '#4a4a3a', manga: '#4a4a3a', calca: '#3a3a30', bota: '#1a1a1a', cinto: '#b8a040', chapeu: 'bombeiro', corChapeu: '#4a4a4a'},
   'operador':     {pele: '#e8bc96', cabelo: '#3a281a', camisa: '#f4f4f0', manga: '#f4f4f0', calca: '#e8e8e4', bota: '#d8d8d4', cinto: '#d8d8d4', chapeu: 'touca', dosimetro: true},
-  'engenheiro':   {pele: '#e3b48a', cabelo: '#8a8a88', penteado: 'careca', oculos: '#2a2a30', camisa: '#f4f4f0', manga: '#f4f4f0', calca: '#e8e8e4', bota: '#d8d8d4', cinto: '#d8d8d4', chapeu: 'touca'},
+  'engenheiro-usina': {pele: '#e3b48a', cabelo: '#8a8a88', penteado: 'careca', oculos: '#2a2a30', camisa: '#f4f4f0', manga: '#f4f4f0', calca: '#e8e8e4', bota: '#d8d8d4', cinto: '#d8d8d4', chapeu: 'touca'},
   'liquidador':   {pele: '#e8b890', cabelo: '#3a2a1a', camisa: '#5a6048', manga: '#5a6048', calca: '#4a503a', bota: '#1a1a1a', cinto: '#3a3a2a', chapeu: 'quepe', corChapeu: '#5a6048', mascara: true, dosimetro: true},
   'morador':      {pele: '#eec29a', cabelo: '#5a3a1e', penteado: 'mop', camisa: '#3a6aa8', manga: '#3a6aa8', calca: '#2a2a3a', bota: '#2a1a10', cinto: '#2a1a10'},
   'moradora':     {pele: '#f0c8a0', cabelo: '#c89850', penteado: 'rabo', camisa: '#c84a5a', manga: '#c84a5a', calca: '#3a3a4a', bota: '#2a1a10', cinto: '#2a1a10'},

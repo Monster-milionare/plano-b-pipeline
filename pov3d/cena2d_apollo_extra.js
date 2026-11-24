@@ -1,4 +1,4 @@
-// Papeis extras das missoes Apollo 8 e 12 (Plano B): tripulacao em macacao azul de voo e em traje branco, e o diretor de voo em Houston.
+// Papeis extras das missoes Apollo 8, 12 e 17 (Plano B): tripulacao em macacao azul de voo e em traje branco, e o diretor de voo em Houston.
 Object.assign(ROLES, {
   conrad:  {pele: '#e8b890', cabelo: '#9a7a52', penteado: 'mop', camisa: AZUL_VOO, manga: AZUL_VOO, calca: '#2f5a94', bota: '#d8d8d0', emblema: '#c8281e', cinto: '#2a3f66'},
   gordon:  {pele: '#eec29a', cabelo: '#3a2616', penteado: 'mop', camisa: AZUL_VOO, manga: AZUL_VOO, calca: '#2f5a94', bota: '#d8d8d0', emblema: '#c8281e', cinto: '#2a3f66'},
@@ -11,4 +11,10 @@ Object.assign(ROLES, {
   anders:  {pele: '#f0c8a0', cabelo: '#a88048', penteado: 'mop', camisa: AZUL_VOO, manga: AZUL_VOO, calca: '#2f5a94', bota: '#d8d8d0', emblema: '#c8281e', cinto: '#2a3f66'},
   'borman-traje': {pele: '#e8b890', cabelo: '#2e2016', penteado: 'mop', camisa: '#f1f1ec', manga: '#f1f1ec', calca: '#e6e6e0', bota: '#c8c8c2', capacete: true, cinto: '#e8742a', emblema: '#c8281e'},
   'anders-traje': {pele: '#f0c8a0', cabelo: '#a88048', penteado: 'mop', camisa: '#f1f1ec', manga: '#f1f1ec', calca: '#e6e6e0', bota: '#c8c8c2', capacete: true, cinto: '#e8742a', emblema: '#c8281e'},
+  cernan:  {pele: '#e8b890', cabelo: '#2a1c12', penteado: 'mop', camisa: AZUL_VOO, manga: AZUL_VOO, calca: '#2f5a94', bota: '#d8d8d0', emblema: '#c8281e', cinto: '#2a3f66'},
+  schmitt: {pele: '#f0c49a', cabelo: '#7a5a3a', camisa: AZUL_VOO, manga: AZUL_VOO, calca: '#2f5a94', bota: '#d8d8d0', emblema: '#c8281e', cinto: '#2a3f66'},
+  evans:   {pele: '#e0a984', cabelo: '#1e140c', penteado: 'mop', bigode: '#1e140c', camisa: AZUL_VOO, manga: AZUL_VOO, calca: '#2f5a94', bota: '#d8d8d0', emblema: '#c8281e', cinto: '#2a3f66'},
+  'cernan-traje':  {pele: '#e8b890', cabelo: '#2a1c12', penteado: 'mop', camisa: '#f1f1ec', manga: '#f1f1ec', calca: '#e6e6e0', bota: '#c8c8c2', capacete: true, cinto: '#e8742a', emblema: '#c8281e'},
+  'schmitt-traje': {pele: '#f0c49a', cabelo: '#7a5a3a', camisa: '#f1f1ec', manga: '#f1f1ec', calca: '#e6e6e0', bota: '#c8c8c2', capacete: true, cinto: '#e8742a', emblema: '#c8281e'},
+  'evans-traje':   {pele: '#e0a984', cabelo: '#1e140c', penteado: 'mop', bigode: '#1e140c', camisa: '#f1f1ec', manga: '#f1f1ec', calca: '#e6e6e0', bota: '#c8c8c2', capacete: true, cinto: '#e8742a', emblema: '#c8281e'},
 });
