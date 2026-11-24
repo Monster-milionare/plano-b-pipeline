@@ -1,0 +1,58 @@
+name: Instagram dos videos agendados
+
+on:
+  schedule:
+    - cron: "48 9-23,0-2 * * *"   # de hora em hora: posta no Instagram o video que esta indo ao ar no YouTube
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ig-agendado
+  cancel-in-progress: false
+
+env:
+  TZ: America/Sao_Paulo
+
+jobs:
+  ig:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Tem video agendado indo ao ar agora?
+        id: q
+        run: python3 ig_agendado.py
+      - uses: actions/setup-python@v5
+        if: steps.q.outputs.id != ''
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Garantir ffmpeg
+        if: steps.q.outputs.id != ''
+        run: which ffmpeg >/dev/null 2>&1 || (sudo apt-get update -y -qq && sudo apt-get install -y -qq ffmpeg)
+      - if: steps.q.outputs.id != ''
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+          (cd pov3d && npm install three@0.160.0 --no-audit --no-fund)
+      - name: Renderizar e postar no Instagram
+        if: steps.q.outputs.id != ''
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: |
+          set +e
+          python publish.py --id "${{ steps.q.outputs.id }}" --so-instagram
+          COD=$?
+          git config user.name "agenda-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -f state/*.json 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "chore: instagram do agendado"
+          for i in 1 2 3 4 5; do
+            if git push; then break; fi
+            git pull --rebase --autostash origin main || { python3 state_merge.py && GIT_EDITOR=true git rebase --continue; } || git rebase --abort
+            sleep 5
+          done
+          exit $COD
