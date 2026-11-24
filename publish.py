@@ -115,22 +115,25 @@ def _descricao(c: dict) -> str:
             f"Conteúdo especulativo e educativo: os fatos citados são históricos, as hipóteses são imaginação.{cred}\n\n{HASHTAGS}")
 
 
-def _enviar_youtube(video: Path, c: dict) -> str:
+def _enviar_youtube(video: Path, c: dict, publicar_em: str | None = None) -> str:
     import upload
     from googleapiclient.errors import HttpError
     try:
         tit = (c.get("titulo_youtube") or c["titulo"]).strip()
         return upload.upload_video(video, tit[:92] + " #shorts" if len(tit) <= 92 else tit[:100],
-                                   _descricao(c), c.get("tags", []) + ["shorts"], None, True)
+                                   _descricao(c), c.get("tags", []) + ["shorts"], publicar_em, True)
     except HttpError as exc:
         if "quota" in str(exc).lower() or "uploadLimitExceeded" in str(exc):
             raise CotaEsgotada(str(exc)[:200]) from exc
         raise
 
 
-def registrar(c: dict, video_id: str, estilo: str, agora_iso: str, ig_id=None):
+def registrar(c: dict, video_id: str, estilo: str, agora_iso: str, ig_id=None, agendado: bool = False):
     pubs = [d for d in _ler(PUB, []) if d["id"] != c["id"]]
-    pubs.append({"id": c["id"], "video_id": video_id, "publicado_em": agora_iso, "instagram": ig_id})
+    item = {"id": c["id"], "video_id": video_id, "publicado_em": agora_iso, "instagram": ig_id}
+    if agendado:
+        item["agendado"] = True
+    pubs.append(item)
     PUB.write_text(json.dumps(pubs, ensure_ascii=False, indent=1), encoding="utf-8")
     vids = [d for d in _ler(VIDEOS, []) if d.get("video_id") != video_id]
     vids.append({"video_id": video_id, "item_id": c["id"], "titulo": c["titulo"], "estilo": estilo,
@@ -184,6 +187,7 @@ def main() -> int:
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--se-nao-publicou-ha", type=float, default=0, help="pula se algo foi publicado nas ultimas N horas (reforco de agendamento)")
     ap.add_argument("--so-instagram", action="store_true", help="posta so no Instagram um video ja publicado no YouTube")
+    ap.add_argument("--publicar-em", default="", help="ISO UTC: sobe AGENDADO no YouTube (privado + publishAt); Instagram fica pro ig_agendado")
     a = ap.parse_args()
     if a.se_nao_publicou_ha and not a.id:
         try:
@@ -230,6 +234,8 @@ def main() -> int:
         saida = config.OUT_DIR / f"{c['id']}.mp4"
         import coerencia
         coerencia.exigir(c)          # mesmo com --id: nunca renderiza roteiro incoerente
+        if a.publicar_em:
+            c["_publicar_em"] = a.publicar_em
         print(f"[publish] {c['id']} | estilo={estilo}", flush=True)
         try:
             r = _renderizar(c, saida, estilo)
@@ -246,7 +252,7 @@ def main() -> int:
             print(f"[publish] dry-run: {saida}")
             continue
         try:
-            vid = _enviar_youtube(saida, c)
+            vid = _enviar_youtube(saida, c, a.publicar_em or None)
         except CotaEsgotada as exc:
             print(f"[publish] cota diaria do YouTube esgotada: {exc}")
             return 2
@@ -254,7 +260,7 @@ def main() -> int:
             print(f"[publish] upload falhou: {exc!r}")
             erros += 1
             continue
-        print(f"[publish] YouTube OK: https://youtube.com/shorts/{vid}", flush=True)
+        print(f"[publish] YouTube OK: https://youtube.com/shorts/{vid}" + (f" (agendado para {a.publicar_em})" if a.publicar_em else ""), flush=True)
         try:
             import thumb
             import upload as _up
@@ -263,6 +269,9 @@ def main() -> int:
             print("[publish] thumbnail customizada enviada", flush=True)
         except Exception as exc:
             print(f"[publish] thumbnail pulada: {str(exc)[:160]}", flush=True)
+        if a.publicar_em:          # agendado: o Instagram posta na hora marcada (ig_agendado.py)
+            registrar(c, vid, estilo, a.publicar_em, None, agendado=True)
+            continue
         import instagram
         ig = instagram.postar(saida, _legenda_ig(c))
         registrar(c, vid, estilo, datetime.now(timezone.utc).isoformat(timespec="seconds"), ig)
