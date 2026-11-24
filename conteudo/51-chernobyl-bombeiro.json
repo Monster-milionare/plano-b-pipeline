@@ -2,7 +2,7 @@
  "id": "51-chernobyl-bombeiro",
  "ordem": 1,
  "formato": "escolha",
- "estilo": "tensa",
+ "estilo": "noir",
  "motor": "2d",
  "tema": "chernobyl",
  "titulo": "Você é bombeiro em Chernobyl na noite da explosão. A ou B?",
