@@ -1,0 +1,200 @@
+{
+ "id": "57-apollo-8-terra-nasce",
+ "ordem": 137,
+ "formato": "escolha",
+ "estilo": "epico",
+ "motor": "2d",
+ "titulo": "Você é o comandante da Apollo 8 e a Terra aparece na janela. A ou B?",
+ "titulo_youtube": "Apollo 8: você para a missão pra fotografar a Terra? A ou B",
+ "titulo_curto": "APOLLO 8: A FOTO",
+ "thumb_texto": "PARAR PRA FOTO?",
+ "descricao": "Véspera de Natal de 1968. A Apollo 8 é a primeira nave com pessoas a orbitar a Lua. Numa das voltas, a tripulação vê a Terra surgir sobre o horizonte lunar, algo que não estava no cronograma, e tira uma das fotos mais famosas da história. Dramatização baseada em fatos históricos e relatos da Nasa. A mais votada vira o próximo vídeo.",
+ "comentario_fixado": "A: parar tudo e fotografar a Terra. B: seguir o cronograma e ignorar. Qual a sua escolha?",
+ "tags": [
+  "apollo 8",
+  "nasa",
+  "frank borman",
+  "terra nasce",
+  "earthrise",
+  "lua",
+  "voce decide",
+  "historia"
+ ],
+ "elenco": {
+  "prot": "borman",
+  "f": [
+   "lovell",
+   "anders"
+  ],
+  "vazio": [
+   "espaco"
+  ]
+ },
+ "perfil": "generico",
+ "longo_id": "46-apollo-8-2d-longo",
+ "longo_chamada": "A viagem completa da Apollo 8",
+ "cenas": [
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você é Frank Borman, comandante da Apollo oito. Véspera de Natal de mil novecentos e sessenta e oito."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Você é Frank Borman, comandante da Apollo oito. Véspera de Natal de mil novecentos e sessenta e oito.",
+   "destaques": [
+    "Apollo oito"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f0"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Vocês são os primeiros humanos a orbitar a Lua. Lá fora, só crateras cinzentas e silêncio."
+    }
+   ],
+   "emocao": "misterioso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "Vocês são os primeiros humanos a orbitar a Lua. Lá fora, só crateras cinzentas e silêncio.",
+   "destaques": [
+    "primeiros humanos"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica"
+   ],
+   "fx": "lua"
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "O cronograma de hoje manda fotografar o chão lunar. Só isso."
+    },
+    {
+     "quem": "f0",
+     "texto": "Comandante, estamos atrasados nas fotos."
+    }
+   ],
+   "emocao": "preocupado",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "O cronograma de hoje manda fotografar o chão lunar. Só isso. Comandante, estamos atrasados nas fotos.",
+   "destaques": [
+    "cronograma"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f0"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "De repente, a Terra surge sobre o horizonte da Lua. Azul, sozinha, no meio do escuro do espaço."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "espaco",
+   "fala": "De repente, a Terra surge sobre o horizonte da Lua. Azul, sozinha, no meio do escuro do espaço.",
+   "destaques": [
+    "Terra"
+   ],
+   "cams": [
+    "ampla",
+    "panoramica"
+   ],
+   "fx": "terra"
+  },
+  {
+   "falas": [
+    {
+     "quem": "f1",
+     "texto": "Gente, olha aquilo! A Terra! Alguém pega o filme colorido!"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Ninguém planejou isso. Parar agora é sair do cronograma."
+    }
+   ],
+   "emocao": "surpreso",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Gente, olha aquilo! A Terra! Alguém pega o filme colorido! Ninguém planejou isso. Parar agora é sair do cronograma.",
+   "destaques": [
+    "filme colorido"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f0"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Na história real, a tripulação parou tudo e tirou a foto. Virou uma das imagens mais famosas de todos os tempos."
+    }
+   ],
+   "emocao": "feliz",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Na história real, a tripulação parou tudo e tirou a foto. Virou uma das imagens mais famosas de todos os tempos.",
+   "destaques": [
+    "foto"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f0"
+   ]
+  },
+  {
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Se você fosse o comandante, o que faria? Comenta A para parar tudo e fotografar a Terra, ou B para seguir o cronograma. A mais votada vira o próximo vídeo."
+    }
+   ],
+   "emocao": "neutro",
+   "visuais": [
+    "cinematic scene"
+   ],
+   "amb": "nave-cabine",
+   "fala": "Se você fosse o comandante, o que faria? Comenta A para parar tudo e fotografar a Terra, ou B para seguir o cronograma. A mais votada vira o próximo vídeo.",
+   "destaques": [
+    "escolha"
+   ],
+   "cams": [
+    "ampla",
+    "eu-frente",
+    "f0"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,196 @@
+{
+ "id": "59-chernobyl-engenheiro-teste",
+ "ordem": 139,
+ "formato": "escolha",
+ "estilo": "noir",
+ "motor": "2d",
+ "tema": "chernobyl",
+ "titulo": "Você é engenheiro em Chernobyl na noite do teste. A ou B?",
+ "titulo_youtube": "Você é engenheiro em Chernobyl: continua o teste ou desliga o reator? A ou B",
+ "titulo_curto": "A NOITE DO TESTE",
+ "thumb_texto": "CONTINUA OU DESLIGA?",
+ "descricao": "25 de abril de 1986: a usina de Chernobyl faria um teste de segurança que já tinha atrasado cerca de dez horas. Com o reator instável e quase todas as barras de controle retiradas, o teste continuou, e na madrugada seguinte o reator 4 explodiu. Dramatização baseada em fatos históricos. A mais votada vira o próximo vídeo.",
+ "comentario_fixado": "A: obedecer e continuar o teste. B: recusar e desligar o reator, mesmo perdendo o emprego. Qual a sua escolha?",
+ "tags": [
+  "chernobyl",
+  "1986",
+  "engenheiro",
+  "teste",
+  "reator 4",
+  "pov",
+  "voce decide",
+  "historia",
+  "desastre nuclear"
+ ],
+ "elenco": {
+  "prot": "engenheiro-usina",
+  "f": [
+   "oficial-sovietico",
+   "operador"
+  ]
+ },
+ "cenas": [
+  {
+   "amb": "chernobyl",
+   "hora": "noite",
+   "emocao": "neutro",
+   "clima": "misterio",
+   "beats": [
+    {
+     "quem": "narrador",
+     "texto": "Você é engenheiro da usina de Chernobyl. Vinte e cinco de abril de mil novecentos e oitenta e seis.",
+     "cam": "ampla",
+     "mov": "zoom"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Hoje a usina vai simular uma queda de energia, pra provar que o reator é seguro.",
+     "cam": "reator",
+     "mov": "pan"
+    },
+    {
+     "quem": "f0",
+     "texto": "O teste já atrasou dez horas. Tem que sair hoje.",
+     "cam": "f0",
+     "mov": "corte",
+     "acoes": [
+      {
+       "quem": "f0",
+       "faz": "olha",
+       "para": "reator"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "amb": "chernobyl",
+   "hora": "noite",
+   "emocao": "preocupado",
+   "clima": "tensa",
+   "beats": [
+    {
+     "quem": "narrador",
+     "texto": "Só que o reator esfria demais, e a potência despenca.",
+     "cam": "reator",
+     "mov": "zoom"
+    },
+    {
+     "quem": "f1",
+     "texto": "Tá instável. Os números não param quietos.",
+     "cam": "f1",
+     "mov": "corte",
+     "acoes": [
+      {
+       "quem": "f1",
+       "faz": "olha",
+       "para": "prot"
+      }
+     ]
+    },
+    {
+     "quem": "narrador",
+     "texto": "Pra segurar a potência, retiram quase todas as barras de controle.",
+     "cam": "coluna",
+     "mov": "pan",
+     "sfx": "geiger"
+    }
+   ]
+  },
+  {
+   "amb": "chernobyl",
+   "hora": "noite",
+   "emocao": "preocupado",
+   "clima": "tensa",
+   "beats": [
+    {
+     "quem": "prot",
+     "texto": "Se a gente continuar, o reator pode escapar do nosso controle.",
+     "cam": "prot",
+     "mov": "corte"
+    },
+    {
+     "quem": "f0",
+     "texto": "Não me interessa. Continua o teste.",
+     "cam": "f0",
+     "mov": "chicote",
+     "acoes": [
+      {
+       "quem": "f0",
+       "faz": "aponta",
+       "para": "reator",
+       "dur": 1.8
+      }
+     ]
+    },
+    {
+     "quem": "narrador",
+     "texto": "O manual manda parar. Mas ali, quem manda é o chefe.",
+     "cam": "chamine",
+     "mov": "recua"
+    }
+   ]
+  },
+  {
+   "amb": "chernobyl",
+   "hora": "madrugada",
+   "emocao": "surpreso",
+   "clima": "epica",
+   "beats": [
+    {
+     "quem": "narrador",
+     "texto": "Uma e vinte e três da madrugada. O teste começa.",
+     "cam": "reator",
+     "mov": "zoom",
+     "sfx": "geiger"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Poucos segundos depois, o reator quatro explode.",
+     "cam": "cidade",
+     "mov": "chicote"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Dois dias depois, a Suécia detecta a radiação e a União Soviética admite o acidente.",
+     "cam": "ampla",
+     "mov": "recua"
+    }
+   ]
+  },
+  {
+   "amb": "chernobyl",
+   "hora": "madrugada",
+   "emocao": "surpreso",
+   "clima": "epica",
+   "beats": [
+    {
+     "quem": "narrador",
+     "texto": "Comenta A: obedecer e continuar o teste.",
+     "cam": "f0",
+     "mov": "chicote",
+     "maos": "aponta"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Ou B: recusar e desligar o reator, mesmo perdendo o emprego.",
+     "cam": "prot",
+     "mov": "chicote"
+    },
+    {
+     "quem": "narrador",
+     "texto": "A mais votada vira o próximo vídeo.",
+     "cam": "grupo",
+     "mov": "zoom",
+     "acoes": [
+      {
+       "quem": "todos",
+       "faz": "olha",
+       "para": "camera"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,190 @@
+{
+ "id": "58-roma-pao-e-circo",
+ "ordem": 138,
+ "formato": "escolha",
+ "estilo": "epico",
+ "motor": "2d",
+ "tema": "roma",
+ "titulo": "Você é senador de Roma e o povo está com fome. A ou B?",
+ "titulo_youtube": "Pão ou circo? Você é senador em Roma e o povo está com fome. A ou B",
+ "titulo_curto": "PÃO OU CIRCO?",
+ "thumb_texto": "COMIDA OU FESTA?",
+ "descricao": "Roma, por volta do ano 100. A cidade tinha cerca de um milhão de habitantes e o Estado distribuía trigo de graça para centenas de milhares de cidadãos, enquanto o Coliseu oferecia espetáculos gratuitos. O poeta Juvenal reclamou que o povo só queria pão e circo. Dramatização baseada em fatos históricos. A mais votada vira o próximo vídeo.",
+ "comentario_fixado": "A: gastar tudo em trigo pra todo mundo. B: gastar tudo em jogos gigantes no Coliseu. Qual a sua escolha?",
+ "tags": [
+  "roma antiga",
+  "pao e circo",
+  "coliseu",
+  "senador",
+  "imperio romano",
+  "pov",
+  "voce decide",
+  "historia"
+ ],
+ "elenco": {
+  "prot": "senador",
+  "f": [
+   "cidadao-romano",
+   "cidada-romana",
+   "centuriao"
+  ]
+ },
+ "cenas": [
+  {
+   "amb": "roma",
+   "hora": "dia",
+   "emocao": "surpreso",
+   "clima": "epica",
+   "beats": [
+    {
+     "quem": "narrador",
+     "texto": "Você é senador em Roma, por volta do ano cem. A cidade tem cerca de um milhão de pessoas.",
+     "cam": "eu-frente",
+     "mov": "zoom",
+     "sfx": "tambor"
+    },
+    {
+     "quem": "narrador",
+     "texto": "O Coliseu domina o horizonte. Mas hoje o povo não está de festa.",
+     "cam": "coliseu",
+     "mov": "pan"
+    },
+    {
+     "quem": "f0",
+     "texto": "Senador, o pão acabou! Meus filhos estão com fome.",
+     "cam": "f0",
+     "mov": "corte",
+     "acoes": [
+      {
+       "quem": "f0",
+       "faz": "olha",
+       "para": "camera"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "amb": "roma",
+   "hora": "tarde",
+   "emocao": "preocupado",
+   "clima": "tensa",
+   "beats": [
+    {
+     "quem": "narrador",
+     "texto": "O Estado já dá trigo de graça pra centenas de milhares de cidadãos.",
+     "cam": "chao",
+     "mov": "zoom"
+    },
+    {
+     "quem": "f1",
+     "texto": "A fila dá a volta no fórum, e o saco volta vazio.",
+     "cam": "f1",
+     "mov": "corte",
+     "acoes": [
+      {
+       "quem": "f1",
+       "faz": "aponta",
+       "para": "cidade",
+       "dur": 1.6
+      }
+     ]
+    },
+    {
+     "quem": "narrador",
+     "texto": "E quando falta comida, falta paciência.",
+     "cam": "cidade",
+     "mov": "pan"
+    }
+   ]
+  },
+  {
+   "amb": "roma",
+   "hora": "entardecer",
+   "emocao": "misterioso",
+   "clima": "misterio",
+   "beats": [
+    {
+     "quem": "narrador",
+     "texto": "Do outro lado, o Coliseu oferece gladiadores e feras, de graça pra todo mundo.",
+     "cam": "coliseu",
+     "mov": "recua"
+    },
+    {
+     "quem": "f2",
+     "texto": "Se o povo for pra arena, esquece a fome e a raiva.",
+     "cam": "f2",
+     "mov": "corte",
+     "acoes": [
+      {
+       "quem": "f2",
+       "faz": "aponta",
+       "para": "coliseu",
+       "dur": 1.6
+      }
+     ]
+    },
+    {
+     "quem": "narrador",
+     "texto": "Um poeta da época, Juvenal, reclamou que o povo só queria pão e circo.",
+     "cam": "arco",
+     "mov": "zoom"
+    }
+   ]
+  },
+  {
+   "amb": "roma",
+   "hora": "noite",
+   "emocao": "preocupado",
+   "clima": "tensa",
+   "beats": [
+    {
+     "quem": "narrador",
+     "texto": "Cada moeda do tesouro só paga uma coisa. Comida ou espetáculo.",
+     "cam": "eu-frente",
+     "mov": "zoom"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Na história real, os imperadores acabaram pagando os dois.",
+     "cam": "ampla",
+     "mov": "recua"
+    }
+   ]
+  },
+  {
+   "amb": "roma",
+   "hora": "noite",
+   "emocao": "surpreso",
+   "clima": "epica",
+   "beats": [
+    {
+     "quem": "narrador",
+     "texto": "Comenta A: gastar tudo em trigo pra todo mundo.",
+     "cam": "f0",
+     "mov": "chicote",
+     "maos": "aponta"
+    },
+    {
+     "quem": "narrador",
+     "texto": "Ou B: gastar tudo em jogos gigantes no Coliseu.",
+     "cam": "f2",
+     "mov": "chicote"
+    },
+    {
+     "quem": "narrador",
+     "texto": "A mais votada vira o próximo vídeo.",
+     "cam": "grupo",
+     "mov": "zoom",
+     "acoes": [
+      {
+       "quem": "todos",
+       "faz": "olha",
+       "para": "camera"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
