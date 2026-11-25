@@ -1,33 +1,36 @@
 {
- "atualizado": "24/11/2026 10:49 UTC",
+ "atualizado": "25/11/2026 09:44 UTC",
  "tema_peso": {
   "ingles": 0.669,
-  "cabral": 0.537,
-  "dumont": 1.016,
-  "apollo": 0.7,
-  "roma": 1.742,
-  "napoleao": 0.844,
-  "futuro": 1.042,
-  "titanic": 1.013,
-  "ciencia": 1.104,
-  "nasa": 0.929
+  "cabral": 0.547,
+  "dumont": 1.053,
+  "apollo": 0.702,
+  "roma": 1.295,
+  "napoleao": 0.857,
+  "futuro": 1.049,
+  "titanic": 0.975,
+  "ciencia": 1.01,
+  "nasa": 0.973,
+  "internet": 1.449,
+  "cretaceo": 1.42
  },
  "formato_peso": {
-  "e-se": 0.971,
-  "pov": 0.669,
-  "voce-acorda": 1.061,
-  "pov3d": 0.892,
-  "debate": 1.041,
-  "escolha": 0.946,
-  "futuro": 1.042,
-  "quem-venceria": 1.404
+  "e-se": 1.044,
+  "pov": 0.67,
+  "voce-acorda": 0.828,
+  "pov3d": 0.908,
+  "debate": 1.068,
+  "escolha": 1.115,
+  "futuro": 1.049,
+  "quem-venceria": 1.187
  },
  "alertas": [
-  "REPETICAO de tema: 'roma' em 3 dos ultimos 8 Shorts.",
-  "Elenco suspeito em 08-internet-1900: perfil 'internet' sem perfil explicito no roteiro."
+  "REPETICAO de tema: 'cretaceo' em 3 dos ultimos 8 Shorts.",
+  "3 pares de Shorts seguidos com o mesmo tema.",
+  "ESTOQUE baixo de Shorts 2D liberados: 1 (meta >= 3)."
  ],
  "tarefas": [
-  "Criar roteiros de OUTROS temas (nao 'roma') e novos cenarios/modelos para sair da mesmice.",
-  "Definir 'perfil' explicito (ou criar perfil novo) em 08-internet-1900."
+  "Criar roteiros de OUTROS temas (nao 'cretaceo') e novos cenarios/modelos para sair da mesmice.",
+  "Escrever mais Shorts 2D (temas novos, cenarios novos)."
  ]
 }
