@@ -38,7 +38,6 @@ jobs:
           python metricas.py || true
           python votos.py || true          # le os votos A/B nos comentarios
           python continuacao.py || true    # a opcao vencedora vira o proximo episodio (entra com prioridade na fila)
-          python responder.py || true      # responde quem votou (precisa do token com permissao de comentar)
           python supervisor.py || true
           rm -f token.json
           git config user.name "planob-bot"
