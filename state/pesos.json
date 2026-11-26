@@ -1,24 +1,24 @@
 {
  "estilos": {
-  "epico": 0.756,
-  "sepia": 0.802,
-  "noir": 1.219,
-  "neon": 1.58,
-  "aquarela": 1.087
+  "epico": 0.825,
+  "sepia": 0.91,
+  "noir": 1.088,
+  "neon": 1.512,
+  "aquarela": 1.116
  },
  "formatos": {
-  "e-se": 1.214,
-  "pov": 0.67,
-  "voce-acorda": 0.939,
-  "pov3d": 0.963,
-  "debate": 1.158,
+  "e-se": 1.111,
+  "pov": 0.688,
+  "voce-acorda": 0.901,
+  "pov3d": 1.025,
+  "debate": 1.261,
   "longo": 0.4,
-  "escolha": 1.315,
-  "futuro": 1.173,
-  "quem-venceria": 1.304
+  "escolha": 1.399,
+  "futuro": 1.313,
+  "quem-venceria": 1.237
  },
- "amostra": 27,
- "media_views_dia": 240.6,
- "atualizado": "2026-11-25T09:44+00:00",
+ "amostra": 34,
+ "media_views_dia": 199.1,
+ "atualizado": "2026-11-26T09:22+00:00",
  "fonte_views": "oauth"
 }
