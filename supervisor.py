@@ -73,7 +73,7 @@ def auditar() -> tuple:
         for a in q["avisos"]:
             alertas.append(f"direcao {c['id']}: {a}")
     st = _ler(config.STATE_DIR / "respostas_status.json", {})
-    if st.get("precisa_autorizar"):
+    if False and st.get("precisa_autorizar"):     # Andre 26/11: nao precisa responder comentario, so fazer o video
         alertas.append(f"COMENTARIOS: {st.get('pendentes', 0)} resposta(s) de voto esperando: o token do canal nao tem permissao de comentar.")
         tarefas.append("Andre: rodar autorizar_youtube.py no PC e atualizar o secret YOUTUBE_TOKEN_JSON (libera as respostas aos votos).")
     try:
