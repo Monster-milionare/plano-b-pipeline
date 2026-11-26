@@ -294,5 +294,13 @@
   "estilo": "sepia",
   "formato": "voce-acorda",
   "publicado_em": "2026-11-25T19:10:00Z"
+ },
+ {
+  "video_id": "oLL3nljuex8",
+  "item_id": "57-apollo-8-terra-nasce",
+  "titulo": "Você é o comandante da Apollo 8 e a Terra aparece na janela. A ou B?",
+  "estilo": "epico",
+  "formato": "escolha",
+  "publicado_em": "2026-11-27T00:15:00Z"
  }
 ]
