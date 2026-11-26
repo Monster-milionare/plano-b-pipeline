@@ -1,5 +1,7 @@
 // Papeis extras das missoes Apollo 8, 12 e 17 (Plano B): tripulacao em macacao azul de voo e em traje branco, e o diretor de voo em Houston.
 Object.assign(ROLES, {
+  shepard: {pele: '#e8b890', cabelo: '#8a6a46', camisa: AZUL_VOO, manga: AZUL_VOO, calca: '#2f5a94', bota: '#d8d8d0', emblema: '#c8281e', cinto: '#2a3f66'},
+  mitchell: {pele: '#eec29a', cabelo: '#33231a', penteado: 'mop', camisa: AZUL_VOO, manga: AZUL_VOO, calca: '#2f5a94', bota: '#d8d8d0', emblema: '#c8281e', cinto: '#2a3f66'},
   conrad:  {pele: '#e8b890', cabelo: '#9a7a52', penteado: 'mop', camisa: AZUL_VOO, manga: AZUL_VOO, calca: '#2f5a94', bota: '#d8d8d0', emblema: '#c8281e', cinto: '#2a3f66'},
   gordon:  {pele: '#eec29a', cabelo: '#3a2616', penteado: 'mop', camisa: AZUL_VOO, manga: AZUL_VOO, calca: '#2f5a94', bota: '#d8d8d0', emblema: '#c8281e', cinto: '#2a3f66'},
   bean:    {pele: '#e0a984', cabelo: '#241810', penteado: 'mop', camisa: AZUL_VOO, manga: AZUL_VOO, calca: '#2f5a94', bota: '#d8d8d0', emblema: '#c8281e', cinto: '#2a3f66'},
