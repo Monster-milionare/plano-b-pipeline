@@ -1,3 +1,13 @@
+quem-venceria|Samurai contra cavaleiro medieval: quem venceria?
+futuro|Você acorda em 2150 numa cidade flutuante
+escolha|Você é Tiradentes e um amigo te traiu: A para fugir pro sertão ou B para assumir a culpa sozinho
+voce-acorda|Você acorda em Londres em 1900, na era das grandes invenções
+quem-venceria|Napoleão contra Gengis Khan: quem venceria?
+escolha|Você é um samurai e o xogum manda você trair seu mestre: A para obedecer ou B para fugir
+escolha|Você é mercador em Veneza em 1348 e chega um navio com doentes: A para deixar atracar ou B para mandar o navio embora
+voce-acorda|Você acorda no Rio de Janeiro em 1808, no dia em que a corte portuguesa chega
+quem-venceria|Roma contra a China Han: quem venceria?
+voce-acorda|Você acorda em Tóquio no ano de 2080
 escolha|Você é Gengis Khan e perdeu território: A para retomar o que perdeu ou B para conquistar terras novas
 voce-acorda|Você acorda em 1348 no meio da Peste Negra
 escolha|Você é bombeiro em Chernobyl e o reator explodiu: A para entrar no prédio do reator ou B para tirar todo mundo de Pripyat

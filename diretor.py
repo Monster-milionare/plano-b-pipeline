@@ -87,6 +87,13 @@ NAO_NOMES = {"cidadao", "cidada", "marujo", "nativo", "soldado", "soldado romano
              "senador", "pretoriano", "escravo", "gladiador", "legionario", "plebeu", "plebeia", "menino", "menina", "dino",
              "bebe tricera", "viking", "egipcio", "samurai", "asteca", "cavaleiro", "engenheiro usina", "liquidador",
              "morador", "moradora", "oficial sovietico", "cidadao romano", "cidada romana", "medico"}
+PONTOS_KW.update({
+    "cidade-medieval": {"igreja": r"igreja\w*|catedral|sinos?|padre|missa", "poco": r"\bpoco\b|\bagua\b", "mercado": r"mercado|feira|barraca\w*|vende\w*"},
+    "cidade-colonial": {"igreja": r"igreja\w*|capela|sinos?|missa", "chafariz": r"chafariz|fonte|praca|\bagua\b"},
+    "cidade-vitoriana": {"relogio": r"relogio|torre|horas?\b", "bonde": r"bonde|eletric\w*|trilhos?", "banca": r"jorna\w*|noticia\w*|banca"},
+    "cidade-futuro": {"torre": r"torre|predios?|arranha", "carros": r"carros?|voador\w*|voando|drones?"},
+    "cidade-oriental": {"pagode": r"pagode|templo|santuario", "torii": r"portal|torii|portao"},
+})
 PONTOS_KW_GERAIS = {"ceu": r"\bceu\b|estrelas|\blua\b", "grupo": r"todos|voces|grupo|juntos"}
 
 

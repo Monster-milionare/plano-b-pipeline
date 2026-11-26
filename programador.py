@@ -2,7 +2,7 @@
 """Programador do dia: roda de madrugada (depois que a cota do YouTube zera, ~02h BRT), escolhe TODOS os videos do
 dia e os horarios, e o workflow programar_dia.yml renderiza e sobe cada um como AGENDADO (privado + publishAt).
 
-- 4 Shorts: rodizio 3x 2D + 1x 3D (o 3D e o 2o do dia). Um Short sempre cai no TRAJETO DA MANHA (07h, pedido do
+- 4 Shorts: rodizio 3x 3D + 1x 2D (o 2D e o 3o do dia; o 3D rende ~2x mais views, pente fino de 26/11). Um Short sempre cai no TRAJETO DA MANHA (07h, pedido do
   Andre: o pessoal indo pro trabalho/faculdade vendo celular); os outros nos melhores horarios aprendidos (horarios.py).
 - 1 longo (fila de longos revisados), no horario do longo (noite no dia util, fim de manha no fim de semana).
 - state/agenda.json guarda o plano do dia. Como os videos agendados ja entram em publicados.json com a hora marcada,
@@ -24,7 +24,7 @@ PUB = config.STATE_DIR / "publicados.json"
 PEDIDOS = config.STATE_DIR / "pedidos.json"   # {"2026-11-24": {"1": "51-chernobyl-bombeiro"}}: o Andre escolhe o video de um slot do dia
 MANHA = (7, 0)                  # o Short do trajeto da manha
 MINUTOS = [0, 10, 5, 15]        # pequenos deslocamentos (evita bater na hora cheia de todo mundo)
-ORDEM_MOTOR = ["2d", "3d", "2d", "2d"]
+ORDEM_MOTOR = ["3d", "3d", "2d", "3d"]   # pente fino 26/11: 3D faz ~2x as views do 2D -> 3 Shorts 3D + 1 2D por dia
 MIN_ANTECEDENCIA = timedelta(minutes=50)   # o YouTube exige publishAt no futuro; damos folga pro render
 
 
@@ -79,7 +79,8 @@ def _fila_valida():
         ok = diversidade.diversificar(ok)
     except Exception:
         pass
-    return ok
+    # promessa cumprida primeiro: episodio de continuacao (voto dos comentarios) entra antes de qualquer outro
+    return [c for c in ok if c.get("continuacao_de")] + [c for c in ok if not c.get("continuacao_de")]
 
 
 def planejar(d: date, gravar: bool = True) -> dict:

@@ -1,0 +1,221 @@
+{
+ "id": "51c-chernobyl-parte-2-voce-corre-pra-pripyat",
+ "ordem": 0,
+ "formato": "escolha",
+ "motor": "2d",
+ "tema": "chernobyl",
+ "estilo": "noir",
+ "continuacao_de": "51-chernobyl-bombeiro",
+ "voto_vencedor": "B",
+ "titulo": "Chernobyl (parte 2): você corre pra Pripyat avisar sua família",
+ "titulo_youtube": "Chernobyl parte 2: vocês escolheram correr pra Pripyat. Ninguém avisou a cidade",
+ "titulo_curto": "CHERNOBYL: PARTE 2",
+ "thumb_texto": "NINGUÉM AVISOU",
+ "descricao": "Continuação do episódio do bombeiro de Chernobyl: a opção mais votada nos comentários foi B, correr pra Pripyat e avisar a família. Em 26 de abril de 1986 a cidade acordou normal; a evacuação só veio no dia seguinte, com mais de mil ônibus.",
+ "comentario_fixado": "A: ir embora com a sua família agora. B: voltar pra usina e ajudar os colegas. O que você faria?",
+ "votacao": {
+  "A": {
+   "rotulo": "A: ir embora com a família agora",
+   "palavras": [
+    "embora",
+    "família",
+    "familia",
+    "fugir",
+    "sair"
+   ]
+  },
+  "B": {
+   "rotulo": "B: voltar pra usina e ajudar os colegas",
+   "palavras": [
+    "voltar",
+    "usina",
+    "ajudar",
+    "colegas"
+   ]
+  }
+ },
+ "tags": [
+  "chernobyl",
+  "pripyat",
+  "1986",
+  "historia",
+  "parte 2",
+  "voce escolhe",
+  "bombeiro"
+ ],
+ "elenco": {
+  "prot": "bombeiro",
+  "f": [
+   "moradora",
+   "morador",
+   "oficial-sovietico"
+  ]
+ },
+ "cenas": [
+  {
+   "amb": "chernobyl",
+   "hora": "madrugada",
+   "acao": "anda",
+   "emocao": "preocupado",
+   "cams": [
+    "cidade",
+    "ampla"
+   ],
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Vocês escolheram B. Você larga a mangueira e corre pra Pripyat."
+    }
+   ],
+   "fala": "Vocês escolheram B. Você larga a mangueira e corre pra Pripyat.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "chernobyl",
+   "hora": "madrugada",
+   "emocao": "misterioso",
+   "cams": [
+    "coluna",
+    "cidade"
+   ],
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "São três quilômetros no escuro. Atrás de você, um brilho azul sobe do reator."
+    }
+   ],
+   "fala": "São três quilômetros no escuro. Atrás de você, um brilho azul sobe do reator.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "chernobyl",
+   "hora": "madrugada",
+   "emocao": "preocupado",
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Você bate na porta de casa. Sua esposa acorda assustada."
+    },
+    {
+     "quem": "f0",
+     "texto": "O que aconteceu? Você tá tremendo!"
+    },
+    {
+     "quem": "prot",
+     "texto": "Fecha as janelas. Ninguém sai de casa amanhã."
+    }
+   ],
+   "fala": "Você bate na porta de casa. Sua esposa acorda assustada. O que aconteceu? Você tá tremendo! Fecha as janelas. Ninguém sai de casa amanhã.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "chernobyl",
+   "hora": "dia",
+   "emocao": "misterioso",
+   "cams": [
+    "roda",
+    "cidade"
+   ],
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "De manhã, Pripyat acorda normal. É sábado, vinte e seis de abril."
+    },
+    {
+     "quem": "narrador",
+     "texto": "Crianças brincam na rua e tem casamento marcado. Ninguém avisou nada."
+    }
+   ],
+   "fala": "De manhã, Pripyat acorda normal. É sábado, vinte e seis de abril. Crianças brincam na rua e tem casamento marcado. Ninguém avisou nada.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "chernobyl",
+   "hora": "dia",
+   "emocao": "preocupado",
+   "falas": [
+    {
+     "quem": "f1",
+     "texto": "Bombeiro, que fumaça é aquela lá na usina?"
+    },
+    {
+     "quem": "prot",
+     "texto": "Leva seus filhos pra dentro. Hoje não é dia de rua."
+    }
+   ],
+   "fala": "Bombeiro, que fumaça é aquela lá na usina? Leva seus filhos pra dentro. Hoje não é dia de rua.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "chernobyl",
+   "hora": "evacuacao",
+   "emocao": "surpreso",
+   "cams": [
+    "cidade",
+    "ampla"
+   ],
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Só no dia seguinte, às duas da tarde, chegam mais de mil ônibus."
+    }
+   ],
+   "fala": "Só no dia seguinte, às duas da tarde, chegam mais de mil ônibus.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "chernobyl",
+   "hora": "evacuacao",
+   "emocao": "triste",
+   "falas": [
+    {
+     "quem": "f2",
+     "texto": "Levem só os documentos. Vocês voltam em três dias."
+    },
+    {
+     "quem": "narrador",
+     "texto": "Quase ninguém voltou. Pripyat está vazia até hoje."
+    }
+   ],
+   "fala": "Levem só os documentos. Vocês voltam em três dias. Quase ninguém voltou. Pripyat está vazia até hoje.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  },
+  {
+   "amb": "chernobyl",
+   "hora": "evacuacao",
+   "emocao": "misterioso",
+   "cams": [
+    "reator",
+    "cidade"
+   ],
+   "falas": [
+    {
+     "quem": "narrador",
+     "texto": "Comenta A: você vai embora com a sua família agora."
+    },
+    {
+     "quem": "narrador",
+     "texto": "Ou B: você volta pra usina e ajuda os colegas. A mais votada vira o próximo vídeo."
+    }
+   ],
+   "fala": "Comenta A: você vai embora com a sua família agora. Ou B: você volta pra usina e ajuda os colegas. A mais votada vira o próximo vídeo.",
+   "visuais": [
+    "cinematic scene"
+   ]
+  }
+ ]
+}

@@ -74,6 +74,11 @@ const DEC = {
   conves:  {grama: 0, flores: 0, pedras: 0, x: [-3, 3], z: [-16, 6], poeira: 0xffd9a0},
   cabine:  {grama: 0, flores: 0, pedras: 0, x: [-3, 3], z: [-3, 5], poeira: 0xffd0a0},
   lua:     {grama: 0, flores: 0, pedras: 140, x: [-34, 34], z: [-44, 8], poeira: null},
+  'cidade-medieval': {grama: 260, flores: 0, pedras: 30, x: [-4.4, 4.4], z: [-32, 6], poeira: 0xe8e4dc},
+  'cidade-colonial': {grama: 120, flores: 40, pedras: 10, x: [-4.4, 4.4], z: [-32, 6], poeira: 0xfff2d0},
+  'cidade-vitoriana': {grama: 0, flores: 0, pedras: 0, x: [-3, 3], z: [-30, 6], poeira: 0xffe8c0},
+  'cidade-futuro': {grama: 0, flores: 0, pedras: 0, x: [-3, 3], z: [-30, 6], poeira: 0x8af0ff},
+  'cidade-oriental': {grama: 160, flores: 60, pedras: 16, x: [-4.4, 4.4], z: [-32, 6], poeira: 0xffd8e8},
 };
 const _tmpM = new THREE.Object3D(), _tmpC = new THREE.Color();
 function _inst(geo, mat, n, a, fn) {

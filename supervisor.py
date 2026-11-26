@@ -72,6 +72,17 @@ def auditar() -> tuple:
             tarefas.append(f"Corrigir a direcao de {c['id']}: {e}")
         for a in q["avisos"]:
             alertas.append(f"direcao {c['id']}: {a}")
+    st = _ler(config.STATE_DIR / "respostas_status.json", {})
+    if st.get("precisa_autorizar"):
+        alertas.append(f"COMENTARIOS: {st.get('pendentes', 0)} resposta(s) de voto esperando: o token do canal nao tem permissao de comentar.")
+        tarefas.append("Andre: rodar autorizar_youtube.py no PC e atualizar o secret YOUTUBE_TOKEN_JSON (libera as respostas aos votos).")
+    try:
+        import continuacao
+        pend = continuacao.pendentes()
+        if pend:
+            alertas.append(f"CONTINUACAO: {len(pend)} video(s) com voto vencedor ainda sem episodio seguinte: " + ", ".join(o["id"] for _, o in pend[:5]))
+    except Exception:
+        pass
     for c in ok:
         r = coerencia.validar(c)
         for a in r["avisos"]:

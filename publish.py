@@ -85,13 +85,13 @@ def alternar(fila: list) -> list:
             continue
         if c and c.get("formato") != "longo" and dia == hoje:
             feitos_hoje.append(_motor(c))
-    n, tem3d = len(feitos_hoje), "3d" in feitos_hoje
-    quer = "3d" if (n >= 1 and not tem3d) else "2d"
+    n, tem2d = len(feitos_hoje), "2d" in feitos_hoje
+    quer = "2d" if (n >= 2 and not tem2d) else "3d"          # 3x 3D + 1x 2D (o 3D rende ~2x mais views)
     pref = [c for c in fila if _motor(c) == quer]
     if not pref:
         print(f"[publish] rodizio: hoje {n} Short(s) ({', '.join(feitos_hoje) or '-'}), queria {quer.upper()} mas nao ha estoque - seguindo a fila normal. CRIE MAIS Shorts {quer.upper()}.", flush=True)
         return fila
-    print(f"[publish] rodizio 3x2D+1x3D: hoje {n} Short(s) ({', '.join(feitos_hoje) or '-'}) -> agora {quer.upper()} ({pref[0]['id']}).", flush=True)
+    print(f"[publish] rodizio 3x3D+1x2D: hoje {n} Short(s) ({', '.join(feitos_hoje) or '-'}) -> agora {quer.upper()} ({pref[0]['id']}).", flush=True)
     return pref + [c for c in fila if c not in pref]
 
 

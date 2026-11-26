@@ -63,6 +63,11 @@ AMB_3D = {
     "vapor": dict(era="1900", mostra="navio a vapor de aco (Titanic), icebergs"),
     "muro": dict(era="1900", mostra="Muro de Berlim"),
     "gavea": dict(era="1900", mostra="cesto da gavea do Titanic, noite sem lua, iceberg"),
+    "cidade-medieval": dict(era="medieval", mostra="rua medieval europeia (1300-1500): casas de enxaimel, catedral gotica, poco, feira"),
+    "cidade-colonial": dict(era="colonial", mostra="rua colonial brasileira (1600-1850): casario colorido, igreja barroca, chafariz, palmeiras"),
+    "cidade-vitoriana": dict(era="1900", mostra="rua de 1850-1930 (Londres/Paris/NY): predios de tijolo, chamines, lampioes a gas, torre do relogio, bonde"),
+    "cidade-futuro": dict(era="futuro", mostra="cidade do futuro (2050-2200): torres de vidro com neon, carros voadores, hologramas, robos"),
+    "cidade-oriental": dict(era="medieval", mostra="cidade oriental feudal (Japao/China): casas de madeira e papel, pagode, torii, lanternas, cerejeiras"),
 }
 
 # DIRECAO: pontos de interesse (alvos de camera e de trajetoria) e entidades que cada cenario sabe desenhar.
@@ -74,10 +79,17 @@ PONTOS = {
     "gavea": {"proa", "mar", "horizonte", "frente", "ceu", "estrelas", "sino", "telefone", "ponte", "chamine", "baixo", "lado",
               "ice-longe", "ice-frente", "ice-perto", "ice-lado", "ice-passou", "ext-proa", "ext-lado", "ext-alto"},
 }
+PONTOS.update({
+    "cidade-medieval": {"igreja", "poco", "mercado"},
+    "cidade-colonial": {"igreja", "chafariz"},
+    "cidade-vitoriana": {"relogio", "bonde", "banca"},
+    "cidade-futuro": {"torre", "carros"},
+    "cidade-oriental": {"pagode", "torii"},
+})
 ENTIDADES = {"selva-cretaceo": {"ptero", "sombra"}, "gavea": {"iceberg"}, "chernobyl": {"helicoptero"}}
 ALVOS_GERAIS = {"grupo", "ampla", "panoramica", "prot", "camera", "voce", "todos", "fora", "fora-esq", "fora-dir"}
 
-ERAS_ANTIGAS = {"vela", "antigo", "medieval"}
+ERAS_ANTIGAS = {"vela", "antigo", "medieval", "colonial"}
 
 
 def _ler(arq):

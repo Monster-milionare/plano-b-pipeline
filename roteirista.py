@@ -29,7 +29,7 @@ REGRAS DE VERDADE (nao negociaveis):
 - Numeros falados por extenso na fala; o campo "ano" pode ter digitos.
 - Sem tracos longos, emojis, asteriscos, hashtags.
 
-CENAS: 7 a 9 cenas. Cada cena: "fala" (1 a 2 frases, o texto completo da cena), "emocao" (neutro|feliz|surpreso|preocupado|misterioso), opcional "ano", "destaques" (1 a 3 palavras da fala para enfatizar na legenda), "visuais" (lista com 1 descricao curta em INGLES). Opcional "cenario" com um destes: conves, terra, cabine, palacio, cidade, cidade-antiga, campo, laboratorio, lua, arena, deserto, aerodromo, selva (use quando o lugar for obvio). Opcional "hora" (dia, manha, amanhecer, tarde, entardecer, noite, madrugada): o CEU do video segue isso, entao se a fala diz "na manha seguinte" ou "a noite", ponha a hora certa (se a fala ja cita a hora, o sistema deduz sozinho).
+CENAS: 7 a 9 cenas. Cada cena: "fala" (1 a 2 frases, o texto completo da cena), "emocao" (neutro|feliz|surpreso|preocupado|misterioso), opcional "ano", "destaques" (1 a 3 palavras da fala para enfatizar na legenda), "visuais" (lista com 1 descricao curta em INGLES). Opcional "cenario" com um destes: conves, terra, cabine, palacio, cidade-antiga (Roma/Grecia/Egito), cidade-medieval (Europa 1300-1500), cidade-colonial (Brasil/Americas 1600-1850), cidade-vitoriana (1850-1930), cidade-futuro (2050+), cidade-oriental (Japao/China antigos), campo, laboratorio, lua, arena, deserto, aerodromo, selva (use quando o lugar for obvio; cidade SEMPRE a da epoca certa). Opcional "hora" (dia, manha, amanhecer, tarde, entardecer, noite, madrugada): o CEU do video segue isso, entao se a fala diz "na manha seguinte" ou "a noite", ponha a hora certa (se a fala ja cita a hora, o sistema deduz sozinho).
 - DIVISAO DE FALAS (obrigatorio): cada cena traz tambem "falas": lista de {{"quem": "narrador"|"prot"|"f0"|"f1"|"f2", "texto": "..."}}. O NARRADOR conta e contextualiza; os PERSONAGENS falam em primeira pessoa, com frases curtas de ate 10 palavras ("prot" = o protagonista, "f0/f1/f2" = os outros bonecos da cena). Pelo menos 3 cenas devem ter fala de personagem, alternando quem fala, como um mini dialogo. O campo "fala" tem que ser exatamente todos os "texto" juntos, em ordem. Cada voz e diferente, entao nao ponha duas falas seguidas do mesmo "quem" sem necessidade.
 - CONTINUIDADE (voce sera reprovado se errar): o lugar, a hora do dia, a epoca e quem esta na cena tem que bater com a fala. "Manha seguinte" nao pode ser de noite; ninguem usa objeto que ainda nao existia; quem morreu nao fala.
 - Se o formato for "escolha": o espectador decide o destino. A ultima cena apresenta DUAS opcoes concretas e opostas e pede o voto: "Comenta A para <opcao A> ou B para <opcao B>". O proximo episodio segue a opcao mais votada, entao diga isso ("a mais votada vira o proximo episodio"). Narre em primeira pessoa, com perigo ou decisao iminente.
@@ -186,16 +186,36 @@ def _groq(prompt: str, temp: float = 0.8):
     return json.loads(r.json()["choices"][0]["message"]["content"])
 
 
-def gerar(fmt: str, titulo: str):
-    """Rascunho -> critico severo (reescreve se gancho/tensao/loop < 8 ou risco factual > 2) -> validacao."""
+def _quer_2d(titulo: str, motor_de=None):
+    """Motor do roteiro novo. Pente fino de 26/11: o 3D rende ~2x mais views, entao o 2D so e escrito para manter um
+    estoque minimo (1 Short 2D por dia) ou para continuar um episodio que ja era 2D."""
+    if motor_de is not None:
+        if motor_de.get("motor") != "2d":
+            return None, None
+        amb = motor_de.get("tema") or next((x.get("amb") for x in motor_de.get("cenas", []) if x.get("amb")), None)
+        return (amb, PRESETS_2D[amb]) if amb in PRESETS_2D else preset_2d(titulo)
+    amb2d, p2d = preset_2d(titulo)
+    if not amb2d:
+        return None, None
+    try:
+        import publish
+        estoque_2d = sum(1 for c in publish.pendentes() if c.get("motor") == "2d")
+    except Exception:
+        estoque_2d = 0
+    return (amb2d, p2d) if estoque_2d < 3 else (None, None)
+
+
+def gerar(fmt: str, titulo: str, contexto: str = "", motor_de=None):
+    """Rascunho -> critico severo (reescreve se gancho/tensao/loop < 8 ou risco factual > 2) -> validacao.
+    contexto: instrucoes extras (ex.: continuacao pelo voto); motor_de: roteiro anterior (continua no mesmo motor/cenario)."""
     if not config.GROQ_API_KEY:
         print("[roteirista] GROQ_API_KEY ausente.")
         return None
     melhor = None
+    amb2d, p2d = _quer_2d(titulo, motor_de)
     for tentativa in range(4):
         try:
-            amb2d, p2d = preset_2d(titulo)
-            d = _groq(PROMPT.format(formato=fmt, titulo=titulo, bloco_2d=_bloco_2d(amb2d, p2d),
+            d = _groq(PROMPT.format(formato=fmt, titulo=titulo, bloco_2d=_bloco_2d(amb2d, p2d) + (contexto or ""),
                                     campo_elenco='"elenco": {"prot": "...", "f": ["...", "..."]}, ' if amb2d else ""))
             if amb2d and _validar_2d(d, amb2d, p2d):
                 print(f"[roteirista] tentativa {tentativa + 1}: {_validar_2d(d, amb2d, p2d)}")
@@ -251,12 +271,12 @@ def _um():
     d = gerar(fmt, titulo)
     if not d:
         return None
+    amb2d, p2d = _quer_2d(titulo)
     ordem = 1 + max([json.loads(p.read_text(encoding="utf-8")).get("ordem", 0) for p in config.CONTEUDO_DIR.glob("*.json")] or [0])
     c = {"id": f"{ordem:02d}-{_slug(titulo)}", "ordem": ordem, "formato": fmt, "titulo": titulo,
          "descricao": d.get("descricao", titulo), "tags": d.get("tags", []), "cenas": d["cenas"],
          "thumb_texto": d.get("thumb_texto", ""), "titulo_curto": d.get("titulo_curto", ""),
          "titulo_youtube": d.get("titulo_youtube", ""), "comentario_fixado": d.get("comentario_fixado", "")}
-    amb2d, p2d = preset_2d(titulo)
     if amb2d and d.get("elenco"):
         c["motor"], c["tema"] = "2d", amb2d
         c["elenco"] = {"prot": d["elenco"]["prot"], "f": list(d["elenco"]["f"])}
