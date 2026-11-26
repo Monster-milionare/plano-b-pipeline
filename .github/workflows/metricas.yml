@@ -18,7 +18,7 @@ env:
 jobs:
   placar:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
 
@@ -32,14 +32,19 @@ jobs:
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           YOUTUBE_TOKEN_JSON: ${{ secrets.YOUTUBE_TOKEN_JSON }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: |
           if [ -n "$YOUTUBE_TOKEN_JSON" ]; then printf '%s' "$YOUTUBE_TOKEN_JSON" > token.json; fi
           python metricas.py || true
+          python votos.py || true          # le os votos A/B nos comentarios
+          python continuacao.py || true    # a opcao vencedora vira o proximo episodio (entra com prioridade na fila)
+          python responder.py || true      # responde quem votou (precisa do token com permissao de comentar)
           python supervisor.py || true
           rm -f token.json
           git config user.name "planob-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add -f state/pesos.json state/placar.md state/views.json state/votos.json state/respostas_sugeridas.json state/supervisor.md state/foco.json 2>/dev/null || true
+          git add -f state/pesos.json state/placar.md state/views.json state/votos.json state/respostas_sugeridas.json state/respostas_status.json state/supervisor.md state/foco.json 2>/dev/null || true
+          git add conteudo/*.json 2>/dev/null || true
           git diff --cached --quiet || git commit -m "chore: placar de metricas"
           for i in 1 2 3 4 5; do
             if git push; then break; fi
