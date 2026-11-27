@@ -1,47 +1,48 @@
-# Supervisor geral - Plano B (26/11/2026 09:22 UTC)
+# Supervisor geral - Plano B (27/11/2026 14:08 UTC)
 
 ## Alertas
 
-- REPETICAO de tema: 'cretaceo' em 3 dos ultimos 8 Shorts.
-- 3 pares de Shorts seguidos com o mesmo tema.
+- Nenhum alerta de repeticao ou estoque.
 
 ## O que fazer
 
-- Criar roteiros de OUTROS temas (nao 'cretaceo') e novos cenarios/modelos para sair da mesmice.
+- Nada urgente.
 
 ## Estoque liberado (fila)
 
-- 2D: 4 | 3D: 5
-- Por tema: peste=1, egito=1, holandes=1, napoleao=1, cretaceo=1, nasa=1, roma=1, chernobyl=1, dino=1
+- 2D: 4 | 3D: 7
+- Por tema: joao=1, nasa=1, chernobyl=1, samurai=1, mongol=1, futuro=1, tiradentes=1, napoleao=1, cretaceo=1, roma=1, dino=1
 
 ## Foco por tema (views/dia, peso 0.5-2.0)
 
 | tema | videos | views/dia | peso |
 |---|---|---|---|
-| cretaceo | 2 | 548 | 1.596 |
-| internet | 1 | 420 | 1.226 |
-| dumont | 2 | 326 | 1.152 |
-| futuro | 2 | 324 | 1.147 |
-| viking | 1 | 336 | 1.114 |
-| roma | 6 | 270 | 1.059 |
-| titanic | 1 | 274 | 1.031 |
-| ciencia | 1 | 268 | 1.024 |
-| chernobyl | 1 | 213 | 0.95 |
-| napoleao | 1 | 169 | 0.891 |
-| nasa | 4 | 203 | 0.873 |
-| apollo | 1 | 32 | 0.709 |
-| ingles | 1 | 2 | 0.669 |
-| cabral | 3 | 72 | 0.573 |
+| dompedro | 1 | 558 | 1.556 |
+| cretaceo | 4 | 299 | 1.286 |
+| dumont | 2 | 326 | 1.279 |
+| futuro | 2 | 324 | 1.273 |
+| internet | 1 | 285 | 1.12 |
+| titanic | 1 | 274 | 1.102 |
+| ciencia | 1 | 268 | 1.094 |
+| roma | 6 | 220 | 1.04 |
+| viking | 1 | 204 | 0.991 |
+| napoleao | 1 | 169 | 0.935 |
+| nasa | 4 | 170 | 0.873 |
+| peste | 1 | 44 | 0.737 |
+| apollo | 1 | 32 | 0.717 |
+| chernobyl | 2 | 74 | 0.678 |
+| ingles | 1 | 2 | 0.67 |
+| cabral | 3 | 72 | 0.607 |
 
 ## Foco por formato
 
 | formato | videos | views/dia | peso |
 |---|---|---|---|
-| futuro | 2 | 324 | 1.147 |
-| escolha | 11 | 293 | 1.144 |
-| debate | 1 | 355 | 1.139 |
-| quem-venceria | 1 | 341 | 1.12 |
-| pov3d | 1 | 214 | 0.951 |
-| e-se | 5 | 230 | 0.942 |
-| voce-acorda | 4 | 170 | 0.785 |
-| pov | 2 | 75 | 0.649 |
+| futuro | 2 | 324 | 1.273 |
+| debate | 1 | 355 | 1.232 |
+| quem-venceria | 1 | 318 | 1.172 |
+| voce-acorda | 5 | 226 | 1.057 |
+| pov3d | 1 | 214 | 1.007 |
+| e-se | 5 | 197 | 0.959 |
+| escolha | 15 | 197 | 0.949 |
+| pov | 2 | 45 | 0.608 |

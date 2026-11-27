@@ -1,36 +1,33 @@
 {
- "atualizado": "26/11/2026 09:22 UTC",
+ "atualizado": "27/11/2026 14:08 UTC",
  "tema_peso": {
-  "ingles": 0.669,
-  "cabral": 0.573,
-  "dumont": 1.152,
-  "apollo": 0.709,
-  "roma": 1.059,
-  "napoleao": 0.891,
-  "futuro": 1.147,
-  "titanic": 1.031,
-  "ciencia": 1.024,
+  "ingles": 0.67,
+  "cabral": 0.607,
+  "dumont": 1.279,
+  "apollo": 0.717,
+  "roma": 1.04,
+  "napoleao": 0.935,
+  "futuro": 1.273,
+  "titanic": 1.102,
+  "ciencia": 1.094,
   "nasa": 0.873,
-  "internet": 1.226,
-  "cretaceo": 1.596,
-  "chernobyl": 0.95,
-  "viking": 1.114
+  "internet": 1.12,
+  "cretaceo": 1.286,
+  "chernobyl": 0.678,
+  "viking": 0.991,
+  "dompedro": 1.556,
+  "peste": 0.737
  },
  "formato_peso": {
-  "e-se": 0.942,
-  "pov": 0.649,
-  "voce-acorda": 0.785,
-  "pov3d": 0.951,
-  "debate": 1.139,
-  "escolha": 1.144,
-  "futuro": 1.147,
-  "quem-venceria": 1.12
+  "e-se": 0.959,
+  "pov": 0.608,
+  "voce-acorda": 1.057,
+  "pov3d": 1.007,
+  "debate": 1.232,
+  "escolha": 0.949,
+  "futuro": 1.273,
+  "quem-venceria": 1.172
  },
- "alertas": [
-  "REPETICAO de tema: 'cretaceo' em 3 dos ultimos 8 Shorts.",
-  "3 pares de Shorts seguidos com o mesmo tema."
- ],
- "tarefas": [
-  "Criar roteiros de OUTROS temas (nao 'cretaceo') e novos cenarios/modelos para sair da mesmice."
- ]
+ "alertas": [],
+ "tarefas": []
 }
