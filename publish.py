@@ -61,8 +61,8 @@ def _motor(c: dict) -> str:
 
 
 def alternar(fila: list) -> list:
-    """Rodizio do dia: 3 Shorts 2D + 1 Short 3D. O 3D entra como o 2o Short do dia (horario nobre da tarde);
-    os outros tres sao 2D. Sem estoque do motor desejado, segue a fila normal (e avisa no log)."""
+    """Andre 27/11: 100% 3D. Continuacao pelo voto primeiro (mesmo se o episodio original era 2D), depois Shorts 3D.
+    Sem estoque 3D, segue a fila normal como ultimo recurso (melhor um 2D do que um dia vazio) e avisa no log."""
     if not fila:
         return fila
     from zoneinfo import ZoneInfo
@@ -86,12 +86,12 @@ def alternar(fila: list) -> list:
         if c and c.get("formato") != "longo" and dia == hoje:
             feitos_hoje.append(_motor(c))
     n, tem2d = len(feitos_hoje), "2d" in feitos_hoje
-    quer = "2d" if (n >= 2 and not tem2d) else "3d"          # 3x 3D + 1x 2D (o 3D rende ~2x mais views)
-    pref = [c for c in fila if _motor(c) == quer]
+    quer = "3d"                                              # Andre 27/11: 100% 3D (2D so em continuacao de episodio 2D)
+    pref = [c for c in fila if c.get("continuacao_de")] + [c for c in fila if _motor(c) == quer and not c.get("continuacao_de")]
     if not pref:
         print(f"[publish] rodizio: hoje {n} Short(s) ({', '.join(feitos_hoje) or '-'}), queria {quer.upper()} mas nao ha estoque - seguindo a fila normal. CRIE MAIS Shorts {quer.upper()}.", flush=True)
         return fila
-    print(f"[publish] rodizio 3x3D+1x2D: hoje {n} Short(s) ({', '.join(feitos_hoje) or '-'}) -> agora {quer.upper()} ({pref[0]['id']}).", flush=True)
+    print(f"[publish] rodizio 100% 3D: hoje {n} Short(s) ({', '.join(feitos_hoje) or '-'}) -> agora {quer.upper()} ({pref[0]['id']}).", flush=True)
     return pref + [c for c in fila if c not in pref]
 
 

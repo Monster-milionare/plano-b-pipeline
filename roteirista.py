@@ -194,6 +194,7 @@ def _quer_2d(titulo: str, motor_de=None):
             return None, None
         amb = motor_de.get("tema") or next((x.get("amb") for x in motor_de.get("cenas", []) if x.get("amb")), None)
         return (amb, PRESETS_2D[amb]) if amb in PRESETS_2D else preset_2d(titulo)
+    return None, None          # Andre 27/11: roteiro novo e sempre 3D (o 2D so continua episodio que ja era 2D)
     amb2d, p2d = preset_2d(titulo)
     if not amb2d:
         return None, None
@@ -251,7 +252,7 @@ def main() -> int:
     if "--se-fila-curta" in sys.argv:
         import publish
         escritos = 0
-        while len(publish.pendentes()) < FILA_ALVO and escritos < MAX_POR_DISPARO:
+        while sum(1 for c in publish.pendentes() if c.get("motor") != "2d") < FILA_ALVO and escritos < MAX_POR_DISPARO:   # estoque 3D
             if _um() is None:
                 break
             escritos += 1

@@ -24,7 +24,7 @@ PUB = config.STATE_DIR / "publicados.json"
 PEDIDOS = config.STATE_DIR / "pedidos.json"   # {"2026-11-24": {"1": "51-chernobyl-bombeiro"}}: o Andre escolhe o video de um slot do dia
 MANHA = (7, 0)                  # o Short do trajeto da manha
 MINUTOS = [0, 10, 5, 15]        # pequenos deslocamentos (evita bater na hora cheia de todo mundo)
-ORDEM_MOTOR = ["3d", "3d", "2d", "3d"]   # pente fino 26/11: 3D faz ~2x as views do 2D -> 3 Shorts 3D + 1 2D por dia
+ORDEM_MOTOR = ["3d"]   # Andre 27/11: 100% 3D (o 3D faz ~2x as views do 2D); 2D so em continuacao de episodio que ja era 2D
 MIN_ANTECEDENCIA = timedelta(minutes=50)   # o YouTube exige publishAt no futuro; damos folga pro render
 
 
@@ -110,7 +110,11 @@ def planejar(d: date, gravar: bool = True) -> dict:
         if pedido and pedido["id"] not in pubs:
             escolha = pedido               # slot escolhido a mao (state/pedidos.json)
         else:
-            escolha = next((c for c in livres if publish._motor(c) == quer), None) or (livres[0] if livres else None)
+            escolha = (next((c for c in livres if c.get("continuacao_de")), None)          # voto do publico primeiro
+                       or next((c for c in livres if publish._motor(c) == quer), None))
+            if escolha is None and livres:          # ultimo recurso: melhor um 2D do que um horario vazio
+                escolha = livres[0]
+                print(f"[programador] sem Short 3D na fila para {h:02d}h{m:02d}: usando {escolha['id']} (2D) - escreva mais 3D")
         if not escolha:
             print(f"[programador] sem roteiro para o slot {h:02d}h{m:02d} (fila vazia)")
             continue
