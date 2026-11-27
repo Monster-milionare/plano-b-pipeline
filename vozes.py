@@ -9,7 +9,9 @@ Se uma voz sumir do catalogo, tts.py cai sozinho para a voz padrao (o video nunc
 import hashlib
 
 FEMININOS = {"rainha", "cidada", "cleopatra", "isabel", "cidada-berlim", "cidada-berlim2", "exploradora", "bebe-tricera",
-             "passageira", "telefonista"}
+             "passageira", "telefonista",
+             "camponesa", "senhora-colonial", "quitandeira", "dama-vitoriana", "dama-japonesa", "cidada-futuro", "aldea",
+             "viajante-f", "moradora", "plebeia", "cidada-romana", "menina"}
 GRAVES = {"rei", "imperador", "cabral", "general-romano", "faraoh", "viking", "napoleao", "guia", "oficial", "capitao"}
 AGUDOS = {"cidadao2", "marujo2", "nativo3", "newton", "bebe-tricera", "menino"}
 

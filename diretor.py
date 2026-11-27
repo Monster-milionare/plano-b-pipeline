@@ -242,6 +242,7 @@ def planejar(conteudo: dict, sintetizar, elenco_vozes, work: Path):
     pov = conteudo.get("formato", "") in FORMATOS_POV or bool(conteudo.get("pov"))
     todos, bt, ultimo = [], [], None
     for ci, c in enumerate(cenas):
+        c = _quem_para_boneco(conteudo, c)
         if c.get("beats"):
             beats = [dict(b) for b in c["beats"]]
             pap = papeis_do_amb(conteudo, c.get("amb"), com_nomes=True)
@@ -493,6 +494,32 @@ def calcular_presenca(bt: list, conteudo: dict, pov: bool):
 
 def _entra_explicito(xs, fid) -> bool:
     return any(fid in _lista(x["b"].get("entra")) for x in xs)
+
+
+def _quem_para_boneco(conteudo: dict, cena: dict) -> dict:
+    """Roteiro que escreve o NOME do papel em "quem" (ex.: "camponesa") vira "f0/f1/f2" ou "prot". Sem isso a pessoa
+    nao entrava em cena, a camera nao ia nela e a voz saia como a do narrador (masculina ate para mulher)."""
+    el = conteudo.get("elenco") or {}
+    amb = cena.get("amb", "")
+    lista = ((el.get("amb") or {}).get(amb) or el.get("f") or [])[:3]
+    prot = (el.get("protAmb") or {}).get(amb) or el.get("prot")
+
+    def troca(x):
+        q = x.get("quem")
+        if not q or q in ("narrador", "radio", "prot") or re.match(r"^f\d$", q):
+            return x
+        if q in lista:
+            return dict(x, quem=f"f{lista.index(q)}")
+        if q == prot:
+            return dict(x, quem="prot")
+        print(f"[diretor] aviso: '{q}' fala em '{amb}' mas nao esta no elenco desse cenario", flush=True)
+        return x
+
+    cena = dict(cena)
+    for k in ("falas", "beats"):
+        if cena.get(k):
+            cena[k] = [troca(x) for x in cena[k]]
+    return cena
 
 
 def legenda_em(legendas, t, idx=0):
