@@ -1,25 +1,25 @@
 {
- "data": "2026-11-27",
+ "data": "2026-11-28",
  "shorts": [
   {
    "slot": 1,
-   "id": "51c-chernobyl-parte-2-voce-corre-pra-pripyat",
-   "motor": "2d",
-   "publicar_em": "2026-11-27T15:10:00Z"
+   "id": "63-lisboa-corte-foge",
+   "motor": "3d",
+   "publicar_em": "2026-11-28T18:10:00Z"
   },
   {
    "slot": 2,
-   "id": "56-piramide-quem-construiu",
+   "id": "64-japao-navios-negros",
    "motor": "3d",
-   "publicar_em": "2026-11-27T19:05:00Z"
+   "publicar_em": "2026-11-28T21:05:00Z"
   },
   {
    "slot": 3,
-   "id": "62-joana-darc-orleans",
+   "id": "65-gengis-ultimo-golpe",
    "motor": "3d",
-   "publicar_em": "2026-11-27T21:15:00Z"
+   "publicar_em": "2026-11-28T23:15:00Z"
   }
  ],
  "longo": null,
- "gerado_em": "2026-11-27T22:44:05+00:00"
+ "gerado_em": "2026-11-28T15:51:12+00:00"
 }
