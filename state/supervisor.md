@@ -1,4 +1,4 @@
-# Supervisor geral - Plano B (27/11/2026 14:08 UTC)
+# Supervisor geral - Plano B (28/11/2026 08:51 UTC)
 
 ## Alertas
 
@@ -17,32 +17,33 @@
 
 | tema | videos | views/dia | peso |
 |---|---|---|---|
-| dompedro | 1 | 558 | 1.556 |
-| cretaceo | 4 | 299 | 1.286 |
-| dumont | 2 | 326 | 1.279 |
-| futuro | 2 | 324 | 1.273 |
-| internet | 1 | 285 | 1.12 |
-| titanic | 1 | 274 | 1.102 |
-| ciencia | 1 | 268 | 1.094 |
-| roma | 6 | 220 | 1.04 |
-| viking | 1 | 204 | 0.991 |
-| napoleao | 1 | 169 | 0.935 |
-| nasa | 4 | 170 | 0.873 |
-| peste | 1 | 44 | 0.737 |
-| apollo | 1 | 32 | 0.717 |
-| chernobyl | 2 | 74 | 0.678 |
+| dumont | 2 | 326 | 1.39 |
+| futuro | 2 | 325 | 1.387 |
+| dompedro | 1 | 390 | 1.376 |
+| cretaceo | 4 | 238 | 1.198 |
+| titanic | 1 | 274 | 1.164 |
+| ciencia | 1 | 268 | 1.154 |
+| internet | 1 | 263 | 1.145 |
+| roma | 6 | 213 | 1.12 |
+| napoleao | 1 | 169 | 0.974 |
+| viking | 1 | 162 | 0.962 |
+| holandes | 1 | 103 | 0.855 |
+| nasa | 5 | 135 | 0.814 |
+| apollo | 1 | 32 | 0.724 |
+| peste | 1 | 30 | 0.721 |
 | ingles | 1 | 2 | 0.67 |
-| cabral | 3 | 72 | 0.607 |
+| chernobyl | 2 | 58 | 0.657 |
+| cabral | 3 | 72 | 0.637 |
 
 ## Foco por formato
 
 | formato | videos | views/dia | peso |
 |---|---|---|---|
-| futuro | 2 | 324 | 1.273 |
-| debate | 1 | 355 | 1.232 |
-| quem-venceria | 1 | 318 | 1.172 |
-| voce-acorda | 5 | 226 | 1.057 |
-| pov3d | 1 | 214 | 1.007 |
-| e-se | 5 | 197 | 0.959 |
-| escolha | 15 | 197 | 0.949 |
-| pov | 2 | 45 | 0.608 |
+| futuro | 2 | 325 | 1.387 |
+| debate | 1 | 355 | 1.312 |
+| quem-venceria | 1 | 318 | 1.244 |
+| pov3d | 1 | 214 | 1.055 |
+| voce-acorda | 5 | 192 | 1.035 |
+| e-se | 6 | 178 | 0.978 |
+| escolha | 16 | 162 | 0.898 |
+| pov | 2 | 35 | 0.596 |
