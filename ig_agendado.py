@@ -9,12 +9,17 @@ from datetime import datetime, timedelta, timezone
 import config
 
 
+# O cron do GitHub pula muito: com janela de 4 h varios videos ficavam sem Reel.
+JANELA_H = 10
+
+
 def pendente():
     try:
         pubs = json.loads((config.STATE_DIR / "publicados.json").read_text(encoding="utf-8"))
     except Exception:
         return ""
     agora = datetime.now(timezone.utc)
+    fila = []
     for d in sorted(pubs, key=lambda x: x.get("publicado_em", "")):
         if not d.get("agendado") or d.get("instagram"):
             continue
@@ -22,15 +27,18 @@ def pendente():
             t = datetime.fromisoformat(d["publicado_em"])
         except Exception:
             continue
-        if t - timedelta(minutes=20) <= agora <= t + timedelta(hours=4):
+        if t - timedelta(minutes=20) <= agora <= t + timedelta(hours=JANELA_H):
             try:
                 c = json.loads((config.CONTEUDO_DIR / f"{d['id']}.json").read_text(encoding="utf-8"))
                 if c.get("formato") == "longo":
                     continue
             except Exception:
                 pass
-            return d["id"]
-    return ""
+            fila.append(d["id"])
+    if not fila:
+        return ""
+    # alterna entre os pendentes: um video que falha no envio nao trava os outros
+    return fila[int(os.environ.get("GITHUB_RUN_NUMBER") or 0) % len(fila)]
 
 
 if __name__ == "__main__":
